@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		System.out.println("hello km4c");
 		System.out.println("hello from intellij IDEA");
+		System.out.println("hi intellij IDEA");
 	}
 
 }
