@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+  <xs:element name="tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="class" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="prop" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="type"/>
+                          <xs:element type="xs:byte" name="maxValue" minOccurs="0"/>
+                          <xs:element type="xs:byte" name="minValue" minOccurs="0"/>
+                          <xs:element type="xs:anyURI" name="uri" minOccurs="0"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:anyURI" name="key" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:anyURI" name="type" use="optional"/>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="isRoot" use="optional"/>
+            <xs:attribute type="xs:string" name="baseUri" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
