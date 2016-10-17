@@ -1,0 +1,83 @@
+package GenericClass;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
+import XMLDomain.Tree;
+import XMLDomain.Tree.Class.Properties.Prop;
+
+public class GenericObject {
+	
+	private String className;
+	private boolean isRoot;
+	private String type;
+	private String baseUri;
+	private ArrayList<GenericAttribute> attributeList;
+	private boolean processed; // questo campo mi indica che sono stati inseriti tutti i valori
+	
+	public GenericObject(Tree.Class Class){
+		
+		this.attributeList = new ArrayList<>();
+		this.className = Class.getName();
+		this.isRoot = Class.getIsRoot().contains("true");
+		this.type = Class.getType();
+		this.baseUri = Class.getBaseUri();
+		this.processed = false;
+		
+		Tree.Class.Properties property = Class.getProperties();
+		List<Tree.Class.Properties.Prop> propList = property.getProp();
+		
+		Iterator<Prop> it = propList.iterator();
+		Tree.Class.Properties.Prop prop;
+		while(it.hasNext()){
+			prop = it.next();
+			GenericAttribute gAtt = new GenericAttribute(prop);
+			attributeList.add(gAtt);
+		}
+		
+	}
+
+	public void setID(String id){
+		for(GenericAttribute g:attributeList){
+			if (g.isPrimaryKey()){
+				g.getAttribute().setAttributeValue(id);
+			}
+		}
+	}
+	public String getClassName() {
+		return className;
+	}
+
+	public boolean isRoot() {
+		return isRoot;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public String getBaseUri() {
+		return baseUri;
+	}
+
+	public boolean isProcessed(){
+		return processed;
+	}
+	public ArrayList<GenericAttribute> getAttributeList() {
+		return attributeList;
+	}
+	
+	public GenericAttribute getIdentifier(){
+		for(GenericAttribute a: attributeList){
+			if(a.getAttributeKey().contains("identifier")){
+				return a;
+			}
+		}
+		return null;
+	}
+	
+	
+}
+

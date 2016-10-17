@@ -407,8 +407,8 @@ public class Tree {
 
                 @XmlElement(required = true)
                 protected String type;
-                protected Byte maxValue;
-                protected Byte minValue;
+                protected String maxValue;
+                protected String minValue;
                 @XmlSchemaType(name = "anyURI")
                 protected String uri;
                 @XmlAttribute(name = "key")
@@ -447,7 +447,7 @@ public class Tree {
                  *     {@link Byte }
                  *     
                  */
-                public Byte getMaxValue() {
+                public String getMaxValue() {
                     return maxValue;
                 }
 
@@ -459,7 +459,7 @@ public class Tree {
                  *     {@link Byte }
                  *     
                  */
-                public void setMaxValue(Byte value) {
+                public void setMaxValue(String value) {
                     this.maxValue = value;
                 }
 
@@ -471,7 +471,7 @@ public class Tree {
                  *     {@link Byte }
                  *     
                  */
-                public Byte getMinValue() {
+                public String getMinValue() {
                     return minValue;
                 }
 
@@ -483,7 +483,7 @@ public class Tree {
                  *     {@link Byte }
                  *     
                  */
-                public void setMinValue(Byte value) {
+                public void setMinValue(String value) {
                     this.minValue = value;
                 }
 
