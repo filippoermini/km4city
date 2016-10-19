@@ -18,7 +18,7 @@ public class TripleGenerator {
 		this.query = query;
 		this.tripleObject = new ArrayList<>();
 		this.boundAttribute = new ArrayList<>();
-		Iterator<Class> it =tree.getClazz().iterator();
+		Iterator<Class> it = tree.getClazz().iterator();
 		Tree.Class c;
 		while(it.hasNext()){
 			c = it.next();
@@ -83,7 +83,7 @@ public class TripleGenerator {
 						a.setAttribute(refClass.getIdentifier().getAttribute()); //l'attributo identifier della refClass è già stato valorizzato e lo posso passare al mio attributo a
 					}else{ // l'attributo è un campo semplice 
 						//calcolo del valore per la simulazione
-						
+						a.getAttribute().setValue(a.getType(), a.getAttribute().getMax(), a.getAttribute().getMin());
 					}
 				}
 			}

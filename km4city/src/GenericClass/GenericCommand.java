@@ -2,48 +2,50 @@ package GenericClass;
 
 import java.util.HashMap;
 import java.util.Random;
+import java.util.UUID;
+
 
 import GenericClass.GenericAttribute.Attribute;
+import GenericClass.GenericCommand.GenerateFloatValue;
 
 
 public class GenericCommand {
 
 	public class GenerateIntValue implements Command<Integer>{
 
-		private int max;
-		private int min;
-		
-		public GenerateIntValue(int max, int min) {
-			this.max = max;
-			this.min = min;
-		}
 		@Override
-		public Integer valueGenerator() {
+		public Integer valueGenerator(Integer max,Integer min) {
 			Random rand = new Random();
 		    int randomNum = rand.nextInt((max - min) + 1) + min;
 		    return randomNum;
 		}
 	}
 	public class GenerateFloatValue implements Command<Float>{
-
-		private float max;
-		private float min;
 		
-		public GenerateFloatValue(float max, float min) {
-			this.max = max;
-			this.min = min;
-		}
 		@Override
-		public Float valueGenerator() {
+		public Float valueGenerator(Float max, Float min) {
 			Random rand = new Random();
 		    float randomNum = rand.nextFloat() * (max - min) + min;
 		    return randomNum;
 		}
 	}
-	private CommandFactory genericCommand;
-	public GenericCommand(Attribute<?> att){
-		genericCommand.init(att.getMax(), att.getMin());
+	public class GenerateUIDValue implements Command<String> {
+		
+		@Override
+		public String valueGenerator(String max, String min) {
+			return UUID.randomUUID().toString();
+		}
 	}
+	
+	private CommandFactory genericCommand;
+	public GenericCommand(){
+		genericCommand = new CommandFactory();
+		genericCommand.init();
+	}
+	public CommandFactory getCommand(){
+		return genericCommand;
+	}
+	
 	public class CommandFactory {
 		private final HashMap<String, Command>	commands;
 		
@@ -55,20 +57,22 @@ public class GenericCommand {
 			commands.put(name, command);
 		}
 		
-		public void executeCommand(String name) {
-			if (commands.containsKey(name)) {
-				commands.get(name).valueGenerator();
+		public Object executeCommand(String name,Object max,Object min) {
+			if (commands.containsKey(name.toLowerCase())) {
+				return commands.get(name).valueGenerator(max,min);
 			}
+			return null;
 		}
 
-		
 		/* Factory pattern */
-		public CommandFactory init(Object max, Object min) {
+		public void init() {
 			CommandFactory cf = new CommandFactory();
-			cf.addCommand("integer",new GenericCommand.GenerateIntValue((int)max, (int)min));
-			cf.addCommand("float",new GenerateFloatValue((float)max, (float)min));
-
-			return cf;
+			this.addCommand("integer",new GenerateIntValue());
+			this.addCommand("float",new GenerateFloatValue());
+			this.addCommand("UID", new GenerateUIDValue());
+			
 		}
 	}
+
+	
 }
