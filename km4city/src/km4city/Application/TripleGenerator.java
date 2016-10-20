@@ -75,17 +75,20 @@ public class TripleGenerator {
 				if(a.isConstrain()){
 					this.boundAttribute.add(a); //l'attributo contiene delle dipendenze verso altri attibuti che potrebbero non essere stati ancora generati
 				}else{
-					if(a.isExternalKey()){ //l'attributo è un riferimento ad un'altra classe
+					if(a.isExternalKey()){//l'attributo è un riferimento ad un'altra classe
+						
 						GenericObject refClass = getObjectClassByName(a.getType());
 						if (!refClass.isProcessed()){ //la classe non è ancora stata processata
-							_process(refClass);
+							_process(refClass); //chiamata ricorsiva
 						} // alla fine di questa procedura la classe refClass contiene tutti i valori (escluso quelli che hanno delle dipendenze) compreso il valore dell'attributo identifier
 						a.setAttribute(refClass.getIdentifier().getAttribute()); //l'attributo identifier della refClass è già stato valorizzato e lo posso passare al mio attributo a
 					}else{ // l'attributo è un campo semplice 
-						//calcolo del valore per la simulazione
+						
+						//calcolo del valore per la simulazione in base ai parametri  
 						a.getAttribute().setValue(a.getType(), a.getAttribute().getMax(), a.getAttribute().getMin());
 					}
 				}
+				//procedura di smaltimento della lista boundAttribute
 			}
 		}
 	}

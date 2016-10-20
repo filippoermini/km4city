@@ -9,7 +9,7 @@ public class GenericTypeMap {
 	private static final HashMap<String,String> ClassMap = new HashMap<String,String>(){{
 		put("integer","java.lang.Integer");
 		put("float","java.lang.Float");
-		put("datetime","java.util.Date");
+		put("datetime","java.lang.String");
 		put("uid","java.lang.String");
 		put("id","java.lang.Integer");
 	}};

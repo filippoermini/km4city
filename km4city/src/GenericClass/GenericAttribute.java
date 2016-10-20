@@ -86,7 +86,7 @@ public class GenericAttribute {
 		this.uri = prop.getUri();
 		this.type = prop.getType();
 		String className = genericTypeMap.getType(prop.getType().toLowerCase());
-		primaryKey = (prop.getType().toLowerCase().contains("id"));
+		primaryKey = (prop.getKey().toLowerCase().contains("identifiel"));
 		externalKey = (className == null);
 		constrain = (valueExpression != null);
 		if(!externalKey && !constrain){

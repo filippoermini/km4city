@@ -1,5 +1,11 @@
 package GenericClass;
 
+import java.sql.Date;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.UUID;
@@ -35,6 +41,34 @@ public class GenericCommand {
 		public String valueGenerator(String max, String min) {
 			return UUID.randomUUID().toString();
 		}
+	}
+	
+	public class GenerateDateTimeValue implements Command<String> {
+
+		@Override
+		public String valueGenerator(String max, String min) {
+			if((max=="" || max == null) && (min == "" || min == null)){
+				
+				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmX")
+                        .withZone(ZoneOffset.UTC)
+                        .format(Instant.now())
+                        .toString();
+			}
+			
+			Random random = new Random();
+			DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmX").withZone(ZoneOffset.UTC);
+			LocalDate maxDate = LocalDate.parse(max, df);
+			LocalDate minDate = LocalDate.parse(min, df);
+			
+			int minDay = (int) LocalDate.of(minDate.getYear(), minDate.getMonth(), minDate.getDayOfMonth()).toEpochDay();
+			int maxDay = (int) LocalDate.of(maxDate.getYear(), maxDate.getMonth(), maxDate.getDayOfMonth()).toEpochDay();
+			long randomDay = minDay + random.nextInt(maxDay - minDay);
+
+			LocalDate randomDate = LocalDate.ofEpochDay(randomDay);
+			return randomDate.toString();
+			
+		}
+		
 	}
 	
 	private CommandFactory genericCommand;

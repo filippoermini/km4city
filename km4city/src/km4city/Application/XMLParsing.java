@@ -1,6 +1,3 @@
-/**
- * 
- */
 package km4city.Application;
 
 import java.io.File;
