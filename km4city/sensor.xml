@@ -6,7 +6,7 @@
                 <type>id</type>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#hasObservation">
-                <type>SensorSite</type>
+                <type>Observation</type>
                 <uri>http://www.disit.org/km4city/schema#Observation</uri>
             </prop>
         </properties>
@@ -48,7 +48,7 @@
             </prop>
         </properties>
     </class>
-    <class type="http://www.w3.org/2006/time#Instant" isRoot="false">
+    <class type="http://www.w3.org/2006/time#Instant" isRoot="false" name="Instant">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>DateTime</type>

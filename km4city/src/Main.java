@@ -13,7 +13,9 @@ public class Main{
 		XMLParsing<Tree> xml = new XMLParsing<>(Tree.class);
 		Tree tree = xml.DeserializeFromXML("sensor.xml");
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
+		System.out.println("--------------------------");
 		tripleGen.generateValue();
+		
 		
 	}
 }

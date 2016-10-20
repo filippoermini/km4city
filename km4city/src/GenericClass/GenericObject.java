@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class.Properties.Prop;
@@ -46,6 +49,16 @@ public class GenericObject {
 			}
 		}
 	}
+	@Override
+	public String toString(){
+		;
+		return "Class name: "+getClassName()+"\n"
+				+"Type name: "+getType()+"\n"
+				+"Base Uri: "+getBaseUri()+"\n"
+				+(isRoot?"root class\n":"")
+				+("Attribute list: \n\n")
+				+(attributeList.stream().map(Object::toString).collect(Collectors.joining("\n")));
+	}
 	public String getClassName() {
 		return className;
 	}
@@ -69,6 +82,10 @@ public class GenericObject {
 		return attributeList;
 	}
 	
+	public void setProcessed(){
+		this.processed = true;
+	}
+	
 	public GenericAttribute getIdentifier(){
 		for(GenericAttribute a: attributeList){
 			if(a.getAttributeKey().contains("identifier")){
@@ -77,6 +94,8 @@ public class GenericObject {
 		}
 		return null;
 	}
+	
+	
 	
 	
 }

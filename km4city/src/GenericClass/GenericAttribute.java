@@ -59,9 +59,14 @@ public class GenericAttribute {
 			return this.attributeValue;
 		}
 		
-		public void setValue(String type,Object max, Object min){
-			
+		public void setValue(String type,Object max, Object min){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, max, min);
+		}
+		
+		public String toString(){
+			return "value: "+this.attributeValue+"\n"
+					+"max: "+this.minValue+"\n"
+					+"min: "+this.maxValue+"\n";
 		}
 	}
 
@@ -81,12 +86,12 @@ public class GenericAttribute {
 	public GenericAttribute(Prop prop){
 		
 		this.attributeKey =  prop.getKey();
-		//this.value = prop.getValue();
+		//this.valueExpression = prop.getValue();
 		externalKey = false;
 		this.uri = prop.getUri();
 		this.type = prop.getType();
 		String className = genericTypeMap.getType(prop.getType().toLowerCase());
-		primaryKey = (prop.getKey().toLowerCase().contains("identifiel"));
+		primaryKey = (prop.getKey().toLowerCase().contains("identifier"));
 		externalKey = (className == null);
 		constrain = (valueExpression != null);
 		if(!externalKey && !constrain){
@@ -105,11 +110,18 @@ public class GenericAttribute {
 				logger.error("Acquiring properties Error: "+e.getMessage());
 			}
 		}
-		
-		
-		
-		
-		
+	}
+	
+	public String toString(){
+		return   "key value:"+this.getAttributeKey()+"\n"
+				+(getType() != null?"Type: "+getType()+"\n":"")
+				+(getUri() != null?"uri: "+getType()+"\n":"")
+				+(isPrimaryKey()?"is primary\n":"")
+				+(isExternalKey()?"is external\n":"")
+				+(isConstrain()?"is constrain\n":"")
+				+"Attribute value:\n"+(attribute != null?attribute.toString():"");
+					
+				
 	}
 
 	public String getAttributeKey() {

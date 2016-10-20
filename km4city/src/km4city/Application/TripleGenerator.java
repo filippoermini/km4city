@@ -2,6 +2,7 @@ package km4city.Application;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.stream.Collectors;
 
 import GenericClass.GenericAttribute;
 import GenericClass.GenericObject;
@@ -25,13 +26,16 @@ public class TripleGenerator {
 			GenericObject g = new GenericObject(c);
 			tripleObject.add(g);
 		}
+		//System.out.println(tripleObject.stream().map(Object::toString).collect(Collectors.joining("\n")));
 	}
 	
 	private void setID(String id){
-		for(GenericObject g:tripleObject){
+		for(int i=0;i<tripleObject.size();i++)
+		{
+			GenericObject g = tripleObject.get(i);
 			if (g.isRoot()){
 				g.setID(id);
-			}
+			}	
 		}
 	}
 	
@@ -47,7 +51,7 @@ public class TripleGenerator {
 	//questa classe si occupa di generare per ogni attributo un valore del tipo e nel range da esso specificato
 	public void generateValue(){
 		//per ogni record della query vado a generare un set di triple definito dal Tree e dai genericObject istanziati
-		String[] res = new String[]{"12345","12346","12347","12348"}; //risultati della query
+		String[] res = new String[]{"12345"};//,"12346","12347","12348"}; //risultati della query
 		for(String el: res){
 			//setto il valore id della classe root con il risultato della query
 			this.setID(el);
@@ -58,6 +62,7 @@ public class TripleGenerator {
 				}
 			}
 		}
+		System.out.println(tripleObject.stream().map(Object::toString).collect(Collectors.joining("\n")));
 	}
 	
 	public void processClass(String ClassName){
@@ -71,7 +76,7 @@ public class TripleGenerator {
 	
 	private void _process(GenericObject g){
 		for(GenericAttribute a:g.getAttributeList()){ //estraggo gli attributi per ogni classe
-			if(!a.getType().contains("id") && !g.isRoot()){//non devo generare il valore per il campo id della clsse root, è già settato
+			if(!(a.isPrimaryKey() && g.isRoot())){//non devo generare il valore per il campo id della clsse root, è già settato
 				if(a.isConstrain()){
 					this.boundAttribute.add(a); //l'attributo contiene delle dipendenze verso altri attibuti che potrebbero non essere stati ancora generati
 				}else{
@@ -79,17 +84,21 @@ public class TripleGenerator {
 						
 						GenericObject refClass = getObjectClassByName(a.getType());
 						if (!refClass.isProcessed()){ //la classe non è ancora stata processata
-							_process(refClass); //chiamata ricorsiva
+							if(refClass.getIdentifier().getAttribute().getAttributeValue()==null)
+								_process(refClass); //chiamata ricorsiva
 						} // alla fine di questa procedura la classe refClass contiene tutti i valori (escluso quelli che hanno delle dipendenze) compreso il valore dell'attributo identifier
 						a.setAttribute(refClass.getIdentifier().getAttribute()); //l'attributo identifier della refClass è già stato valorizzato e lo posso passare al mio attributo a
+						System.out.println(a.toString());
 					}else{ // l'attributo è un campo semplice 
 						
 						//calcolo del valore per la simulazione in base ai parametri  
 						a.getAttribute().setValue(a.getType(), a.getAttribute().getMax(), a.getAttribute().getMin());
+						//System.out.println(a.toString());
 					}
 				}
 				//procedura di smaltimento della lista boundAttribute
 			}
 		}
+		g.setProcessed();
 	}
 }

@@ -49,14 +49,14 @@ public class GenericCommand {
 		public String valueGenerator(String max, String min) {
 			if((max=="" || max == null) && (min == "" || min == null)){
 				
-				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmX")
-                        .withZone(ZoneOffset.UTC)
+				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
+                        .withZone(ZoneOffset.systemDefault())
                         .format(Instant.now())
                         .toString();
 			}
 			
 			Random random = new Random();
-			DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmX").withZone(ZoneOffset.UTC);
+			DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX").withZone(ZoneOffset.systemDefault());
 			LocalDate maxDate = LocalDate.parse(max, df);
 			LocalDate minDate = LocalDate.parse(min, df);
 			
@@ -93,7 +93,7 @@ public class GenericCommand {
 		
 		public Object executeCommand(String name,Object max,Object min) {
 			if (commands.containsKey(name.toLowerCase())) {
-				return commands.get(name).valueGenerator(max,min);
+				return commands.get(name.toLowerCase()).valueGenerator(max,min);
 			}
 			return null;
 		}
@@ -103,7 +103,8 @@ public class GenericCommand {
 			CommandFactory cf = new CommandFactory();
 			this.addCommand("integer",new GenerateIntValue());
 			this.addCommand("float",new GenerateFloatValue());
-			this.addCommand("UID", new GenerateUIDValue());
+			this.addCommand("uid", new GenerateUIDValue());
+			this.addCommand("datetime", new GenerateDateTimeValue());
 			
 		}
 	}
