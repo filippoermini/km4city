@@ -80,13 +80,19 @@ public class GenericAttribute {
 	private boolean externalKey;
 	private boolean constrain;
 	private String type; 
+	private String name;
+	private String[] hourValue;
+	private String rangre;
 	
 	
 	
 	public GenericAttribute(Prop prop){
 		
+		this.name = (prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
 		this.attributeKey =  prop.getKey();
-		//this.valueExpression = prop.getValue();
+		this.valueExpression = prop.getValueExpression();
+		this.hourValue = prop.getHourValue()!=null?prop.getHourValue().split(";"):null;
+		this.rangre = prop.getRange();
 		externalKey = false;
 		this.uri = prop.getUri();
 		this.type = prop.getType();
@@ -113,9 +119,10 @@ public class GenericAttribute {
 	}
 	
 	public String toString(){
-		return   "key value:"+this.getAttributeKey()+"\n"
+		return  "Attribute name: "+getAttributeName()+"\n"
+				+"key value:"+this.getAttributeKey()+"\n"
 				+(getType() != null?"Type: "+getType()+"\n":"")
-				+(getUri() != null?"uri: "+getType()+"\n":"")
+				+(getUri() != null?"uri: "+getUri()+"\n":"")
 				+(isPrimaryKey()?"is primary\n":"")
 				+(isExternalKey()?"is external\n":"")
 				+(isConstrain()?"is constrain\n":"")
@@ -123,7 +130,9 @@ public class GenericAttribute {
 					
 				
 	}
-
+	public String getAttributeName(){
+		return name;
+	}
 	public String getAttributeKey() {
 		return attributeKey;
 	}

@@ -20,8 +20,10 @@ public class GenericCommand {
 	public class GenerateIntValue implements Command<Integer>{
 
 		@Override
-		public Integer valueGenerator(Integer max,Integer min) {
+		public Integer valueGenerator(Object... args) {
 			Random rand = new Random();
+			int max = (int) args[1];
+			int min = (int) args[0];
 		    int randomNum = rand.nextInt((max - min) + 1) + min;
 		    return randomNum;
 		}
@@ -29,8 +31,10 @@ public class GenericCommand {
 	public class GenerateFloatValue implements Command<Float>{
 		
 		@Override
-		public Float valueGenerator(Float max, Float min) {
+		public Float valueGenerator(Object... args) {
 			Random rand = new Random();
+			float min = (float) args[0];
+			float max = (float) args[1];
 		    float randomNum = rand.nextFloat() * (max - min) + min;
 		    return randomNum;
 		}
@@ -38,7 +42,7 @@ public class GenericCommand {
 	public class GenerateUIDValue implements Command<String> {
 		
 		@Override
-		public String valueGenerator(String max, String min) {
+		public String valueGenerator(Object... args) {
 			return UUID.randomUUID().toString();
 		}
 	}
@@ -46,7 +50,9 @@ public class GenericCommand {
 	public class GenerateDateTimeValue implements Command<String> {
 
 		@Override
-		public String valueGenerator(String max, String min) {
+		public String valueGenerator(Object... args) {
+			String min = (String) args[0];
+			String max = (String) args[1];
 			if((max=="" || max == null) && (min == "" || min == null)){
 				
 				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
@@ -91,16 +97,16 @@ public class GenericCommand {
 			commands.put(name, command);
 		}
 		
-		public Object executeCommand(String name,Object max,Object min) {
+		public Object executeCommand(String name,Object... args) {
 			if (commands.containsKey(name.toLowerCase())) {
-				return commands.get(name.toLowerCase()).valueGenerator(max,min);
+				return commands.get(name.toLowerCase()).valueGenerator(args);
 			}
 			return null;
 		}
 
 		/* Factory pattern */
 		public void init() {
-			CommandFactory cf = new CommandFactory();
+			
 			this.addCommand("integer",new GenerateIntValue());
 			this.addCommand("float",new GenerateFloatValue());
 			this.addCommand("uid", new GenerateUIDValue());

@@ -22,8 +22,8 @@ public class GenericTypeMap {
 		return genericTypeMap;
 	}
 	
-	protected Object getValue(String type,Object max,Object min){
-		return commandMap.getCommand().executeCommand(type, max, min);
+	protected Object getValue(String type,Object... args){
+		return commandMap.getCommand().executeCommand(type, args);
 	}
 	protected String getType(String key){
 		return ClassMap.get(key);

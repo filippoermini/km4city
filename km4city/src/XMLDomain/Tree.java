@@ -165,12 +165,14 @@ public class Tree {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "properties"
+        "properties",
+        "queryInfo"
     })
     public static class Class {
 
         @XmlElement(required = true)
         protected Tree.Class.Properties properties;
+        protected Tree.Class.QueryInfo queryInfo;
         @XmlAttribute(name = "type")
         @XmlSchemaType(name = "anyURI")
         protected String type;
@@ -192,7 +194,14 @@ public class Tree {
         public Tree.Class.Properties getProperties() {
             return properties;
         }
-
+        
+        public Tree.Class.QueryInfo getQueryInfo(){
+        	
+        	return queryInfo==null?new QueryInfo():queryInfo;
+        }
+        public void setQueryInfo(Tree.Class.QueryInfo queryInfo){
+        	this.queryInfo = queryInfo;
+        }
         /**
          * Imposta il valore della proprietà properties.
          * 
@@ -202,7 +211,7 @@ public class Tree {
          *     
          */
         public void setProperties(Tree.Class.Properties value) {
-            this.properties = value;
+        	this.properties = value;
         }
 
         /**
@@ -335,6 +344,36 @@ public class Tree {
          * 
          * 
          */
+       
+        
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "query",
+            "server"
+        })
+        public static class QueryInfo{
+        	
+        	protected String query;
+        	protected String server;
+        	
+        	public void setQuery(String query){
+        		this.query = query;
+        	}
+        	
+        	public String getQuery(){
+        		return query;
+        	}
+        	
+        	public void setServer(String server){
+        		this.server = server;
+        	}
+        	
+        	public String getServer(){
+        		return server;
+        	}
+        	
+        	
+        }
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
             "prop"
@@ -401,7 +440,10 @@ public class Tree {
                 "type",
                 "maxValue",
                 "minValue",
-                "uri"
+                "uri",
+                "valueExpression",
+                "hourValue",
+                "range"
             })
             public static class Prop {
 
@@ -414,8 +456,23 @@ public class Tree {
                 @XmlAttribute(name = "key")
                 @XmlSchemaType(name = "anyURI")
                 protected String key;
+                protected String valueExpression;
+                protected String hourValue;
+                protected String range;
 
-                /**
+                public String getHourValue() {
+					return hourValue;
+				}
+				public void setHourValue(String hourValue) {
+					this.hourValue = hourValue;
+				}
+				public String getRange() {
+					return range;
+				}
+				public void setRange(String range) {
+					this.range = range;
+				}
+				/**
                  * Recupera il valore della proprietà type.
                  * 
                  * @return
@@ -423,6 +480,12 @@ public class Tree {
                  *     {@link String }
                  *     
                  */
+                public String getValueExpression(){
+                	return valueExpression;
+                }
+                public void setValueExpression(String valueExpression){
+                	this.valueExpression = valueExpression;
+                }
                 public String getType() {
                     return type;
                 }
