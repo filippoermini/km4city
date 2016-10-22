@@ -28,8 +28,7 @@
             </prop>
             <prop key="http://www.disit.org/km4city/schema#vehicleFlow">
                 <type>Float</type>
-                <maxValue>10</maxValue>
-                <minValue>1</minValue>
+                <valueExpression>$concentration * $averageSpeed </valueExpression>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#concentration">

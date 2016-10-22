@@ -3,7 +3,14 @@ package km4city.Application;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Iterator;
-import java.util.stream.Collectors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+import org.apache.log4j.Logger;
 
 import GenericClass.GenericAttribute;
 import GenericClass.GenericObject;
@@ -12,64 +19,16 @@ import XMLDomain.Tree.Class;
 
 public class TripleGenerator {
 
-	public class TripleObject{
-		
-		private String type; 
-		private ArrayList<GenericObject> tripleObject;
-		public TripleObject(String type){
-			this.tripleObject = new ArrayList<>();
-			this.type = type;
-		}
-		public TripleObject clone(){
-			return new TripleObject(type);
-		}
-		public void add(GenericObject obj){
-			this.tripleObject.add(obj);
-		}
-		public ArrayList<GenericObject> getTripleObject(){
-			return this.tripleObject;
-		}
-		public String ToRDF(){
-			String triple = "";
-			Formatter formatter = new Formatter();
-			for(GenericObject go:tripleObject){
-				//per ogni classe genero il type
-				triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
-				for(GenericAttribute ga:go.getAttributeList()){
-					//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
-					String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri()+"/"+ga.getAttribute().gettAttributeValue()+">":ga.getAttribute().gettAttributeValue()+(ga.getUri()!=null?"^^<"+ga.getUri()+">":"");
-					triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+ga.getAttributeKey()+"> "+object+" .\n";
-				}
-			}
-			formatter.close();
-			return triple;
-		}
-	}
-	public class TripleList{
-		
-		private ArrayList<TripleObject> tripleList;
-		
-		public TripleList(){
-			this.tripleList = new ArrayList<>();
-		}
-		public void add(TripleObject obj){
-			TripleObject objClone = obj.clone();
-			this.tripleList.add(objClone);
-		}
-		
-		public Iterator<TripleObject> getIterator(){
-			return this.getIterator();
-		}
-	}
 	private String query;
-	private TripleObject tripleObject;
-	private ArrayList<GenericAttribute> boundAttribute;
+	private TripleContainer tripleContainer;
 	private TripleList tripleList;
+	private ArrayList<GenericAttribute> boundAttribute;
+	final static Logger logger = Logger.getLogger(TripleGenerator.class);
 	
 	
 	public TripleGenerator(String query,Tree tree){
 		this.query = query;
-		this.tripleObject = new TripleObject(tree.getTypeId());
+		this.tripleContainer = new TripleContainer(tree.getTypeId());
 		this.boundAttribute = new ArrayList<>();
 		tripleList = new TripleList();
 		Iterator<Class> it = tree.getClazz().iterator();
@@ -77,14 +36,14 @@ public class TripleGenerator {
 		while(it.hasNext()){
 			c = it.next();
 			GenericObject g = new GenericObject(c);
-			tripleObject.add(g);
+			tripleContainer.add(g);
 		}
 	}
 	
 	private void setID(String id){
-		for(int i=0;i<tripleObject.getTripleObject().size();i++)
+		for(int i=0;i<tripleContainer.getTripleObject().size();i++)
 		{
-			GenericObject g = tripleObject.getTripleObject().get(i);
+			GenericObject g = tripleContainer.getTripleObject().get(i);
 			if (g.isRoot()){
 				g.setID(id);
 			}	
@@ -92,7 +51,7 @@ public class TripleGenerator {
 	}
 	
 	private GenericObject getObjectClassByName(String name){
-		for(GenericObject g:tripleObject.getTripleObject()){
+		for(GenericObject g:tripleContainer.getTripleObject()){
 			if(g.getClassName().contains(name)){
 				return g;
 			}
@@ -105,7 +64,7 @@ public class TripleGenerator {
 		//setto il valore id della classe root con il risultato della query
 		this.setID(resId);
 		//ciclo su tutti gli attributi e genero un valore
-		for(GenericObject g:tripleObject.getTripleObject()){ //estraggo le classi
+		for(GenericObject g:tripleContainer.getTripleObject()){ //estraggo le classi
 			if(!g.isProcessed()){//la classe non è ancora stata processata
 				_process(g);
 			}
@@ -142,10 +101,50 @@ public class TripleGenerator {
 						//System.out.println(a.toString());
 					}
 				}
-				//procedura di smaltimento della lista boundAttribute
+				
 			}
 		}
+		//procedura di smaltimento della lista boundAttribute
 		g.setProcessed();
+		int index = 0;
+		GenericAttribute ga;
+		while(!boundAttribute.isEmpty()){
+			ga = boundAttribute.get(index);
+			try {
+				if(execute(ga)){
+					boundAttribute.remove(ga);
+					index = index==0?0:index - 1;
+				}
+			} catch (ScriptException e) {
+				logger.error("Evaluate expression "+ga.getValueExpression()+" error");
+			}
+			index++;
+		}
+		
+	}
+	
+	private boolean execute(GenericAttribute ga) throws ScriptException{
+		String regex = "[$]+[a-zA-Z0-9]*\\s";
+		String valueExpression = ga.getValueExpression();
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(valueExpression);
+
+		while (matcher.find()){
+			String var = matcher.group().replace(" ", "");
+			String value = this.tripleContainer.getValueByAttributeName(var.replace("$", ""));
+			if(value != null ){
+				valueExpression = valueExpression.replace(var, value);
+			}
+			else{
+				return false;
+			}
+			
+		}
+		ScriptEngineManager manager = new ScriptEngineManager();
+		ScriptEngine engine = manager.getEngineByName("js");
+		String result = engine.eval(valueExpression).toString();
+		ga.getAttribute().setAttributeValue(result);
+		return true;
 	}
 	
 	public String tripleRDF(){
@@ -155,8 +154,8 @@ public class TripleGenerator {
 		//ArrayList;
 		for(String el: queryRes){
 			generateValue(el); //genero i valori per ogni record della query
-			this.tripleList.add(this.tripleObject); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
-			triple += this.tripleObject.ToRDF()+"\n";
+			this.tripleList.add(this.tripleContainer); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
+			triple += this.tripleContainer.ToRDF()+"\n";
 		}
 		return triple;
 	}

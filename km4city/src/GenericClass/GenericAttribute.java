@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
+import GenericClass.GenericAttribute.Attribute;
 import XMLDomain.Tree.Class.Properties.Prop;
 
 public class GenericAttribute {
@@ -167,6 +168,10 @@ public class GenericAttribute {
 		return this.externalClassObject;
 	}
 	public Attribute<?> getAttribute() {
+		if(attribute == null) {
+			Class clazz = String.class;
+			attribute = new Attribute<>(clazz);
+		}
 		return attribute;
 	}
 

@@ -109,7 +109,7 @@ public class GenericObject {
 	
 	public GenericAttribute getAttributeByName(String name){
 		for(GenericAttribute a: attributeList){
-			if(a.getAttributeName().equals(name))
+			if(a.getAttributeName().contains(name.replaceAll("\\s", "")))
 				return a;
 		}
 		return null;
