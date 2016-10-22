@@ -14,13 +14,14 @@ public class TripleGenerator {
 
 	public class TripleObject{
 		
-		private String type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"; 
+		private String type; 
 		private ArrayList<GenericObject> tripleObject;
-		public TripleObject(){
+		public TripleObject(String type){
 			this.tripleObject = new ArrayList<>();
+			this.type = type;
 		}
 		public TripleObject clone(){
-			return new TripleObject();
+			return new TripleObject(type);
 		}
 		public void add(GenericObject obj){
 			this.tripleObject.add(obj);
@@ -68,7 +69,7 @@ public class TripleGenerator {
 	
 	public TripleGenerator(String query,Tree tree){
 		this.query = query;
-		this.tripleObject = new TripleObject();
+		this.tripleObject = new TripleObject(tree.getTypeId());
 		this.boundAttribute = new ArrayList<>();
 		tripleList = new TripleList();
 		Iterator<Class> it = tree.getClazz().iterator();

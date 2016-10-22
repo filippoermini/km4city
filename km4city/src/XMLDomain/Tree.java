@@ -83,10 +83,26 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "tree")
 public class Tree {
 
+	@XmlAttribute(name = "typeId")
+	protected String typeId;
+	@XmlAttribute(name = "fileName")
+	protected String fileName;
     @XmlElement(name = "class")
     protected List<Tree.Class> clazz;
 
-    /**
+    public String getTypeId(){
+    	return this.typeId;
+    }
+    public void setTypeId(String type){
+    	this.typeId = type;
+    }
+    public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	/**
      * Gets the value of the clazz property.
      * 
      * <p>

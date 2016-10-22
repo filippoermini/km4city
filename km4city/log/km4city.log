@@ -278,3 +278,52 @@
 2016-10-22 13:53:00 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
 2016-10-22 14:05:13 [INFO ] Main - Start computation
 2016-10-22 14:05:14 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:24:04 [INFO ] Main - Start computation
+2016-10-22 14:24:05 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:26:34 [INFO ] Main - Start computation
+2016-10-22 14:26:35 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:27:13 [INFO ] Main - Start computation
+2016-10-22 14:27:14 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:27:42 [INFO ] Main - Start computation
+2016-10-22 14:27:43 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:54:54 [INFO ] Main - Start computation
+2016-10-22 14:54:54 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:55:38 [INFO ] Main - Start computation
+2016-10-22 14:55:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:56:04 [INFO ] Main - Start computation
+2016-10-22 14:56:04 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:56:44 [INFO ] Main - Start computation
+2016-10-22 14:56:45 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:56:56 [INFO ] Main - Start computation
+2016-10-22 14:56:57 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:58:10 [INFO ] Main - Start computation
+2016-10-22 14:58:11 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:58:11 [INFO ] Main - File 2016-10/sensori_FIRENZE.n3 creato
+2016-10-22 14:58:23 [INFO ] Main - Start computation
+2016-10-22 14:58:24 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:58:24 [INFO ] Main - File 2016_10/sensori_FIRENZE.n3 creato
+2016-10-22 14:58:54 [INFO ] Main - Start computation
+2016-10-22 14:58:55 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 14:58:55 [ERROR] Main - Creating file .n3 error 2016_10/22/14/5855/sensori_FIRENZE.n3 (No such file or directory)
+2016-10-22 14:58:55 [INFO ] Main - File 2016_10/22/14/5855/sensori_FIRENZE.n3 creato
+2016-10-22 15:00:03 [INFO ] Main - Start computation
+2016-10-22 15:00:03 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:00:04 [ERROR] Main - Creating file .n3 error 2016_10/22/15/0004/sensori_FIRENZE.n3 (No such file or directory)
+2016-10-22 15:00:16 [INFO ] Main - Start computation
+2016-10-22 15:00:17 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:01:41 [INFO ] Main - Start computation
+2016-10-22 15:01:42 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:06:02 [INFO ] Main - Start computation
+2016-10-22 15:06:03 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:06:03 [ERROR] Main - Creating file .n3 error 2016_10/22/15/0603/sensori_FIRENZE.n3 (No such file or directory)
+2016-10-22 15:07:16 [INFO ] Main - Start computation
+2016-10-22 15:07:17 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:07:17 [INFO ] Main - File 2016_10/22/15/0717/sensori_FIRENZE.n3 creato
+2016-10-22 15:09:32 [INFO ] Main - Start computation
+2016-10-22 15:09:33 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:09:33 [INFO ] Main - Directory created: 2016_10/22/15/0933
+2016-10-22 15:09:33 [INFO ] Main - File 2016_10/22/15/0933/sensori_FIRENZE.n3 creato
+2016-10-22 15:23:55 [INFO ] Main - Start computation
+2016-10-22 15:23:55 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-22 15:23:56 [INFO ] Main - Directory created: ./2016_10/22/15/2356
+2016-10-22 15:23:56 [INFO ] Main - File ./2016_10/22/15/2356/sensori_FIRENZE.n3 creato

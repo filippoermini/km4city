@@ -1,3 +1,11 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 import org.apache.log4j.Logger;
 
 import XMLDomain.Tree;
@@ -14,8 +22,42 @@ public class Main{
 		Tree tree = xml.DeserializeFromXML(args[0]);
 		
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
-		System.out.println(tripleGen.tripleRDF());
+		String triple = tripleGen.tripleRDF();
 		
 		
+		//generazione file e cartelle secondo lo scema predefinito
+		String directoryPath = args[1];
+		String path = directoryPath+DateTimeFormatter.ofPattern("yyyy_MM/dd/HH/mmss").withZone(ZoneOffset.systemDefault()).format(Instant.now()).toString();
+		if(mkdir(path)){
+			PrintWriter out = null;
+			try {
+				out = new PrintWriter(path+"/"+tree.getFileName());
+				out.print(triple);
+				out.close();
+				logger.info("File "+path+"/"+tree.getFileName()+" creato");
+			} catch (FileNotFoundException e) {
+				logger.error("Creating file .n3 error "+e.getMessage());
+			}
+		}
+		
+	}
+	
+	private static boolean mkdir(String dirPath){
+		
+		File theDir = new File("./"+dirPath);
+		if (!theDir.exists()) {
+		    boolean result = false;
+		    try{
+		        theDir.mkdirs();
+		        result = true;
+		    } 
+		    catch(SecurityException se){
+		    	logger.error("Directory not created: "+dirPath);
+		    }        
+		    if(result) {    
+		        logger.info("Directory created: "+dirPath);
+		    }
+		}
+		return true;
 	}
 }
