@@ -14,7 +14,7 @@ public class Main{
 		Tree tree = xml.DeserializeFromXML(args[0]);
 		
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
-		tripleGen.generateValue();
+		System.out.println(tripleGen.tripleRDF());
 		
 		
 	}

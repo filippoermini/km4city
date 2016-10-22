@@ -1,6 +1,7 @@
 package km4city.Application;
 
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.Iterator;
 import java.util.stream.Collectors;
 
@@ -11,14 +12,65 @@ import XMLDomain.Tree.Class;
 
 public class TripleGenerator {
 
+	public class TripleObject{
+		
+		private String type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"; 
+		private ArrayList<GenericObject> tripleObject;
+		public TripleObject(){
+			this.tripleObject = new ArrayList<>();
+		}
+		public TripleObject clone(){
+			return new TripleObject();
+		}
+		public void add(GenericObject obj){
+			this.tripleObject.add(obj);
+		}
+		public ArrayList<GenericObject> getTripleObject(){
+			return this.tripleObject;
+		}
+		public String ToRDF(){
+			String triple = "";
+			Formatter formatter = new Formatter();
+			for(GenericObject go:tripleObject){
+				//per ogni classe genero il type
+				triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
+				for(GenericAttribute ga:go.getAttributeList()){
+					//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
+					String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri()+"/"+ga.getAttribute().gettAttributeValue()+">":ga.getAttribute().gettAttributeValue()+(ga.getUri()!=null?"^^<"+ga.getUri()+">":"");
+					triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+ga.getAttributeKey()+"> "+object+" .\n";
+				}
+			}
+			formatter.close();
+			return triple;
+		}
+	}
+	public class TripleList{
+		
+		private ArrayList<TripleObject> tripleList;
+		
+		public TripleList(){
+			this.tripleList = new ArrayList<>();
+		}
+		public void add(TripleObject obj){
+			TripleObject objClone = obj.clone();
+			this.tripleList.add(objClone);
+		}
+		
+		public Iterator<TripleObject> getIterator(){
+			return this.getIterator();
+		}
+	}
 	private String query;
-	private ArrayList<GenericObject> tripleObject;
+	private TripleObject tripleObject;
 	private ArrayList<GenericAttribute> boundAttribute;
+	private TripleList tripleList;
+	
 	
 	public TripleGenerator(String query,Tree tree){
 		this.query = query;
-		this.tripleObject = new ArrayList<>();
+		this.tripleObject = new TripleObject();
 		this.boundAttribute = new ArrayList<>();
+		tripleList = new TripleList();
 		Iterator<Class> it = tree.getClazz().iterator();
 		Tree.Class c;
 		while(it.hasNext()){
@@ -26,13 +78,12 @@ public class TripleGenerator {
 			GenericObject g = new GenericObject(c);
 			tripleObject.add(g);
 		}
-		//System.out.println(tripleObject.stream().map(Object::toString).collect(Collectors.joining("\n")));
 	}
 	
 	private void setID(String id){
-		for(int i=0;i<tripleObject.size();i++)
+		for(int i=0;i<tripleObject.getTripleObject().size();i++)
 		{
-			GenericObject g = tripleObject.get(i);
+			GenericObject g = tripleObject.getTripleObject().get(i);
 			if (g.isRoot()){
 				g.setID(id);
 			}	
@@ -40,7 +91,7 @@ public class TripleGenerator {
 	}
 	
 	private GenericObject getObjectClassByName(String name){
-		for(GenericObject g:tripleObject){
+		for(GenericObject g:tripleObject.getTripleObject()){
 			if(g.getClassName().contains(name)){
 				return g;
 			}
@@ -49,28 +100,23 @@ public class TripleGenerator {
 	}
 	
 	//questa classe si occupa di generare per ogni attributo un valore del tipo e nel range da esso specificato
-	public void generateValue(){
-		//per ogni record della query vado a generare un set di triple definito dal Tree e dai genericObject istanziati
-		String[] res = new String[]{"12345"};//,"12346","12347","12348"}; //risultati della query
-		for(String el: res){
-			//setto il valore id della classe root con il risultato della query
-			this.setID(el);
-			//ciclo su tutti gli attributi e genero un valore
-			for(GenericObject g:tripleObject){ //estraggo le classi
-				if(!g.isProcessed()){//la classe non è ancora stata processata
-					_process(g);
-				}
+	private void generateValue(String resId){
+		//setto il valore id della classe root con il risultato della query
+		this.setID(resId);
+		//ciclo su tutti gli attributi e genero un valore
+		for(GenericObject g:tripleObject.getTripleObject()){ //estraggo le classi
+			if(!g.isProcessed()){//la classe non è ancora stata processata
+				_process(g);
 			}
 		}
-		System.out.println(tripleObject.stream().map(Object::toString).collect(Collectors.joining("\n")));
 	}
 	
-	public void processClass(String ClassName){
+	private void processClass(String ClassName){
 		GenericObject g = getObjectClassByName(ClassName);
 		_process(g);
 	}
 
-	public void processClass(GenericObject g){
+	private void processClass(GenericObject g){
 		_process(g);
 	}
 	
@@ -87,8 +133,7 @@ public class TripleGenerator {
 							if(refClass.getIdentifier().getAttribute().getAttributeValue()==null)
 								_process(refClass); //chiamata ricorsiva
 						} // alla fine di questa procedura la classe refClass contiene tutti i valori (escluso quelli che hanno delle dipendenze) compreso il valore dell'attributo identifier
-						a.setAttribute(refClass.getIdentifier().getAttribute()); //l'attributo identifier della refClass è già stato valorizzato e lo posso passare al mio attributo a
-						System.out.println(a.toString());
+						a.setExternalClassObject(refClass); //l'attributo identifier della refClass è già stato valorizzato e lo posso passare al mio attributo a
 					}else{ // l'attributo è un campo semplice 
 						
 						//calcolo del valore per la simulazione in base ai parametri  
@@ -100,5 +145,18 @@ public class TripleGenerator {
 			}
 		}
 		g.setProcessed();
+	}
+	
+	public String tripleRDF(){
+		String triple = "";
+		//eseguo la query e ciclo sui risultati 
+		String[] queryRes = new String[]{"12345"};
+		//ArrayList;
+		for(String el: queryRes){
+			generateValue(el); //genero i valori per ogni record della query
+			this.tripleList.add(this.tripleObject); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
+			triple += this.tripleObject.ToRDF()+"\n";
+		}
+		return triple;
 	}
 }

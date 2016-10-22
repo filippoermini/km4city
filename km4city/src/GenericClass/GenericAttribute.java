@@ -59,6 +59,10 @@ public class GenericAttribute {
 			return this.attributeValue;
 		}
 		
+		public String gettAttributeValue(){
+			return this.attributeValue.toString();
+		}
+		
 		public void setValue(String type,Object max, Object min){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, max, min);
 		}
@@ -83,11 +87,13 @@ public class GenericAttribute {
 	private String name;
 	private String[] hourValue;
 	private String rangre;
+	private GenericObject externalClassObject;
 	
 	
 	
 	public GenericAttribute(Prop prop){
 		
+		this.externalClassObject = null;
 		this.name = (prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
 		this.attributeKey =  prop.getKey();
 		this.valueExpression = prop.getValueExpression();
@@ -136,6 +142,10 @@ public class GenericAttribute {
 	public String getAttributeKey() {
 		return attributeKey;
 	}
+	
+	public String getValue(){
+		return attribute.toString();
+	}
 
 	public String getValueExpression() {
 		return valueExpression;
@@ -147,6 +157,14 @@ public class GenericAttribute {
 
 	public void setAttribute(Attribute<?> att){
 		this.attribute = att;
+	}
+	public void setExternalClassObject(GenericObject go){
+		this.externalClassObject = go;
+		this.attribute = go.getIdentifier().getAttribute();
+	}
+	
+	public GenericObject getExternalClassObject(){
+		return this.externalClassObject;
 	}
 	public Attribute<?> getAttribute() {
 		return attribute;

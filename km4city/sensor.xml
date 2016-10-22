@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tree>
-    <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true">
+    <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>id</type>
@@ -11,7 +11,7 @@
             </prop>
         </properties>
     </class>
-    <class type="http://www.disit.org/km4city/schema#Observation" name="Observation" isRoot="false">
+    <class type="http://www.disit.org/km4city/schema#Observation" name="Observation" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>UID</type>
@@ -48,7 +48,7 @@
             </prop>
         </properties>
     </class>
-    <class type="http://www.w3.org/2006/time#Instant" isRoot="false" name="Instant">
+    <class type="http://www.w3.org/2006/time#Instant" isRoot="false" name="Instant" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>DateTime</type>
