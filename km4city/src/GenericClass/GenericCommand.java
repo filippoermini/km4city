@@ -1,6 +1,7 @@
 package GenericClass;
 
-import java.sql.Date;
+import java.util.Calendar;
+import java.util.Date;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
@@ -77,6 +78,38 @@ public class GenericCommand {
 		
 	}
 	
+	public class GenerateHourDependentValue implements Command<String>{
+
+		@Override
+		public String valueGenerator(Object... args) {
+			//questa tipologia di dato varia in base al valore dell'ora in cui viene generato il valore
+			//in base al valore di riferimento definito per ogni ora si determina il valore della simulazione dato un coefficiente di scarto
+			// il coefficiente di scarto è un valore intero e serve a limiare il range di variazione del valore orario.
+			String[] hourValue = ((String) args[0]).split(";");
+			Calendar rightNow = Calendar.getInstance();
+			int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+			Random rand = new Random();
+			if(((String) args[0]).contains(",")){
+				//i valori orari e il range sono float
+				float refValue = Float.parseFloat(hourValue[hour]);
+				float range = (float) args[1];
+				float min = refValue - range;
+				float max = refValue + range;
+			    float randomNum = rand.nextFloat() * (max - min) + min;
+			    return randomNum+"";
+			}else{
+				//i valori orari e il range sono int
+				int refValue = Integer.parseInt(hourValue[hour]);
+				int range = (int) args[1];
+				int min = refValue - range;
+				int max = refValue + range;
+			    int randomNum = rand.nextInt() * (max - min) + min;
+			    return randomNum+"";
+			}
+		}
+		
+	}
+	
 	private CommandFactory genericCommand;
 	public GenericCommand(){
 		genericCommand = new CommandFactory();
@@ -111,7 +144,7 @@ public class GenericCommand {
 			this.addCommand("float",new GenerateFloatValue());
 			this.addCommand("uid", new GenerateUIDValue());
 			this.addCommand("datetime", new GenerateDateTimeValue());
-			
+			this.addCommand("hourdependent", new GenerateHourDependentValue());
 		}
 	}
 

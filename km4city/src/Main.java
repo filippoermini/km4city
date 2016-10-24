@@ -32,6 +32,7 @@ public class Main{
 		String path = directoryPath+DateTimeFormatter.ofPattern("yyyy_MM/dd/HH/mmss").withZone(ZoneOffset.systemDefault()).format(Instant.now()).toString();
 		if(mkdir(path)){
 			PrintWriter out = null;
+			PrintWriter end = null;
 			try {
 				out = new PrintWriter(path+"/"+tree.getFileName());
 				out.print(triple);
@@ -39,6 +40,14 @@ public class Main{
 				logger.info("File "+path+"/"+tree.getFileName()+" creato");
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file .n3 error "+e.getMessage());
+			}
+			try {
+				end = new PrintWriter(path+"/"+"end.txt");
+				end.print("end triplification");
+				end.close();
+				logger.info("File "+path+"/end.txt creato");
+			} catch (FileNotFoundException e) {
+				logger.error("Creating file end.txt error "+e.getMessage());
 			}
 		}
 		

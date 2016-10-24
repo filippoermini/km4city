@@ -618,3 +618,27 @@
 2016-10-22 19:47:15 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
 2016-10-22 19:47:16 [INFO ] Main - Directory created: ./2016_10/22/19/4716
 2016-10-22 19:47:16 [INFO ] Main - File ./2016_10/22/19/4716/sensori_FIRENZE.n3 creato
+2016-10-23 18:12:20 [INFO ] Main - Start computation
+2016-10-23 18:12:20 [INFO ] Main - Start computation
+2016-10-23 18:12:20 [INFO ] Main - Start computation
+2016-10-23 18:12:22 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-23 18:12:22 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-23 18:12:22 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-23 18:12:22 [INFO ] Main - Start computation
+2016-10-23 18:12:23 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-23 18:12:24 [INFO ] Main - Directory created: ./2016_10/23/18/1224
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/sensori_FIRENZE.n3 creato
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/sensori_FIRENZE.n3 creato
+2016-10-23 18:12:24 [INFO ] Main - Directory created: ./2016_10/23/18/1224
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/end.txt creato
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/end.txt creato
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/sensori_FIRENZE.n3 creato
+2016-10-23 18:12:24 [INFO ] Main - File ./2016_10/23/18/1224/end.txt creato
+2016-10-23 18:12:25 [INFO ] Main - Directory created: ./2016_10/23/18/1225
+2016-10-23 18:12:25 [INFO ] Main - File ./2016_10/23/18/1225/sensori_FIRENZE.n3 creato
+2016-10-23 18:12:25 [INFO ] Main - File ./2016_10/23/18/1225/end.txt creato
+2016-10-23 18:17:37 [INFO ] Main - Start computation
+2016-10-23 18:17:38 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-23 18:17:39 [INFO ] Main - Directory created: ./2016_10/23/18/1739
+2016-10-23 18:17:39 [INFO ] Main - File ./2016_10/23/18/1739/sensori_FIRENZE.n3 creato
+2016-10-23 18:17:39 [INFO ] Main - File ./2016_10/23/18/1739/end.txt creato

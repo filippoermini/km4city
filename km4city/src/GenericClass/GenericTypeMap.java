@@ -12,6 +12,7 @@ public class GenericTypeMap {
 		put("datetime","java.lang.String");
 		put("uid","java.lang.String");
 		put("id","java.lang.Integer");
+		put("hourdependent","java.lang.String");
 	}};
 	
 	private GenericTypeMap(){
