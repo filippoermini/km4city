@@ -8,6 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 import org.apache.log4j.Logger;
 
+import Application.RDFconnector;
 import Application.TripleGenerator;
 import Application.XMLParsing;
 import XMLDomain.Tree; 
@@ -20,6 +21,7 @@ public class Main{
 	
 	public static void main(String[] args){
 		
+		RDFconnector rdf = new RDFconnector();
 		logger.info("Start computation");
 		XMLParsing<Tree> xml = new XMLParsing(Tree.class);
 		Tree tree = xml.DeserializeFromXML(args[0]);
@@ -27,7 +29,7 @@ public class Main{
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
 		String triple = tripleGen.tripleRDF(true);
 		String jsonState = tripleGen.toJson();
-		System.out.println(jsonState);
+		
 		
 		//generazione file e cartelle secondo lo scema predefinito
 		String directoryPath = args[1];
@@ -35,6 +37,7 @@ public class Main{
 		if(mkdir(path)){
 			PrintWriter out = null;
 			PrintWriter end = null;
+			PrintWriter json = null;
 			try {
 				out = new PrintWriter(path+"/"+tree.getFileName());
 				out.print(triple);
@@ -50,6 +53,15 @@ public class Main{
 				logger.info("File "+path+"/end.txt creato");
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file end.txt error "+e.getMessage());
+			}
+			try {
+				String jsonFileName = tree.getFileName().substring(0, tree.getFileName().length()-4)+".json";
+				json = new PrintWriter(path+"/"+jsonFileName);
+				json.print(jsonState);
+				json.close();
+				logger.info("File "+path+"/"+jsonFileName+" creato");
+			} catch (FileNotFoundException e) {
+				logger.error("Creating file .n3 error "+e.getMessage());
 			}
 		}
 		

@@ -12,6 +12,7 @@ import javax.script.ScriptException;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class;
@@ -171,7 +172,7 @@ public class TripleGenerator {
 	}
 	
 	public String toJson(){
-		Gson g = new Gson();
+		Gson g = new GsonBuilder().setPrettyPrinting().create();;
 		return g.toJson(statesList);
 	}
 }
