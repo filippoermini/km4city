@@ -9,8 +9,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager; 
+import org.apache.log4j.Logger;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -21,7 +20,7 @@ import com.thoughtworks.xstream.XStream;
 public class XMLParsing<T> {
 	
 	final Class<T> typeParameterClass;
-	final static Logger logger = LogManager.getLogger(XMLParsing.class);
+	final static Logger logger = Logger.getLogger(XMLParsing.class);
 	
 	public XMLParsing(Class<T> typeParameterClass){
 		this.typeParameterClass = typeParameterClass;

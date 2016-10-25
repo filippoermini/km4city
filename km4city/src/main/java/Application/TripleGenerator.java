@@ -1,7 +1,6 @@
 package Application;
 
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -10,8 +9,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager; 
+import org.apache.log4j.Logger;
 
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class;
@@ -26,7 +24,7 @@ public class TripleGenerator {
 	private TripleList tripleList;
 	private ArrayList<GenericAttribute> boundAttribute;
 	private States statesList;
-	final static Logger logger = LogManager.getLogger(TripleGenerator.class);
+	final static Logger logger = Logger.getLogger(TripleGenerator.class);
 	
 	
 	public TripleGenerator(String query,Tree tree){

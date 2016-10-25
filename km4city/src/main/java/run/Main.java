@@ -7,8 +7,7 @@ import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import Application.TripleGenerator;
 import Application.XMLParsing;
@@ -18,7 +17,7 @@ import XMLDomain.Tree;
 
 public class Main{
 	
-	final static Logger logger = LogManager.getLogger(Main.class.getName());
+	final static Logger logger = Logger.getLogger(Main.class.getName());
 	
 	public static void main(String[] args){
 		
