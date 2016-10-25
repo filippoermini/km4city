@@ -1,4 +1,4 @@
-package GenericClass;
+package genericClass;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,9 +11,8 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.UUID;
 
-
-import GenericClass.GenericAttribute.Attribute;
-import GenericClass.GenericCommand.GenerateFloatValue;
+import genericClass.GenericAttribute.Attribute;
+import genericClass.GenericCommand.GenerateFloatValue;
 
 
 public class GenericCommand {

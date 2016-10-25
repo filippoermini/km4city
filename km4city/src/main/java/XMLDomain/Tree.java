@@ -83,6 +83,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "tree")
 public class Tree {
 
+	@XmlAttribute(name = "stateful")
+	protected boolean statefull = false;
 	@XmlAttribute(name = "typeId")
 	protected String typeId;
 	@XmlAttribute(name = "fileName")
@@ -90,7 +92,14 @@ public class Tree {
     @XmlElement(name = "class")
     protected List<Tree.Class> clazz;
 
-    public String getTypeId(){
+    
+    public boolean isStatefull() {
+		return statefull;
+	}
+	public void setStatefull(boolean statefull) {
+		this.statefull = statefull;
+	}
+	public String getTypeId(){
     	return this.typeId;
     }
     public void setTypeId(String type){

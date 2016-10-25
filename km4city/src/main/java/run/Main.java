@@ -1,30 +1,33 @@
+package run;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import XMLDomain.Tree;
-import km4city.Application.TripleGenerator;
-import km4city.Application.XMLParsing;
+import Application.TripleGenerator;
+import Application.XMLParsing;
+import XMLDomain.Tree; 
+
+
 
 public class Main{
 	
-	final static Logger logger = Logger.getLogger(Main.class);
+	final static Logger logger = LogManager.getLogger(Main.class.getName());
+	
 	public static void main(String[] args){
 		
 		logger.info("Start computation");
-		XMLParsing<Tree> xml = new XMLParsing<>(Tree.class);
+		XMLParsing<Tree> xml = new XMLParsing(Tree.class);
 		Tree tree = xml.DeserializeFromXML(args[0]);
 		
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
-		String triple = tripleGen.tripleRDF();
+		String triple = tripleGen.tripleRDF(tree.isStatefull());
 		
 		
 		//generazione file e cartelle secondo lo scema predefinito

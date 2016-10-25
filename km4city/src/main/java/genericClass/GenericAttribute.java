@@ -1,4 +1,5 @@
-package GenericClass;
+package genericClass;
+
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -7,10 +8,11 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager; 
 
-import GenericClass.GenericAttribute.Attribute;
 import XMLDomain.Tree.Class.Properties.Prop;
+import genericClass.GenericAttribute.Attribute;
 
 public class GenericAttribute {
 
@@ -76,7 +78,7 @@ public class GenericAttribute {
 	}
 
 	final static GenericTypeMap genericTypeMap = GenericTypeMap.getInstance();
-	final static Logger logger = Logger.getLogger(GenericAttribute.class);
+	final static Logger logger = LogManager.getLogger(GenericAttribute.class);
 	private String valueExpression;
 	private String uri;
 	private Attribute<?> attribute;

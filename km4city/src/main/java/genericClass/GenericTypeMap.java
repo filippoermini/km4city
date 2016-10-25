@@ -1,4 +1,4 @@
-package GenericClass;
+package genericClass;
 
 import java.util.HashMap;
 

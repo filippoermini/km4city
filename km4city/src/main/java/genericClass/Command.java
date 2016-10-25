@@ -1,4 +1,4 @@
-package GenericClass;
+package genericClass;
 
 @FunctionalInterface
 public interface Command<T> {

@@ -1,4 +1,4 @@
-package km4city.Application;
+package Application;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +9,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager; 
 
 import com.thoughtworks.xstream.XStream;
 
@@ -20,7 +21,7 @@ import com.thoughtworks.xstream.XStream;
 public class XMLParsing<T> {
 	
 	final Class<T> typeParameterClass;
-	final static Logger logger = Logger.getLogger(XMLParsing.class);
+	final static Logger logger = LogManager.getLogger(XMLParsing.class);
 	
 	public XMLParsing(Class<T> typeParameterClass){
 		this.typeParameterClass = typeParameterClass;

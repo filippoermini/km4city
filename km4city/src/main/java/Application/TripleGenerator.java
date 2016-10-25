@@ -1,4 +1,4 @@
-package km4city.Application;
+package Application;
 
 import java.util.ArrayList;
 import java.util.Formatter;
@@ -10,12 +10,14 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager; 
 
-import GenericClass.GenericAttribute;
-import GenericClass.GenericObject;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class;
+import genericClass.GenericAttribute;
+import genericClass.GenericObject;
+import jsonDomain.States;
 
 public class TripleGenerator {
 
@@ -23,14 +25,17 @@ public class TripleGenerator {
 	private TripleContainer tripleContainer;
 	private TripleList tripleList;
 	private ArrayList<GenericAttribute> boundAttribute;
-	final static Logger logger = Logger.getLogger(TripleGenerator.class);
+	private States statesList;
+	final static Logger logger = LogManager.getLogger(TripleGenerator.class);
 	
 	
 	public TripleGenerator(String query,Tree tree){
+		
 		this.query = query;
 		this.tripleContainer = new TripleContainer(tree.getTypeId());
 		this.boundAttribute = new ArrayList<>();
 		tripleList = new TripleList();
+		statesList = new States();
 		Iterator<Class> it = tree.getClazz().iterator();
 		Tree.Class c;
 		while(it.hasNext()){
@@ -147,7 +152,8 @@ public class TripleGenerator {
 		return true;
 	}
 	
-	public String tripleRDF(){
+	public String tripleRDF(boolean stateful){
+		
 		String triple = "";
 		//eseguo la query e ciclo sui risultati 
 		String[] queryRes = new String[]{"12345"};
@@ -155,8 +161,16 @@ public class TripleGenerator {
 		for(String el: queryRes){
 			generateValue(el); //genero i valori per ogni record della query
 			this.tripleList.add(this.tripleContainer); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
-			triple += this.tripleContainer.ToRDF()+"\n";
+			this.tripleContainer.generateTriple();
+			triple += this.tripleContainer.getRDFTriple()+"\n";
+			if(stateful){
+				statesList.add(this.tripleContainer.getState());
+			}
 		}
 		return triple;
+	}
+	
+	public void toJson(){
+		
 	}
 }

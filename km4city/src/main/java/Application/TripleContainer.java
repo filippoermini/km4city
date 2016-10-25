@@ -1,16 +1,21 @@
-package km4city.Application;
+package Application;
 
 import java.util.ArrayList;
 import java.util.Formatter;
 
-import GenericClass.GenericAttribute;
-import GenericClass.GenericObject;
+import genericClass.GenericAttribute;
+import genericClass.GenericObject;
+import jsonDomain.Attribute;
+import jsonDomain.State;
+
 
 
 public class TripleContainer{
 	
 	private String type; 
 	private ArrayList<GenericObject> tripleObject;
+	private String tripleRDF;
+	private State state;
 	public TripleContainer(String type){
 		this.tripleObject = new ArrayList<>();
 		this.type = type;
@@ -24,21 +29,29 @@ public class TripleContainer{
 	public ArrayList<GenericObject> getTripleObject(){
 		return this.tripleObject;
 	}
-	public String ToRDF(){
-		String triple = "";
+	public void generateTriple(){
+		tripleRDF = "";
+		state = new State();
 		Formatter formatter = new Formatter();
 		for(GenericObject go:tripleObject){
 			//per ogni classe genero il type
-			triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
+			tripleRDF += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
+			state.add(new Attribute("id",go.getIdentifier().getAttribute().gettAttributeValue()));
 			for(GenericAttribute ga:go.getAttributeList()){
 				//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
 				String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri()+"/"+ga.getAttribute().gettAttributeValue()+">":ga.getAttribute().gettAttributeValue()+(ga.getUri()!=null?"^^<"+ga.getUri()+">":"");
-				triple += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+ga.getAttributeKey()+"> "+object+" .\n";
+				tripleRDF += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+ga.getAttributeKey()+"> "+object+" .\n";
+				state.add(new Attribute(ga.getAttributeName(),ga.getAttribute().gettAttributeValue()));
 			}
-		}
-		return triple;
+		}		
 	}
 	
+	public String getRDFTriple(){
+		return tripleRDF;
+	}
+	public State getState(){
+		return state;
+	}
 	public String getValueByAttributeName(String name){
 		GenericAttribute value = null;
 		for(GenericObject go:tripleObject){
