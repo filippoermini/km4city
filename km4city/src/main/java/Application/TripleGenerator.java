@@ -11,6 +11,8 @@ import javax.script.ScriptException;
 
 import org.apache.log4j.Logger;
 
+import com.google.gson.Gson;
+
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class;
 import genericClass.GenericAttribute;
@@ -168,7 +170,8 @@ public class TripleGenerator {
 		return triple;
 	}
 	
-	public void toJson(){
-		
+	public String toJson(){
+		Gson g = new Gson();
+		return g.toJson(statesList);
 	}
 }

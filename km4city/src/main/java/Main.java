@@ -1,4 +1,3 @@
-package run;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,8 +25,9 @@ public class Main{
 		Tree tree = xml.DeserializeFromXML(args[0]);
 		
 		TripleGenerator tripleGen = new TripleGenerator("", tree);
-		String triple = tripleGen.tripleRDF(tree.isStatefull());
-		
+		String triple = tripleGen.tripleRDF(true);
+		String jsonState = tripleGen.toJson();
+		System.out.println(jsonState);
 		
 		//generazione file e cartelle secondo lo scema predefinito
 		String directoryPath = args[1];
