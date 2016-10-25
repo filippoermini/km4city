@@ -18,14 +18,10 @@ public class GenericObject {
 	private String type;
 	private String baseUri;
 	private ArrayList<GenericAttribute> attributeList;
-	private String query;
-	private String server;
 	private boolean processed; // questo campo mi indica che sono stati inseriti tutti i valori
 	
 	public GenericObject(Tree.Class Class){
 		
-		this.query = Class.getQueryInfo().getQuery();
-		this.server = Class.getQueryInfo().getServer();
 		this.attributeList = new ArrayList<>();
 		this.className = Class.getName();
 		this.isRoot = Class.getIsRoot().contains("true");
@@ -60,17 +56,11 @@ public class GenericObject {
 		return "Class name: "+getClassName()+"\n"
 				+"Type name: "+getType()+"\n"
 				+"Base Uri: "+getBaseUri()+"\n"
-				+(isRoot?"root class\n"+"Query: "+getQuery()+"\nServer: "+getServer():"")
+				+(isRoot?"root class\n":"")
 				+("Attribute list: \n\n")
 				+(attributeList.stream().map(Object::toString).collect(Collectors.joining("\n")));
 	}
 	
-	public String getServer(){
-		return server;
-	}
-	public String getQuery(){
-		return query;
-	}
 	public String getClassName() {
 		return className;
 	}

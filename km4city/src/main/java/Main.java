@@ -21,13 +21,14 @@ public class Main{
 	
 	public static void main(String[] args){
 		
-		RDFconnector rdf = new RDFconnector();
+		
 		logger.info("Start computation");
 		XMLParsing<Tree> xml = new XMLParsing(Tree.class);
 		Tree tree = xml.DeserializeFromXML(args[0]);
+		RDFconnector rdf = new RDFconnector(tree.getQueryInfo().getServer());
 		
-		TripleGenerator tripleGen = new TripleGenerator("", tree);
-		String triple = tripleGen.tripleRDF(true);
+		TripleGenerator tripleGen = new TripleGenerator(tree,rdf);
+		String triple = tripleGen.tripleRDF(tree.isStatefull());
 		String jsonState = tripleGen.toJson();
 		
 		

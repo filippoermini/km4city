@@ -10,6 +10,9 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import org.apache.log4j.Logger;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.query.BindingSet;
+import org.eclipse.rdf4j.query.TupleQueryResult;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -23,6 +26,7 @@ import jsonDomain.States;
 public class TripleGenerator {
 
 	private String query;
+	private RDFconnector rdfEngine;
 	private TripleContainer tripleContainer;
 	private TripleList tripleList;
 	private ArrayList<GenericAttribute> boundAttribute;
@@ -30,9 +34,10 @@ public class TripleGenerator {
 	final static Logger logger = Logger.getLogger(TripleGenerator.class);
 	
 	
-	public TripleGenerator(String query,Tree tree){
+	public TripleGenerator(Tree tree,RDFconnector rdf){
 		
-		this.query = query;
+		this.rdfEngine = rdf;
+		this.query = tree.getQueryInfo().getQuery();
 		this.tripleContainer = new TripleContainer(tree.getTypeId());
 		this.boundAttribute = new ArrayList<>();
 		tripleList = new TripleList();
@@ -157,10 +162,12 @@ public class TripleGenerator {
 		
 		String triple = "";
 		//eseguo la query e ciclo sui risultati 
-		String[] queryRes = new String[]{"12345"};
+		TupleQueryResult results = rdfEngine.SPARQLExecute(query);
 		//ArrayList;
-		for(String el: queryRes){
-			generateValue(el); //genero i valori per ogni record della query
+		while(results.hasNext()){
+			BindingSet bindingSet = results.next();
+			Value value = bindingSet.getValue("id");
+			generateValue(value.stringValue()); //genero i valori per ogni record della query
 			this.tripleList.add(this.tripleContainer); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
 			this.tripleContainer.generateTriple();
 			triple += this.tripleContainer.getRDFTriple()+"\n";

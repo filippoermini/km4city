@@ -78,26 +78,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "clazz"
+    "clazz",
+    "queryInfo"
 })
 @XmlRootElement(name = "tree")
 public class Tree {
 
-	@XmlAttribute(name = "stateful")
-	protected boolean statefull = false;
+	@XmlAttribute(name = "isStateful")
+	protected boolean isStatefull = false;
 	@XmlAttribute(name = "typeId")
 	protected String typeId;
 	@XmlAttribute(name = "fileName")
 	protected String fileName;
     @XmlElement(name = "class")
     protected List<Tree.Class> clazz;
+    protected Tree.QueryInfo queryInfo;
 
+    public Tree.QueryInfo getQueryInfo(){
+    	
+    	return queryInfo==null?new QueryInfo():queryInfo;
+    }
+    public void setQueryInfo(Tree.QueryInfo queryInfo){
+    	this.queryInfo = queryInfo;
+    }
     
     public boolean isStatefull() {
-		return statefull;
+		return isStatefull;
 	}
 	public void setStatefull(boolean statefull) {
-		this.statefull = statefull;
+		this.isStatefull = statefull;
 	}
 	public String getTypeId(){
     	return this.typeId;
@@ -188,16 +197,41 @@ public class Tree {
      * 
      * 
      */
+    
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "properties",
-        "queryInfo"
+        "query",
+        "server"
+    })
+    public static class QueryInfo{
+    	
+    	protected String query;
+    	protected String server;
+    	
+    	public void setQuery(String query){
+    		this.query = query;
+    	}
+    	
+    	public String getQuery(){
+    		return query;
+    	}
+    	
+    	public void setServer(String server){
+    		this.server = server;
+    	}
+    	
+    	public String getServer(){
+    		return server;
+    	}	
+    }
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "properties"
     })
     public static class Class {
 
         @XmlElement(required = true)
         protected Tree.Class.Properties properties;
-        protected Tree.Class.QueryInfo queryInfo;
         @XmlAttribute(name = "type")
         @XmlSchemaType(name = "anyURI")
         protected String type;
@@ -220,13 +254,7 @@ public class Tree {
             return properties;
         }
         
-        public Tree.Class.QueryInfo getQueryInfo(){
-        	
-        	return queryInfo==null?new QueryInfo():queryInfo;
-        }
-        public void setQueryInfo(Tree.Class.QueryInfo queryInfo){
-        	this.queryInfo = queryInfo;
-        }
+        
         /**
          * Imposta il valore della proprietà properties.
          * 
@@ -371,34 +399,7 @@ public class Tree {
          */
        
         
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "query",
-            "server"
-        })
-        public static class QueryInfo{
-        	
-        	protected String query;
-        	protected String server;
-        	
-        	public void setQuery(String query){
-        		this.query = query;
-        	}
-        	
-        	public String getQuery(){
-        		return query;
-        	}
-        	
-        	public void setServer(String server){
-        		this.server = server;
-        	}
-        	
-        	public String getServer(){
-        		return server;
-        	}
-        	
-        	
-        }
+       
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
             "prop"

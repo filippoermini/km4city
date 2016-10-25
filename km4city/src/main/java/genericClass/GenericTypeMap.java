@@ -11,7 +11,7 @@ public class GenericTypeMap {
 		put("float","java.lang.Float");
 		put("datetime","java.lang.String");
 		put("uid","java.lang.String");
-		put("id","java.lang.Integer");
+		put("id","java.lang.String");
 		put("hourdependent","java.lang.String");
 	}};
 	
