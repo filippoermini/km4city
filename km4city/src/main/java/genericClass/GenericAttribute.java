@@ -108,7 +108,7 @@ public class GenericAttribute {
 		primaryKey = (prop.getKey().toLowerCase().contains("identifier"));
 		externalKey = (className == null);
 		constrain = (valueExpression != null);
-		if(!externalKey && !constrain){
+		if(!externalKey){
 			try {
 				Class clazz = java.lang.Class.forName(className);
 				Attribute attribute = new Attribute<>(clazz);

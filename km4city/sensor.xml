@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" fileName="sensori_FIRENZE.n3">
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" fileName="sensori_FIRENZE.n3" isStateful="true">
     <queryInfo>
     	<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
     	<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} order by ?id limit 100</query>
     </queryInfo>
-    <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" baseUri="http://www.disit.org/km4city/resource" isStateful="true">
+    <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>id</type>
@@ -26,8 +26,7 @@
             </prop>
             <prop key="http://www.disit.org/km4city/schema#averageSpeed">
                 <type>Float</type>
-                <maxValue>10.0</maxValue>
-                <minValue>1.0</minValue>
+                <valueExpression>$vehicleFlow * 2 </valueExpression>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#vehicleFlow">

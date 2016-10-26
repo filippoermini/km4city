@@ -8,6 +8,8 @@ import java.time.format.DateTimeFormatter;
 
 import org.apache.log4j.Logger;
 
+import com.thoughtworks.xstream.converters.extended.ISO8601SqlTimestampConverter;
+
 import Application.RDFconnector;
 import Application.TripleGenerator;
 import Application.XMLParsing;
@@ -54,15 +56,18 @@ public class Main{
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file end.txt error "+e.getMessage());
 			}
-			try {
-				String jsonFileName = tree.getFileName().substring(0, tree.getFileName().length()-4)+".json";
-				json = new PrintWriter(path+"/"+jsonFileName);
-				json.print(jsonState);
-				json.close();
-				logger.info("File "+path+"/"+jsonFileName+" creato");
-			} catch (FileNotFoundException e) {
-				logger.error("Creating file .n3 error "+e.getMessage());
+			if(tree.isStatefull()){
+				try {
+					String jsonFileName = tree.getFileName().substring(0, tree.getFileName().length()-4)+".json";
+					json = new PrintWriter(path+"/"+jsonFileName);
+					json.print(jsonState);
+					json.close();
+					logger.info("File "+path+"/"+jsonFileName+" creato");
+				} catch (FileNotFoundException e) {
+					logger.error("Creating file .n3 error "+e.getMessage());
+				}
 			}
+			
 		}
 		
 		//--------------------------------

@@ -56,7 +56,7 @@ public class TripleContainer{
 		GenericAttribute value = null;
 		for(GenericObject go:tripleObject){
 			if((value = go.getAttributeByName(name))!= null )
-				return value.getAttribute().gettAttributeValue();
+				return value.getAttribute().generateAttributeValue()!=null?value.getAttribute().gettAttributeValue():null;
 		}
 		return null;
 	}

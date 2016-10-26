@@ -17,31 +17,41 @@ public class RDFconnector {
 	final static Logger logger = Logger.getLogger(RDFconnector.class);
 	public RDFconnector(String endPoint){
 		this.endPoint = endPoint;//"http://servicemap.disit.org/WebAppGrafo/sparql";
-		repo = new SPARQLRepository(endPoint);
+		repo = new SPARQLRepository(this.endPoint);
 		repo.initialize();
 	}
 	
 	public TupleQueryResult SPARQLExecute(String query){
-		try (RepositoryConnection conn = repo.getConnection()) {
-//			   String queryString = "SELECT DISTINCT ?id WHERE {"
+		RepositoryConnection conn = repo.getConnection(); 
+//	    String queryString = "SELECT DISTINCT ?id WHERE {"
 //					   					+"?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,\"METRO\"))"
 //										+"} order by ?id limit 100";
-			logger.debug(query);	
-			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
-			logger.debug(conn.isActive());
-			TupleQueryResult result = null;		
-			try{
-				result = tupleQuery.evaluate();
-			}
-			finally{
-				conn.close();
-				result.close();
-			}
-			return result;
-		}catch(Exception ex){
-			logger.error("Error during query execution :"+ex.getMessage());
-		}
-		return null;
+//			
+		TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+		TupleQueryResult result = tupleQuery.evaluate();
+		return result;
+			
+		
+			//logger.error("Error during query execution :"+ex.getMessage());
+		
+		
+//	    Repository repo = new SPARQLRepository("http://servicemap.disit.org/WebAppGrafo/sparql");
+//	    repo.initialize();
+//	    
+//	    RepositoryConnection con = this.repo.getConnection();
+//	    TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString);
+//	    TupleQueryResult result = tupleQuery.evaluate();
+//
+//	      while (result.hasNext()) {
+//	        BindingSet bindingSet = result.next();
+//	        for(String n:result.getBindingNames()) {
+//	          Value value = bindingSet.getValue(n);
+//	          if(value!=null) {
+//	            System.out.println(n+":"+value.stringValue());
+//	          }
+//	        }
+//	      }
+	      
 	}
 }
 	

@@ -2,6 +2,7 @@ package Application;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -118,20 +119,27 @@ public class TripleGenerator {
 		//procedura di smaltimento della lista boundAttribute
 		g.setProcessed();
 		int index = 0;
-		GenericAttribute ga;
-		while(!boundAttribute.isEmpty()){
-			ga = boundAttribute.get(index);
-			try {
+		GenericAttribute ga = null;;
+		int size = boundAttribute.size();
+		try{
+			while(!boundAttribute.isEmpty()){
+				ga = boundAttribute.get(index);
 				if(execute(ga)){
 					boundAttribute.remove(ga);
 					index = index==0?0:index - 1;
+					size--;
+				}else{
+					index++;
 				}
-			} catch (ScriptException e) {
-				logger.error("Evaluate expression "+ga.getValueExpression()+" error");
+				if(index>=size){
+					throw new Exception("Circular dependency on bound attribute");
+				}
 			}
-			index++;
+		} catch (Exception e) {
+			logger.fatal("Evaluate expression error: "+ e.getMessage());
+			System.exit(0);
 		}
-		
+
 	}
 	
 	private boolean execute(GenericAttribute ga) throws ScriptException{
