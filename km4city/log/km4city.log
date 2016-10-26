@@ -1,0 +1,123 @@
+2016-10-25 02:30:13 [INFO ] Main: Start computation
+2016-10-25 02:30:13 [INFO ] XMLParsing: Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 02:30:15 [INFO ] Main: Directory created: ./2016_10/25/02/3015
+2016-10-25 02:30:15 [INFO ] Main: File ./2016_10/25/02/3015/sensori_FIRENZE.n3 creato
+2016-10-25 02:30:15 [INFO ] Main: File ./2016_10/25/02/3015/end.txt creato
+2016-10-25 02:30:47 [INFO ] Main: Start computation
+2016-10-25 02:30:47 [INFO ] XMLParsing: Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 02:30:47 [INFO ] Main: Directory created: ./2016_10/25/02/3047
+2016-10-25 02:30:47 [INFO ] Main: File ./2016_10/25/02/3047/sensori_FIRENZE.n3 creato
+2016-10-25 02:30:47 [INFO ] Main: File ./2016_10/25/02/3047/end.txt creato
+2016-10-25 02:58:34 [INFO ] Main: Start computation
+2016-10-25 02:58:35 [INFO ] XMLParsing: Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 02:58:36 [INFO ] Main: Directory created: ./2016_10/25/02/5836
+2016-10-25 02:58:36 [INFO ] Main: File ./2016_10/25/02/5836/sensori_FIRENZE.n3 creato
+2016-10-25 02:58:36 [INFO ] Main: File ./2016_10/25/02/5836/end.txt creato
+2016-10-25 10:51:51 [INFO ] Main - Start computation
+2016-10-25 10:51:51 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 10:51:52 [INFO ] Main - Directory created: ./2016_10/25/10/5152
+2016-10-25 10:51:52 [INFO ] Main - File ./2016_10/25/10/5152/sensori_FIRENZE.n3 creato
+2016-10-25 10:51:52 [INFO ] Main - File ./2016_10/25/10/5152/end.txt creato
+2016-10-25 11:08:51 [INFO ] Main - Start computation
+2016-10-25 11:08:51 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:08:52 [INFO ] Main - Directory created: ./2016_10/25/11/0852
+2016-10-25 11:08:52 [INFO ] Main - File ./2016_10/25/11/0852/sensori_FIRENZE.n3 creato
+2016-10-25 11:08:52 [INFO ] Main - File ./2016_10/25/11/0852/end.txt creato
+2016-10-25 11:40:25 [INFO ] Main - Start computation
+2016-10-25 11:40:26 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:40:28 [INFO ] Main - Directory created: ./2016_10/25/11/4028
+2016-10-25 11:40:28 [INFO ] Main - File ./2016_10/25/11/4028/sensori_FIRENZE.n3 creato
+2016-10-25 11:40:28 [INFO ] Main - File ./2016_10/25/11/4028/end.txt creato
+2016-10-25 11:40:46 [INFO ] Main - Start computation
+2016-10-25 11:40:46 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:40:48 [INFO ] Main - Directory created: ./2016_10/25/11/4048
+2016-10-25 11:40:48 [INFO ] Main - File ./2016_10/25/11/4048/sensori_FIRENZE.n3 creato
+2016-10-25 11:40:48 [INFO ] Main - File ./2016_10/25/11/4048/end.txt creato
+2016-10-25 11:42:05 [INFO ] Main - Start computation
+2016-10-25 11:42:05 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:42:07 [INFO ] Main - Directory created: ./2016_10/25/11/4207
+2016-10-25 11:42:07 [INFO ] Main - File ./2016_10/25/11/4207/sensori_FIRENZE.n3 creato
+2016-10-25 11:42:07 [INFO ] Main - File ./2016_10/25/11/4207/end.txt creato
+2016-10-25 11:42:12 [INFO ] Main - Start computation
+2016-10-25 11:42:13 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:42:13 [INFO ] Main - Directory created: ./2016_10/25/11/4213
+2016-10-25 11:42:13 [INFO ] Main - File ./2016_10/25/11/4213/sensori_FIRENZE.n3 creato
+2016-10-25 11:42:13 [INFO ] Main - File ./2016_10/25/11/4213/end.txt creato
+2016-10-25 11:43:18 [INFO ] Main - Start computation
+2016-10-25 11:43:18 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:43:20 [INFO ] Main - Directory created: ./2016_10/25/11/4320
+2016-10-25 11:43:20 [INFO ] Main - File ./2016_10/25/11/4320/sensori_FIRENZE.n3 creato
+2016-10-25 11:43:20 [INFO ] Main - File ./2016_10/25/11/4320/end.txt creato
+2016-10-25 11:59:14 [INFO ] Main - Start computation
+2016-10-25 11:59:14 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 11:59:15 [INFO ] Main - Directory created: ./2016_10/25/11/5915
+2016-10-25 11:59:15 [INFO ] Main - File ./2016_10/25/11/5915/sensori_FIRENZE.n3 creato
+2016-10-25 11:59:15 [INFO ] Main - File ./2016_10/25/11/5915/end.txt creato
+2016-10-25 12:00:03 [INFO ] Main - Start computation
+2016-10-25 12:00:03 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 12:00:04 [INFO ] Main - Directory created: ./2016_10/25/12/0004
+2016-10-25 12:00:04 [INFO ] Main - File ./2016_10/25/12/0004/sensori_FIRENZE.n3 creato
+2016-10-25 12:00:04 [INFO ] Main - File ./2016_10/25/12/0004/end.txt creato
+2016-10-25 12:07:37 [INFO ] Main - Start computation
+2016-10-25 12:07:38 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 12:07:38 [INFO ] Main - Directory created: ./2016_10/25/12/0738
+2016-10-25 12:07:38 [INFO ] Main - File ./2016_10/25/12/0738/sensori_FIRENZE.n3 creato
+2016-10-25 12:07:38 [INFO ] Main - File ./2016_10/25/12/0738/end.txt creato
+2016-10-25 12:13:35 [INFO ] Main - Start computation
+2016-10-25 12:13:36 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 12:13:37 [INFO ] Main - Directory created: ./2016_10/25/12/1337
+2016-10-25 12:13:37 [INFO ] Main - File ./2016_10/25/12/1337/sensori_FIRENZE.n3 creato
+2016-10-25 12:13:37 [INFO ] Main - File ./2016_10/25/12/1337/end.txt creato
+2016-10-25 12:13:37 [INFO ] Main - File ./2016_10/25/12/1337/sensori_FIRENZ.json creato
+2016-10-25 12:14:53 [INFO ] Main - Start computation
+2016-10-25 12:14:53 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 12:14:55 [INFO ] Main - Directory created: ./2016_10/25/12/1455
+2016-10-25 12:14:55 [INFO ] Main - File ./2016_10/25/12/1455/sensori_FIRENZE.n3 creato
+2016-10-25 12:14:55 [INFO ] Main - File ./2016_10/25/12/1455/end.txt creato
+2016-10-25 12:14:55 [INFO ] Main - File ./2016_10/25/12/1455/sensori_FIRENZ.json creato
+2016-10-25 12:17:11 [INFO ] Main - Start computation
+2016-10-25 12:17:11 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 12:17:13 [INFO ] Main - Directory created: ./2016_10/25/12/1713
+2016-10-25 12:17:13 [INFO ] Main - File ./2016_10/25/12/1713/sensori_FIRENZE.n3 creato
+2016-10-25 12:17:13 [INFO ] Main - File ./2016_10/25/12/1713/end.txt creato
+2016-10-25 12:17:13 [INFO ] Main - File ./2016_10/25/12/1713/sensori_FIRENZ.json creato
+2016-10-25 16:58:26 [INFO ] Main - Start computation
+2016-10-25 16:58:26 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 16:58:28 [INFO ] Main - Directory created: ./2016_10/25/16/5828
+2016-10-25 16:58:28 [INFO ] Main - File ./2016_10/25/16/5828/sensori_FIRENZE.n3 creato
+2016-10-25 16:58:28 [INFO ] Main - File ./2016_10/25/16/5828/end.txt creato
+2016-10-25 16:58:28 [INFO ] Main - File ./2016_10/25/16/5828/sensori_FIRENZ.json creato
+2016-10-25 17:23:34 [INFO ] Main - Start computation
+2016-10-25 17:23:34 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 17:23:36 [INFO ] Main - Directory created: ./2016_10/25/17/2336
+2016-10-25 17:23:36 [INFO ] Main - File ./2016_10/25/17/2336/sensori_FIRENZE.n3 creato
+2016-10-25 17:23:36 [INFO ] Main - File ./2016_10/25/17/2336/end.txt creato
+2016-10-25 17:23:36 [INFO ] Main - File ./2016_10/25/17/2336/sensori_FIRENZ.json creato
+2016-10-25 17:49:26 [INFO ] Main - Start computation
+2016-10-25 17:49:26 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 17:49:28 [INFO ] Main - Directory created: ./2016_10/25/17/4928
+2016-10-25 17:49:28 [INFO ] Main - File ./2016_10/25/17/4928/sensori_FIRENZE.n3 creato
+2016-10-25 17:49:28 [INFO ] Main - File ./2016_10/25/17/4928/end.txt creato
+2016-10-25 17:49:28 [INFO ] Main - File ./2016_10/25/17/4928/sensori_FIRENZ.json creato
+2016-10-25 18:17:15 [INFO ] Main - Start computation
+2016-10-25 18:17:15 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 18:17:17 [ERROR] RDFconnector - Error during query execution :Virtuoso 37000 Error SP030: SPARQL compiler, line 0: Bad character '\' (0x5c) in SPARQL expression at '\'
+
+SPARQL query:
+define sql:big-data-const 0 SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,\"METRO\"))} order by ?id limit 100"
+2016-10-25 18:17:44 [INFO ] Main - Start computation
+2016-10-25 18:17:44 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 18:17:45 [ERROR] RDFconnector - Error during query execution :Virtuoso 37000 Error SP030: SPARQL compiler, line 0: End-of-line in a short double-quoted string at '"
+'
+
+SPARQL query:
+define sql:big-data-const 0 SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} order by ?id limit 100"
+2016-10-25 18:18:06 [INFO ] Main - Start computation
+2016-10-25 18:18:06 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 18:18:08 [ERROR] GenericAttribute - set attribute value Error. Value: "AR05100200101"^^<http://www.w3.org/2001/XMLSchema#string> - null
+2016-10-25 18:20:22 [INFO ] Main - Start computation
+2016-10-25 18:20:22 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-25 18:20:24 [INFO ] Main - Directory created: ./2016_10/25/18/2024
+2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/sensori_FIRENZE.n3 creato
+2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/end.txt creato
+2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/sensori_FIRENZ.json creato

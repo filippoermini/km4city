@@ -1,0 +1,15 @@
+<http://www.disit.org/km4city/resource/12345> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SensorSite> .
+<http://www.disit.org/km4city/resource/12345> <http://purl.org/dc/terms/identifier> 12345 .
+<http://www.disit.org/km4city/resource/12345> <http://www.disit.org/km4city/schema#hasObservation> <http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#Observation> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://purl.org/dc/terms/identifier> eed29ea7-f6a5-4249-a59a-8060287e2d02 .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://purl.org/dc/terms/date> 2016-10-22T16:11:30+02:00^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.disit.org/km4city/schema#averageSpeed> 6.795528^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.disit.org/km4city/schema#vehicleFlow> 1.9487753^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.disit.org/km4city/schema#concentration> 2.4739442^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.disit.org/km4city/schema#measuredTime> <http://www.disit.org/km4city/resource/2016-10-22T16:11:30+02:00> .
+<http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> <http://www.disit.org/km4city/schema#measuredBySensor> <http://www.disit.org/km4city/resource/12345> .
+<http://www.disit.org/km4city/resource/2016-10-22T16:11:30+02:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2016-10-22T16:11:30+02:00> <http://purl.org/dc/terms/identifier> 2016-10-22T16:11:30+02:00^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.disit.org/km4city/resource/2016-10-22T16:11:30+02:00> <http://www.disit.org/km4city/schema#instantObserv> <http://www.disit.org/km4city/resource/eed29ea7-f6a5-4249-a59a-8060287e2d02> .
+
