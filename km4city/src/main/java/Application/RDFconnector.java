@@ -16,8 +16,6 @@ public class RDFconnector {
 	private Repository repo;
 	final static Logger logger = Logger.getLogger(RDFconnector.class);
 	public RDFconnector(String endPoint){
-		
-		
 		this.endPoint = endPoint;//"http://servicemap.disit.org/WebAppGrafo/sparql";
 		repo = new SPARQLRepository(endPoint);
 		repo.initialize();
@@ -28,9 +26,18 @@ public class RDFconnector {
 //			   String queryString = "SELECT DISTINCT ?id WHERE {"
 //					   					+"?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,\"METRO\"))"
 //										+"} order by ?id limit 100";
-			   TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
-			   TupleQueryResult result = tupleQuery.evaluate();
-			   return result;
+			logger.debug(query);	
+			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
+			logger.debug(conn.isActive());
+			TupleQueryResult result = null;		
+			try{
+				result = tupleQuery.evaluate();
+			}
+			finally{
+				conn.close();
+				result.close();
+			}
+			return result;
 		}catch(Exception ex){
 			logger.error("Error during query execution :"+ex.getMessage());
 		}

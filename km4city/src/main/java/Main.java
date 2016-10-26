@@ -30,8 +30,7 @@ public class Main{
 		TripleGenerator tripleGen = new TripleGenerator(tree,rdf);
 		String triple = tripleGen.tripleRDF(tree.isStatefull());
 		String jsonState = tripleGen.toJson();
-		
-		
+				
 		//generazione file e cartelle secondo lo scema predefinito
 		String directoryPath = args[1];
 		String path = directoryPath+DateTimeFormatter.ofPattern("yyyy_MM/dd/HH/mmss").withZone(ZoneOffset.systemDefault()).format(Instant.now()).toString();
