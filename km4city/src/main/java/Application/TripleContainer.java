@@ -38,7 +38,7 @@ public class TripleContainer{
 			state.add(new Attribute("id",go.getIdentifier().getAttribute().gettAttributeValue()));
 			for(GenericAttribute ga:go.getAttributeList()){
 				//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
-				String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri()+"/"+ga.getAttribute().gettAttributeValue()+">\"":ga.getAttribute().gettAttributeValue()+"\""+(ga.getUri()!=null?"^^<"+ga.getUri()+">":"");
+				String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri()+"/"+ga.getAttribute().gettAttributeValue()+">":"\""+ga.getAttribute().gettAttributeValue()+"\""+(ga.getUri()!=null?"^^<"+ga.getUri()+">":"");
 				tripleRDF += "<"+go.getBaseUri()+"/"+go.getIdentifier().getAttribute().gettAttributeValue()+"> "+"<"+ga.getAttributeKey()+"> "+object+" .\n";
 				state.add(new Attribute(ga.getAttributeName(),ga.getAttribute().gettAttributeValue()));
 			}
