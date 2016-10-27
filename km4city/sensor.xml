@@ -26,7 +26,8 @@
             </prop>
             <prop key="http://www.disit.org/km4city/schema#averageSpeed">
                 <type>Float</type>
-                <valueExpression>$vehicleFlow * 2 </valueExpression>
+                <maxValue>3</maxValue>
+                <minValue>2</minValue>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#vehicleFlow">

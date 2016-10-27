@@ -131,7 +131,7 @@ public class TripleGenerator {
 				}else{
 					index++;
 				}
-				if(index>=size){
+				if(index>=size && index!=0){
 					throw new Exception("Circular dependency on bound attribute");
 				}
 			}
