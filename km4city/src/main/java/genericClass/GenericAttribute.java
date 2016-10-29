@@ -4,6 +4,8 @@ package genericClass;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
@@ -17,34 +19,43 @@ public class GenericAttribute {
 
 	public class Attribute<T>{
 		private final Class<T> typeParameterClass;
-		private T maxValue;
-		private T minValue;
 		private T attributeValue;
+		private HashMap<String,Object> paramList;
 		
 		
 		public Attribute(Class<T> typeParameterClass){
 			this.typeParameterClass = typeParameterClass;
+			paramList = new HashMap<>();
 		}
 		
-		public void setMax(T value){
-			this.maxValue = value;
-		}
-		public void setMin(T value){
-			this.minValue = value;
-		}
-		
-		public T getMax(){
-			return this.maxValue;
-		}
-		
-		public T getMin(){
-			return this.minValue;
+		public Attribute(Attribute<T> a){
+			if(a!=null){
+				typeParameterClass = a.typeParameterClass;
+				attributeValue = a.attributeValue;
+				paramList = a.paramList;
+			}else{
+				typeParameterClass = null;
+			}
 		}
 		
+		public void setParamList(HashMap<String,Object> param){
+			this.paramList = param;
+		}
+		
+		public void putParam(String key, Object param){
+			this.paramList.put(key, param);
+		}
+		
+		public Object getParam(String key){
+			return this.paramList.get(key);
+		}
 		public T generateAttributeValue(){
 			return null;
 		}
 		
+		public HashMap<String,Object> getAttributeList(){
+			return paramList;
+		}
 		public void setAttributeValue(String value){
 			Constructor<?> constructor;
 			try {
@@ -65,14 +76,21 @@ public class GenericAttribute {
 			return this.attributeValue.toString();
 		}
 		
-		public void setValue(String type,Object max, Object min){	
-			this.attributeValue = (T) genericTypeMap.getValue(type, max, min);
+		public void setValue(String type,Object value){	
+			this.attributeValue = (T) genericTypeMap.getValue(type, value);
 		}
-		
+		private String getObjectList(){
+			String str = "";
+			Iterator it = this.paramList.entrySet().iterator();
+		    while (it.hasNext()) {
+		    	Map.Entry pair = (Map.Entry)it.next();
+		    	str += pair.getKey()+": "+pair.getValue()+"\n";
+		    }
+		    return str;
+		}
 		public String toString(){
-			return "value: "+this.attributeValue+"\n"
-					+"max: "+this.minValue+"\n"
-					+"min: "+this.maxValue+"\n";
+			return "value: "+this.attributeValue+"\n"+getObjectList();
+					
 		}
 	}
 
@@ -87,8 +105,6 @@ public class GenericAttribute {
 	private boolean constrain;
 	private String type; 
 	private String name;
-	private String[] hourValue;
-	private String rangre;
 	private GenericObject externalClassObject;
 	
 	
@@ -99,8 +115,6 @@ public class GenericAttribute {
 		this.name = (prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
 		this.attributeKey =  prop.getKey();
 		this.valueExpression = prop.getValueExpression();
-		this.hourValue = prop.getHourValue()!=null?prop.getHourValue().split(";"):null;
-		this.rangre = prop.getRange();
 		externalKey = false;
 		this.uri = prop.getUri();
 		this.type = prop.getType();
@@ -112,25 +126,36 @@ public class GenericAttribute {
 			try {
 				Class clazz = java.lang.Class.forName(className);
 				Attribute attribute = new Attribute<>(clazz);
-				
-				if(prop.getMaxValue() != null && prop.getMinValue() != null){
-					Constructor<?> constructor = clazz.getConstructor(String.class);
-					attribute.setMax(constructor.newInstance(prop.getMaxValue()));
-					attribute.setMin(constructor.newInstance(prop.getMinValue()));
-				}
+				attribute.setParamList(prop.getAttributeList());
 				this.attribute = attribute;
-			} catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			} catch (ClassNotFoundException | SecurityException | IllegalArgumentException e) {
 				// TODO Auto-generated catch block
 				logger.error("Acquiring properties Error: "+e.getMessage());
 			}
 		}
 	}
 	
+	
+	
+	public GenericAttribute(GenericAttribute ga) {
+		
+		this.valueExpression = ga.valueExpression;
+		this.uri = ga.uri;
+		this.attribute = new Attribute<>(ga.attribute);
+		this.attributeKey = ga.attributeKey;
+		this.primaryKey = ga.primaryKey;
+		this.externalKey = ga.externalKey;
+		this.constrain = ga.constrain;
+		this.type = ga.type;
+		this.name = ga.name;
+		this.externalClassObject = ga.externalClassObject;
+	}
+
+
+
 	public String toString(){
 		return  "Attribute name: "+getAttributeName()+"\n"
 				+"key value:"+this.getAttributeKey()+"\n"
-				+(getType() != null?"Type: "+getType()+"\n":"")
-				+(getUri() != null?"uri: "+getUri()+"\n":"")
 				+(isPrimaryKey()?"is primary\n":"")
 				+(isExternalKey()?"is external\n":"")
 				+(isConstrain()?"is constrain\n":"")
@@ -190,6 +215,9 @@ public class GenericAttribute {
 
 	public String getType() {
 		return type;
+	}
+	public HashMap<String,Object> getAttributeList(){
+		return this.getAttribute().paramList;
 	}
 	
 	

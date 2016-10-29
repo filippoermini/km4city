@@ -8,7 +8,10 @@
 
 package XMLDomain;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,6 +20,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+
 
 
 /**
@@ -469,7 +473,8 @@ public class Tree {
                 "uri",
                 "valueExpression",
                 "hourValue",
-                "range"
+                "range",
+                "fromSet"
             })
             public static class Prop {
 
@@ -485,8 +490,36 @@ public class Tree {
                 protected String valueExpression;
                 protected String hourValue;
                 protected String range;
+                protected String fromSet;
 
-                public String getHourValue() {
+                
+                public HashMap<String,String> getAttributeList(){
+                	HashMap<String,String> map = new HashMap<>();
+                	Field[] fields = this.getClass().getDeclaredFields();
+                	for(Field f:fields){
+                		try {
+							Object v = f.get(this);
+							map.put(f.getName(),(String) v);
+						} catch (IllegalArgumentException | IllegalAccessException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+                	}
+                	return map;
+                }
+                
+                
+                public String getFromSet() {
+					return fromSet;
+				}
+
+
+				public void setFromSet(String fromSet) {
+					this.fromSet = fromSet;
+				}
+
+
+				public String getHourValue() {
 					return hourValue;
 				}
 				public void setHourValue(String hourValue) {

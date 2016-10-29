@@ -22,8 +22,9 @@ public class GenericCommand {
 		@Override
 		public Integer valueGenerator(Object... args) {
 			Random rand = new Random();
-			int max = (int) args[1];
-			int min = (int) args[0];
+			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
+			int min = Integer.parseInt((String) param.get("minValue"));
+			int max = Integer.parseInt((String) param.get("maxValue"));
 		    int randomNum = rand.nextInt((max - min) + 1) + min;
 		    return randomNum;
 		}
@@ -33,8 +34,9 @@ public class GenericCommand {
 		@Override
 		public Float valueGenerator(Object... args) {
 			Random rand = new Random();
-			float min = (float) args[0];
-			float max = (float) args[1];
+			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
+			float min = Float.parseFloat((String) param.get("minValue"));
+			float max = Float.parseFloat((String) param.get("maxValue"));
 		    float randomNum = rand.nextFloat() * (max - min) + min;
 		    return randomNum;
 		}
@@ -51,8 +53,9 @@ public class GenericCommand {
 
 		@Override
 		public String valueGenerator(Object... args) {
-			String min = (String) args[0];
-			String max = (String) args[1];
+			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
+			String min = (String) param.get("minValue");
+			String max = (String) param.get("maxValue");
 			if((max=="" || max == null) && (min == "" || min == null)){
 				
 				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
@@ -84,14 +87,21 @@ public class GenericCommand {
 			//questa tipologia di dato varia in base al valore dell'ora in cui viene generato il valore
 			//in base al valore di riferimento definito per ogni ora si determina il valore della simulazione dato un coefficiente di scarto
 			// il coefficiente di scarto è un valore intero e serve a limiare il range di variazione del valore orario.
-			String[] hourValue = ((String) args[0]).split(";");
+			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
+			String[] hourValue = ((String) param.get("hourValue")).split(";");
 			Calendar rightNow = Calendar.getInstance();
 			int hour = rightNow.get(Calendar.HOUR_OF_DAY);
+			String r = "";
+			if(((String) param.get("range")).split(";").length > 1){
+				r = ((String) param.get("range")).split(";")[hour];
+			}else {
+				r = (String) param.get("range");
+			}
 			Random rand = new Random();
-			if(((String) args[0]).contains(",")){
+			if(((String) param.get("uri")).contains("float")){
 				//i valori orari e il range sono float
 				float refValue = Float.parseFloat(hourValue[hour]);
-				float range = (float) args[1];
+				float range = Float.parseFloat(r);
 				float min = refValue - range;
 				float max = refValue + range;
 			    float randomNum = rand.nextFloat() * (max - min) + min;
@@ -99,12 +109,25 @@ public class GenericCommand {
 			}else{
 				//i valori orari e il range sono int
 				int refValue = Integer.parseInt(hourValue[hour]);
-				int range = (int) args[1];
+				int range = Integer.parseInt(r);
 				int min = refValue - range;
 				int max = refValue + range;
-			    int randomNum = rand.nextInt() * (max - min) + min;
+			    int randomNum = (int)(rand.nextFloat()* (max - min) + min);
 			    return randomNum+"";
 			}
+		}
+		
+	}
+	public class GenerateFromSetValue implements Command<String>{
+
+		@Override
+		public String valueGenerator(Object... args) {
+			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
+			String[] set = ((String) param.get("fromSet")).split(";");
+			Random rand = new Random();
+			int bound = set.length;
+			int index = rand.nextInt(bound);
+			return set[index];
 		}
 		
 	}
@@ -144,6 +167,7 @@ public class GenericCommand {
 			this.addCommand("uid", new GenerateUIDValue());
 			this.addCommand("datetime", new GenerateDateTimeValue());
 			this.addCommand("hourdependent", new GenerateHourDependentValue());
+			this.addCommand("fromset", new GenerateFromSetValue());
 		}
 	}
 

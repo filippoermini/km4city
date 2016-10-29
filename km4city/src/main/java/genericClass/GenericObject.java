@@ -42,6 +42,25 @@ public class GenericObject {
 		}
 		
 	}
+	
+	
+
+	public GenericObject(GenericObject go) {
+	
+		this.className = go.className;
+		this.isRoot = go.isRoot;
+		this.type = go.type;
+		this.baseUri = go.baseUri;
+		this.processed = go.processed;
+		this.attributeList = new ArrayList();
+		Iterator<GenericAttribute> it = go.attributeList.iterator();
+		while(it.hasNext()){
+			this.attributeList.add(new GenericAttribute(it.next()));
+		}
+		
+	}
+
+
 
 	public void setID(String id){
 		for(GenericAttribute g:attributeList){

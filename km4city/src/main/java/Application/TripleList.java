@@ -15,7 +15,6 @@ public class TripleList{
 		return this.getIterator();
 	}
 	public void add(TripleContainer tripleContainer) {
-		TripleContainer objClone = tripleContainer.clone();
-		this.tripleList.add(objClone);
+		this.tripleList.add(tripleContainer);
 	}
 }

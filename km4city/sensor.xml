@@ -36,9 +36,8 @@
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#concentration">
-                <type>Float</type>
-                <maxValue>3</maxValue>
-                <minValue>2</minValue>
+                <type>FromSet</type>
+                <fromSet>1;4;6</fromSet>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#measuredTime">
