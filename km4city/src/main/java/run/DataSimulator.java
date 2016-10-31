@@ -1,3 +1,4 @@
+package run;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,33 +9,44 @@ import java.time.format.DateTimeFormatter;
 
 import org.apache.log4j.Logger;
 
-import com.thoughtworks.xstream.converters.extended.ISO8601SqlTimestampConverter;
-
+import Application.CommonValue;
 import Application.RDFconnector;
+import Application.RDFconnector.RepositoryManager;
 import Application.TripleGenerator;
 import Application.XMLParsing;
-import XMLDomain.Tree; 
+import XMLDomain.Tree;
 
+public class DataSimulator {
 
-
-public class Main{
+	public static Logger logger; 
+	private String xmlFile;
+	private String startPath;
+	private XMLParsing<Tree> xml;
+	private Tree tree;
+	private RepositoryManager rdf;
 	
-	final static Logger logger = Logger.getLogger(Main.class.getName());
 	
-	public static void main(String[] args){
+	public DataSimulator(String file, String start,String name){
 		
+		this.xmlFile = file;
+		this.startPath = start;
+		CommonValue.init(name);
+		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
+		xml = new XMLParsing(Tree.class);
+		tree = xml.DeserializeFromXML(xmlFile);
+		rdf = RDFconnector.getInstance(tree.getQueryInfo().getServer());
+		logger.info("Initialization parameters completed");
+	}
+	
+	public void run(){
 		
 		logger.info("Start computation");
-		XMLParsing<Tree> xml = new XMLParsing(Tree.class);
-		Tree tree = xml.DeserializeFromXML(args[0]);
-		RDFconnector rdf = new RDFconnector(tree.getQueryInfo().getServer());
-		
 		TripleGenerator tripleGen = new TripleGenerator(tree,rdf);
 		String triple = tripleGen.tripleRDF(tree.isStatefull());
 		String jsonState = tripleGen.toJson();
 				
 		//generazione file e cartelle secondo lo scema predefinito
-		String directoryPath = args[1];
+		String directoryPath = this.startPath;
 		String path = directoryPath+DateTimeFormatter.ofPattern("yyyy_MM/dd/HH/mmss").withZone(ZoneOffset.systemDefault()).format(Instant.now()).toString();
 		if(mkdir(path)){
 			PrintWriter out = null;
@@ -67,12 +79,9 @@ public class Main{
 					logger.error("Creating file .n3 error "+e.getMessage());
 				}
 			}
+			logger.info("Computation completed");
 			
 		}
-		
-		//--------------------------------
-		
-		
 	}
 	
 	private static boolean mkdir(String dirPath){

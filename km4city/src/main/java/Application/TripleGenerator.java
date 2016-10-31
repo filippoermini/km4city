@@ -19,6 +19,7 @@ import org.eclipse.rdf4j.query.TupleQueryResult;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import Application.RDFconnector.RepositoryManager;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class;
 import genericClass.GenericAttribute;
@@ -28,15 +29,15 @@ import jsonDomain.States;
 public class TripleGenerator {
 
 	private String query;
-	private RDFconnector rdfEngine;
+	private RepositoryManager rdfEngine;
 	private TripleContainer tripleContainerOrigin;
 	private TripleList tripleList;
 	private ArrayList<GenericAttribute> boundAttribute;
 	private States statesList;
-	final static Logger logger = Logger.getLogger(TripleGenerator.class);
+	public static Logger logger; 
 	
 	
-	public TripleGenerator(Tree tree,RDFconnector rdf){
+	public TripleGenerator(Tree tree,RepositoryManager rdf){
 		
 		this.rdfEngine = rdf;
 		this.query = tree.getQueryInfo().getQuery();
@@ -51,6 +52,7 @@ public class TripleGenerator {
 			GenericObject g = new GenericObject(c);
 			tripleContainerOrigin.add(g);
 		}
+		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	}
 	
 	
@@ -166,7 +168,7 @@ public class TripleGenerator {
 	}
 	
 	public String toJson(){
-		Gson g = new GsonBuilder().setPrettyPrinting().create();;
+		Gson g = new GsonBuilder().setPrettyPrinting().create();
 		return g.toJson(statesList);
 	}
 }

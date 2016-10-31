@@ -20,10 +20,11 @@ import com.thoughtworks.xstream.XStream;
 public class XMLParsing<T> {
 	
 	final Class<T> typeParameterClass;
-	final static Logger logger = Logger.getLogger(XMLParsing.class);
+	public static Logger logger;  
 	
 	public XMLParsing(Class<T> typeParameterClass){
 		this.typeParameterClass = typeParameterClass;
+		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	}
 	public boolean SerializeToXML(String xmlPath, T object){
 		boolean results = false;

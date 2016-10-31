@@ -94,8 +94,11 @@ public class Tree {
 	protected String typeId;
 	@XmlAttribute(name = "fileName")
 	protected String fileName;
+	@XmlAttribute(name = "simulationName")
+	protected String simulationName;
     @XmlElement(name = "class")
     protected List<Tree.Class> clazz;
+    
     protected Tree.QueryInfo queryInfo;
 
     public Tree.QueryInfo getQueryInfo(){
@@ -106,7 +109,19 @@ public class Tree {
     	this.queryInfo = queryInfo;
     }
     
-    public boolean isStatefull() {
+    public String getIsStateful() {
+		return isStateful;
+	}
+	public void setIsStateful(String isStateful) {
+		this.isStateful = isStateful;
+	}
+	public String getSimulationName() {
+		return simulationName;
+	}
+	public void setSimulationName(String simulationName) {
+		this.simulationName = simulationName;
+	}
+	public boolean isStatefull() {
 		return isStateful.contains("true");
 	}
 	public void setStatefull(String stateful) {
