@@ -82,8 +82,12 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+	"fileIterationQuery",
+	"classIterationQuery",
+    "fileInfo",
     "clazz",
-    "queryInfo"
+    "linkedTree",
+    "attributes"
 })
 @XmlRootElement(name = "tree")
 public class Tree {
@@ -92,21 +96,62 @@ public class Tree {
 	protected String isStateful;
 	@XmlAttribute(name = "typeId")
 	protected String typeId;
-	@XmlAttribute(name = "fileName")
-	protected String fileName;
 	@XmlAttribute(name = "simulationName")
 	protected String simulationName;
     @XmlElement(name = "class")
     protected List<Tree.Class> clazz;
+    @XmlAttribute(name = "primaryTree")
+    protected String primaryTree;
+    @XmlElement(name = "linkedTree")
+    protected LinkedTree linkedTree; 
+    @XmlElement(name = "fileIterationQuery")
+    protected Tree.QueryInfo fileIterationQuery;
+    @XmlElement(name = "classIterationQuery")
+    protected Tree.QueryInfo classIterationQuery;
+    @XmlElement(name = "attributes")
+    protected List<Tree.Attribute> attributes;
+    @XmlElement(name = "fileInfo")
+    protected Tree.FileInfo fileInfo;
     
-    protected Tree.QueryInfo queryInfo;
-
-    public Tree.QueryInfo getQueryInfo(){
-    	
-    	return queryInfo==null?new QueryInfo():queryInfo;
-    }
-    public void setQueryInfo(Tree.QueryInfo queryInfo){
-    	this.queryInfo = queryInfo;
+    public Tree.FileInfo getFileInfo() {
+		return fileInfo;
+	}
+	public void setFileInfo(Tree.FileInfo fileInfo) {
+		this.fileInfo = fileInfo;
+	}
+	public List<Tree.Attribute> getAttributes() {
+		return attributes;
+	}
+	public void setAttributes(List<Tree.Attribute> attributes) {
+		this.attributes = attributes;
+	}
+	public String getPrimaryTree() {
+		return primaryTree;
+	}
+	public void setPrimaryTree(String primaryTree) {
+		this.primaryTree = primaryTree;
+	}
+	public LinkedTree getLinkedTree() {
+		return linkedTree;
+	}
+	public void setLinkedTree(LinkedTree linkedTree) {
+		this.linkedTree = linkedTree;
+	}
+	public Tree.QueryInfo getFileIterationQuery() {
+		return fileIterationQuery==null?new QueryInfo():fileIterationQuery;
+	}
+	public void setFileIterationQuery(Tree.QueryInfo fileIterationQuery) {
+		this.fileIterationQuery = fileIterationQuery;
+	}
+	public Tree.QueryInfo getClassIterationQuery() {
+		return classIterationQuery==null?new QueryInfo():classIterationQuery;
+	}
+	public void setClassIterationQuery(Tree.QueryInfo classIterationQuery) {
+		this.classIterationQuery = classIterationQuery;
+	}
+	
+    public void setQueryInfo(Tree.QueryInfo fileIterationquery){
+    	this.fileIterationQuery = fileIterationquery;
     }
     
     public String getIsStateful() {
@@ -133,12 +178,6 @@ public class Tree {
     public void setTypeId(String type){
     	this.typeId = type;
     }
-    public String getFileName() {
-		return fileName;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
 	/**
      * Gets the value of the clazz property.
      * 
@@ -216,7 +255,76 @@ public class Tree {
      * 
      * 
      */
-    
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "name",
+        "valueExpression"
+    })
+    public static class Attribute{
+    	@XmlAttribute(name= "name")
+    	protected String name;
+    	@XmlAttribute(name= "valueExpression")
+    	protected String valueExpression;
+		
+    	public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getValueExpression() {
+			return valueExpression;
+		}
+		public void setValueExpression(String valueExpression) {
+			this.valueExpression = valueExpression;
+		}
+    }
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "linkedTree"
+    })
+    public static class LinkedTree{
+    	
+    	@XmlElement(name = "linkedTree")
+    	protected List<String> linkedTree;
+
+		public List<String> getLinkedTree() {
+			return linkedTree;
+		}
+
+		public void setLinkedTree(List<String> linkedTree) {
+			this.linkedTree = linkedTree;
+		}
+    	
+    }
+    public static class LinkedAttribute{
+    	
+    }
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "fileName",
+        "startDirectory"
+    })
+    public static class FileInfo{
+ 
+    	protected String fileName;
+    	protected String startDirectory;
+		
+    	public String getFileName() {
+			return fileName;
+		}
+		public void setFileName(String fileName) {
+			this.fileName = fileName;
+		}
+		public String getStartDirectory() {
+			return startDirectory;
+		}
+		public void setStartDirectory(String startDirectory) {
+			this.startDirectory = startDirectory;
+		}
+    	
+    	
+    }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "query",

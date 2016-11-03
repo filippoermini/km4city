@@ -21,7 +21,7 @@ public class RDFconnector {
 		
 		private String endPoint;
 		private Repository repo;
-		
+		private RepositoryConnection conn;
 		public RepositoryManager(String endPoint){
 			this.endPoint = endPoint;//"http://servicemap.disit.org/WebAppGrafo/sparql";
 			repo = new SPARQLRepository(this.endPoint);
@@ -36,8 +36,12 @@ public class RDFconnector {
 			return repo;
 		}
 		
+		public void close(){
+			this.conn.close();
+		}
+		
 		public TupleQueryResult SPARQLExecute(String query){
-			RepositoryConnection conn = repo.getConnection(); 
+			conn = repo.getConnection(); 
 //		    String queryString = "SELECT DISTINCT ?id WHERE {"
 //						   					+"?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,\"METRO\"))"
 //											+"} order by ?id limit 100";
@@ -70,6 +74,25 @@ public class RDFconnector {
 	      }
 	      return instance.getRepository(endPoint);
 	}
+	
+	public static void closeAll(){
+		RepositoryManager rm;
+		Iterator<RepositoryManager> it = instance.repositoryList.iterator();
+		while(it.hasNext()){
+			rm = it.next();
+			rm.close();
+		}
+	}
+	public static void close(String serverName){
+		RepositoryManager rm;
+		Iterator<RepositoryManager> it = instance.repositoryList.iterator();
+		while(it.hasNext()){
+			rm = it.next();
+			if(rm.getEndPoint().equals(serverName))
+				rm.close();
+		}
+	}
+	
 	
 	private RepositoryManager getRepository(String endpoint){
 		

@@ -8,6 +8,7 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
 import org.apache.log4j.Logger;
+import org.eclipse.rdf4j.model.util.RDFCollections;
 
 import Application.CommonValue;
 import Application.RDFconnector;
@@ -29,13 +30,13 @@ public class DataSimulator {
 	public DataSimulator(String file, String start,String name){
 		
 		this.xmlFile = file;
-		this.startPath = start;
 		CommonValue.init(name);
 		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 		xml = new XMLParsing(Tree.class);
 		tree = xml.DeserializeFromXML(xmlFile);
-		rdf = RDFconnector.getInstance(tree.getQueryInfo().getServer());
+		rdf = RDFconnector.getInstance(tree.getClassIterationQuery().getServer());
 		logger.info("Initialization parameters completed");
+		this.startPath = tree.getFileInfo().getStartDirectory();
 	}
 	
 	public void run(){
@@ -53,10 +54,10 @@ public class DataSimulator {
 			PrintWriter end = null;
 			PrintWriter json = null;
 			try {
-				out = new PrintWriter(path+"/"+tree.getFileName());
+				out = new PrintWriter(path+"/"+tree.getFileInfo().getFileName());
 				out.print(triple);
 				out.close();
-				logger.info("File "+path+"/"+tree.getFileName()+" creato");
+				logger.info("File "+path+"/"+tree.getFileInfo().getFileName()+" creato");
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file .n3 error "+e.getMessage());
 			}
@@ -70,7 +71,7 @@ public class DataSimulator {
 			}
 			if(tree.isStatefull()){
 				try {
-					String jsonFileName = tree.getFileName().substring(0, tree.getFileName().length()-4)+".json";
+					String jsonFileName = tree.getFileInfo().getFileName().substring(0, tree.getFileInfo().getFileName().length()-4)+".json";
 					json = new PrintWriter(path+"/"+jsonFileName);
 					json.print(jsonState);
 					json.close();
@@ -80,7 +81,7 @@ public class DataSimulator {
 				}
 			}
 			logger.info("Computation completed");
-			
+			RDFconnector.closeAll();
 		}
 	}
 	

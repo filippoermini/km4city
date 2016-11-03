@@ -40,7 +40,7 @@ public class TripleGenerator {
 	public TripleGenerator(Tree tree,RepositoryManager rdf){
 		
 		this.rdfEngine = rdf;
-		this.query = tree.getQueryInfo().getQuery();
+		this.query = tree.getClassIterationQuery().getQuery();
 		this.tripleContainerOrigin = new TripleContainer(tree.getTypeId());
 		this.boundAttribute = new ArrayList<>();
 		tripleList = new TripleList();

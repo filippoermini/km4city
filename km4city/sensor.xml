@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" fileName="sensori_FIRENZE.n3" isStateful="true" simulationName="Traffic Simulation">
-    <queryInfo>
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" isStateful="true" simulationName="TrafficSimulation">
+    <classIterationQuery>
     	<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
     	<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} order by ?id limit 100</query>
-    </queryInfo>
+    </classIterationQuery>
+    <fileInfo>
+    	<fileName>sensori_FIRENZE.n3</fileName>
+    	<startDirectory>./</startDirectory>
+    </fileInfo>
     <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
@@ -15,14 +19,14 @@
             </prop>
         </properties>
     </class>
-    <class type="http://www.disit.org/km4city/schema#Observation" name="Observation" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+    <class type="http://www.disit.org/km4city/schema#Observation" name="Observation" isRoot="false" baseUri="http://www.disit.org/km4city/resource{+$SensorSite}">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>UID</type>
             </prop>
             <prop key="http://purl.org/dc/terms/date">
                 <type>DateTime</type>
-                <uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
+                <uri>http://www.w3.org/2001/XMLSchema#dateTime{$SensorSite}</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#averageSpeed">
                 <type>Float</type>
@@ -37,7 +41,7 @@
             </prop>
             <prop key="http://www.disit.org/km4city/schema#concentration">
                 <type>FromSet</type>
-                <fromSet>1;4;6</fromSet>
+                <fromSet>50</fromSet>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
             <prop key="http://www.disit.org/km4city/schema#measuredTime">
