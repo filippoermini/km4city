@@ -124,7 +124,7 @@ public class TripleGenerator {
 	}
 	
 	private boolean execute(GenericAttribute ga,TripleContainer tc) throws ScriptException{
-		String regex = "[$]+[a-zA-Z0-9]*\\s";
+		String regex = "[$]+[a-zA-Z0-9_]*\\s";
 		String valueExpression = ga.getValueExpression();
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(valueExpression);
@@ -132,6 +132,8 @@ public class TripleGenerator {
 		while (matcher.find()){
 			String var = matcher.group().replace(" ", "");
 			String value = tc.getValueByAttributeName(var.replace("$", ""));
+			Pattern p = Pattern.compile("[^a-zA-Z]");
+			value = p.matcher(value).find()?"\""+value+"\"":value;
 			if(value != null ){
 				valueExpression = valueExpression.replace(var, value);
 			}

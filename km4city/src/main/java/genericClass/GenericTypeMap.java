@@ -14,6 +14,7 @@ public class GenericTypeMap {
 		put("id","java.lang.String");
 		put("hourdependent","java.lang.String");
 		put("fromset","java.lang.String");
+		put("string","java.lang.String");
 	}};
 	
 	private GenericTypeMap(){

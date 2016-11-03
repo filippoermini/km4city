@@ -597,7 +597,8 @@ public class Tree {
                 "valueExpression",
                 "hourValue",
                 "range",
-                "fromSet"
+                "fromSet",
+                "name"
             })
             public static class Prop {
 
@@ -605,15 +606,18 @@ public class Tree {
                 protected String type;
                 protected String maxValue;
                 protected String minValue;
+                protected String name;
                 @XmlSchemaType(name = "anyURI")
                 protected String uri;
                 @XmlAttribute(name = "key")
-                @XmlSchemaType(name = "anyURI")
                 protected String key;
                 protected String valueExpression;
                 protected String hourValue;
                 protected String range;
                 protected String fromSet;
+                @XmlAttribute(name = "isUri")
+                protected String isUri;
+                
 
                 
                 public HashMap<String,String> getAttributeList(){
@@ -631,8 +635,28 @@ public class Tree {
                 	return map;
                 }
                 
-                
-                public String getFromSet() {
+                public String getName() {
+					return name;
+				}
+
+				public void setName(String name) {
+					this.name = name;
+				}
+
+				public boolean isUri(){
+                	return isUri==null?false:isUri.contains("true");
+                }
+                public String getIsUri() {
+					return isUri;
+				}
+
+
+				public void setIsUri(String isUri) {
+					this.isUri = isUri;
+				}
+
+
+				public String getFromSet() {
 					return fromSet;
 				}
 
@@ -669,7 +693,7 @@ public class Tree {
                 	this.valueExpression = valueExpression;
                 }
                 public String getType() {
-                    return type;
+                    return type==null?"":type;
                 }
 
                 /**

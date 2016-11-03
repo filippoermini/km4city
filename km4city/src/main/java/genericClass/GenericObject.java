@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import Application.Pair;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class.Properties.Prop;
 
@@ -95,6 +98,19 @@ public class GenericObject {
 	public String getBaseUri() {
 		return baseUri;
 	}
+	
+	public String getBaseUri(ArrayList<GenericObject> tripleObject){
+		
+		if (baseUri.contains("$")){
+			Pair<String,String> baseUriParam = getBaseUriParam(this.getBaseUri(),tripleObject);
+			String pre = baseUriParam.getLeft();
+			String suff = baseUriParam.getRight();
+			return pre+suff;
+		}else{
+			return baseUri+"/"+this.getIdentifier().getAttribute().gettAttributeValue();
+		}
+			
+	}
 
 	public boolean isProcessed(){
 		return processed;
@@ -124,6 +140,31 @@ public class GenericObject {
 		return null;
 	}
 	
+	private Pair<String,String> getBaseUriParam(String baseUri, ArrayList<GenericObject> tripleObject){
+		String suff = "";
+		String pre  = baseUri;
+		if(baseUri.contains("$")){
+			Matcher m = Pattern.compile("\\{.*?\\}").matcher(baseUri);
+			while(m.find()){
+				String pattern = m.group();
+				Matcher m1 = Pattern.compile("[$]+[a-zA-Z_]+").matcher(pattern);
+				m1.find();
+				String var = m1.group().replace("$", "");
+				String value = getIdentifierFromClassName(var,tripleObject);
+				pre = pre.replace(pattern, "");
+				suff+=pattern.replace("$"+var, value).replace("{", "").replace("}", "").replaceAll(" ", "");
+			}
+		}
+		return new Pair<String,String>(pre,suff);
+	}
+	
+	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
+		for(GenericObject go:tripleObject){
+			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
+				return go.getIdentifier().getAttribute().gettAttributeValue();
+		}
+		return "";
+	}
 	
 	
 	

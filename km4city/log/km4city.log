@@ -121,3 +121,587 @@ define sql:big-data-const 0 SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s 
 2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/sensori_FIRENZE.n3 creato
 2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/end.txt creato
 2016-10-25 18:20:24 [INFO ] Main - File ./2016_10/25/18/2024/sensori_FIRENZ.json creato
+2016-10-27 23:26:30 [INFO ] Main - Start computation
+2016-10-27 23:26:31 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-27 23:26:35 [INFO ] Main - Directory created: ./2016_10/27/23/2635
+2016-10-27 23:26:35 [INFO ] Main - File ./2016_10/27/23/2635/sensori_FIRENZE.n3 creato
+2016-10-27 23:26:35 [INFO ] Main - File ./2016_10/27/23/2635/end.txt creato
+2016-10-27 23:26:35 [INFO ] Main - File ./2016_10/27/23/2635/sensori_FIRENZ.json creato
+2016-10-27 23:42:13 [INFO ] Main - Start computation
+2016-10-27 23:42:15 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-27 23:42:24 [INFO ] Main - Directory created: ./2016_10/27/23/4224
+2016-10-27 23:42:24 [INFO ] Main - File ./2016_10/27/23/4224/sensori_FIRENZE.n3 creato
+2016-10-27 23:42:24 [INFO ] Main - File ./2016_10/27/23/4224/end.txt creato
+2016-10-27 23:42:24 [INFO ] Main - File ./2016_10/27/23/4224/sensori_FIRENZ.json creato
+2016-10-27 23:44:48 [INFO ] Main - Start computation
+2016-10-27 23:44:50 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-27 23:44:59 [INFO ] Main - Directory created: ./2016_10/27/23/4459
+2016-10-27 23:44:59 [INFO ] Main - File ./2016_10/27/23/4459/sensori_FIRENZE.n3 creato
+2016-10-27 23:44:59 [INFO ] Main - File ./2016_10/27/23/4459/end.txt creato
+2016-10-27 23:44:59 [INFO ] Main - File ./2016_10/27/23/4459/sensori_FIRENZ.json creato
+2016-10-28 11:57:54 [INFO ] Main - Start computation
+2016-10-28 11:57:55 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 12:04:28 [INFO ] Main - Start computation
+2016-10-28 12:04:29 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 12:05:12 [INFO ] Main - Start computation
+2016-10-28 12:05:13 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 12:37:39 [INFO ] Main - Start computation
+2016-10-28 12:37:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 12:40:24 [INFO ] Main - Start computation
+2016-10-28 12:40:24 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 12:44:17 [INFO ] Main - Start computation
+2016-10-28 12:44:18 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 13:01:00 [INFO ] Main - Start computation
+2016-10-28 13:01:00 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 13:01:23 [INFO ] Main - Start computation
+2016-10-28 13:01:23 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 13:10:00 [INFO ] Main - Start computation
+2016-10-28 13:10:00 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 13:11:05 [INFO ] Main - Start computation
+2016-10-28 13:11:05 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 13:34:10 [INFO ] Main - Start computation
+2016-10-28 13:34:11 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 23:43:26 [INFO ] Main - Start computation
+2016-10-28 23:43:27 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-28 23:58:34 [INFO ] Main - Start computation
+2016-10-28 23:58:34 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:08:50 [INFO ] Main - Start computation
+2016-10-29 00:08:50 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:18:39 [INFO ] Main - Start computation
+2016-10-29 00:18:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:19:45 [INFO ] Main - Start computation
+2016-10-29 00:19:46 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:21:54 [INFO ] Main - Start computation
+2016-10-29 00:21:54 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:22:39 [INFO ] Main - Start computation
+2016-10-29 00:22:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 00:22:42 [INFO ] Main - Directory created: ./2016_10/29/00/2242
+2016-10-29 00:22:42 [INFO ] Main - File ./2016_10/29/00/2242/sensori_FIRENZE.n3 creato
+2016-10-29 00:22:42 [INFO ] Main - File ./2016_10/29/00/2242/end.txt creato
+2016-10-29 00:22:42 [INFO ] Main - File ./2016_10/29/00/2242/sensori_FIRENZ.json creato
+2016-10-29 00:24:39 [INFO ] Main - Start computation
+2016-10-29 00:24:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:31:56 [INFO ] Main - Start computation
+2016-10-29 11:31:57 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:33:44 [INFO ] Main - Start computation
+2016-10-29 11:33:44 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:33:47 [INFO ] Main - Directory created: ./2016_10/29/11/3347
+2016-10-29 11:33:47 [INFO ] Main - File ./2016_10/29/11/3347/sensori_FIRENZE.n3 creato
+2016-10-29 11:33:47 [INFO ] Main - File ./2016_10/29/11/3347/end.txt creato
+2016-10-29 11:33:47 [INFO ] Main - File ./2016_10/29/11/3347/sensori_FIRENZ.json creato
+2016-10-29 11:34:49 [INFO ] Main - Start computation
+2016-10-29 11:34:49 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:37:26 [INFO ] Main - Directory created: ./2016_10/29/11/3726
+2016-10-29 11:37:26 [INFO ] Main - File ./2016_10/29/11/3726/sensori_FIRENZE.n3 creato
+2016-10-29 11:37:26 [INFO ] Main - File ./2016_10/29/11/3726/end.txt creato
+2016-10-29 11:37:26 [INFO ] Main - File ./2016_10/29/11/3726/sensori_FIRENZ.json creato
+2016-10-29 11:44:26 [INFO ] Main - Start computation
+2016-10-29 11:44:26 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:48:24 [INFO ] Main - Start computation
+2016-10-29 11:48:24 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:48:37 [INFO ] Main - Start computation
+2016-10-29 11:48:38 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:52:48 [INFO ] Main - Start computation
+2016-10-29 11:52:48 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:52:49 [INFO ] Main - Directory created: ./2016_10/29/11/5249
+2016-10-29 11:52:49 [INFO ] Main - File ./2016_10/29/11/5249/sensori_FIRENZE.n3 creato
+2016-10-29 11:52:49 [INFO ] Main - File ./2016_10/29/11/5249/end.txt creato
+2016-10-29 11:52:49 [INFO ] Main - File ./2016_10/29/11/5249/sensori_FIRENZ.json creato
+2016-10-29 11:53:09 [INFO ] Main - Start computation
+2016-10-29 11:53:09 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:53:43 [INFO ] Main - Start computation
+2016-10-29 11:53:43 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 11:58:30 [INFO ] Main - Start computation
+2016-10-29 11:58:31 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:07:53 [INFO ] Main - Start computation
+2016-10-29 12:07:53 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:07:56 [INFO ] Main - Directory created: ./2016_10/29/12/0756
+2016-10-29 12:07:56 [INFO ] Main - File ./2016_10/29/12/0756/sensori_FIRENZE.n3 creato
+2016-10-29 12:07:56 [INFO ] Main - File ./2016_10/29/12/0756/end.txt creato
+2016-10-29 12:07:56 [INFO ] Main - File ./2016_10/29/12/0756/sensori_FIRENZ.json creato
+2016-10-29 12:09:14 [INFO ] Main - Start computation
+2016-10-29 12:09:14 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:15:11 [INFO ] Main - Start computation
+2016-10-29 12:15:11 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:15:13 [INFO ] Main - Directory created: ./2016_10/29/12/1513
+2016-10-29 12:15:13 [INFO ] Main - File ./2016_10/29/12/1513/sensori_FIRENZE.n3 creato
+2016-10-29 12:15:13 [INFO ] Main - File ./2016_10/29/12/1513/end.txt creato
+2016-10-29 12:15:13 [INFO ] Main - File ./2016_10/29/12/1513/sensori_FIRENZ.json creato
+2016-10-29 12:20:58 [INFO ] Main - Start computation
+2016-10-29 12:20:58 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:21:29 [INFO ] Main - Start computation
+2016-10-29 12:21:29 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:32:55 [INFO ] Main - Start computation
+2016-10-29 12:32:55 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:32:58 [INFO ] Main - Directory created: ./2016_10/29/12/3258
+2016-10-29 12:32:58 [INFO ] Main - File ./2016_10/29/12/3258/sensori_FIRENZE.n3 creato
+2016-10-29 12:32:58 [INFO ] Main - File ./2016_10/29/12/3258/end.txt creato
+2016-10-29 12:32:58 [INFO ] Main - File ./2016_10/29/12/3258/sensori_FIRENZ.json creato
+2016-10-29 12:33:43 [INFO ] Main - Start computation
+2016-10-29 12:33:43 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:38:24 [INFO ] Main - Start computation
+2016-10-29 12:38:24 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:39:41 [INFO ] Main - Start computation
+2016-10-29 12:39:41 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:40:10 [INFO ] Main - Start computation
+2016-10-29 12:40:10 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:44:14 [INFO ] Main - Start computation
+2016-10-29 12:44:14 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:46:58 [INFO ] Main - Start computation
+2016-10-29 12:46:58 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:47:51 [INFO ] Main - Start computation
+2016-10-29 12:47:52 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:49:13 [INFO ] Main - Start computation
+2016-10-29 12:49:13 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 12:50:36 [INFO ] Main - Start computation
+2016-10-29 12:50:36 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 13:59:04 [INFO ] Main - Start computation
+2016-10-29 13:59:04 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 13:59:05 [INFO ] Main - Start computation
+2016-10-29 13:59:05 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 13:59:22 [INFO ] Main - Start computation
+2016-10-29 13:59:22 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:04:50 [INFO ] Main - Start computation
+2016-10-29 14:04:50 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:11:18 [INFO ] Main - Start computation
+2016-10-29 14:11:18 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:11:19 [FATAL] TripleGenerator - Evaluate expression error: null
+2016-10-29 14:12:08 [INFO ] Main - Start computation
+2016-10-29 14:12:08 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:12:09 [FATAL] TripleGenerator - Evaluate expression error: null
+2016-10-29 14:12:36 [INFO ] Main - Start computation
+2016-10-29 14:12:37 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:12:38 [INFO ] Main - Start computation
+2016-10-29 14:12:39 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:12:49 [INFO ] Main - Start computation
+2016-10-29 14:12:49 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:13:57 [INFO ] Main - Start computation
+2016-10-29 14:13:58 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:15:19 [INFO ] Main - Start computation
+2016-10-29 14:15:20 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:17:29 [INFO ] Main - Start computation
+2016-10-29 14:17:29 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:17:32 [INFO ] Main - Directory created: ./2016_10/29/14/1732
+2016-10-29 14:17:32 [INFO ] Main - File ./2016_10/29/14/1732/sensori_FIRENZE.n3 creato
+2016-10-29 14:17:32 [INFO ] Main - File ./2016_10/29/14/1732/end.txt creato
+2016-10-29 14:17:32 [INFO ] Main - File ./2016_10/29/14/1732/sensori_FIRENZ.json creato
+2016-10-29 14:24:39 [INFO ] Main - Start computation
+2016-10-29 14:24:41 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 14:25:36 [INFO ] Main - Directory created: ./2016_10/29/14/2536
+2016-10-29 14:25:36 [INFO ] Main - File ./2016_10/29/14/2536/sensori_FIRENZE.n3 creato
+2016-10-29 14:25:36 [INFO ] Main - File ./2016_10/29/14/2536/end.txt creato
+2016-10-29 14:25:36 [INFO ] Main - File ./2016_10/29/14/2536/sensori_FIRENZ.json creato
+2016-10-29 19:17:24 [INFO ] Main Process - Start computation
+2016-10-29 19:17:25 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 19:17:29 [INFO ] Main Process - Directory created: ./2016_10/29/19/1729
+2016-10-29 19:17:29 [INFO ] Main Process - File ./2016_10/29/19/1729/sensori_FIRENZE.n3 creato
+2016-10-29 19:17:29 [INFO ] Main Process - File ./2016_10/29/19/1729/end.txt creato
+2016-10-29 19:17:29 [INFO ] Main Process - File ./2016_10/29/19/1729/sensori_FIRENZ.json creato
+2016-10-29 19:26:28 [INFO ] Main Process - loading parametres
+2016-10-29 19:26:28 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 19:26:28 [INFO ] Main Process - initialization parameters completed
+2016-10-29 19:26:28 [INFO ] Main Process - start computation
+2016-10-29 19:26:32 [INFO ] Main Process - Directory created: ./2016_10/29/19/2632
+2016-10-29 19:26:32 [INFO ] Main Process - File ./2016_10/29/19/2632/sensori_FIRENZE.n3 creato
+2016-10-29 19:26:32 [INFO ] Main Process - File ./2016_10/29/19/2632/end.txt creato
+2016-10-29 19:26:32 [INFO ] Main Process - File ./2016_10/29/19/2632/sensori_FIRENZ.json creato
+2016-10-29 19:34:45 [INFO ] Main Process - [Traffic Simulator] loading parametres
+2016-10-29 19:34:46 [INFO ] XMLParsing - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-29 19:34:46 [INFO ] Main Process - [Traffic Simulator] initialization parameters completed
+2016-10-29 19:34:46 [INFO ] Main Process - [Traffic Simulator] start computation
+2016-10-29 19:34:50 [INFO ] Main Process - Directory created: ./2016_10/29/19/3450
+2016-10-29 19:34:50 [INFO ] Main Process - [Traffic Simulator] File ./2016_10/29/19/3450/sensori_FIRENZE.n3 creato
+2016-10-29 19:34:50 [INFO ] Main Process - [Traffic Simulator] File ./2016_10/29/19/3450/end.txt creato
+2016-10-29 19:34:50 [INFO ] Main Process - [Traffic Simulator] File ./2016_10/29/19/3450/sensori_FIRENZ.json creato
+2016-10-29 19:34:50 [INFO ] Main Process - [Traffic Simulator] csomputation completed
+2016-10-30 00:16:25 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:16:25 [INFO ] root - Initialization parameters completed
+2016-10-30 00:16:25 [INFO ] root - Start computation
+2016-10-30 00:16:30 [INFO ] root - Directory created: ./2016_10/30/00/1630
+2016-10-30 00:16:30 [INFO ] root - File ./2016_10/30/00/1630/sensori_FIRENZE.n3 creato
+2016-10-30 00:16:30 [INFO ] root - File ./2016_10/30/00/1630/end.txt creato
+2016-10-30 00:16:30 [INFO ] root - File ./2016_10/30/00/1630/sensori_FIRENZ.json creato
+2016-10-30 00:16:30 [INFO ] root - Computation completed
+2016-10-30 00:20:25 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:20:25 [INFO ] root - Initialization parameters completed
+2016-10-30 00:20:25 [INFO ] root - Start computation
+2016-10-30 00:20:28 [INFO ] root - Directory created: ./2016_10/30/00/2028
+2016-10-30 00:20:28 [INFO ] root - File ./2016_10/30/00/2028/sensori_FIRENZE.n3 creato
+2016-10-30 00:20:28 [INFO ] root - File ./2016_10/30/00/2028/end.txt creato
+2016-10-30 00:20:28 [INFO ] root - File ./2016_10/30/00/2028/sensori_FIRENZ.json creato
+2016-10-30 00:20:28 [INFO ] root - Computation completed
+2016-10-30 00:26:45 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:26:45 [INFO ] root - Initialization parameters completed
+2016-10-30 00:26:45 [INFO ] root - Start computation
+2016-10-30 00:26:47 [INFO ] root - Directory created: ./2016_10/30/00/2647
+2016-10-30 00:26:47 [INFO ] root - File ./2016_10/30/00/2647/sensori_FIRENZE.n3 creato
+2016-10-30 00:26:47 [INFO ] root - File ./2016_10/30/00/2647/end.txt creato
+2016-10-30 00:26:47 [INFO ] root - File ./2016_10/30/00/2647/sensori_FIRENZ.json creato
+2016-10-30 00:26:47 [INFO ] root - Computation completed
+2016-10-30 00:28:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:29:08 [INFO ] root - Initialization parameters completed
+2016-10-30 00:29:31 [INFO ] root - Start computation
+2016-10-30 00:30:21 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:30:22 [INFO ] root - Initialization parameters completed
+2016-10-30 00:30:22 [INFO ] root - Start computation
+2016-10-30 00:30:24 [INFO ] root - Directory created: ./2016_10/30/00/3024
+2016-10-30 00:30:24 [INFO ] root - File ./2016_10/30/00/3024/sensori_FIRENZE.n3 creato
+2016-10-30 00:30:24 [INFO ] root - File ./2016_10/30/00/3024/end.txt creato
+2016-10-30 00:30:24 [INFO ] root - File ./2016_10/30/00/3024/sensori_FIRENZ.json creato
+2016-10-30 00:30:24 [INFO ] root - Computation completed
+2016-10-30 00:31:33 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:31:33 [INFO ] root - Initialization parameters completed
+2016-10-30 00:31:33 [INFO ] root - Start computation
+2016-10-30 00:31:36 [INFO ] root - Directory created: ./2016_10/30/00/3136
+2016-10-30 00:31:36 [INFO ] root - File ./2016_10/30/00/3136/sensori_FIRENZE.n3 creato
+2016-10-30 00:31:36 [INFO ] root - File ./2016_10/30/00/3136/end.txt creato
+2016-10-30 00:31:36 [INFO ] root - File ./2016_10/30/00/3136/sensori_FIRENZ.json creato
+2016-10-30 00:31:36 [INFO ] root - Computation completed
+2016-10-30 00:33:19 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:33:42 [INFO ] root - Initialization parameters completed
+2016-10-30 00:33:42 [INFO ] root - Start computation
+2016-10-30 00:35:22 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:36:44 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:37:04 [INFO ] root - Initialization parameters completed
+2016-10-30 00:37:17 [INFO ] root - Start computation
+2016-10-30 00:37:50 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:37:51 [INFO ] root - Initialization parameters completed
+2016-10-30 00:37:51 [INFO ] root - Start computation
+2016-10-30 00:37:53 [INFO ] root - Directory created: ./2016_10/30/00/3753
+2016-10-30 00:37:53 [INFO ] root - File ./2016_10/30/00/3753/sensori_FIRENZE.n3 creato
+2016-10-30 00:37:53 [INFO ] root - File ./2016_10/30/00/3753/end.txt creato
+2016-10-30 00:37:53 [INFO ] root - File ./2016_10/30/00/3753/sensori_FIRENZ.json creato
+2016-10-30 00:37:53 [INFO ] root - Computation completed
+2016-10-30 00:39:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:40:15 [INFO ] root - Initialization parameters completed
+2016-10-30 00:40:35 [INFO ] root - Start computation
+2016-10-30 00:42:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:42:53 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-10-30 00:42:55 [INFO ] Traffic Simulator - Start computation
+2016-10-30 00:43:18 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-30 00:43:19 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-10-30 00:43:19 [INFO ] Traffic Simulator - Start computation
+2016-10-30 00:43:21 [INFO ] Traffic Simulator - Directory created: ./2016_10/30/00/4321
+2016-10-30 00:43:21 [INFO ] Traffic Simulator - File ./2016_10/30/00/4321/sensori_FIRENZE.n3 creato
+2016-10-30 00:43:21 [INFO ] Traffic Simulator - File ./2016_10/30/00/4321/end.txt creato
+2016-10-30 00:43:21 [INFO ] Traffic Simulator - File ./2016_10/30/00/4321/sensori_FIRENZ.json creato
+2016-10-30 00:43:21 [INFO ] Traffic Simulator - Computation completed
+2016-10-31 23:49:31 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-31 23:51:34 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-31 23:53:33 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-10-31 23:53:33 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-10-31 23:53:33 [INFO ] Traffic Simulator - Start computation
+2016-10-31 23:53:37 [INFO ] Traffic Simulator - Directory created: ./2016_10/31/23/5337
+2016-10-31 23:53:37 [INFO ] Traffic Simulator - File ./2016_10/31/23/5337/sensori_FIRENZE.n3 creato
+2016-10-31 23:53:37 [INFO ] Traffic Simulator - File ./2016_10/31/23/5337/end.txt creato
+2016-10-31 23:53:37 [INFO ] Traffic Simulator - File ./2016_10/31/23/5337/sensori_FIRENZ.json creato
+2016-10-31 23:53:37 [INFO ] Traffic Simulator - Computation completed
+2016-11-01 10:11:29 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 7 counts of IllegalAnnotationExceptions
+2016-11-01 10:17:49 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 8 counts of IllegalAnnotationExceptions
+2016-11-01 10:19:21 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 4 counts of IllegalAnnotationExceptions
+2016-11-01 10:19:52 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 3 counts of IllegalAnnotationExceptions
+2016-11-01 10:20:45 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-01 10:21:41 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-01 10:22:32 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:22:32 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-01 10:22:32 [INFO ] Traffic Simulator - Start computation
+2016-11-01 10:22:37 [INFO ] Traffic Simulator - Directory created: null2016_11/01/10/2237
+2016-11-01 10:22:37 [INFO ] Traffic Simulator - File null2016_11/01/10/2237/null creato
+2016-11-01 10:22:37 [INFO ] Traffic Simulator - File null2016_11/01/10/2237/end.txt creato
+2016-11-01 10:23:55 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:23:59 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-01 10:26:26 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:26:29 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-01 10:27:34 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:29:35 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:29:35 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-01 10:29:35 [INFO ] Traffic Simulator - Start computation
+2016-11-01 10:29:38 [INFO ] Traffic Simulator - Directory created: ./2016_11/01/10/2938
+2016-11-01 10:29:38 [INFO ] Traffic Simulator - File ./2016_11/01/10/2938/sensori_FIRENZE.n3 creato
+2016-11-01 10:29:38 [INFO ] Traffic Simulator - File ./2016_11/01/10/2938/end.txt creato
+2016-11-01 10:29:38 [INFO ] Traffic Simulator - File ./2016_11/01/10/2938/sensori_FIRENZ.json creato
+2016-11-01 10:29:38 [INFO ] Traffic Simulator - Computation completed
+2016-11-01 10:30:27 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-01 10:30:27 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-01 10:30:27 [INFO ] Traffic Simulator - Start computation
+2016-11-01 10:30:29 [INFO ] Traffic Simulator - Directory created: ./2016_11/01/10/3029
+2016-11-01 10:30:29 [INFO ] Traffic Simulator - File ./2016_11/01/10/3029/sensori_FIRENZE.n3 creato
+2016-11-01 10:30:29 [INFO ] Traffic Simulator - File ./2016_11/01/10/3029/end.txt creato
+2016-11-01 10:30:29 [INFO ] Traffic Simulator - File ./2016_11/01/10/3029/sensori_FIRENZ.json creato
+2016-11-01 10:30:29 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 01:11:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:11:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:11:39 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:11:43 [INFO ] Traffic Simulator - Directory created: ./2016_11/03/01/1143
+2016-11-03 01:11:43 [INFO ] Traffic Simulator - File ./2016_11/03/01/1143/sensori_FIRENZE.n3 creato
+2016-11-03 01:11:43 [INFO ] Traffic Simulator - File ./2016_11/03/01/1143/end.txt creato
+2016-11-03 01:11:43 [INFO ] Traffic Simulator - File ./2016_11/03/01/1143/sensori_FIRENZ.json creato
+2016-11-03 01:11:43 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 01:14:00 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:14:00 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:14:08 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:15:54 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:15:54 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:15:54 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:17:03 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:17:03 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:17:03 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:20:19 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:20:19 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:20:19 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:21:35 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:21:35 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:21:35 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:22:52 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:22:52 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:22:52 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:23:31 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:23:31 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:23:31 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:25:12 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:25:12 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:25:12 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:26:08 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:26:08 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:26:08 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:27:30 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:27:30 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:27:30 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:51:53 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 01:51:53 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 01:51:53 [INFO ] Traffic Simulator - Start computation
+2016-11-03 01:51:59 [INFO ] Traffic Simulator - Directory created: ./2016_11/03/01/5159
+2016-11-03 01:51:59 [INFO ] Traffic Simulator - File ./2016_11/03/01/5159/sensori_FIRENZE.n3 creato
+2016-11-03 01:51:59 [INFO ] Traffic Simulator - File ./2016_11/03/01/5159/end.txt creato
+2016-11-03 01:51:59 [INFO ] Traffic Simulator - File ./2016_11/03/01/5159/sensori_FIRENZ.json creato
+2016-11-03 01:51:59 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 02:16:07 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 02:16:07 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 02:16:07 [INFO ] Traffic Simulator - Start computation
+2016-11-03 02:19:12 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 02:19:12 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 02:19:12 [INFO ] Traffic Simulator - Start computation
+2016-11-03 02:19:15 [INFO ] Traffic Simulator - Directory created: ./2016_11/03/02/1915
+2016-11-03 02:19:15 [INFO ] Traffic Simulator - File ./2016_11/03/02/1915/sensori_FIRENZE.n3 creato
+2016-11-03 02:19:15 [INFO ] Traffic Simulator - File ./2016_11/03/02/1915/end.txt creato
+2016-11-03 02:19:15 [INFO ] Traffic Simulator - File ./2016_11/03/02/1915/sensori_FIRENZ.json creato
+2016-11-03 02:19:15 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 02:20:24 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 02:20:24 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 02:20:24 [INFO ] Traffic Simulator - Start computation
+2016-11-03 02:24:41 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 02:24:41 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 02:24:41 [INFO ] Traffic Simulator - Start computation
+2016-11-03 02:24:45 [INFO ] Traffic Simulator - Directory created: ./2016_11/03/02/2445
+2016-11-03 02:24:45 [INFO ] Traffic Simulator - File ./2016_11/03/02/2445/sensori_FIRENZE.n3 creato
+2016-11-03 02:24:45 [INFO ] Traffic Simulator - File ./2016_11/03/02/2445/end.txt creato
+2016-11-03 02:24:45 [INFO ] Traffic Simulator - File ./2016_11/03/02/2445/sensori_FIRENZ.json creato
+2016-11-03 02:24:45 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 14:42:15 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:42:15 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:42:15 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:43:09 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:43:09 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:43:09 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:46:14 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:46:14 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:46:14 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:46:46 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:46:46 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:46:46 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:47:15 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:47:15 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:47:15 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:48:48 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:48:48 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:48:48 [INFO ] Traffic Simulator - Start computation
+2016-11-03 14:48:54 [INFO ] Traffic Simulator - Directory created: ./2016_11/03/14/4853
+2016-11-03 14:48:54 [INFO ] Traffic Simulator - File ./2016_11/03/14/4853/sensori_FIRENZE.n3 creato
+2016-11-03 14:48:54 [INFO ] Traffic Simulator - File ./2016_11/03/14/4853/end.txt creato
+2016-11-03 14:48:54 [INFO ] Traffic Simulator - File ./2016_11/03/14/4853/sensori_FIRENZ.json creato
+2016-11-03 14:48:54 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 14:58:13 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 14:58:13 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 14:58:13 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:04:36 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:04:37 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:04:37 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:04:42 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/0442
+2016-11-03 15:04:42 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/0442/recharge.n3 creato
+2016-11-03 15:04:42 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/0442/end.txt creato
+2016-11-03 15:04:42 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/0442/recharg.json creato
+2016-11-03 15:04:42 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:23:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:23:49 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:23:49 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:23:52 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/2352
+2016-11-03 15:23:52 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/2352/recharge.n3 creato
+2016-11-03 15:23:52 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/2352/end.txt creato
+2016-11-03 15:23:52 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/2352/recharg.json creato
+2016-11-03 15:23:52 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:29:12 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:29:12 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:29:12 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:34:15 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:34:15 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:34:15 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:34:17 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/3417
+2016-11-03 15:34:17 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/3417/recharge.n3 creato
+2016-11-03 15:34:17 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/3417/end.txt creato
+2016-11-03 15:34:17 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/3417/recharg.json creato
+2016-11-03 15:34:17 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:39:17 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:39:17 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:39:17 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:41:31 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:41:31 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:41:31 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:42:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:42:49 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:42:49 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:42:50 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/4250
+2016-11-03 15:42:50 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4250/recharge.n3 creato
+2016-11-03 15:42:50 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4250/end.txt creato
+2016-11-03 15:42:50 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:44:19 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:44:19 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:44:19 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:44:20 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/4420
+2016-11-03 15:44:20 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4420/recharge.n3 creato
+2016-11-03 15:44:20 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4420/end.txt creato
+2016-11-03 15:44:20 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:46:55 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:46:55 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:46:55 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:48:50 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:48:50 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:48:50 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:48:56 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:48:56 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:48:56 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:48:58 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/4858
+2016-11-03 15:48:58 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4858/recharge.n3 creato
+2016-11-03 15:48:58 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/4858/end.txt creato
+2016-11-03 15:48:58 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/5004
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/5004/recharge.n3 creato
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/5004/end.txt creato
+2016-11-03 15:50:04 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:50:47 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:50:47 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:50:47 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:50:48 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/15/5048
+2016-11-03 15:50:48 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/5048/recharge.n3 creato
+2016-11-03 15:50:48 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/15/5048/end.txt creato
+2016-11-03 15:50:48 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 15:55:53 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:55:53 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:55:53 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:55:56 [FATAL] Traffic Simulator - Evaluate expression error: ReferenceError: "$Charging_Station" is not defined in <eval> at line number 1
+2016-11-03 15:56:58 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:56:58 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:56:58 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:57:41 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:57:41 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:57:41 [INFO ] Traffic Simulator - Start computation
+2016-11-03 15:59:45 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 15:59:45 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 15:59:45 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:00:40 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:00:40 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:00:40 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:15:02 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:15:02 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:15:02 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:38:50 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:38:50 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:38:50 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:38:53 [FATAL] Traffic Simulator - Evaluate expression error: ReferenceError: "charging_stations_1" is not defined in <eval> at line number 1
+2016-11-03 16:39:25 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:39:25 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:39:25 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:40:44 [FATAL] Traffic Simulator - Evaluate expression error: ReferenceError: "charging_stations_1" is not defined in <eval> at line number 1
+2016-11-03 16:44:18 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:44:18 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:44:18 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:44:20 [FATAL] Traffic Simulator - Evaluate expression error: ReferenceError: "charging_stations_1" is not defined in <eval> at line number 1
+2016-11-03 16:44:36 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:44:36 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:44:36 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:48:06 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:48:06 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:48:06 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:49:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:49:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:49:39 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:49:40 [FATAL] Traffic Simulator - Evaluate expression error: null
+2016-11-03 16:50:38 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:50:38 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:50:38 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:53:38 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 16:53:38 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 16:53:38 [INFO ] Traffic Simulator - Start computation
+2016-11-03 16:53:40 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/16/5340
+2016-11-03 16:53:40 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/16/5340/recharge.n3 creato
+2016-11-03 16:53:40 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/16/5340/end.txt creato
+2016-11-03 16:53:40 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:10:23 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: null
+2016-11-03 17:11:32 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: null
+2016-11-03 17:12:01 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: null
+2016-11-03 17:13:10 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:13:10 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:13:10 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:13:15 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/1315
+2016-11-03 17:13:15 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1315/recharge.n3 creato
+2016-11-03 17:13:15 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1315/end.txt creato
+2016-11-03 17:13:15 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:15:28 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:15:29 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:15:29 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:15:31 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/1531
+2016-11-03 17:15:31 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1531/recharge.n3 creato
+2016-11-03 17:15:31 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1531/end.txt creato
+2016-11-03 17:15:31 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:16:50 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:16:50 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:16:50 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:16:53 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/1653
+2016-11-03 17:16:53 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1653/recharge.n3 creato
+2016-11-03 17:16:53 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/1653/end.txt creato
+2016-11-03 17:16:53 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:18:08 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:18:08 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:18:08 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:21:08 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:21:08 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:21:08 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:23:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:23:49 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:23:49 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:23:51 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/2351
+2016-11-03 17:23:51 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/2351/recharge.n3 creato
+2016-11-03 17:23:51 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/2351/end.txt creato
+2016-11-03 17:23:51 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:24:29 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:24:29 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:24:29 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:24:42 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:24:42 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:24:42 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:31:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:31:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:31:39 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:31:41 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/3141
+2016-11-03 17:31:41 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/3141/recharge.n3 creato
+2016-11-03 17:31:41 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/3141/end.txt creato
+2016-11-03 17:31:41 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:42:24 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:42:24 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:42:24 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:42:27 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/4227
+2016-11-03 17:42:27 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/4227/recharge.n3 creato
+2016-11-03 17:42:27 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/4227/end.txt creato
+2016-11-03 17:42:27 [INFO ] Traffic Simulator - Computation completed

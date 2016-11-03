@@ -3,11 +3,14 @@ package genericClass;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.Callable;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
@@ -106,18 +109,20 @@ public class GenericAttribute {
 	private String type; 
 	private String name;
 	private GenericObject externalClassObject;
+	private boolean isUri;
 	
 	
 	
 	public GenericAttribute(Prop prop){
 		
 		this.externalClassObject = null;
-		this.name = (prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
+		this.name = prop.getName()!=null?prop.getName():(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
 		this.attributeKey =  prop.getKey();
 		this.valueExpression = prop.getValueExpression();
-		externalKey = false;
+		this.externalKey = false;
 		this.uri = prop.getUri();
 		this.type = prop.getType();
+		this.isUri = prop.isUri();
 		String className = genericTypeMap.getType(prop.getType().toLowerCase());
 		primaryKey = (prop.getKey().toLowerCase().contains("identifier"));
 		externalKey = (className == null);
@@ -149,6 +154,7 @@ public class GenericAttribute {
 		this.type = ga.type;
 		this.name = ga.name;
 		this.externalClassObject = ga.externalClassObject;
+		this.isUri = ga.isUri();
 	}
 
 
@@ -181,6 +187,10 @@ public class GenericAttribute {
 	public String getUri() {
 		return uri;
 	}
+	
+	public String getUri(ArrayList<GenericObject> tripleObject){
+		return getUriParam(this.uri, tripleObject);
+	}
 
 	public void setAttribute(Attribute<?> att){
 		this.attribute = att;
@@ -199,6 +209,10 @@ public class GenericAttribute {
 			attribute = new Attribute<>(clazz);
 		}
 		return attribute;
+	}
+	
+	public boolean isUri(){
+		return isUri;
 	}
 
 	public boolean isPrimaryKey() {
@@ -220,7 +234,28 @@ public class GenericAttribute {
 		return this.getAttribute().paramList;
 	}
 	
-	
+	private String getUriParam(String uri,ArrayList<GenericObject> tripleObject){
+		String resUri = uri;
+		if(resUri.contains("$")){
+			Matcher m = Pattern.compile("\\{.*?\\}").matcher(resUri);
+			while(m.find()){
+				String pattern = m.group();
+				Matcher m1 = Pattern.compile("[$]+[a-zA-Z_]+").matcher(pattern);
+				m1.find();
+				String var = m1.group().replace("$", "");
+				String value = getIdentifierFromClassName(var,tripleObject);
+				resUri = resUri.replace(pattern, pattern.replace(var, value).replace("{", "").replace("}", "").replaceAll(" ", ""));
+			}
+		}
+		return resUri;
+	}
+	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
+		for(GenericObject go:tripleObject){
+			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
+				return go.getIdentifier().getAttribute().gettAttributeValue();
+		}
+		return "";
+	}
 	
 	
 }

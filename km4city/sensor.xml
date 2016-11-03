@@ -1,69 +1,131 @@
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" isStateful="true" simulationName="TrafficSimulation">
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" fileName="sensori_FIRENZE.n3" isStateful="false">
     <classIterationQuery>
     	<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
-    	<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} order by ?id limit 100</query>
+    	<query>SELECT DISTINCT (substr(str(?s),39) as ?id) WHERE {?s a km4c:Charging_stations.} limit 10</query>
     </classIterationQuery>
     <fileInfo>
-    	<fileName>sensori_FIRENZE.n3</fileName>
-    	<startDirectory>./</startDirectory>
+    	<fileName>recharge.n3</fileName>
+    	<startDirectory>./recharge/</startDirectory>
     </fileInfo>
-    <class type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
+    <class type="http://www.disit.org/km4city/schema#Charging_Stations" name="Charging_Station" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>id</type>
+                <name>Charging_Station</name>
             </prop>
-            <prop key="http://www.disit.org/km4city/schema#hasObservation">
-                <type>Observation</type>
-                <uri>http://www.disit.org/km4city/schema#Observation</uri>
+            <prop key="http://www.w3.org/ns/ssn/hasSensor">
+                <type>Sensor1</type>
+                <uri>http://www.w3.org/ns/ssn/Sensor</uri>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/hasSensor">
+                <type>Sensor2</type>
+                <uri>http://www.w3.org/ns/ssn/Sensor</uri>
             </prop>
         </properties>
     </class>
-    <class type="http://www.disit.org/km4city/schema#Observation" name="Observation" isRoot="false" baseUri="http://www.disit.org/km4city/resource{+$SensorSite}">
+    <class type="http://www.w3.org/ns/ssn/Sensor" name="Sensor1" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>String</type>
+                <valueExpression>$Charging_Station + "_sensor1"</valueExpression>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/MadeObservation">
+                <type>Observation1</type>
+            </prop>
+        </properties>
+    </class>
+    <class type="http://www.w3.org/ns/ssn/Sensor" name="Sensor2" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>String</type>
+                <valueExpression>$Charging_Station + "_sensor2"</valueExpression>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/MadeObservation">
+                <type>Observation2</type>
+            </prop>
+        </properties>
+    </class>
+    <class type="http://www.w3.org/ns/ssn/Observation" name="Observation1" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
                 <type>UID</type>
             </prop>
-            <prop key="http://purl.org/dc/terms/date">
-                <type>DateTime</type>
-                <uri>http://www.w3.org/2001/XMLSchema#dateTime{$SensorSite}</uri>
+            <prop key="http://www.w3.org/ns/ssn/observationResult">
+                <type>SensorOutput1</type>
             </prop>
-            <prop key="http://www.disit.org/km4city/schema#averageSpeed">
+            <prop key="http://www.w3.org/ns/ssn/observedProperty" isUri="true">
+				<type>FromSet</type>
+                <fromSet>http://www.disit.org/km4city/schema#chargeState</fromSet>
+            </prop>
+        </properties>
+    </class>
+	<class type="http://www.w3.org/ns/ssn/SensorOutput" name="SensorOutput1" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>UID</type>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/observationResultTime">
+                <type>DateTime</type>
+                <uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
+            </prop>
+			<prop key="http://www.w3.org/ns/ssn/hasValue">
+				<type>ObservationValue1</type>
+			</prop>
+		</properties>
+	</class>
+	<class type="http://www.w3.org/ns/ssn/ObservationValue" name="ObservationValue1" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>UID</type>
+            </prop>
+            <prop key="http://www.disit.org/km4city/schema#chargeState">
                 <type>Float</type>
                 <maxValue>3</maxValue>
                 <minValue>2</minValue>
                 <uri>http://www.w3.org/2001/XMLSchema#float</uri>
             </prop>
-            <prop key="http://www.disit.org/km4city/schema#vehicleFlow">
-                <type>Float</type>
-                <valueExpression>$concentration * $averageSpeed </valueExpression>
-                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
-            </prop>
-            <prop key="http://www.disit.org/km4city/schema#concentration">
-                <type>FromSet</type>
-                <fromSet>50</fromSet>
-                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
-            </prop>
-            <prop key="http://www.disit.org/km4city/schema#measuredTime">
-                <type>Instant</type>
-                <uri>http://www.w3.org/2006/time#Instant</uri>
-            </prop>
-            <prop key="http://www.disit.org/km4city/schema#measuredBySensor">
-                <type>SensorSite</type>
-                <uri>http://www.disit.org/km4city/schema#SensorSite</uri>
-            </prop>
-        </properties>
-    </class>
-    <class type="http://www.w3.org/2006/time#Instant" isRoot="false" name="Instant" baseUri="http://www.disit.org/km4city/resource">
+		</properties>
+	</class>
+    <class type="http://www.w3.org/ns/ssn/Observation" name="Observation2" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
         <properties>
             <prop key="http://purl.org/dc/terms/identifier">
-                <type>DateTime</type>
-                <uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
-            </prop>    
-            <prop key="http://www.disit.org/km4city/schema#instantObserv">
-                <type>Observation</type>
-                <uri>http://www.disit.org/km4city/schema#Observation</uri>
+                <type>UID</type>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/observationResult">
+                <type>SensorOutput2</type>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/observedProperty">
+				<type>FromSet</type>
+                <fromSet>http://www.disit.org/km4city/schema#lastChargeState</fromSet>
             </prop>
         </properties>
     </class>
+	<class type="http://www.w3.org/ns/ssn/SensorOutput" name="SensorOutput2" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>UID</type>
+            </prop>
+            <prop key="http://www.w3.org/ns/ssn/observationResultTime" isNull="true">
+                <type>DateTime</type>
+                <uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
+            </prop>
+			<prop key="http://www.w3.org/ns/ssn/hasValue">
+				<type>ObservationValue2</type>
+			</prop>
+		</properties>
+	</class>
+	<class type="http://www.w3.org/ns/ssn/ObservationValue" name="ObservationValue2" isRoot="false" baseUri="http://www.disit.org/km4city/resource">
+        <properties>
+            <prop key="http://purl.org/dc/terms/identifier">
+                <type>UID</type>
+            </prop>
+            <prop key="http://www.disit.org/km4city/schema#lastChargeTime">
+                <type>Float</type>
+                <maxValue>3</maxValue>
+                <minValue>2</minValue>
+                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
+            </prop>
+		</properties>
+	</class>
 </tree>
