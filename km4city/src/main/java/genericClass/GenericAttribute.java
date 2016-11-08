@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.regex.Matcher;
@@ -18,47 +19,33 @@ import org.apache.log4j.Logger;
 import XMLDomain.Tree.Class.Properties.Prop;
 import genericClass.GenericAttribute.Attribute;
 
+
 public class GenericAttribute {
 
 	public class Attribute<T>{
 		private final Class<T> typeParameterClass;
 		private T attributeValue;
-		private HashMap<String,Object> paramList;
+		
 		
 		
 		public Attribute(Class<T> typeParameterClass){
 			this.typeParameterClass = typeParameterClass;
-			paramList = new HashMap<>();
 		}
 		
 		public Attribute(Attribute<T> a){
 			if(a!=null){
 				typeParameterClass = a.typeParameterClass;
 				attributeValue = a.attributeValue;
-				paramList = a.paramList;
 			}else{
 				typeParameterClass = null;
 			}
 		}
 		
-		public void setParamList(HashMap<String,Object> param){
-			this.paramList = param;
-		}
 		
-		public void putParam(String key, Object param){
-			this.paramList.put(key, param);
-		}
-		
-		public Object getParam(String key){
-			return this.paramList.get(key);
-		}
 		public T generateAttributeValue(){
 			return null;
 		}
 		
-		public HashMap<String,Object> getAttributeList(){
-			return paramList;
-		}
 		public void setAttributeValue(String value){
 			Constructor<?> constructor;
 			try {
@@ -71,45 +58,34 @@ public class GenericAttribute {
 			
 		}
 		
+		
 		public T getAttributeValue(){
 			return this.attributeValue;
-		}
-		
-		public String gettAttributeValue(){
-			return this.attributeValue.toString();
 		}
 		
 		public void setValue(String type,Object value){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, value);
 		}
-		private String getObjectList(){
-			String str = "";
-			Iterator it = this.paramList.entrySet().iterator();
-		    while (it.hasNext()) {
-		    	Map.Entry pair = (Map.Entry)it.next();
-		    	str += pair.getKey()+": "+pair.getValue()+"\n";
-		    }
-		    return str;
-		}
 		public String toString(){
-			return "value: "+this.attributeValue+"\n"+getObjectList();
+			return "value: "+this.attributeValue+"\n";
 					
 		}
 	}
 
 	final static GenericTypeMap genericTypeMap = GenericTypeMap.getInstance();
 	final static Logger logger = Logger.getLogger(GenericAttribute.class);
-	private String valueExpression;
-	private String uri;
 	private Attribute<?> attribute;
 	private String attributeKey;
-	private boolean primaryKey;
-	private boolean externalKey;
-	private boolean constrain;
-	private String type; 
 	private String name;
 	private GenericObject externalClassObject;
+	private HashMap<String,AttributeParam> paramList;
+	private boolean isPrimaryKey;
+	private boolean isExternalKey;
 	private boolean isUri;
+	private boolean isValueExpression;
+	private boolean isProcessed;
+	private boolean isHidden;
+	
 	
 	
 	
@@ -118,55 +94,98 @@ public class GenericAttribute {
 		this.externalClassObject = null;
 		this.name = prop.getName()!=null?prop.getName():(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#")[(prop.getKey().split("/")[prop.getKey().split("/").length-1]).split("#").length-1];;
 		this.attributeKey =  prop.getKey();
-		this.valueExpression = prop.getValueExpression();
-		this.externalKey = false;
-		this.uri = prop.getUri();
-		this.type = prop.getType();
+		this.isProcessed = false;
+		this.isExternalKey = false;
 		this.isUri = prop.isUri();
 		String className = genericTypeMap.getType(prop.getType().toLowerCase());
-		primaryKey = (prop.getKey().toLowerCase().contains("identifier"));
-		externalKey = (className == null);
-		constrain = (valueExpression != null);
-		if(!externalKey){
+		this.isPrimaryKey = (prop.getKey().toLowerCase().contains("identifier"));
+		this.isExternalKey = (className == null);
+		this.isHidden = prop.isHidden();
+		this.paramList = new HashMap<String,AttributeParam>();
+		this.paramList = prop.getAttributeList();
+		if(!isExternalKey){
 			try {
 				Class clazz = java.lang.Class.forName(className);
 				Attribute attribute = new Attribute<>(clazz);
-				attribute.setParamList(prop.getAttributeList());
 				this.attribute = attribute;
 			} catch (ClassNotFoundException | SecurityException | IllegalArgumentException e) {
 				// TODO Auto-generated catch block
 				logger.error("Acquiring properties Error: "+e.getMessage());
 			}
 		}
+		this.isValueExpression = this.attribute==null?false:this.paramContainExpression();
 	}
 	
 	
 	
 	public GenericAttribute(GenericAttribute ga) {
 		
-		this.valueExpression = ga.valueExpression;
-		this.uri = ga.uri;
+		
 		this.attribute = new Attribute<>(ga.attribute);
 		this.attributeKey = ga.attributeKey;
-		this.primaryKey = ga.primaryKey;
-		this.externalKey = ga.externalKey;
-		this.constrain = ga.constrain;
-		this.type = ga.type;
+		this.isPrimaryKey = ga.isPrimaryKey;
+		this.isExternalKey = ga.isExternalKey;
 		this.name = ga.name;
 		this.externalClassObject = ga.externalClassObject;
 		this.isUri = ga.isUri();
+		this.isProcessed = ga.isProcessed;
+		this.isValueExpression = ga.isValueExpression;
+		this.isHidden = ga.isHidden;
+		this.paramList = ga.paramList;
+	}
+	
+	public boolean paramContainExpression(){
+		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
+	    	if (pair.getValue()!=null && pair.getValue().isValueEspression())
+	    		return true;
+	    }
+	    return false;
+	}
+	
+	public void setParamList(HashMap<String,AttributeParam> param){
+		this.paramList = param;
+	}
+	
+	public void putParam(String key, String param){
+		this.paramList.put(key, new AttributeParam(param));
+	}
+	
+	public Object getParam(String key){
+		return this.paramList.get(key).getObject();
+	}
+	public boolean isHidden(){
+		return isHidden;
+	}
+	public boolean isProcessed() {
+		return isProcessed;
 	}
 
+	public void setProcessed(boolean isProcessed) {
+		this.isProcessed = isProcessed;
+	}
 
-
+	public boolean isValueExpression() {
+		return isValueExpression;
+	}
+	private String getObjectList(){
+		String str = "";
+		Iterator it = this.paramList.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry pair = (Map.Entry)it.next();
+	    	str += pair.getKey()+": "+pair.getValue()+"\n";
+	    }
+	    return str;
+	}
 	public String toString(){
 		return  "Attribute name: "+getAttributeName()+"\n"
 				+"key value:"+this.getAttributeKey()+"\n"
 				+(isPrimaryKey()?"is primary\n":"")
 				+(isExternalKey()?"is external\n":"")
-				+(isConstrain()?"is constrain\n":"")
+				+"Attribute param" + getObjectList()
 				+"Attribute value:\n"+(attribute != null?attribute.toString():"");
-					
+							
 				
 	}
 	public String getAttributeName(){
@@ -181,15 +200,15 @@ public class GenericAttribute {
 	}
 
 	public String getValueExpression() {
-		return valueExpression;
+		return (String) this.getParam("valueExpression");
 	}
 
 	public String getUri() {
-		return uri;
+		return  (String) this.getParam("uri");
 	}
 	
 	public String getUri(ArrayList<GenericObject> tripleObject){
-		return getUriParam(this.uri, tripleObject);
+		return getUriParam((String) this.getParam("uri"), tripleObject);
 	}
 
 	public void setAttribute(Attribute<?> att){
@@ -216,22 +235,19 @@ public class GenericAttribute {
 	}
 
 	public boolean isPrimaryKey() {
-		return primaryKey;
+		return isPrimaryKey;
 	}
 
 	public boolean isExternalKey() {
-		return externalKey;
+		return isExternalKey;
 	}
 	
-	public boolean isConstrain(){
-		return constrain;
+	public HashMap<String,AttributeParam> getAttributeList(){
+		return paramList;
 	}
 
 	public String getType() {
-		return type;
-	}
-	public HashMap<String,Object> getAttributeList(){
-		return this.getAttribute().paramList;
+		return (String) this.getParam("type");
 	}
 	
 	private String getUriParam(String uri,ArrayList<GenericObject> tripleObject){
@@ -252,7 +268,7 @@ public class GenericAttribute {
 	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
 		for(GenericObject go:tripleObject){
 			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
-				return go.getIdentifier().getAttribute().gettAttributeValue();
+				return go.getIdentifier().getAttribute().getAttributeValue().toString();
 		}
 		return "";
 	}

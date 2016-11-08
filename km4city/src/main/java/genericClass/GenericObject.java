@@ -107,7 +107,7 @@ public class GenericObject {
 			String suff = baseUriParam.getRight();
 			return pre+suff;
 		}else{
-			return baseUri+"/"+this.getIdentifier().getAttribute().gettAttributeValue();
+			return baseUri+"/"+this.getIdentifier().getAttribute().getAttributeValue().toString();
 		}
 			
 	}
@@ -161,7 +161,7 @@ public class GenericObject {
 	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
 		for(GenericObject go:tripleObject){
 			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
-				return go.getIdentifier().getAttribute().gettAttributeValue();
+				return go.getIdentifier().getAttribute().getAttributeValue().toString();
 		}
 		return "";
 	}

@@ -10,11 +10,14 @@ public class GenericTypeMap {
 		put("integer","java.lang.Integer");
 		put("float","java.lang.Float");
 		put("datetime","java.lang.String");
-		put("uid","java.lang.String");
+		put("uuid","java.lang.String");
 		put("id","java.lang.String");
 		put("hourdependent","java.lang.String");
 		put("fromset","java.lang.String");
 		put("string","java.lang.String");
+		put("query","java.lang.String");
+		put("md5","java.lang.String");
+		put("valueexpression","java.lang.String");
 	}};
 	
 	private GenericTypeMap(){

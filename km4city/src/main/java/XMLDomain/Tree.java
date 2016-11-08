@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+import genericClass.AttributeParam;
+
+
 
 
 /**
@@ -322,20 +325,28 @@ public class Tree {
 		public void setStartDirectory(String startDirectory) {
 			this.startDirectory = startDirectory;
 		}
-    	
-    	
     }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "query",
-        "server"
+        "server",
+        "bindingValue"
     })
     public static class QueryInfo{
     	
     	protected String query;
     	protected String server;
-    	
-    	public void setQuery(String query){
+    	protected String bindingValue;
+    	    	
+    	public String getBindingValue() {
+			return bindingValue;
+		}
+
+		public void setBindingValue(String bindingValue) {
+			this.bindingValue = bindingValue;
+		}
+
+		public void setQuery(String query){
     		this.query = query;
     	}
     	
@@ -598,7 +609,9 @@ public class Tree {
                 "hourValue",
                 "range",
                 "fromSet",
-                "name"
+                "name",
+                "queryInfo",
+                "md5String"
             })
             public static class Prop {
 
@@ -617,16 +630,47 @@ public class Tree {
                 protected String fromSet;
                 @XmlAttribute(name = "isUri")
                 protected String isUri;
-                
+                @XmlAttribute(name = "isHidden")
+                protected String isHidden;
+                @XmlElement(name = "queryInfo")
+                protected Tree.QueryInfo queryInfo;
+                protected String md5String;
+         
+                public String getMd5String() {
+					return md5String;
+                }
+				public void setMd5String(String md5) {
+					this.md5String = md5;
+				}
 
+				public boolean isHidden(){
+                	return isHidden==null?false:isHidden.contains("true");
+                }
                 
-                public HashMap<String,String> getAttributeList(){
-                	HashMap<String,String> map = new HashMap<>();
+                public String getIsHidden() {
+					return isHidden;
+				}
+
+				public void setIsHidden(String isHidden) {
+					this.isHidden = isHidden;
+				}
+
+				public Tree.QueryInfo getQueryInfo() {
+					return queryInfo;
+				}
+
+				public void setQueryInfo(Tree.QueryInfo query) {
+					this.queryInfo = query;
+				}
+
+				public HashMap<String,AttributeParam> getAttributeList(){
+                	HashMap<String,AttributeParam> map = new HashMap<>();
                 	Field[] fields = this.getClass().getDeclaredFields();
                 	for(Field f:fields){
                 		try {
 							Object v = f.get(this);
-							map.put(f.getName(),(String) v);
+							AttributeParam param = new AttributeParam(v);
+							map.put(f.getName(),param);
 						} catch (IllegalArgumentException | IllegalAccessException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();

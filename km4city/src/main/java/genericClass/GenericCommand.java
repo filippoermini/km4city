@@ -2,6 +2,9 @@ package genericClass;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
@@ -11,20 +14,35 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.UUID;
 
-import genericClass.GenericAttribute.Attribute;
-import genericClass.GenericCommand.GenerateFloatValue;
+import javax.script.ScriptException;
+
+import org.apache.log4j.Logger;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.query.BindingSet;
+import org.eclipse.rdf4j.query.TupleQueryResult;
+
+import Application.CommonValue;
+import Application.EvalEngine;
+import Application.RDFconnector;
+import Application.RDFconnector.RepositoryManager;
+import XMLDomain.Tree;
+import XMLDomain.Tree.QueryInfo;
+
 
 
 public class GenericCommand {
+	
+	final static Logger logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
+	final static EvalEngine javascriptEngine = EvalEngine.getInstance();
 
 	public class GenerateIntValue implements Command<Integer>{
 
 		@Override
 		public Integer valueGenerator(Object... args) {
 			Random rand = new Random();
-			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
-			int min = Integer.parseInt((String) param.get("minValue"));
-			int max = Integer.parseInt((String) param.get("maxValue"));
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			int min = Integer.parseInt((String) param.get("minValue").getObject());
+			int max = Integer.parseInt((String) param.get("maxValue").getObject());
 		    int randomNum = rand.nextInt((max - min) + 1) + min;
 		    return randomNum;
 		}
@@ -34,14 +52,14 @@ public class GenericCommand {
 		@Override
 		public Float valueGenerator(Object... args) {
 			Random rand = new Random();
-			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
-			float min = Float.parseFloat((String) param.get("minValue"));
-			float max = Float.parseFloat((String) param.get("maxValue"));
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			float min = Float.parseFloat((String) param.get("minValue").getObject());
+			float max = Float.parseFloat((String) param.get("maxValue").getObject());
 		    float randomNum = rand.nextFloat() * (max - min) + min;
 		    return randomNum;
 		}
 	}
-	public class GenerateUIDValue implements Command<String> {
+	public class GenerateUUIDValue implements Command<String> {
 		
 		@Override
 		public String valueGenerator(Object... args) {
@@ -53,9 +71,9 @@ public class GenericCommand {
 
 		@Override
 		public String valueGenerator(Object... args) {
-			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
-			String min = (String) param.get("minValue");
-			String max = (String) param.get("maxValue");
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String min = (String) param.get("minValue").getObject();
+			String max = (String) param.get("maxValue").getObject();
 			if((max=="" || max == null) && (min == "" || min == null)){
 				
 				return  DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
@@ -87,18 +105,18 @@ public class GenericCommand {
 			//questa tipologia di dato varia in base al valore dell'ora in cui viene generato il valore
 			//in base al valore di riferimento definito per ogni ora si determina il valore della simulazione dato un coefficiente di scarto
 			// il coefficiente di scarto è un valore intero e serve a limiare il range di variazione del valore orario.
-			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
-			String[] hourValue = ((String) param.get("hourValue")).split(";");
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String[] hourValue = ((String) param.get("hourValue").getObject()).split(";");
 			Calendar rightNow = Calendar.getInstance();
 			int hour = rightNow.get(Calendar.HOUR_OF_DAY);
 			String r = "";
-			if(((String) param.get("range")).split(";").length > 1){
-				r = ((String) param.get("range")).split(";")[hour];
+			if(((String) param.get("range").getObject()).split(";").length > 1){
+				r = ((String) param.get("range").getObject()).split(";")[hour];
 			}else {
-				r = (String) param.get("range");
+				r = (String) param.get("range").getObject();
 			}
 			Random rand = new Random();
-			if(((String) param.get("uri")).contains("float")){
+			if(((String) param.get("uri").getObject()).contains("float")){
 				//i valori orari e il range sono float
 				float refValue = Float.parseFloat(hourValue[hour]);
 				float range = Float.parseFloat(r);
@@ -122,12 +140,77 @@ public class GenericCommand {
 
 		@Override
 		public String valueGenerator(Object... args) {
-			HashMap<String,Object> param = (HashMap<String, Object>) args[0];
-			String[] set = ((String) param.get("fromSet")).split(";");
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String[] set = ((String) param.get("fromSet").getObject()).split(";");
 			Random rand = new Random();
 			int bound = set.length;
 			int index = rand.nextInt(bound);
 			return set[index];
+		}
+		
+	}
+	
+	public class GenerateQueryValue implements Command<String>{
+		@Override
+		public String valueGenerator(Object... args) {
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			Tree.QueryInfo queryInfo = (QueryInfo) param.get("queryInfo").getObject();
+			RepositoryManager rm = RDFconnector.getInstance(queryInfo.getServer());
+			TupleQueryResult results = rm.SPARQLExecute(queryInfo.getQuery());
+			if(results.hasNext()) {
+				BindingSet bindingSet = results.next();
+				Value value = bindingSet.getValue(queryInfo.getBindingValue());
+				return value.stringValue();
+			}
+			return "";
+		}
+	}
+	
+	public class GenerateMD5Value implements Command<String>{
+		@Override
+		public String valueGenerator(Object... args) {
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String arg = (String) param.get("md5String").getObject();
+			try {
+				 return md5(arg);
+			} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				logger.error("MD5 encription error: "+e.getMessage());
+			}
+			return "";
+		}
+		
+		private String md5(String message) throws NoSuchAlgorithmException, UnsupportedEncodingException{
+			StringBuffer hexString = new StringBuffer();
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			byte[] hash = md.digest(message.getBytes("UTF-8"));
+
+			for (int i = 0; i < hash.length; i++) {
+			    if ((0xff & hash[i]) < 0x10) {
+			        hexString.append("0"
+			                + Integer.toHexString((0xFF & hash[i])));
+			    } else {
+			        hexString.append(Integer.toHexString(0xFF & hash[i]));
+			    }
+			}
+			return hexString.toString();
+		}
+		
+	}
+	
+	public class GenerateExpressionValue implements Command<String>{
+
+		@Override
+		public String valueGenerator(Object... args) {
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String expression = (String) param.get("valueExpression").getObject();
+			try {
+				return javascriptEngine.getEngine().eval(expression).toString();
+			} catch (ScriptException e) {
+				// TODO Auto-generated catch block
+				logger.error("Evaluate expression error: "+ e.getMessage());
+			}
+			return null;
 		}
 		
 	}
@@ -164,10 +247,13 @@ public class GenericCommand {
 			
 			this.addCommand("integer",new GenerateIntValue());
 			this.addCommand("float",new GenerateFloatValue());
-			this.addCommand("uid", new GenerateUIDValue());
+			this.addCommand("uuid", new GenerateUUIDValue());
 			this.addCommand("datetime", new GenerateDateTimeValue());
 			this.addCommand("hourdependent", new GenerateHourDependentValue());
 			this.addCommand("fromset", new GenerateFromSetValue());
+			this.addCommand("query", new GenerateQueryValue());
+			this.addCommand("md5", new GenerateMD5Value());
+			this.addCommand("valueexpression", new GenerateExpressionValue());
 		}
 	}
 

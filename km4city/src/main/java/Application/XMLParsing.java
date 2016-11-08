@@ -41,7 +41,7 @@ public class XMLParsing<T> {
 				results = true;
 
 		    } catch (JAXBException e) {
-		    	logger.error("Serialize Error - JAXB exception: "+e.getMessage());
+		    	logger.error("Serialize Error - JAXB exception: "+e.getMessage()+e.getCause() );
 		    }
 		return results;
 

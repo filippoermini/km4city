@@ -58,13 +58,15 @@ public class TripleContainer {
 			//per ogni classe genero il type
 			String baseUri = "<"+go.getBaseUri(tripleObject)+"> ";
 			tripleRDF += baseUri+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
-			state.add(new Attribute("id",go.getIdentifier().getAttribute().gettAttributeValue()));
+			state.add(new Attribute("id",go.getIdentifier().getAttribute().getAttributeValue().toString()));
 			for(GenericAttribute ga:go.getAttributeList()){
 				//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
-				String attributeValue = !ga.isUri()?"\""+ga.getAttribute().gettAttributeValue()+"\"":"<"+ga.getAttribute().gettAttributeValue()+">";
-				String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri(tripleObject)+">":attributeValue+(ga.getUri()!=null?"^^<"+ga.getUri(tripleObject)+">":"");
-				tripleRDF += baseUri+"<"+ga.getAttributeKey()+"> "+object+" .\n";
-				state.add(new Attribute(ga.getAttributeName(),ga.getAttribute().gettAttributeValue()));
+				if(!ga.isHidden()){
+					String attributeValue = !ga.isUri()?"\""+ga.getAttribute().getAttributeValue().toString()+"\"":"<"+ga.getAttribute().getAttributeValue().toString()+">";
+					String object = ga.isExternalKey()?"<"+ga.getExternalClassObject().getBaseUri(tripleObject)+">":attributeValue+(ga.getUri()!=null?"^^<"+ga.getUri(tripleObject)+">":"");
+					tripleRDF += baseUri+"<"+ga.getAttributeKey()+"> "+object+" .\n";
+					state.add(new Attribute(ga.getAttributeName(),ga.getAttribute().getAttributeValue().toString()));
+				}
 			}
 		}		
 	}
@@ -85,11 +87,19 @@ public class TripleContainer {
 			}	
 		}
 	}
+	public GenericAttribute getGenericAttributeByName(String name){
+		GenericAttribute value = null;
+		for(GenericObject go:tripleObject){
+			if((value = go.getAttributeByName(name))!= null )
+				return value;
+		}
+		return null;
+	}
 	public String getValueByAttributeName(String name){
 		GenericAttribute value = null;
 		for(GenericObject go:tripleObject){
 			if((value = go.getAttributeByName(name))!= null )
-				return value.getAttribute().gettAttributeValue()!=null?value.getAttribute().gettAttributeValue():null;
+				return value.getAttribute().getAttributeValue()!=null?value.getAttribute().getAttributeValue().toString():null;
 		}
 		return null;
 	}
