@@ -24,7 +24,6 @@ public class DataSimulator {
 	private String startPath;
 	private XMLParsing<Tree> xml;
 	private Tree tree;
-	private RepositoryManager rdf;
 	
 	
 	public DataSimulator(String file, String start,String name){
@@ -34,7 +33,6 @@ public class DataSimulator {
 		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 		xml = new XMLParsing(Tree.class);
 		tree = xml.DeserializeFromXML(xmlFile);
-		rdf = RDFconnector.getInstance(tree.getClassIterationQuery().getServer());
 		logger.info("Initialization parameters completed");
 		this.startPath = tree.getFileInfo().getStartDirectory();
 	}
@@ -42,8 +40,8 @@ public class DataSimulator {
 	public void run(){
 		
 		logger.info("Start computation");
-		TripleGenerator tripleGen = new TripleGenerator(tree,rdf);
-		String triple = tripleGen.tripleRDF(tree.isStatefull());
+		TripleGenerator tripleGen = new TripleGenerator(tree);
+		String triple = tripleGen.tripleRDF(tree.isStatefull(),tree.getTypeId());
 		String jsonState = tripleGen.toJson();
 				
 		//generazione file e cartelle secondo lo scema predefinito

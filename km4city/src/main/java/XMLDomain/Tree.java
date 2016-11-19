@@ -8,7 +8,6 @@
 
 package XMLDomain;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,74 +22,12 @@ import javax.xml.bind.annotation.XmlType;
 
 import genericClass.AttributeParam;
 
-
-
-
-/**
- * <p>Classe Java per anonymous complex type.
- * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="class" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="properties">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="prop" maxOccurs="unbounded" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                                       &lt;element name="maxValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
- *                                       &lt;element name="minValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
- *                                       &lt;element name="uri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *                                     &lt;/sequence>
- *                                     &lt;attribute name="key" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *                 &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="isRoot" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="baseUri" type="{http://www.w3.org/2001/XMLSchema}string" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
 	"fileIterationQuery",
 	"classIterationQuery",
     "fileInfo",
-    "clazz",
-    "linkedTree",
-    "attributes"
+    "iterationElement"
 })
 @XmlRootElement(name = "tree")
 public class Tree {
@@ -101,45 +38,31 @@ public class Tree {
 	protected String typeId;
 	@XmlAttribute(name = "simulationName")
 	protected String simulationName;
-    @XmlElement(name = "class")
-    protected List<Tree.Class> clazz;
-    @XmlAttribute(name = "primaryTree")
-    protected String primaryTree;
-    @XmlElement(name = "linkedTree")
-    protected LinkedTree linkedTree; 
     @XmlElement(name = "fileIterationQuery")
     protected Tree.QueryInfo fileIterationQuery;
     @XmlElement(name = "classIterationQuery")
     protected Tree.QueryInfo classIterationQuery;
-    @XmlElement(name = "attributes")
-    protected List<Tree.Attribute> attributes;
     @XmlElement(name = "fileInfo")
     protected Tree.FileInfo fileInfo;
+    @XmlElement(name = "iterationElement")
+    protected Tree.iterationElement iterationElement;
     
-    public Tree.FileInfo getFileInfo() {
+    public Tree.iterationElement getIterationElement(){
+    	return this.iterationElement;
+    }
+    
+    public void setIterationElement(Tree.iterationElement it){
+    	this.iterationElement = it;
+    }
+    
+	public Tree.FileInfo getFileInfo() {
 		return fileInfo;
 	}
 	public void setFileInfo(Tree.FileInfo fileInfo) {
 		this.fileInfo = fileInfo;
 	}
-	public List<Tree.Attribute> getAttributes() {
-		return attributes;
-	}
-	public void setAttributes(List<Tree.Attribute> attributes) {
-		this.attributes = attributes;
-	}
-	public String getPrimaryTree() {
-		return primaryTree;
-	}
-	public void setPrimaryTree(String primaryTree) {
-		this.primaryTree = primaryTree;
-	}
-	public LinkedTree getLinkedTree() {
-		return linkedTree;
-	}
-	public void setLinkedTree(LinkedTree linkedTree) {
-		this.linkedTree = linkedTree;
-	}
+	
+	
 	public Tree.QueryInfo getFileIterationQuery() {
 		return fileIterationQuery==null?new QueryInfo():fileIterationQuery;
 	}
@@ -181,83 +104,36 @@ public class Tree {
     public void setTypeId(String type){
     	this.typeId = type;
     }
-	/**
-     * Gets the value of the clazz property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the clazz property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getClazz().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Tree.Class }
-     * 
-     * 
-     */
-    public List<Tree.Class> getClazz() {
-        if (clazz == null) {
-            clazz = new ArrayList<Tree.Class>();
+	
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "",propOrder = {
+    	"clazz",
+    	"attributes"
+    })
+    public static class iterationElement{
+    	@XmlElement(name = "attributes")
+        protected Tree.Class.Properties attributes;
+    	@XmlElement(name = "class")
+        protected List<Tree.Class> clazz;
+    	
+    	public Tree.Class.Properties getAttributes() {
+    		return attributes;
+    	}
+    	public void seAttributes(Tree.Class.Properties hiddenProperties) {
+    		this.attributes = hiddenProperties;
+    	}
+    	
+    	public List<Tree.Class> getClazz() {
+            if (clazz == null) {
+                clazz = new ArrayList<Tree.Class>();
+            }
+            return this.clazz;
         }
-        return this.clazz;
+
+    	
     }
-
-
-    /**
-     * <p>Classe Java per anonymous complex type.
-     * 
-     * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="properties">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="prop" maxOccurs="unbounded" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                             &lt;element name="maxValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-     *                             &lt;element name="minValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-     *                             &lt;element name="uri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-     *                           &lt;/sequence>
-     *                           &lt;attribute name="key" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
-     *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="isRoot" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="baseUri" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
+    
+    
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "name",

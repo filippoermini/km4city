@@ -14,7 +14,7 @@ import Application.Pair;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Class.Properties.Prop;
 
-public class GenericObject {
+public class GenericClass {
 	
 	private String className;
 	private boolean isRoot;
@@ -23,7 +23,7 @@ public class GenericObject {
 	private ArrayList<GenericAttribute> attributeList;
 	private boolean processed; // questo campo mi indica che sono stati inseriti tutti i valori
 	
-	public GenericObject(Tree.Class Class){
+	public GenericClass(Tree.Class Class){
 		
 		this.attributeList = new ArrayList<>();
 		this.className = Class.getName();
@@ -42,28 +42,22 @@ public class GenericObject {
 			prop = it.next();
 			GenericAttribute gAtt = new GenericAttribute(prop);
 			attributeList.add(gAtt);
-		}
-		
+		}	
 	}
-	
-	
-
-	public GenericObject(GenericObject go) {
+	public GenericClass(GenericClass go) {
 	
 		this.className = go.className;
 		this.isRoot = go.isRoot;
 		this.type = go.type;
 		this.baseUri = go.baseUri;
 		this.processed = go.processed;
-		this.attributeList = new ArrayList();
+		this.attributeList = new ArrayList<GenericAttribute>();
 		Iterator<GenericAttribute> it = go.attributeList.iterator();
 		while(it.hasNext()){
 			this.attributeList.add(new GenericAttribute(it.next()));
 		}
 		
 	}
-
-
 
 	public void setID(String id){
 		for(GenericAttribute g:attributeList){
@@ -99,7 +93,7 @@ public class GenericObject {
 		return baseUri;
 	}
 	
-	public String getBaseUri(ArrayList<GenericObject> tripleObject){
+	public String getBaseUri(ArrayList<GenericClass> tripleObject){
 		
 		if (baseUri.contains("$")){
 			Pair<String,String> baseUriParam = getBaseUriParam(this.getBaseUri(),tripleObject);
@@ -140,7 +134,7 @@ public class GenericObject {
 		return null;
 	}
 	
-	private Pair<String,String> getBaseUriParam(String baseUri, ArrayList<GenericObject> tripleObject){
+	private Pair<String,String> getBaseUriParam(String baseUri, ArrayList<GenericClass> tripleObject){
 		String suff = "";
 		String pre  = baseUri;
 		if(baseUri.contains("$")){
@@ -158,8 +152,8 @@ public class GenericObject {
 		return new Pair<String,String>(pre,suff);
 	}
 	
-	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
-		for(GenericObject go:tripleObject){
+	private String getIdentifierFromClassName(String className, ArrayList<GenericClass> tripleObject){
+		for(GenericClass go:tripleObject){
 			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
 				return go.getIdentifier().getAttribute().getAttributeValue().toString();
 		}

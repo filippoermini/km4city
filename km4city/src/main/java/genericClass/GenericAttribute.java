@@ -77,7 +77,7 @@ public class GenericAttribute {
 	private Attribute<?> attribute;
 	private String attributeKey;
 	private String name;
-	private GenericObject externalClassObject;
+	private GenericClass externalClassObject;
 	private HashMap<String,AttributeParam> paramList;
 	private boolean isPrimaryKey;
 	private boolean isExternalKey;
@@ -207,19 +207,19 @@ public class GenericAttribute {
 		return  (String) this.getParam("uri");
 	}
 	
-	public String getUri(ArrayList<GenericObject> tripleObject){
+	public String getUri(ArrayList<GenericClass> tripleObject){
 		return getUriParam((String) this.getParam("uri"), tripleObject);
 	}
 
 	public void setAttribute(Attribute<?> att){
 		this.attribute = att;
 	}
-	public void setExternalClassObject(GenericObject go){
+	public void setExternalClassObject(GenericClass go){
 		this.externalClassObject = go;
 		this.attribute = go.getIdentifier().getAttribute();
 	}
 	
-	public GenericObject getExternalClassObject(){
+	public GenericClass getExternalClassObject(){
 		return this.externalClassObject;
 	}
 	public Attribute<?> getAttribute() {
@@ -250,7 +250,7 @@ public class GenericAttribute {
 		return (String) this.getParam("type");
 	}
 	
-	private String getUriParam(String uri,ArrayList<GenericObject> tripleObject){
+	private String getUriParam(String uri,ArrayList<GenericClass> tripleObject){
 		String resUri = uri;
 		if(resUri.contains("$")){
 			Matcher m = Pattern.compile("\\{.*?\\}").matcher(resUri);
@@ -265,8 +265,8 @@ public class GenericAttribute {
 		}
 		return resUri;
 	}
-	private String getIdentifierFromClassName(String className, ArrayList<GenericObject> tripleObject){
-		for(GenericObject go:tripleObject){
+	private String getIdentifierFromClassName(String className, ArrayList<GenericClass> tripleObject){
+		for(GenericClass go:tripleObject){
 			if(go.getClassName().toLowerCase().equals(className.toLowerCase()))
 				return go.getIdentifier().getAttribute().getAttributeValue().toString();
 		}
