@@ -64,7 +64,11 @@ public class IterationManager {
 		
 		init(it);
 		setID(resId);
-
+		//genero prima gli attibuti condivisi
+		for(GenericAttribute ga:it.getAttributes()){
+			generateAttributeValue(ga);
+		}
+		//generazione delle classi
 		for(GenericClass g:it.getClasses()){ //estraggo le classi
 			if(!g.isProcessed()){//la classe non è ancora stata processata
 				_process(g);
@@ -163,32 +167,4 @@ public class IterationManager {
 		a.getAttribute().setValue(a.getType(), a.getAttributeList());
 		//System.out.println(a.toString());
 	}
-	private boolean execute(GenericAttribute ga) throws ScriptException{
-		String regex = "[$]+[{]+[\\w-]*+[}]";
-		String valueExpression = ga.getValueExpression();
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(valueExpression);
-
-		while (matcher.find()){
-			String var = matcher.group().trim();
-			String value = it.getValueByAttributeName(var.replace("$", "").replace("{", "").replace("}", ""));
-			Pattern p = Pattern.compile("[^a-zA-Z]"); //controllo se il valore restutiito è una stringa in caso la metto tra apici
-			value = p.matcher(value).find()?"\""+value+"\"":value;
-			if(value != null ){
-				valueExpression = valueExpression.replace(var, value);
-			}
-			else{
-				return false;
-			}
-			
-		}
-		ScriptEngine engine = javascriptEngine.getEngine();
-		String result = engine.eval(valueExpression).toString();
-		ga.getAttribute().setAttributeValue(result);
-		return true;
-	}
-	
-	
-	
-	
 }

@@ -378,41 +378,7 @@ public class Tree {
         }
 
 
-        /**
-         * <p>Classe Java per anonymous complex type.
-         * 
-         * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="prop" maxOccurs="unbounded" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *                   &lt;element name="maxValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-         *                   &lt;element name="minValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-         *                   &lt;element name="uri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-         *                 &lt;/sequence>
-         *                 &lt;attribute name="key" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-       
-        
+      
        
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -422,28 +388,7 @@ public class Tree {
 
             protected List<Tree.Class.Properties.Prop> prop;
 
-            /**
-             * Gets the value of the prop property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the prop property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getProp().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link Tree.Class.Properties.Prop }
-             * 
-             * 
-             */
+          
             public List<Tree.Class.Properties.Prop> getProp() {
                 if (prop == null) {
                     prop = new ArrayList<Tree.Class.Properties.Prop>();
@@ -452,29 +397,6 @@ public class Tree {
             }
 
 
-            /**
-             * <p>Classe Java per anonymous complex type.
-             * 
-             * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
-             * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string"/>
-             *         &lt;element name="maxValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-             *         &lt;element name="minValue" type="{http://www.w3.org/2001/XMLSchema}byte" minOccurs="0"/>
-             *         &lt;element name="uri" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-             *       &lt;/sequence>
-             *       &lt;attribute name="key" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
-             * 
-             * 
-             */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "type",
@@ -484,7 +406,7 @@ public class Tree {
                 "valueExpression",
                 "hourValue",
                 "range",
-                "fromSet",
+                "set",
                 "name",
                 "queryInfo",
                 "md5String"
@@ -503,7 +425,7 @@ public class Tree {
                 protected String valueExpression;
                 protected String hourValue;
                 protected String range;
-                protected String fromSet;
+                protected String set;
                 @XmlAttribute(name = "isUri")
                 protected String isUri;
                 @XmlAttribute(name = "isHidden")
@@ -576,13 +498,13 @@ public class Tree {
 				}
 
 
-				public String getFromSet() {
-					return fromSet;
+				public String geSet() {
+					return set;
 				}
 
 
-				public void setFromSet(String fromSet) {
-					this.fromSet = fromSet;
+				public void setSet(String set) {
+					this.set = set;
 				}
 
 
@@ -709,7 +631,7 @@ public class Tree {
                  *     
                  */
                 public String getKey() {
-                    return key;
+                    return key==null?"":key;
                 }
 
                 /**

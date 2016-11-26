@@ -141,7 +141,7 @@ public class GenericCommand {
 		@Override
 		public String valueGenerator(Object... args) {
 			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
-			String[] set = ((String) param.get("fromSet").getObject()).split(";");
+			String[] set = ((String) param.get("set").getObject()).split(";");
 			Random rand = new Random();
 			int bound = set.length;
 			int index = rand.nextInt(bound);

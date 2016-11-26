@@ -40,13 +40,22 @@ public class IterationElement {
 			if((value = go.getAttributeByName(name))!= null )
 				return value;
 		}
+		for(GenericAttribute ga:attributes){
+			if(name.equals(ga.getAttributeName()))
+				return ga;
+		}
 		return null;
 	}
+	
 	public String getValueByAttributeName(String name){
 		GenericAttribute value = null;
 		for(GenericClass go:classes){
 			if((value = go.getAttributeByName(name))!= null )
 				return value.getAttribute().getAttributeValue()!=null?value.getAttribute().getAttributeValue().toString():null;
+		}
+		for(GenericAttribute ga:attributes){
+			if(name.equals(ga.getAttributeName()))
+				return ga.getValue();
 		}
 		return null;
 	}

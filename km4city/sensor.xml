@@ -9,6 +9,14 @@
     	<startDirectory>./recharge/</startDirectory>
     </fileInfo>
     <iterationElement>
+    	<attributes>
+    		<prop>
+    			<name>var1</name>
+    			<type>float</type>
+    			<maxValue>100</maxValue>
+    			<minValue>1</minValue>	
+    		</prop>
+    	</attributes>
     	<class type="http://www.disit.org/km4city/schema#Charging_Stations" name="Charging_Station" isRoot="true" baseUri="http://www.disit.org/km4city/resource">
 	        <properties>
 	            <prop key="http://purl.org/dc/terms/identifier">
@@ -60,7 +68,7 @@
 	            </prop>
 	            <prop key="http://www.w3.org/ns/ssn/observedProperty" isUri="true">
 					<type>FromSet</type>
-	                <fromSet>http://www.disit.org/km4city/schema#chargeState</fromSet>
+	                <set>http://www.disit.org/km4city/schema#chargeState</set>
 	            </prop>
 	        </properties>
 	    </class>
@@ -86,8 +94,8 @@
 	            <prop key="http://www.disit.org/km4city/schema#chargeState">
 	                <name>chargeState1</name>
 	                <type>Float</type>
-	                <maxValue>3</maxValue>
-	                <minValue>2</minValue>
+	                <maxValue>${var1}</maxValue>
+	                <minValue>1</minValue>
 	                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
 	            </prop>
 			</properties>
@@ -99,7 +107,7 @@
 	            </prop>
 	            <prop key="http://www.w3.org/ns/ssn/observedProperty">
 					<type>FromSet</type>
-	                <fromSet>http://www.disit.org/km4city/schema#lastChargeState</fromSet>
+	                <set>http://www.disit.org/km4city/schema#lastChargeState</set>
 	            </prop>
 	        </properties>
 	    </class>
