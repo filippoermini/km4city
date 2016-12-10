@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" isStateful="false">
+    <instanceIterationQuery>
+    	<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+    	<query>SELECT DISTINCT (substr(str(?s),39) as ?id) WHERE {?s a km4c:Charging_stations.} limit 10</query>
+    </instanceIterationQuery>
+    <fileInfo>
+    	<fileName>recharge.n3</fileName>
+    	<startDirectory>./recharge/</startDirectory>
+    </fileInfo>
+    <iterationElement>
+    	<instance type="http://www.disit.org/km4city/schema#Charging_Stations" name="Charging_Station" isRoot="true" baseUri="http://www.disit.org/km4city/resource/">
+	        <properties>
+	            <prop key="http://purl.org/dc/terms/identifier">
+	                <type>id</type>
+	                <name>Charging_Stations</name>
+	            </prop>
+	            <prop key="http://www.w3.org/ns/ssn/hasSensor">
+	                <type>Sensor1</type>
+	                <uri>http://www.w3.org/ns/ssn/Sensor</uri>
+	            </prop>
+	        </properties>
+	    </instance>
+	    <instance type="http://www.w3.org/ns/ssn/Sensor" name="Sensor1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
+	        <properties>
+	            <prop key="http://purl.org/dc/terms/identifier">
+	                <type>valueExpression</type>
+	                <valueExpression>${Charging_Stations} + "_sensor1"</valueExpression>
+	            </prop>
+	            <prop key="http://www.w3.org/ns/ssn/MadeObservation">
+	                <type>Observation1</type>
+	            </prop>
+	        </properties>
+	    </instance>
+	    <instance type="http://www.w3.org/ns/ssn/Observation" name="Observation1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
+	        <properties>
+	            <prop key="http://purl.org/dc/terms/identifier">
+	                <type>md5</type>
+	                <md5String>"obs1"+${Charging_Stations}+${dateTime}</md5String>
+	            </prop>
+	            <prop key="http://www.w3.org/ns/ssn/dateTime" isHidden="true">
+	                <name>dateTime</name>
+	                <type>DateTime</type>
+	            </prop>
+	            <prop key="http://www.w3.org/ns/ssn/observedProperty" isUri="true">
+					<type>FromSet</type>
+	                <set>http://www.disit.org/km4city/schema#chargeState</set>
+	            </prop>
+	        </properties>
+	    </instance>
+    </iterationElement>
+</tree>

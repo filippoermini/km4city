@@ -26,11 +26,11 @@ public class DataSimulator {
 	private Tree tree;
 	
 	
-	public DataSimulator(String file, String start,String name){
+	public DataSimulator(String file,String name){
 		
 		this.xmlFile = file;
+		logger = Logger.getLogger(name);
 		CommonValue.init(name);
-		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 		xml = new XMLParsing(Tree.class);
 		tree = xml.DeserializeFromXML(xmlFile);
 		logger.info("Initialization parameters completed");

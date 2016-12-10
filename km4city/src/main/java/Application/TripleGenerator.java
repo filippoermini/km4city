@@ -1,17 +1,6 @@
 package Application;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.concurrent.ExecutionException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 
 import org.apache.log4j.Logger;
 import org.eclipse.rdf4j.model.Value;
@@ -23,16 +12,10 @@ import com.google.gson.GsonBuilder;
 
 import Application.RDFconnector.RepositoryManager;
 import XMLDomain.Tree;
-import XMLDomain.Tree.Class;
-import genericClass.AttributeParam;
-import genericClass.GenericAttribute;
-import genericClass.GenericClass;
-import genericClass.IterationElement;
-import genericClass.IterationManager;
-import genericClass.SimulationObject;
-import genericClass.GenericAttribute.Attribute;
+import genericInstance.IterationElement;
+import genericInstance.IterationManager;
+import genericInstance.SimulationObject;
 import jsonDomain.State;
-import jsonDomain.States;
 
 public class TripleGenerator {
 
@@ -46,7 +29,7 @@ public class TripleGenerator {
 	//TODO da rifare completamente
 	public TripleGenerator(Tree tree){
 		
-		this.rdfEngine = RDFconnector.getInstance(tree.getClassIterationQuery().getServer());
+		this.rdfEngine = RDFconnector.getInstance(tree.getInstanceIterationQuery().getServer());
 		this.simulationObject = new SimulationObject(tree);
 		this.itManager = new IterationManager(tree.getIterationElement());
 		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());

@@ -705,3 +705,363 @@ define sql:big-data-const 0 SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s 
 2016-11-03 17:42:27 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/4227/recharge.n3 creato
 2016-11-03 17:42:27 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/4227/end.txt creato
 2016-11-03 17:42:27 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:50:15 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:50:15 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:50:15 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:50:33 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/5033
+2016-11-03 17:50:33 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/5033/recharge.n3 creato
+2016-11-03 17:50:33 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/5033/end.txt creato
+2016-11-03 17:50:33 [INFO ] Traffic Simulator - Computation completed
+2016-11-03 17:58:43 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-03 17:58:43 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-03 17:58:43 [INFO ] Traffic Simulator - Start computation
+2016-11-03 17:58:47 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/03/17/5847
+2016-11-03 17:58:47 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/5847/recharge.n3 creato
+2016-11-03 17:58:47 [INFO ] Traffic Simulator - File ./recharge/2016_11/03/17/5847/end.txt creato
+2016-11-03 17:58:47 [INFO ] Traffic Simulator - Computation completed
+2016-11-07 00:15:05 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-07 00:15:23 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-07 00:18:35 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-07 00:19:35 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-07 00:20:06 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-07 00:20:23 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-07 00:23:47 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:23:47 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:23:47 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:25:23 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:25:23 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:25:23 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:27:47 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:27:47 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:27:47 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:29:57 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:29:57 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:29:57 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:33:20 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:33:20 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:33:20 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:34:27 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:34:27 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:34:27 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:37:19 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:37:19 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:37:19 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:48:08 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:48:08 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:48:08 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:53:38 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:53:38 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:53:38 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:55:06 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:55:06 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:55:06 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:56:59 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:56:59 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:56:59 [INFO ] Traffic Simulator - Start computation
+2016-11-07 00:58:26 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 00:58:26 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 00:58:26 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:04:28 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:04:28 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:04:28 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:05:34 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:05:34 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:05:34 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:07:57 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:07:57 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:07:57 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:10:11 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:10:11 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:10:11 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:18:32 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:18:32 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:18:32 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:20:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:20:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:20:39 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:25:27 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:25:27 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:25:27 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:28:11 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:28:11 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:28:11 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:29:18 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:29:18 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:29:18 [INFO ] Traffic Simulator - Start computation
+2016-11-07 01:33:49 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-07 01:33:49 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-07 01:33:49 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:14:55 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:14:56 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:14:56 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:15:05 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-08 00:19:59 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:20:00 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:20:00 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:20:04 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-08 00:21:26 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:21:26 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:21:26 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:26:28 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:26:28 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:26:28 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:31:08 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:31:08 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:31:08 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:36:30 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:36:30 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:36:30 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:46:29 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:46:30 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:46:30 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:47:40 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:47:40 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:47:40 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:50:33 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:50:33 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:50:33 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:53:20 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:53:20 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:53:20 [INFO ] Traffic Simulator - Start computation
+2016-11-08 00:56:04 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 00:56:04 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 00:56:04 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:04:57 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:04:57 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:04:57 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:07:02 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:07:02 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:07:02 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:14:14 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:14:14 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:14:14 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:18:51 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:18:51 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:18:51 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:20:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:20:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:20:39 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:22:10 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:22:10 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:22:10 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:25:06 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:25:07 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:25:07 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:28:26 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-08 01:30:23 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:30:23 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:30:23 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:33:52 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:33:52 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:33:52 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:37:05 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:37:05 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:37:05 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:42:34 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:42:34 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:42:34 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:47:59 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:47:59 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:47:59 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:58:46 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 01:58:46 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 01:58:46 [INFO ] Traffic Simulator - Start computation
+2016-11-08 01:58:49 [ERROR] Traffic Simulator - Evaluate expression error: ReferenceError: "charging_stations_1_sensor2" is not defined in <eval> at line number 1
+2016-11-08 01:58:49 [ERROR] Traffic Simulator - Evaluate expression error: <eval>:1:28 Expected ; but found error
+charging_stations_1_sensor1��>�s��|��H �
+                            ^ in <eval> at line number 1 at column number 28
+2016-11-08 01:58:49 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-08 02:02:38 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:02:38 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:02:38 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:02:40 [ERROR] Traffic Simulator - Evaluate expression error: ReferenceError: "charging_stations_1_sensor2" is not defined in <eval> at line number 1
+2016-11-08 02:02:40 [ERROR] Traffic Simulator - Evaluate expression error: <eval>:1:28 Expected ; but found error
+charging_stations_1_sensor1��>�s��|��H �
+                            ^ in <eval> at line number 1 at column number 28
+2016-11-08 02:02:40 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-08 02:03:04 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:03:04 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:03:04 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:03:58 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:03:58 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:03:58 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:07:37 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:07:37 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:07:37 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:09:44 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:09:44 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:09:44 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:10:20 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:10:20 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:10:20 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:10:22 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/08/02/1022
+2016-11-08 02:10:22 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/1022/recharge.n3 creato
+2016-11-08 02:10:22 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/1022/end.txt creato
+2016-11-08 02:10:22 [INFO ] Traffic Simulator - Computation completed
+2016-11-08 02:16:37 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:16:37 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:16:37 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:18:36 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:18:36 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:18:36 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:21:38 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:21:38 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:21:38 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:23:14 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/08/02/2314
+2016-11-08 02:23:14 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/2314/recharge.n3 creato
+2016-11-08 02:23:14 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/2314/end.txt creato
+2016-11-08 02:23:14 [INFO ] Traffic Simulator - Computation completed
+2016-11-08 02:25:19 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:25:19 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:25:19 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:25:22 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/08/02/2522
+2016-11-08 02:25:22 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/2522/recharge.n3 creato
+2016-11-08 02:25:22 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/2522/end.txt creato
+2016-11-08 02:25:22 [INFO ] Traffic Simulator - Computation completed
+2016-11-08 02:30:55 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-08 02:30:55 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-08 02:30:55 [INFO ] Traffic Simulator - Start computation
+2016-11-08 02:30:58 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/08/02/3058
+2016-11-08 02:30:58 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/3058/recharge.n3 creato
+2016-11-08 02:30:58 [INFO ] Traffic Simulator - File ./recharge/2016_11/08/02/3058/end.txt creato
+2016-11-08 02:30:58 [INFO ] Traffic Simulator - Computation completed
+2016-11-11 22:49:09 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-11 22:50:37 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-11 22:50:37 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-11 22:50:37 [INFO ] Traffic Simulator - Start computation
+2016-11-11 22:50:40 [ERROR] Traffic Simulator - Evaluate expression error: <eval>:1:1 Expected ; but found {
+${Charging_Station} + "_sensor2"
+ ^ in <eval> at line number 1 at column number 1
+2016-11-11 22:50:40 [ERROR] Traffic Simulator - Evaluate expression error: <eval>:1:1 Expected ; but found {
+${Charging_Stations} + "_sensor1" + ${sensor_code}
+ ^ in <eval> at line number 1 at column number 1
+2016-11-11 22:50:40 [FATAL] Traffic Simulator - Circular dependency on bound attribute: identifier
+2016-11-11 22:51:47 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-11 22:51:47 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-11 22:51:47 [INFO ] Traffic Simulator - Start computation
+2016-11-11 22:52:46 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 1 counts of IllegalAnnotationExceptions
+2016-11-11 22:53:39 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-11 22:53:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-11 22:53:39 [INFO ] Traffic Simulator - Start computation
+2016-11-11 22:56:15 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-11 22:56:15 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-11 22:56:15 [INFO ] Traffic Simulator - Start computation
+2016-11-11 23:05:09 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-11 23:05:09 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-11 23:05:09 [INFO ] Traffic Simulator - Start computation
+2016-11-11 23:05:13 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/11/23/0513
+2016-11-11 23:05:13 [INFO ] Traffic Simulator - File ./recharge/2016_11/11/23/0513/recharge.n3 creato
+2016-11-11 23:05:13 [INFO ] Traffic Simulator - File ./recharge/2016_11/11/23/0513/end.txt creato
+2016-11-11 23:05:13 [INFO ] Traffic Simulator - Computation completed
+2016-11-19 17:08:30 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 3 counts of IllegalAnnotationExceptions
+2016-11-19 17:08:30 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:10:23 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 4 counts of IllegalAnnotationExceptions
+2016-11-19 17:10:23 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:14:53 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-19 17:14:53 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:14:59 [INFO ] Traffic Simulator - Start computation
+2016-11-19 17:17:12 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-19 17:17:12 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:17:17 [INFO ] Traffic Simulator - Start computation
+2016-11-19 17:38:53 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-19 17:38:53 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:38:53 [INFO ] Traffic Simulator - Start computation
+2016-11-19 17:39:52 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-19 17:39:52 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:39:52 [INFO ] Traffic Simulator - Start computation
+2016-11-19 17:41:18 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-19 17:41:18 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-19 17:41:18 [INFO ] Traffic Simulator - Start computation
+2016-11-19 17:41:20 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/19/17/4120
+2016-11-19 17:41:20 [INFO ] Traffic Simulator - File ./recharge/2016_11/19/17/4120/recharge.n3 creato
+2016-11-19 17:41:20 [INFO ] Traffic Simulator - File ./recharge/2016_11/19/17/4120/end.txt creato
+2016-11-19 17:41:20 [INFO ] Traffic Simulator - Computation completed
+2016-11-26 16:43:17 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-26 16:43:17 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:44:46 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-26 16:44:46 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:44:58 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-26 16:44:58 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:46:40 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-26 16:46:40 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:46:55 [ERROR] Traffic Simulator - Deserialize error - JAXB excepition: 2 counts of IllegalAnnotationExceptions
+2016-11-26 16:46:55 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:49:55 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-26 16:49:59 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:50:05 [INFO ] Traffic Simulator - Start computation
+2016-11-26 16:54:17 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-26 16:54:17 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:54:17 [INFO ] Traffic Simulator - Start computation
+2016-11-26 16:56:35 [INFO ] Traffic Simulator - Deserialize file sensor.xml into class XMLDomain.Tree object
+2016-11-26 16:56:35 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-11-26 16:56:35 [INFO ] Traffic Simulator - Start computation
+2016-11-26 16:56:40 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_11/26/16/5640
+2016-11-26 16:56:40 [INFO ] Traffic Simulator - File ./recharge/2016_11/26/16/5640/recharge.n3 creato
+2016-11-26 16:56:40 [INFO ] Traffic Simulator - File ./recharge/2016_11/26/16/5640/end.txt creato
+2016-11-26 16:56:40 [INFO ] Traffic Simulator - Computation completed
+2016-12-08 17:53:14 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 17:53:14 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 17:53:14 [INFO ] Traffic Simulator - Start computation
+2016-12-08 17:53:16 [ERROR] Traffic Simulator - Evaluate expression error: <eval>:1:30 Expected ; but found {
+"obs1"+"charging_stations_1"+${dateTime}
+                              ^ in <eval> at line number 1 at column number 30
+2016-12-08 17:53:16 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_12/08/17/5316
+2016-12-08 17:53:16 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/17/5316/recharge.n3 creato
+2016-12-08 17:53:16 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/17/5316/end.txt creato
+2016-12-08 17:53:16 [INFO ] Traffic Simulator - Computation completed
+2016-12-08 17:59:47 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 17:59:47 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 17:59:47 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:15:10 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:15:10 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:15:10 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:15:13 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_12/08/18/1513
+2016-12-08 18:15:13 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/1513/recharge.n3 creato
+2016-12-08 18:15:13 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/1513/end.txt creato
+2016-12-08 18:15:13 [INFO ] Traffic Simulator - Computation completed
+2016-12-08 18:18:05 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:18:05 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:18:05 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:22:07 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:22:07 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:22:07 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:22:17 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:22:17 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:22:17 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:24:15 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_12/08/18/2415
+2016-12-08 18:24:15 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/2415/recharge.n3 creato
+2016-12-08 18:24:15 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/2415/end.txt creato
+2016-12-08 18:24:15 [INFO ] Traffic Simulator - Computation completed
+2016-12-08 18:29:39 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:29:39 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:29:39 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:38:30 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:38:30 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:38:30 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:41:54 [INFO ] Traffic Simulator - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-08 18:41:54 [INFO ] Traffic Simulator - Initialization parameters completed
+2016-12-08 18:41:54 [INFO ] Traffic Simulator - Start computation
+2016-12-08 18:41:55 [INFO ] Traffic Simulator - Directory created: ./recharge/2016_12/08/18/4155
+2016-12-08 18:41:55 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/4155/recharge.n3 creato
+2016-12-08 18:41:55 [INFO ] Traffic Simulator - File ./recharge/2016_12/08/18/4155/end.txt creato
+2016-12-08 18:41:55 [INFO ] Traffic Simulator - Computation completed
+2016-12-10 12:46:10 [INFO ] Recharge - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-10 12:46:10 [INFO ] Recharge - Initialization parameters completed
+2016-12-10 12:46:10 [INFO ] Recharge - Start computation
+2016-12-10 12:48:09 [INFO ] Recharge - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-10 12:48:10 [INFO ] Recharge - Initialization parameters completed
+2016-12-10 12:48:10 [INFO ] Recharge - Start computation
+2016-12-10 12:49:17 [INFO ] Recharge - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-10 12:49:17 [INFO ] Recharge - Initialization parameters completed
+2016-12-10 12:49:17 [INFO ] Recharge - Start computation
+2016-12-10 12:49:20 [INFO ] Recharge - Directory created: ./recharge/2016_12/10/12/4920
+2016-12-10 12:49:20 [INFO ] Recharge - File ./recharge/2016_12/10/12/4920/recharge.n3 creato
+2016-12-10 12:49:20 [INFO ] Recharge - File ./recharge/2016_12/10/12/4920/end.txt creato
+2016-12-10 12:49:20 [INFO ] Recharge - Computation completed
+2016-12-10 17:56:03 [INFO ] Recharge - Deserialize file sensor-test1.xml into class XMLDomain.Tree object
+2016-12-10 17:56:03 [INFO ] Recharge - Initialization parameters completed
+2016-12-10 17:56:03 [INFO ] Recharge - Start computation
+2016-12-10 17:56:07 [INFO ] Recharge - Directory created: ./recharge/2016_12/10/17/5607
+2016-12-10 17:56:07 [INFO ] Recharge - File ./recharge/2016_12/10/17/5607/recharge.n3 creato
+2016-12-10 17:56:07 [INFO ] Recharge - File ./recharge/2016_12/10/17/5607/end.txt creato
+2016-12-10 17:56:07 [INFO ] Recharge - Computation completed

@@ -20,12 +20,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-import genericClass.AttributeParam;
+import genericInstance.AttributeParam;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
 	"fileIterationQuery",
-	"classIterationQuery",
+	"instanceIterationQuery",
     "fileInfo",
     "iterationElement"
 })
@@ -40,8 +40,8 @@ public class Tree {
 	protected String simulationName;
     @XmlElement(name = "fileIterationQuery")
     protected Tree.QueryInfo fileIterationQuery;
-    @XmlElement(name = "classIterationQuery")
-    protected Tree.QueryInfo classIterationQuery;
+    @XmlElement(name = "instanceIterationQuery")
+    protected Tree.QueryInfo instanceIterationQuery;
     @XmlElement(name = "fileInfo")
     protected Tree.FileInfo fileInfo;
     @XmlElement(name = "iterationElement")
@@ -69,11 +69,11 @@ public class Tree {
 	public void setFileIterationQuery(Tree.QueryInfo fileIterationQuery) {
 		this.fileIterationQuery = fileIterationQuery;
 	}
-	public Tree.QueryInfo getClassIterationQuery() {
-		return classIterationQuery==null?new QueryInfo():classIterationQuery;
+	public Tree.QueryInfo getInstanceIterationQuery() {
+		return instanceIterationQuery==null?new QueryInfo():instanceIterationQuery;
 	}
-	public void setClassIterationQuery(Tree.QueryInfo classIterationQuery) {
-		this.classIterationQuery = classIterationQuery;
+	public void setInstanceIterationQuery(Tree.QueryInfo instanceIterationQuery) {
+		this.instanceIterationQuery = instanceIterationQuery;
 	}
 	
     public void setQueryInfo(Tree.QueryInfo fileIterationquery){
@@ -107,27 +107,27 @@ public class Tree {
 	
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "",propOrder = {
-    	"clazz",
+    	"instance",
     	"attributes"
     })
     public static class iterationElement{
     	@XmlElement(name = "attributes")
-        protected Tree.Class.Properties attributes;
-    	@XmlElement(name = "class")
-        protected List<Tree.Class> clazz;
+        protected Tree.Instance.Properties attributes;
+    	@XmlElement(name = "instance")
+        protected List<Tree.Instance> instance;
     	
-    	public Tree.Class.Properties getAttributes() {
+    	public Tree.Instance.Properties getAttributes() {
     		return attributes;
     	}
-    	public void seAttributes(Tree.Class.Properties hiddenProperties) {
+    	public void seAttributes(Tree.Instance.Properties hiddenProperties) {
     		this.attributes = hiddenProperties;
     	}
     	
-    	public List<Tree.Class> getClazz() {
-            if (clazz == null) {
-                clazz = new ArrayList<Tree.Class>();
+    	public List<Tree.Instance> getInstance() {
+            if (instance == null) {
+            	instance = new ArrayList<Tree.Instance>();
             }
-            return this.clazz;
+            return this.instance;
         }
 
     	
@@ -242,10 +242,10 @@ public class Tree {
     @XmlType(name = "", propOrder = {
         "properties"
     })
-    public static class Class {
+    public static class Instance {
 
         @XmlElement(required = true)
-        protected Tree.Class.Properties properties;
+        protected Tree.Instance.Properties properties;
         @XmlAttribute(name = "type")
         @XmlSchemaType(name = "anyURI")
         protected String type;
@@ -264,7 +264,7 @@ public class Tree {
          *     {@link Tree.Class.Properties }
          *     
          */
-        public Tree.Class.Properties getProperties() {
+        public Tree.Instance.Properties getProperties() {
             return properties;
         }
         
@@ -277,7 +277,7 @@ public class Tree {
          *     {@link Tree.Class.Properties }
          *     
          */
-        public void setProperties(Tree.Class.Properties value) {
+        public void setProperties(Tree.Instance.Properties value) {
         	this.properties = value;
         }
 
@@ -386,12 +386,12 @@ public class Tree {
         })
         public static class Properties {
 
-            protected List<Tree.Class.Properties.Prop> prop;
+            protected List<Tree.Instance.Properties.Prop> prop;
 
           
-            public List<Tree.Class.Properties.Prop> getProp() {
+            public List<Tree.Instance.Properties.Prop> getProp() {
                 if (prop == null) {
-                    prop = new ArrayList<Tree.Class.Properties.Prop>();
+                    prop = new ArrayList<Tree.Instance.Properties.Prop>();
                 }
                 return this.prop;
             }

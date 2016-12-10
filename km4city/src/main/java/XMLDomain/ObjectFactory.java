@@ -45,27 +45,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Tree.Class }
+     * Create an instance of {@link Tree.Instance }
      * 
      */
-    public Tree.Class createTreeClass() {
-        return new Tree.Class();
+    public Tree.Instance createTreeClass() {
+        return new Tree.Instance();
     }
 
     /**
-     * Create an instance of {@link Tree.Class.Properties }
+     * Create an instance of {@link Tree.Instance.Properties }
      * 
      */
-    public Tree.Class.Properties createTreeClassProperties() {
-        return new Tree.Class.Properties();
+    public Tree.Instance.Properties createTreeClassProperties() {
+        return new Tree.Instance.Properties();
     }
 
     /**
-     * Create an instance of {@link Tree.Class.Properties.Prop }
+     * Create an instance of {@link Tree.Instance.Properties.Prop }
      * 
      */
-    public Tree.Class.Properties.Prop createTreeClassPropertiesProp() {
-        return new Tree.Class.Properties.Prop();
+    public Tree.Instance.Properties.Prop createTreeClassPropertiesProp() {
+        return new Tree.Instance.Properties.Prop();
     }
 
 }
