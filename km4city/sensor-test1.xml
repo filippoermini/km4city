@@ -11,7 +11,7 @@
     <iterationElement>
     	<instance type="http://www.disit.org/km4city/schema#Charging_Stations" name="Charging_Station" isRoot="true" baseUri="http://www.disit.org/km4city/resource/">
 	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
+	            <prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 	                <type>id</type>
 	                <name>Charging_Stations</name>
 	            </prop>
@@ -23,9 +23,10 @@
 	    </instance>
 	    <instance type="http://www.w3.org/ns/ssn/Sensor" name="Sensor1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
 	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
+	            <prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 	                <type>valueExpression</type>
 	                <valueExpression>${Charging_Stations} + "_sensor1"</valueExpression>
+	                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
 	            </prop>
 	            <prop key="http://www.w3.org/ns/ssn/MadeObservation">
 	                <type>Observation1</type>
@@ -34,7 +35,7 @@
 	    </instance>
 	    <instance type="http://www.w3.org/ns/ssn/Observation" name="Observation1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
 	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
+	            <prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 	                <type>md5</type>
 	                <md5String>"obs1"+${Charging_Stations}+${dateTime}</md5String>
 	            </prop>
@@ -46,6 +47,15 @@
 					<type>FromSet</type>
 	                <set>http://www.disit.org/km4city/schema#chargeState</set>
 	            </prop>
+	            <prop key="http://www.disit.org/km4city/schema#chargeState">
+	                <name>chargeState1</name>
+	                <type>profiledependent</type>
+	                <profilesFile>profiles-1.csv</profilesFile>
+	                <profileId>consumoElettrico</profileId>                
+	                <maxValue>3000</maxValue>
+	                <variance>10.12</variance>
+                <uri>http://www.w3.org/2001/XMLSchema#float</uri>
+            </prop>
 	        </properties>
 	    </instance>
     </iterationElement>

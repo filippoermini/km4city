@@ -39,6 +39,7 @@ public class GenericInstance {
 		Tree.Instance.Properties.Prop prop;
 		while(it.hasNext()){
 			prop = it.next();
+			
 			GenericAttribute gAtt = new GenericAttribute(prop);
 			attributeList.add(gAtt);
 		}	
@@ -118,7 +119,7 @@ public class GenericInstance {
 	
 	public GenericAttribute getIdentifier(){
 		for(GenericAttribute a: attributeList){
-			if(a.getAttributeKey().contains("identifier")){
+			if(a.isPrimaryKey()){
 				return a;
 			}
 		}

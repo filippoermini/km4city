@@ -101,7 +101,7 @@ public class GenericAttribute {
 		this.isExternalKey = false;
 		this.isUri = prop.isUri();
 		String className = genericTypeMap.getType(prop.getType().toLowerCase());
-		this.isPrimaryKey = (prop.getKey().toLowerCase().contains("identifier"));
+		this.isPrimaryKey = prop.isPrimaryKey();
 		this.isExternalKey = (className == null);
 		this.isHidden = prop.isHidden();
 		this.paramList = new HashMap<String,AttributeParam>();

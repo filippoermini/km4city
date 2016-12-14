@@ -36,6 +36,8 @@ public class Tree {
 	protected String isStateful;
 	@XmlAttribute(name = "typeId")
 	protected String typeId;
+	@XmlAttribute(name = "identifierUri")
+	protected String identifierUri;
 	@XmlAttribute(name = "simulationName")
 	protected String simulationName;
     @XmlElement(name = "fileIterationQuery")
@@ -62,7 +64,14 @@ public class Tree {
 		this.fileInfo = fileInfo;
 	}
 	
-	
+	public String getIdentifierUri() {
+		return identifierUri;
+	}
+
+	public void setIdentifierUri(String identifierUri) {
+		this.identifierUri = identifierUri;
+	}
+
 	public Tree.QueryInfo getFileIterationQuery() {
 		return fileIterationQuery==null?new QueryInfo():fileIterationQuery;
 	}
@@ -409,7 +418,10 @@ public class Tree {
                 "set",
                 "name",
                 "queryInfo",
-                "md5String"
+                "md5String",
+                "profilesFile",
+                "profileId",
+                "variance"
             })
             public static class Prop {
 
@@ -426,6 +438,8 @@ public class Tree {
                 protected String hourValue;
                 protected String range;
                 protected String set;
+                @XmlAttribute(name = "isPrimaryKey")
+                protected String isPrimaryKey;
                 @XmlAttribute(name = "isUri")
                 protected String isUri;
                 @XmlAttribute(name = "isHidden")
@@ -433,14 +447,60 @@ public class Tree {
                 @XmlElement(name = "queryInfo")
                 protected Tree.QueryInfo queryInfo;
                 protected String md5String;
-         
-                public String getMd5String() {
+                protected String profilesFile;
+                protected String profileId;
+                protected String variance;
+                @XmlAttribute(name = "isPersistent")
+                protected String isPersistent;
+                
+				public String getProfilesFile() {
+					return profilesFile;
+				}
+				public void setProfilesFile(String profilesFile) {
+					this.profilesFile = profilesFile;
+				}
+				public String getProfileId() {
+					return profileId;
+				}
+				public void setProfileId(String profileId) {
+					this.profileId = profileId;
+				}
+				public String getVariance() {
+					return variance;
+				}
+				public void setVariance(String variance) {
+					this.variance = variance;
+				}
+				public String getSet() {
+					return set;
+				}
+				public String getMd5String() {
 					return md5String;
                 }
 				public void setMd5String(String md5) {
 					this.md5String = md5;
 				}
 
+				public String getIsPrimaryKey() {
+					return isPrimaryKey;
+				}
+				public void setIsPrimaryKey(String isPrimaryKey) {
+					this.isPrimaryKey = isPrimaryKey;
+				}
+				public boolean isPersistent(){
+					return isPersistent==null?false:isPersistent.contains("true");
+				}
+				
+				public String getIsPersistent() {
+					return isPersistent;
+				}
+				public void setIsPersistent(String isPersistent) {
+					this.isPersistent = isPersistent;
+				}
+				public boolean isPrimaryKey(){
+					return isPrimaryKey==null?false:isPrimaryKey.contains("true");
+				}
+				
 				public boolean isHidden(){
                 	return isHidden==null?false:isHidden.contains("true");
                 }

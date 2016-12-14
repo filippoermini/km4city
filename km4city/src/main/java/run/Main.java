@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import csvDomain.CSVImporter;
+import csvDomain.CSVProfiles;
+
 
 
 
 
 public class Main{
 	
+
 	public static void main(String[] args){
-		
+	
 		String xml = "";
 		String simulationName = "";
         if(args.length <=1){
@@ -42,6 +46,7 @@ public class Main{
             	System.exit(0);
             }
         }
+
 		DataSimulator Simulator = new DataSimulator(xml,simulationName);
 		Simulator.run();
 		

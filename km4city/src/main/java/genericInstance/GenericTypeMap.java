@@ -18,6 +18,7 @@ public class GenericTypeMap {
 		put("query","java.lang.String");
 		put("md5","java.lang.String");
 		put("valueexpression","java.lang.String");
+		put("profiledependent","java.lang.String");
 	}};
 	
 	private GenericTypeMap(){

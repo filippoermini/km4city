@@ -27,6 +27,8 @@ import Application.RDFconnector;
 import Application.RDFconnector.RepositoryManager;
 import XMLDomain.Tree;
 import XMLDomain.Tree.QueryInfo;
+import csvDomain.CSVImporter;
+import csvDomain.CSVProfiles;
 
 
 
@@ -216,6 +218,34 @@ public class GenericCommand {
 		
 	}
 	
+	public class GenerateProfileDependentvalue implements Command<String>{
+
+		@Override
+		public String valueGenerator(Object... args) {
+			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
+			String file = (String) param.get("profilesFile").getObject();
+			String profileID = (String) param.get("profileId").getObject();
+			double maxValue = Double.parseDouble((String) param.get("maxValue").getObject());
+			double variance = Double.parseDouble((String) param.get("variance").getObject());
+			CSVProfiles csvProfile;
+			try {
+				 csvProfile = CSVImporter.importProfile(file);
+				 double value = csvProfile.getValue(profileID);
+				 Random r = new Random();
+				 double error = r.nextGaussian()*variance;
+				 return value*maxValue + error+"";
+				 
+				 
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				logger.error("CSV Importer error: "+e.getMessage());
+				System.exit(-1);
+			}
+			return null;
+		}
+		
+	}
+	
 	private CommandFactory genericCommand;
 	public GenericCommand(){
 		genericCommand = new CommandFactory();
@@ -255,6 +285,7 @@ public class GenericCommand {
 			this.addCommand("query", new GenerateQueryValue());
 			this.addCommand("md5", new GenerateMD5Value());
 			this.addCommand("valueexpression", new GenerateExpressionValue());
+			this.addCommand("profiledependent", new GenerateProfileDependentvalue());
 		}
 	}
 
