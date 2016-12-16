@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/">
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/" isStateful="true">
 	<instanceIterationQuery>
 		<server>http://www.disit.org/ServiceMap/sparql</server>
 		<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))}</query>
