@@ -50,7 +50,7 @@
 	            <prop key="http://www.disit.org/km4city/schema#chargeState">
 	                <name>chargeState1</name>
 	                <type>profiledependent</type>
-	                <profilesFile>profiles-1.csv</profilesFile>
+	                <profilesFile>profiles-2.csv</profilesFile>
 	                <profileId>consumoElettrico</profileId>                
 	                <maxValue>3000</maxValue>
 	                <variance>10.12</variance>

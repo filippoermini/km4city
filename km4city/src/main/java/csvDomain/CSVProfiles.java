@@ -26,7 +26,7 @@ public class CSVProfiles {
 		this.cvsProfiles.add(profiles);
 	}
 	
-	public Profiles geyProfilesById(String profileId){
+	public Profiles getProfilesById(String profileId){
 		Iterator<Profiles> it = this.cvsProfiles.iterator();
 		Profiles profiles;
 		while(it.hasNext()){
@@ -42,15 +42,27 @@ public class CSVProfiles {
 		 LocalDateTime datetime = LocalDateTime.now();
 		 Day day = Day.valueOf(datetime.getDayOfWeek().name().substring(0, 3).toLowerCase());
 		 int indexOfTimeSlot = (datetime.getHour()*4) + (datetime.getMinute()/15);
-		 Profiles profile = this.geyProfilesById(profileID);
+		 Profiles profile = this.getProfilesById(profileID);
 		 DayProfile dayProfile = null;
 		 if(profile != null){
 			 dayProfile = profile.getProfileByDay(day)!=null?profile.getProfileByDay(day):profile.getProfileByDay(Day.any);
 		 }else{
-			 logger.fatal("Profile id: "+profileID+" do no exist");
+			 logger.error("Profile id: "+profileID+" do no exist");
+			 logger.error("Process interrupted");
 			 System.exit(-1);
 		 }
 		 return dayProfile.getTimeSlotValue()[indexOfTimeSlot];
 		 
+	}
+	
+	public Profiles getProfileByIndex(int index){
+		if (index<=this.cvsProfiles.size()){
+			return this.cvsProfiles.get(index);
+		}
+		return null;
+	}
+
+	public int length(){
+		return this.cvsProfiles.size();
 	}
 }

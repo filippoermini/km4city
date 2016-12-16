@@ -9,12 +9,16 @@ import java.util.regex.Pattern;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import org.apache.log4j.Logger;
+
+import Application.CommonValue;
 import Application.Pair;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Instance.Properties.Prop;
 
 public class GenericInstance {
 	
+	final static Logger logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	private String instanceName;
 	private boolean isRoot;
 	private String type;
@@ -22,13 +26,24 @@ public class GenericInstance {
 	private ArrayList<GenericAttribute> attributeList;
 	private boolean processed; // questo campo mi indica che sono stati inseriti tutti i valori
 	
-	public GenericInstance(Tree.Instance instance){
+	public GenericInstance(Tree.Instance instance, String mainBaseUri){
 		
 		this.attributeList = new ArrayList<>();
 		this.instanceName = instance.getName();
 		this.isRoot = instance.getIsRoot().contains("true");
 		this.type = instance.getType();
-		this.baseUri = instance.getBaseUri();
+		if(mainBaseUri == null){
+			if(instance.getBaseUri()==null){
+				logger.error("Base uri error: tree.baseuri or instance baseuri must be defined - at instance: "+instance.getName());
+				logger.error("Process interrupted");
+				System.exit(-1);
+			}else{
+				this.baseUri = instance.getBaseUri();
+			}
+		}else{
+			this.baseUri = mainBaseUri;
+		}
+		
 		this.processed = false;
 		
 		

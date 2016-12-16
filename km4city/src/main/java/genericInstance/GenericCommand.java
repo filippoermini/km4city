@@ -13,6 +13,8 @@ import java.time.temporal.TemporalAccessor;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.script.ScriptException;
 
@@ -159,14 +161,48 @@ public class GenericCommand {
 			Tree.QueryInfo queryInfo = (QueryInfo) param.get("queryInfo").getObject();
 			RepositoryManager rm = RDFconnector.getInstance(queryInfo.getServer());
 			TupleQueryResult results = rm.SPARQLExecute(queryInfo.getQuery());
+			String bindingField;
+			if (queryInfo.getBindingValue().isEmpty()){
+				bindingField = getBindingField(queryInfo.getQuery());
+			}else{
+				bindingField = queryInfo.getBindingValue();
+			}
 			if(results.hasNext()) {
 				BindingSet bindingSet = results.next();
-				Value value = bindingSet.getValue(queryInfo.getBindingValue());
+				Value value = bindingSet.getValue(bindingField);
+				if(value==null){
+					return "";
+				}
 				return value.stringValue();
+				
 			}
 			return "";
 		}
+		
+		private String getBindingField(String query){
+			
+		    Pattern pattern = Pattern.compile("select(.*?)where");
+		    Matcher matcher = pattern.matcher(query);
+		    while (matcher.find()) {
+		        String value = matcher.group(1);
+		        value = value.replace("select", "").replace("where", "").replace("SELECT", "").replace("WHERE","").replace("Select", "").replace("Where", "").trim();
+		        String[] bindingValue = value.split("[?]");
+		        if(bindingValue.length>0){
+		        	if(bindingValue.length>2){
+		        		logger.warn("The query should return only one column, find: "+bindingValue.length+". ");
+		        		logger.warn("Output column selected: "+bindingValue[1]);
+		        		return bindingValue[1];
+		        	}else{
+		        		return bindingValue[1];
+		        	}
+		        }
+		    }
+		    logger.warn("Fail to retrive outpur field, value set to 'id'");
+        	return "id";
+		}
+		
 	}
+	
 	
 	public class GenerateMD5Value implements Command<String>{
 		@Override
@@ -239,6 +275,7 @@ public class GenericCommand {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				logger.error("CSV Importer error: "+e.getMessage());
+				logger.error("Process interrupted");
 				System.exit(-1);
 			}
 			return null;

@@ -48,8 +48,18 @@ public class Tree {
     protected Tree.FileInfo fileInfo;
     @XmlElement(name = "iterationElement")
     protected Tree.iterationElement iterationElement;
+    @XmlAttribute(name = "baseUri")
+    protected String baseUri;
     
-    public Tree.iterationElement getIterationElement(){
+    public String getBaseUri() {
+		return baseUri;
+	}
+
+	public void setBaseUri(String baseUri) {
+		this.baseUri = baseUri;
+	}
+
+	public Tree.iterationElement getIterationElement(){
     	return this.iterationElement;
     }
     
@@ -90,7 +100,7 @@ public class Tree {
     }
     
     public String getIsStateful() {
-		return isStateful;
+		return isStateful==null?"false":isStateful;
 	}
 	public void setIsStateful(String isStateful) {
 		this.isStateful = isStateful;
@@ -102,7 +112,7 @@ public class Tree {
 		this.simulationName = simulationName;
 	}
 	public boolean isStatefull() {
-		return isStateful.contains("true");
+		return isStateful==null?false:isStateful.contains("true");
 	}
 	public void setStatefull(String stateful) {
 		this.isStateful = stateful;
@@ -224,7 +234,7 @@ public class Tree {
     	protected String bindingValue;
     	    	
     	public String getBindingValue() {
-			return bindingValue;
+			return bindingValue!=null?bindingValue:"";
 		}
 
 		public void setBindingValue(String bindingValue) {
@@ -245,7 +255,16 @@ public class Tree {
     	
     	public String getServer(){
     		return server;
-    	}	
+    	}
+    	
+    	@Override
+    	public String toString(){
+    		return this.query;
+    	}
+    	
+    	public void setStringValue(String val){
+    		this.query = val;
+    	}
     }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -347,7 +366,7 @@ public class Tree {
          *     
          */
         public String getIsRoot() {
-            return isRoot;
+            return isRoot==null?"false":isRoot;
         }
 
         /**
@@ -411,7 +430,7 @@ public class Tree {
                 "type",
                 "maxValue",
                 "minValue",
-                "uri",
+                "datatype",
                 "valueExpression",
                 "hourValue",
                 "range",
@@ -431,7 +450,7 @@ public class Tree {
                 protected String minValue;
                 protected String name;
                 @XmlSchemaType(name = "anyURI")
-                protected String uri;
+                protected String datatype;
                 @XmlAttribute(name = "key")
                 protected String key;
                 protected String valueExpression;
@@ -666,8 +685,8 @@ public class Tree {
                  *     {@link String }
                  *     
                  */
-                public String getUri() {
-                    return uri;
+                public String getDatatype() {
+                    return datatype;
                 }
 
                 /**
@@ -678,8 +697,8 @@ public class Tree {
                  *     {@link String }
                  *     
                  */
-                public void setUri(String value) {
-                    this.uri = value;
+                public void setDatatype(String value) {
+                    this.datatype = value;
                 }
 
                 /**

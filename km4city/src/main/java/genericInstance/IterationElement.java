@@ -72,7 +72,7 @@ public class IterationElement {
 				//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
 				if(!ga.isHidden()){
 					String attributeValue = !ga.isUri()?"\""+ga.getAttribute().getAttributeValue().toString()+"\"":"<"+ga.getAttribute().getAttributeValue().toString()+">";
-					String object = ga.isExternalKey()?"<"+ga.getExternalInstanceObject().getBaseUri(instances)+">":attributeValue+(ga.getUri()!=null?"^^<"+ga.getUri(instances)+">":"");
+					String object = ga.isExternalKey()?"<"+ga.getExternalInstanceObject().getBaseUri(instances)+">":attributeValue+(ga.getDatatype()!=null?"^^<"+ga.getDatatype(instances)+">":"");
 					tripleRDF += baseUri+"<"+ga.getAttributeKey()+"> "+object+" .\n";
 					
 				}

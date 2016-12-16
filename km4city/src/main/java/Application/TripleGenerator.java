@@ -31,7 +31,7 @@ public class TripleGenerator {
 		
 		this.rdfEngine = RDFconnector.getInstance(tree.getInstanceIterationQuery().getServer());
 		this.simulationObject = new SimulationObject(tree);
-		this.itManager = new IterationManager(tree.getIterationElement());
+		this.itManager = new IterationManager(tree.getIterationElement(),tree.getBaseUri());
 		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	}
 	
@@ -48,10 +48,11 @@ public class TripleGenerator {
 			String triple = "";
 			//eseguo la query e ciclo sui risultati 
 			TupleQueryResult results = rdfEngine.SPARQLExecute(simulationObject.getQuery());
-			//ArrayList;
+			int index = 0;
 			while(results.hasNext()){
 				BindingSet bindingSet = results.next();
 				Value value = bindingSet.getValue("id");
+				logger.info("Processing record "+ ++index +" id extract: "+value.stringValue());
 				IterationElement itElement = generateValue(value.stringValue()); //genero i valori per ogni record della query
 				this.simulationObject.AddElement(itElement); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
 				triple += itElement.generateTriple(type)+"\n";

@@ -206,12 +206,12 @@ public class GenericAttribute {
 		return (String) this.getParam("valueExpression");
 	}
 
-	public String getUri() {
-		return  (String) this.getParam("uri");
+	public String getDatatype() {
+		return  (String) this.getParam("datatype");
 	}
 	
-	public String getUri(ArrayList<GenericInstance> tripleObject){
-		return getUriParam((String) this.getParam("uri"), tripleObject);
+	public String getDatatype(ArrayList<GenericInstance> tripleObject){
+		return getUriParam((String) this.getParam("datatype"), tripleObject);
 	}
 
 	public void setAttribute(Attribute<?> att){

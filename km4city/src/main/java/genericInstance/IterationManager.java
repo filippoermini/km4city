@@ -31,17 +31,18 @@ import XMLDomain.Tree.Instance;
 public class IterationManager {
 
 	
-	
+	private String mainBaseUri;
 	private Tree.iterationElement origin;
 	private IterationElement it;
 	private EvalEngine javascriptEngine;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
-	public IterationManager(Tree.iterationElement iterationElement){
+	public IterationManager(Tree.iterationElement iterationElement, String baseUri){
 		
 		this.javascriptEngine = EvalEngine.getInstance();
 		this.origin = iterationElement;
 		this.it = new IterationElement();
+		this.mainBaseUri = baseUri;
 	}
 	
 	private void init(IterationElement it){
@@ -49,7 +50,7 @@ public class IterationManager {
 		Tree.Instance c;
 		while(itc.hasNext()){
 			c = itc.next();
-			GenericInstance g = new GenericInstance(c);
+			GenericInstance g = new GenericInstance(c,mainBaseUri);
 			it.getInstances().add(g);
 		}
 		if(this.origin.getAttributes() != null){
@@ -129,7 +130,7 @@ public class IterationManager {
 			    	if (pair.getValue().isValueEspression()){
 			    		//il parametro contiene un'espressione da calcolare
 			    		String regex = "[$]+[{]+[\\w-]*+[}]";
-			    		String valueExpression = (String) pair.getValue().getObject();
+			    		String valueExpression = pair.getValue().getObject().toString();
 			    		Pattern pattern = Pattern.compile(regex);
 			    		Matcher matcher = pattern.matcher(valueExpression);
 			    		while (matcher.find()){
@@ -153,12 +154,14 @@ public class IterationManager {
 			    			}
 			    		}
 			    		//se non è un value expression (cioè sono dentro un parametro) eseguo l'espressione
-			    		if(!a.getType().equals("valueExpression")){
+			    		if(!a.getType().equals("valueExpression") && !a.getType().equals("query")){
 				    		try {
 								pair.getValue().setObject(javascriptEngine.getEngine().eval(pair.getValue().getObject().toString()).toString());
 							} catch (ScriptException e) {
 								// TODO Auto-generated catch block
 								logger.error("Evaluate expression error: "+ e.getMessage());
+								logger.error("Process interrupt");
+								System.exit(-1);
 							}
 			    		}
 			    	}			
@@ -166,8 +169,9 @@ public class IterationManager {
 			}else{
 				if(a.getAttribute().getAttributeValue()==null){
 					//caso di dipendenza circolare il percorso mi ha mandato da un attributo dal quale sono già passato
-					logger.fatal("Circular dependency on bound attribute: "+a.getAttributeName());
-					System.exit(0);
+					logger.error("Circular dependency on bound attribute: "+a.getAttributeName());
+					logger.error("Process interrupt");
+					System.exit(-1);
 				}	
 			}    	
 		}

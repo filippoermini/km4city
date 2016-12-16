@@ -33,7 +33,15 @@ public class Profiles {
 		}
 		return null;
 	}
-	
+	public int length(){
+		return this.profiles.size();
+	}
+	public DayProfile getDayProfileByIndex(int index){
+		if (index<this.profiles.size()){
+			return this.profiles.get(index);
+		}
+		return null;
+	}
 	public double getTimeSlotValue(Day day){
 		return 1f; // TODO estrarre il valore orario ricavare il time slot relativo  
 	}

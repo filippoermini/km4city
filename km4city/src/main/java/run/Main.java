@@ -1,16 +1,5 @@
 package run;
 
-import java.util.Scanner;
-
-import org.apache.log4j.Logger;
-
-import csvDomain.CSVImporter;
-import csvDomain.CSVProfiles;
-
-
-
-
-
 public class Main{
 	
 
@@ -38,8 +27,8 @@ public class Main{
             	if (i < args.length){
             		simulationName = args[i++];
                 }else{
-                	System.err.println("-x: requires the simulation's name");
-                    System.exit(-1);
+                	System.err.println("-n: requires the simulation's name");
+                	System.exit(-1);
                 }
             }else if(arg.equals("-help")){
             	printUsage();
