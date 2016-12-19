@@ -7,12 +7,14 @@ public class AttributeParam{
 	
 	private Object object;
 	private boolean isValueEspression;
+	private boolean isForegoingValue;
 	
 	public AttributeParam(Object val){
 		this.object = val;
 		try{
 			String v = val.toString();
 			this.isValueEspression = v.contains("$");
+			this.isForegoingValue  = v.contains("@");
 		}catch(Exception e){
 			isValueEspression = false;
 		}
@@ -39,6 +41,9 @@ public class AttributeParam{
 			this.object = obj;
 		}
 		
+	}
+	public boolean isForegoingValue() {
+		return isForegoingValue;
 	}
 	public boolean isValueEspression() {
 		return isValueEspression;

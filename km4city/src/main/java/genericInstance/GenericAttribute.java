@@ -86,6 +86,7 @@ public class GenericAttribute {
 	private boolean isExternalKey;
 	private boolean isUri;
 	private boolean isValueExpression;
+	private boolean isForegoingValue;
 	private boolean isProcessed;
 	private boolean isHidden;
 	
@@ -106,6 +107,7 @@ public class GenericAttribute {
 		this.isHidden = prop.isHidden();
 		this.paramList = new HashMap<String,AttributeParam>();
 		this.paramList = prop.getAttributeList();
+		
 		if(!isExternalKey){
 			try {
 				Class instance = java.lang.Class.forName(className);
@@ -117,6 +119,7 @@ public class GenericAttribute {
 			}
 		}
 		this.isValueExpression = this.attribute==null?false:this.paramContainExpression();
+		this.isForegoingValue  = this.attribute==null?false:this.paramContainForegoingValue();
 	}
 	
 	
@@ -135,6 +138,17 @@ public class GenericAttribute {
 		this.isValueExpression = ga.isValueExpression;
 		this.isHidden = ga.isHidden;
 		this.paramList = ga.paramList;
+	}
+	
+	
+	public boolean paramContainForegoingValue(){
+		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
+	    	if (pair.getValue()!=null && pair.getValue().isForegoingValue())
+	    		return true;
+	    }
+	    return false;
 	}
 	
 	public boolean paramContainExpression(){
@@ -164,7 +178,11 @@ public class GenericAttribute {
 	public boolean isProcessed() {
 		return isProcessed;
 	}
-
+	
+	public boolean isForegoingValue(){
+		return isForegoingValue;
+	}
+		
 	public void setProcessed(boolean isProcessed) {
 		this.isProcessed = isProcessed;
 	}

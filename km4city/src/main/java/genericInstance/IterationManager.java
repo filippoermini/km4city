@@ -35,6 +35,7 @@ public class IterationManager {
 	private Tree.iterationElement origin;
 	private IterationElement it;
 	private EvalEngine javascriptEngine;
+	private SimulationObject temporarylist;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
 	public IterationManager(Tree.iterationElement iterationElement, String baseUri){
@@ -63,7 +64,9 @@ public class IterationManager {
 			}
 		}
 	}
-	
+	public void setTemporayList(SimulationObject obj){
+		this.temporarylist = obj;
+	}
 	public IterationElement generateIterationElement(String resId){
 		this.it = new IterationElement();
 		init(it);
@@ -174,6 +177,11 @@ public class IterationManager {
 					System.exit(-1);
 				}	
 			}    	
+		}
+		//controllo il caso in cui il valore Ë un riferimento ad un iterazione precedente
+		if(a.isForegoingValue()){
+			int i = 0;
+			i++;
 		}
 		//tutti i parametri necessari a determinare il valore dell'attributo non sono espressioni (o non lo sono pi√π)
 		a.getAttribute().setValue(a.getType(), a.getAttributeList());

@@ -9,6 +9,14 @@
 		<startDirectory>./sensorsite/</startDirectory>
 	</fileInfo>
 	<iterationElement>
+		<attributes>
+			<prop>
+				<type>foregoing</type>	
+				<name>testVar1</name>
+				<default>2</default>
+				<refValue>@[3]{Observation.concentration}</refValue>		
+			</prop>
+		</attributes>
 		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" >
 			<properties>
 				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">

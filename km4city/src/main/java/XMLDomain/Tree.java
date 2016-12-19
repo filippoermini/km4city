@@ -440,7 +440,8 @@ public class Tree {
                 "md5String",
                 "profilesFile",
                 "profileId",
-                "variance"
+                "variance",
+                "referenceValue"
             })
             public static class Prop {
 
@@ -469,9 +470,17 @@ public class Tree {
                 protected String profilesFile;
                 protected String profileId;
                 protected String variance;
+                protected String referenceValue;
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
                 
+                
+				public String getReferenceValue() {
+					return referenceValue;
+				}
+				public void setReferenceValue(String referenceValue) {
+					this.referenceValue = referenceValue;
+				}
 				public String getProfilesFile() {
 					return profilesFile;
 				}

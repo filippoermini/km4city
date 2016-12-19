@@ -25,8 +25,6 @@ public class TripleGenerator {
 	private ArrayList<State> statesList;
 	public static Logger logger; 
 	
-	
-	//TODO da rifare completamente
 	public TripleGenerator(Tree tree){
 		
 		this.rdfEngine = RDFconnector.getInstance(tree.getInstanceIterationQuery().getServer());
