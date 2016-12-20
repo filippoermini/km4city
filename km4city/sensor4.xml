@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/" isStateful="true">
+	<instanceIterationQuery>
+		<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+		<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))}</query>
+	</instanceIterationQuery>
+	<fileInfo>
+		<fileName>sensorsite.n3</fileName>
+		<startDirectory>./sensorsite/</startDirectory>
+	</fileInfo>
+	<iterationElement>
+		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true" >
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>id</type>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#hasObservation">
+					<type>Observation</type>
+				</prop>
+			</properties>
+		</instance>
+		<instance type="http://www.disit.org/km4city/schema#Observation" name="Observation" >
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>UUID</type>
+				</prop>
+				<prop key="http://purl.org/dc/terms/date">
+					<type>DateTime</type>
+					<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#lastAverageSpeed">
+					<type>query</type>
+					<queryInfo>
+					<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+					<query>select ?speed where {
+?s a km4c:SensorSite.
+?s dcterms:identifier ${id}.
+?s km4c:hasObservation ?o.
+?o km4c:averageSpeed ?speed.
+?o dcterms:date ?d.
+} order by desc(?d) limit 1</query>
+					</queryInfo>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#averageSpeed">
+					<type>float</type>
+					<maxValue>3</maxValue>
+					<minValue>2</minValue>
+					<name>averageSpeed</name>
+					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#vehicleFlow">
+					<type>valueExpression</type>
+					<valueExpression>${concentration} * ${averageSpeed} </valueExpression>
+					<datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#concentration">
+					<type>float</type>
+					<maxValue>3</maxValue>
+					<minValue>2</minValue>
+					<name>concentration</name>
+					<datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#measuredTime">
+					<type>Instant</type>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#measuredBySensor">
+					<type>SensorSite</type>
+				</prop>
+			</properties>
+		</instance>
+		<instance type="http://www.w3.org/2006/time#Instant"  name="Instant">
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>DateTime</type>
+					<name>dateTime</name>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#instantObserv">
+					<type>Observation</type>
+				</prop>
+			</properties>
+		</instance>
+	</iterationElement>
+</tree>
