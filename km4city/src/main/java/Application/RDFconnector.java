@@ -6,6 +6,7 @@ import java.util.Iterator;
 import org.apache.log4j.Logger;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.query.BindingSet;
+import org.eclipse.rdf4j.query.QueryEvaluationException;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
@@ -19,13 +20,15 @@ public class RDFconnector {
 	
 	public class RepositoryManager{
 		
+		private Logger logger;
 		private String endPoint;
 		private Repository repo;
 		private RepositoryConnection conn;
-		public RepositoryManager(String endPoint){
+		public RepositoryManager(String endPoint,Logger log){
 			this.endPoint = endPoint;//"http://servicemap.disit.org/WebAppGrafo/sparql";
 			repo = new SPARQLRepository(this.endPoint);
 			repo.initialize();
+			this.logger = log;
 		}
 
 		private String getEndPoint() {
@@ -47,7 +50,14 @@ public class RDFconnector {
 //											+"} order by ?id limit 100";
 //				
 			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL, query);
-			TupleQueryResult result = tupleQuery.evaluate();
+			TupleQueryResult result = null;
+			try{
+				result = tupleQuery.evaluate();
+			}catch(QueryEvaluationException ex){
+				logger.error("Query Evaluation Error: "+ex.getMessage());
+				logger.error("Process interrupted");
+				System.exit(-1);
+			}
 			return result;
 		}
 		
@@ -63,7 +73,7 @@ public class RDFconnector {
 	}
 	private void add(String endPoint){
 		if(getRepository(endPoint)==null){
-			RepositoryManager rm = new RepositoryManager(endPoint);
+			RepositoryManager rm = new RepositoryManager(endPoint,logger);
 			this.repositoryList.add(rm);
 		}
 	}

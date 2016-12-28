@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.management.relation.RelationServiceNotRegisteredException;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
 
@@ -178,10 +179,29 @@ public class IterationManager {
 				}	
 			}    	
 		}
-		//controllo il caso in cui il valore è un riferimento ad un iterazione precedente
+		//controllo il caso in cui il valore ï¿½ un riferimento ad un iterazione precedente
 		if(a.isForegoingValue()){
-			int i = 0;
-			i++;
+			String regex = "@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
+			String regIndex = "[\\[]+[\\w-']*+[\\]]";
+			String regVar = "[{]+[\\w-']*+[}]";
+			String refValue = a.getParam("refValue").toString();
+			Pattern pattern = Pattern.compile(regex);
+    		Matcher matcher = pattern.matcher(refValue);
+    		boolean find = false;
+    		while (matcher.find()){
+    			find = true;
+    			Object value;
+    			String var = matcher.group().trim();
+    			Pattern patternIndex = Pattern.compile(regIndex);
+        		matcher = patternIndex.matcher(var);
+        		if(matcher.find()){
+        			String index = matcher.group().trim().replace("[", "").replace("]", "");
+        			
+        		}
+    			
+    			
+    		}			
+
 		}
 		//tutti i parametri necessari a determinare il valore dell'attributo non sono espressioni (o non lo sono piÃ¹)
 		a.getAttribute().setValue(a.getType(), a.getAttributeList());

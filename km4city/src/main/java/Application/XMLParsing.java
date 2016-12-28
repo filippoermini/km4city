@@ -42,6 +42,8 @@ public class XMLParsing<T> {
 
 		    } catch (JAXBException e) {
 		    	logger.error("Serialize Error - JAXB exception: "+e.getMessage()+e.getCause() );
+		    	logger.error("Process interrupt");
+				System.exit(-1);
 		    }
 		return results;
 
@@ -59,6 +61,8 @@ public class XMLParsing<T> {
 
 		  } catch (JAXBException e) {
 			logger.error("Deserialize error - JAXB excepition: "+e.getMessage());
+			logger.error("Process interrupt");
+			System.exit(-1);
 		  }
 		return object;
 		

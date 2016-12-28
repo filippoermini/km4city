@@ -232,8 +232,16 @@ public class Tree {
     	protected String query;
     	protected String server;
     	protected String bindingValue;
-    	    	
-    	public String getBindingValue() {
+    	    
+    	public QueryInfo(QueryInfo q){
+    		this.query = q.query;
+    		this.server = q.server;
+    		this.bindingValue = q.bindingValue;
+    	}
+    public QueryInfo() {
+			// TODO Auto-generated constructor stub
+		}
+	public String getBindingValue() {
 			return bindingValue!=null?bindingValue:"";
 		}
 
@@ -441,7 +449,8 @@ public class Tree {
                 "profilesFile",
                 "profileId",
                 "variance",
-                "referenceValue"
+                "refValue",
+                "defaultValue"
             })
             public static class Prop {
 
@@ -470,16 +479,22 @@ public class Tree {
                 protected String profilesFile;
                 protected String profileId;
                 protected String variance;
-                protected String referenceValue;
+                protected String refValue;
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
+                protected String defaultValue;
                 
-                
-				public String getReferenceValue() {
-					return referenceValue;
+				public String getDefalult() {
+					return defaultValue;
 				}
-				public void setReferenceValue(String referenceValue) {
-					this.referenceValue = referenceValue;
+				public void setDefalult(String defaultValue) {
+					this.defaultValue = defaultValue;
+				}
+				public String getRefValue() {
+					return refValue;
+				}
+				public void setRefValue(String referenceValue) {
+					this.refValue = referenceValue;
 				}
 				public String getProfilesFile() {
 					return profilesFile;

@@ -1,5 +1,6 @@
 package genericInstance;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -10,7 +11,22 @@ public class AttributeParam{
 	private boolean isForegoingValue;
 	
 	public AttributeParam(Object val){
-		this.object = val;
+		if (val == null || val.getClass() == String.class )
+			this.object = val;
+		else{
+			
+			try {
+				Class<?> clazz = null;
+				Constructor<?> ctor;
+				clazz = Class.forName(val.getClass().getName());
+				ctor = clazz.getConstructor(val.getClass());
+				this.object = ctor.newInstance(new Object[] { val });
+			}catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 		try{
 			String v = val.toString();
 			this.isValueEspression = v.contains("$");

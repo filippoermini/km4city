@@ -108,6 +108,7 @@ public class GenericAttribute {
 		this.paramList = new HashMap<String,AttributeParam>();
 		this.paramList = prop.getAttributeList();
 		
+		
 		if(!isExternalKey){
 			try {
 				Class instance = java.lang.Class.forName(className);
@@ -119,7 +120,8 @@ public class GenericAttribute {
 			}
 		}
 		this.isValueExpression = this.attribute==null?false:this.paramContainExpression();
-		this.isForegoingValue  = this.attribute==null?false:this.paramContainForegoingValue();
+		this.isForegoingValue = this.paramContainForegoingValue();
+		
 	}
 	
 	
