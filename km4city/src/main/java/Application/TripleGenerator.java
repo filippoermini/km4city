@@ -29,7 +29,7 @@ public class TripleGenerator {
 		
 		this.rdfEngine = RDFconnector.getInstance(tree.getInstanceIterationQuery().getServer());
 		this.simulationObject = new SimulationObject(tree);
-		this.itManager = new IterationManager(tree.getIterationElement(),tree.getBaseUri());
+		this.itManager = new IterationManager(tree.getIterationElement(),tree.getBaseUri(),this.simulationObject);
 		statesList = new ArrayList<>();
 		logger = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	}

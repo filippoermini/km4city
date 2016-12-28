@@ -20,6 +20,7 @@ import org.eclipse.rdf4j.query.TupleQueryResult;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.thoughtworks.xstream.io.binary.Token.Attribute;
 
 import Application.CommonValue;
 import Application.EvalEngine;
@@ -39,12 +40,13 @@ public class IterationManager {
 	private SimulationObject temporarylist;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
-	public IterationManager(Tree.iterationElement iterationElement, String baseUri){
+	public IterationManager(Tree.iterationElement iterationElement, String baseUri, SimulationObject tempList){
 		
 		this.javascriptEngine = EvalEngine.getInstance();
 		this.origin = iterationElement;
 		this.it = new IterationElement();
 		this.mainBaseUri = baseUri;
+		this.temporarylist = tempList;
 	}
 	
 	private void init(IterationElement it){
@@ -179,7 +181,7 @@ public class IterationManager {
 				}	
 			}    	
 		}
-		//controllo il caso in cui il valore ï¿½ un riferimento ad un iterazione precedente
+		//controllo il caso in cui il valore è un riferimento ad un iterazione precedente
 		if(a.isForegoingValue()){
 			String regex = "@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
 			String regIndex = "[\\[]+[\\w-']*+[\\]]";
@@ -196,7 +198,57 @@ public class IterationManager {
         		matcher = patternIndex.matcher(var);
         		if(matcher.find()){
         			String index = matcher.group().trim().replace("[", "").replace("]", "");
-        			
+        			//controllo se è un indice numerico o un id 
+        			if(index.contains("'")){
+        				//l'indice è un id
+        				//controllo se è l'id attuale 
+        				index = index.replaceAll("'", "");
+        				Pattern patternVar = Pattern.compile(regVar);
+		        		matcher = patternVar.matcher(var);
+		        		matcher.find();
+		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
+		        		String val;
+		        		if((val = this.it.getValueByAttributeName(varName))!=null){
+		        			a.getAttribute().setValue(val);
+		        		}else{
+		        			for(GenericInstance g:it.getInstances()){ //estraggo le classi
+		        				if(!g.isProcessed()){//la classe non Ã¨ ancora stata processata
+		        					_process(g);
+		        				}
+		        			}
+		        			//ho generato i valori che non avevo
+		        			a.getAttribute().setValue(this.it.getValueByAttributeName(varName));
+		        		}
+        				if(index.equals(this.it.getValueId())){
+        					//il valore potrebbe ancora non essere stato generato
+        				}else{
+        					//vado a cercare l'id nella lista degli elementi già generati
+        					IterationElement ie;
+        					if((ie = this.temporarylist.getElementById(index))!=null){
+        						val = ie.getValueByAttributeName(varName);
+        		        		a.getAttribute().setValue(val);
+        					}else{
+        						//l'elemento con quell'id non è presente nella lista
+        						a.getAttribute().setValue("java.lang.String", a.getParam("default"));
+        					}
+        				}
+        			}else{
+        				//l'indice è il numero del record
+        				int indexInt = Integer.parseInt(index);
+        				if(this.temporarylist.size()>indexInt){
+        					IterationElement ie = this.temporarylist.getElementAtIndex(indexInt);
+        					Pattern patternVar = Pattern.compile(regVar);
+    		        		matcher = patternVar.matcher(var);
+    		        		matcher.find();
+    		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
+    		        		a.getAttribute().setValue(ie.getValueByAttributeName(varName));
+        				}else{
+        					//il record a quell'indice ancora non esiste
+        					a.getAttribute().setValue("java.lang.String", a.getParam("default"));
+        				}
+        				
+        				
+        			}
         		}
     			
     			
