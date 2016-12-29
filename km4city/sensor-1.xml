@@ -14,7 +14,12 @@
 				<type>foregoing</type>	
 				<name>testVar1</name>
 				<defaultValue>2</defaultValue>
-				<refValue>@[3]{concentration}</refValue>		
+				<refValue>@['FI055ZTL00801']{concentration}</refValue>		
+			</prop>
+			<prop>
+				<type>valueExpression</type>
+				<name>testVar2</name>
+				<valueExpression>${testVar1} + 44</valueExpression>
 			</prop>
 		</attributes>
 		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true">
@@ -85,9 +90,9 @@
 				<prop key="http://www.disit.org/km4city/schema#instantObserv">
 					<type>Observation</type>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#value">
+				<prop key="http://www.disit.org/km4city/schema#valueForegoing">
 					<type>valueExpression</type>
-					<valueExpression>${testVar1}</valueExpression>
+					<valueExpression>${testVar2}</valueExpression>
 				</prop>
 			</properties>
 		</instance>

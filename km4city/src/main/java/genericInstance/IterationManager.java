@@ -143,6 +143,11 @@ public class IterationManager {
 			    			Object value;
 			    			String var = matcher.group().replace(" ", "");
 			    			GenericAttribute ga = it.getGenericAttributeByName(var.replace("$", "").replace("{", "").replace("}", "")); //attributo da cui dipende la variabile
+			    			if(ga == null){
+			    				logger.error("Variable "+var+" not present");
+			    				logger.error("Process interrupt");
+			    				System.exit(-1);
+			    			}
 			    			value = ((Object) ga.getAttribute().getAttributeValue());
 			    			if(value != null){
 			    				if(value.getClass().getName().contains("String")) 
@@ -201,35 +206,38 @@ public class IterationManager {
         			//controllo se Ë un indice numerico o un id 
         			if(index.contains("'")){
         				//l'indice Ë un id
-        				//controllo se Ë l'id attuale 
+        				
         				index = index.replaceAll("'", "");
         				Pattern patternVar = Pattern.compile(regVar);
 		        		matcher = patternVar.matcher(var);
 		        		matcher.find();
 		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
 		        		String val;
-		        		if((val = this.it.getValueByAttributeName(varName))!=null){
-		        			a.getAttribute().setValue(val);
-		        		}else{
-		        			for(GenericInstance g:it.getInstances()){ //estraggo le classi
-		        				if(!g.isProcessed()){//la classe non √® ancora stata processata
-		        					_process(g);
-		        				}
-		        			}
-		        			//ho generato i valori che non avevo
-		        			a.getAttribute().setValue(this.it.getValueByAttributeName(varName));
-		        		}
+		        		
+		        		//controllo se Ë l'id attuale 
         				if(index.equals(this.it.getValueId())){
         					//il valore potrebbe ancora non essere stato generato
+        					if((val = this.it.getValueByAttributeName(varName))!=null){
+    		        			a.getAttribute().setValue(val);
+    		        		}else{
+    		        			for(GenericInstance g:it.getInstances()){ //estraggo le classi
+    		        				if(!g.isProcessed()){//la classe non √® ancora stata processata
+    		        					_process(g);
+    		        				}
+    		        			}
+    		        			//ho generato i valori che non avevo
+    		        			a.getAttribute().setValue(this.it.getValueByAttributeName(varName));    
+    		        		}
         				}else{
         					//vado a cercare l'id nella lista degli elementi gi‡ generati
         					IterationElement ie;
         					if((ie = this.temporarylist.getElementById(index))!=null){
         						val = ie.getValueByAttributeName(varName);
         		        		a.getAttribute().setValue(val);
+        		        		
         					}else{
         						//l'elemento con quell'id non Ë presente nella lista
-        						a.getAttribute().setValue("java.lang.String", a.getParam("default"));
+        						a.getAttribute().setValue(a.getParam("defaultValue").toString());
         					}
         				}
         			}else{
@@ -244,7 +252,7 @@ public class IterationManager {
     		        		a.getAttribute().setValue(ie.getValueByAttributeName(varName));
         				}else{
         					//il record a quell'indice ancora non esiste
-        					a.getAttribute().setValue("java.lang.String", a.getParam("default"));
+        					a.getAttribute().setValue(a.getParam("defaultValue").toString());
         				}
         				
         				
@@ -254,9 +262,11 @@ public class IterationManager {
     			
     		}			
 
+		}else{
+			a.getAttribute().setValue(a.getType(), a.getAttributeList());
 		}
 		//tutti i parametri necessari a determinare il valore dell'attributo non sono espressioni (o non lo sono pi√π)
-		a.getAttribute().setValue(a.getType(), a.getAttributeList());
+		
 		//System.out.println(a.toString());
 	}
 }

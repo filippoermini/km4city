@@ -71,6 +71,7 @@ public class GenericAttribute {
 		public void setValue(String type,Object value){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, value);
 		}
+		
 		public String toString(){
 			return "value: "+this.attributeValue+"\n";
 		}
