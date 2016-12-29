@@ -5,6 +5,7 @@ package genericInstance;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -26,7 +27,7 @@ import XMLDomain.Tree.Instance;
 public class GenericAttribute {
 
 	public class Attribute<T>{
-		private final Class<T> typeParameterClass;
+		private Class<T> typeParameterClass;
 		private T attributeValue;
 		
 		
@@ -65,8 +66,24 @@ public class GenericAttribute {
 		public T getAttributeValue(){
 			return this.attributeValue;
 		}
-		public void setValue(String value){
+		public boolean setValue(String value){
+			try{
+				Integer intValue = Integer.parseInt(value);
+				Class instance = Integer.class;
+				this.typeParameterClass = instance;
+				this.attributeValue = (T) intValue;
+				return true;
+			}catch(NumberFormatException ex){}
+			try{
+				Float floatValue = Float.parseFloat(value);
+				Class instance = Float.class;
+				this.typeParameterClass = instance;
+				this.attributeValue = (T) floatValue;
+				return true;
+			}catch(NumberFormatException ex){}
 			this.attributeValue = (T) value;
+			return true;
+			
 		}
 		public void setValue(String type,Object value){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, value);

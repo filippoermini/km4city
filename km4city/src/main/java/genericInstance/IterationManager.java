@@ -188,6 +188,11 @@ public class IterationManager {
 		}
 		//controllo il caso in cui il valore è un riferimento ad un iterazione precedente
 		if(a.isForegoingValue()){
+//			if(a.getParam("defaultValue") == null){
+//				logger.error("Default value for "+a.getAttributeName()+" attribute not defined");
+//				logger.error("Process interrupt");
+//				System.exit(-1);
+//			}
 			String regex = "@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
 			String regIndex = "[\\[]+[\\w-']*+[\\]]";
 			String regVar = "[{]+[\\w-']*+[}]";

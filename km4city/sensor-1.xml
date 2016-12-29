@@ -13,8 +13,10 @@
 			<prop>
 				<type>foregoing</type>	
 				<name>testVar1</name>
-				<defaultValue>2</defaultValue>
-				<refValue>@['FI055ZTL00801']{concentration}</refValue>		
+				<foregoingValue>
+					<refValue>@['FI055ZTL00801']{concentration}</refValue>
+				</foregoingValue>
+						
 			</prop>
 			<prop>
 				<type>valueExpression</type>

@@ -223,6 +223,31 @@ public class Tree {
     }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
+        "refValue",
+        "defaultValue",
+    }) 
+    public static class ForegoingValue{
+    	
+    	protected String refValue;
+    	@XmlElement(required = true)
+    	protected String dafaultValue;
+		public String getRefValue() {
+			return refValue;
+		}
+		public void setRefValue(String refValue) {
+			this.refValue = refValue;
+		}
+		public String getDafaultValue() {
+			return dafaultValue;
+		}
+		public void setDafaultValue(String dafaultValue) {
+			this.dafaultValue = dafaultValue;
+		}
+    	
+    	
+    }
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
         "query",
         "server",
         "bindingValue"
@@ -233,14 +258,20 @@ public class Tree {
     	protected String server;
     	protected String bindingValue;
     	    
-    	public QueryInfo(QueryInfo q){
-    		this.query = q.query;
-    		this.server = q.server;
-    		this.bindingValue = q.bindingValue;
-    	}
-    public QueryInfo() {
-			// TODO Auto-generated constructor stub
+    	
+    	
+    
+	public QueryInfo() {
+			super();
 		}
+
+	public QueryInfo(QueryInfo q) {
+			super();
+			this.query = q.query;
+			this.server = q.server;
+			this.bindingValue = q.bindingValue;
+		}
+
 	public String getBindingValue() {
 			return bindingValue!=null?bindingValue:"";
 		}
@@ -283,7 +314,6 @@ public class Tree {
         @XmlElement(required = true)
         protected Tree.Instance.Properties properties;
         @XmlAttribute(name = "type")
-        @XmlSchemaType(name = "anyURI")
         protected String type;
         @XmlAttribute(name = "name")
         protected String name;
@@ -445,12 +475,11 @@ public class Tree {
                 "set",
                 "name",
                 "queryInfo",
+                "foregoingValue",
                 "md5String",
                 "profilesFile",
                 "profileId",
-                "variance",
-                "refValue",
-                "defaultValue"
+                "variance"
             })
             public static class Prop {
 
@@ -461,7 +490,7 @@ public class Tree {
                 protected String name;
                 @XmlSchemaType(name = "anyURI")
                 protected String datatype;
-                @XmlAttribute(name = "key")
+                @XmlAttribute(name = "key",required = true)
                 protected String key;
                 protected String valueExpression;
                 protected String hourValue;
@@ -475,27 +504,16 @@ public class Tree {
                 protected String isHidden;
                 @XmlElement(name = "queryInfo")
                 protected Tree.QueryInfo queryInfo;
+                @XmlElement(name = "foregoingValue")
+                protected Tree.QueryInfo foregoingValue;
                 protected String md5String;
                 protected String profilesFile;
                 protected String profileId;
                 protected String variance;
-                protected String refValue;
+         
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
-                protected String defaultValue;
-                
-				public String getDefalult() {
-					return defaultValue;
-				}
-				public void setDefalult(String defaultValue) {
-					this.defaultValue = defaultValue;
-				}
-				public String getRefValue() {
-					return refValue;
-				}
-				public void setRefValue(String referenceValue) {
-					this.refValue = referenceValue;
-				}
+          
 				public String getProfilesFile() {
 					return profilesFile;
 				}
