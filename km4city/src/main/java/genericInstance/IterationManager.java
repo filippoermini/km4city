@@ -186,7 +186,7 @@ public class IterationManager {
 				}	
 			}    	
 		}
-		//controllo il caso in cui il valore è un riferimento ad un iterazione precedente
+		//controllo il caso in cui il valore ï¿½ un riferimento ad un iterazione precedente
 		if(a.isForegoingValue()){
 //			if(a.getParam("defaultValue") == null){
 //				logger.error("Default value for "+a.getAttributeName()+" attribute not defined");
@@ -208,9 +208,9 @@ public class IterationManager {
         		matcher = patternIndex.matcher(var);
         		if(matcher.find()){
         			String index = matcher.group().trim().replace("[", "").replace("]", "");
-        			//controllo se è un indice numerico o un id 
+        			//controllo se ï¿½ un indice numerico o un id 
         			if(index.contains("'")){
-        				//l'indice è un id
+        				//l'indice ï¿½ un id
         				
         				index = index.replaceAll("'", "");
         				Pattern patternVar = Pattern.compile(regVar);
@@ -219,7 +219,7 @@ public class IterationManager {
 		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
 		        		String val;
 		        		
-		        		//controllo se è l'id attuale 
+		        		//controllo se ï¿½ l'id attuale 
         				if(index.equals(this.it.getValueId())){
         					//il valore potrebbe ancora non essere stato generato
         					if((val = this.it.getValueByAttributeName(varName))!=null){
@@ -234,19 +234,19 @@ public class IterationManager {
     		        			a.getAttribute().setValue(this.it.getValueByAttributeName(varName));    
     		        		}
         				}else{
-        					//vado a cercare l'id nella lista degli elementi già generati
+        					//vado a cercare l'id nella lista degli elementi giï¿½ generati
         					IterationElement ie;
         					if((ie = this.temporarylist.getElementById(index))!=null){
         						val = ie.getValueByAttributeName(varName);
         		        		a.getAttribute().setValue(val);
         		        		
         					}else{
-        						//l'elemento con quell'id non è presente nella lista
+        						//l'elemento con quell'id non ï¿½ presente nella lista
         						a.getAttribute().setValue(a.getParam("defaultValue").toString());
         					}
         				}
         			}else{
-        				//l'indice è il numero del record
+        				//l'indice ï¿½ il numero del record
         				int indexInt = Integer.parseInt(index);
         				if(this.temporarylist.size()>indexInt){
         					IterationElement ie = this.temporarylist.getElementAtIndex(indexInt);
@@ -259,8 +259,6 @@ public class IterationManager {
         					//il record a quell'indice ancora non esiste
         					a.getAttribute().setValue(a.getParam("defaultValue").toString());
         				}
-        				
-        				
         			}
         		}
     			
