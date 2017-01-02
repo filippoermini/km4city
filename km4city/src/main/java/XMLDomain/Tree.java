@@ -195,9 +195,6 @@ public class Tree {
 		}
     	
     }
-    public static class LinkedAttribute{
-    	
-    }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "fileName",
@@ -220,6 +217,31 @@ public class Tree {
 		public void setStartDirectory(String startDirectory) {
 			this.startDirectory = startDirectory;
 		}
+    }
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "refValue",
+        "defaultValue",
+    }) 
+    public static class ForegoingValue{
+    	
+    	protected String refValue;
+    	@XmlElement(required = true)
+    	protected String dafaultValue;
+		public String getRefValue() {
+			return refValue;
+		}
+		public void setRefValue(String refValue) {
+			this.refValue = refValue;
+		}
+		public String getDafaultValue() {
+			return dafaultValue;
+		}
+		public void setDafaultValue(String dafaultValue) {
+			this.dafaultValue = dafaultValue;
+		}
+    	
+    	
     }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
