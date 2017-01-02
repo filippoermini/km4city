@@ -138,8 +138,8 @@ public class Tree {
     	public Tree.Instance.Properties getAttributes() {
     		return attributes;
     	}
-    	public void seAttributes(Tree.Instance.Properties hiddenProperties) {
-    		this.attributes = hiddenProperties;
+    	public void seAttributes(Tree.Instance.Properties attributes) {
+    		this.attributes = attributes;
     	}
     	
     	public List<Tree.Instance> getInstance() {
@@ -153,48 +153,6 @@ public class Tree {
     }
     
     
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "name",
-        "valueExpression"
-    })
-    public static class Attribute{
-    	@XmlAttribute(name= "name")
-    	protected String name;
-    	@XmlAttribute(name= "valueExpression")
-    	protected String valueExpression;
-		
-    	public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public String getValueExpression() {
-			return valueExpression;
-		}
-		public void setValueExpression(String valueExpression) {
-			this.valueExpression = valueExpression;
-		}
-    }
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "linkedTree"
-    })
-    public static class LinkedTree{
-    	
-    	@XmlElement(name = "linkedTree")
-    	protected List<String> linkedTree;
-
-		public List<String> getLinkedTree() {
-			return linkedTree;
-		}
-
-		public void setLinkedTree(List<String> linkedTree) {
-			this.linkedTree = linkedTree;
-		}
-    	
-    }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "fileName",
@@ -218,31 +176,7 @@ public class Tree {
 			this.startDirectory = startDirectory;
 		}
     }
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "refValue",
-        "defaultValue",
-    }) 
-    public static class ForegoingValue{
-    	
-    	protected String refValue;
-    	@XmlElement(required = true)
-    	protected String dafaultValue;
-		public String getRefValue() {
-			return refValue;
-		}
-		public void setRefValue(String refValue) {
-			this.refValue = refValue;
-		}
-		public String getDafaultValue() {
-			return dafaultValue;
-		}
-		public void setDafaultValue(String dafaultValue) {
-			this.dafaultValue = dafaultValue;
-		}
-    	
-    	
-    }
+    
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "query",
@@ -471,8 +405,9 @@ public class Tree {
                 "profilesFile",
                 "profileId",
                 "variance",
-                "refValue",
-                "defaultValue"
+                "defaultValue",
+                "refValue"
+                
             })
             public static class Prop {
 
@@ -497,26 +432,26 @@ public class Tree {
                 protected String isHidden;
                 @XmlElement(name = "queryInfo")
                 protected Tree.QueryInfo queryInfo;
+                protected String refValue;
+                protected String defaultValue;
                 protected String md5String;
                 protected String profilesFile;
                 protected String profileId;
                 protected String variance;
-                protected String refValue;
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
-                protected String defaultValue;
                 
-				public String getDefalult() {
-					return defaultValue;
-				}
-				public void setDefalult(String defaultValue) {
-					this.defaultValue = defaultValue;
-				}
 				public String getRefValue() {
 					return refValue;
 				}
-				public void setRefValue(String referenceValue) {
-					this.refValue = referenceValue;
+				public void setRefValue(String refValue) {
+					this.refValue = refValue;
+				}
+				public String getDefaultValue() {
+					return defaultValue;
+				}
+				public void setDefaultValue(String defaultValue) {
+					this.defaultValue = defaultValue;
 				}
 				public String getProfilesFile() {
 					return profilesFile;
