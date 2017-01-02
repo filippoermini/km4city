@@ -29,8 +29,8 @@ public class AttributeParam{
 		}
 		try{
 			String v = val.toString();
-			this.isValueEspression = v.contains("$");
-			this.isForegoingValue  = v.contains("@");
+			this.isValueEspression = v.contains("$") && v.contains("{");
+			this.isForegoingValue  = v.contains("@") && v.contains("{");
 		}catch(Exception e){
 			isValueEspression = false;
 		}

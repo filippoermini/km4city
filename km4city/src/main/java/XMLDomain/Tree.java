@@ -138,8 +138,8 @@ public class Tree {
     	public Tree.Instance.Properties getAttributes() {
     		return attributes;
     	}
-    	public void seAttributes(Tree.Instance.Properties hiddenProperties) {
-    		this.attributes = hiddenProperties;
+    	public void seAttributes(Tree.Instance.Properties attributes) {
+    		this.attributes = attributes;
     	}
     	
     	public List<Tree.Instance> getInstance() {
@@ -153,51 +153,6 @@ public class Tree {
     }
     
     
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "name",
-        "valueExpression"
-    })
-    public static class Attribute{
-    	@XmlAttribute(name= "name")
-    	protected String name;
-    	@XmlAttribute(name= "valueExpression")
-    	protected String valueExpression;
-		
-    	public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public String getValueExpression() {
-			return valueExpression;
-		}
-		public void setValueExpression(String valueExpression) {
-			this.valueExpression = valueExpression;
-		}
-    }
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "linkedTree"
-    })
-    public static class LinkedTree{
-    	
-    	@XmlElement(name = "linkedTree")
-    	protected List<String> linkedTree;
-
-		public List<String> getLinkedTree() {
-			return linkedTree;
-		}
-
-		public void setLinkedTree(List<String> linkedTree) {
-			this.linkedTree = linkedTree;
-		}
-    	
-    }
-    public static class LinkedAttribute{
-    	
-    }
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "fileName",
@@ -221,31 +176,7 @@ public class Tree {
 			this.startDirectory = startDirectory;
 		}
     }
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "refValue",
-        "defaultValue",
-    }) 
-    public static class ForegoingValue{
-    	
-    	protected String refValue;
-    	@XmlElement(required = true)
-    	protected String dafaultValue;
-		public String getRefValue() {
-			return refValue;
-		}
-		public void setRefValue(String refValue) {
-			this.refValue = refValue;
-		}
-		public String getDafaultValue() {
-			return dafaultValue;
-		}
-		public void setDafaultValue(String dafaultValue) {
-			this.dafaultValue = dafaultValue;
-		}
-    	
-    	
-    }
+    
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "query",
@@ -258,20 +189,14 @@ public class Tree {
     	protected String server;
     	protected String bindingValue;
     	    
-    	
-    	
-    
-	public QueryInfo() {
-			super();
+    	public QueryInfo(QueryInfo q){
+    		this.query = q.query;
+    		this.server = q.server;
+    		this.bindingValue = q.bindingValue;
+    	}
+    public QueryInfo() {
+			// TODO Auto-generated constructor stub
 		}
-
-	public QueryInfo(QueryInfo q) {
-			super();
-			this.query = q.query;
-			this.server = q.server;
-			this.bindingValue = q.bindingValue;
-		}
-
 	public String getBindingValue() {
 			return bindingValue!=null?bindingValue:"";
 		}
@@ -314,6 +239,7 @@ public class Tree {
         @XmlElement(required = true)
         protected Tree.Instance.Properties properties;
         @XmlAttribute(name = "type")
+        @XmlSchemaType(name = "anyURI")
         protected String type;
         @XmlAttribute(name = "name")
         protected String name;
@@ -475,11 +401,13 @@ public class Tree {
                 "set",
                 "name",
                 "queryInfo",
-                "foregoingValue",
                 "md5String",
                 "profilesFile",
                 "profileId",
-                "variance"
+                "variance",
+                "defaultValue",
+                "refValue"
+                
             })
             public static class Prop {
 
@@ -490,7 +418,7 @@ public class Tree {
                 protected String name;
                 @XmlSchemaType(name = "anyURI")
                 protected String datatype;
-                @XmlAttribute(name = "key",required = true)
+                @XmlAttribute(name = "key")
                 protected String key;
                 protected String valueExpression;
                 protected String hourValue;
@@ -504,16 +432,27 @@ public class Tree {
                 protected String isHidden;
                 @XmlElement(name = "queryInfo")
                 protected Tree.QueryInfo queryInfo;
-                @XmlElement(name = "foregoingValue")
-                protected Tree.QueryInfo foregoingValue;
+                protected String refValue;
+                protected String defaultValue;
                 protected String md5String;
                 protected String profilesFile;
                 protected String profileId;
                 protected String variance;
-         
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
-          
+                
+				public String getRefValue() {
+					return refValue;
+				}
+				public void setRefValue(String refValue) {
+					this.refValue = refValue;
+				}
+				public String getDefaultValue() {
+					return defaultValue;
+				}
+				public void setDefaultValue(String defaultValue) {
+					this.defaultValue = defaultValue;
+				}
 				public String getProfilesFile() {
 					return profilesFile;
 				}
