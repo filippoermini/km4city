@@ -82,7 +82,7 @@ elementi:
 
 type value:
 
-tip | Descrizione | Campi aggiuntivi |
+tipo | Descrizione | Campi aggiuntivi |
 ------------ | ------------- | --------------
 id | definische che la proprietà dovrà contenere il valore proveniente dall query di iterazione, questa proprietà deve essere attribuita all'istanza con isRoot = true | nessuno
 integer | l'attributo restituirà un valore intero generato casualmente tra due valori | **maxValue**,**minValue** estremi dell'intervallo 
@@ -93,7 +93,13 @@ datetime  | genera una data in formato ISO 8601 se non specificati gli estremi l
 hourdependent |  serve a generare dei valori diversi per ogni ora della giornata in base a valori orari di riferimento |  **hourValue**: contiene i valori di riferimento per ogni ora, devono essere inseriti 24 valori separati da ';' . **range**: contiene il range di variazione all'interno del quale possiamo far variare il valore di riferimento, può essere un valore unico per tutti e 24 i valori oppure può essere definito in modo analogo a **hourValue** indicando i 24 valori del range
 fromset  |  estrae un valore a caso da un set di elementi (se il set contiene un solo elemento verrà estratto sempre quello) | **set** deve contenere la lista di elementi separati da';'
 query  | il valore dell'attributo è il risultato dell'esecuzione di una query, la query deve restituire un solo valore |  *elemento di tipo queryInfo rifarsi alla definizione dello stesso*
-valueexpression | il valore dell'attributo è ottenuto dall'esecuzione di una espressione che può contenere variabili, le variabili si riferiscono ai valori assunti da altre propiertà | **valueExpression* contiene l'espressione algebrica o logica da eseguire, le variabile devono essere dichiarate con la seguente sintassi ${nome} dove nome è il valore inserito nelle proprietà dell'attributo *prop*
+valueexpression | il valore dell'attributo è ottenuto dall'esecuzione di una espressione che può contenere variabili, le variabili si riferiscono ai valori assunti da altre propiertà | **valueExpression** contiene l'espressione algebrica o logica da eseguire, le variabile devono essere dichiarate con la seguente sintassi ${nome} dove nome è il valore inserito nelle proprietà dell'attributo *prop*
+foregoing  |  attraverso questo tipo di variabile si può andare a referenziare il valore di una variabile generata in iterazioni precedenti all'interno dell'iterazione corrente  |  **name** è il nome assunto dalla variabile nell'iterazione corrente, **defaultValue** è il valore della variabile nel caso in cui il valore di riferimento non esistesse o non sia ancora stato generato, **refValue** contiene la coppia [iterazione]{nomeVaribile} da cui prendere il valore
+
+i tipi foregoing possono essere dichiarati solo all'interno degli attributes e non delle instances
+inoltre, i campi che lo definiscono non devono contenere espressioni o riferimenti a variabili.
+
+le iterazioni precedenti possono essere referenziate attraverso un indice @[4]{...} oppure specificando l'id dell'iterazione @['FI055ZTL00801']{...} necessariamente tra apici
 
 le espressione logiche ed algebriche oltre che nelle proprietà in cui sono definite possono essere inserite nei campi aggiuntivi di altre proprietà
 ad esemprio nei campi maxValue o minValue oppure all'interno di una query.
@@ -101,57 +107,104 @@ ad esemprio nei campi maxValue o minValue oppure all'interno di una query.
 
 Esemipo di file xml:
 
-```xml
-<?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" isStateful="false">
-    <instanceIterationQuery>
-    	<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
-    	<query>SELECT DISTINCT (substr(str(?s),39) as ?id) WHERE {?s a km4c:Charging_stations.} limit 10</query>
-    </instanceIterationQuery>
-    <fileInfo>
-    	<fileName>recharge.n3</fileName>
-    	<startDirectory>./recharge/</startDirectory>
-    </fileInfo>
-    <iterationElement>
-    	<instance type="http://www.disit.org/km4city/schema#Charging_Stations" name="Charging_Station" isRoot="true" baseUri="http://www.disit.org/km4city/resource/">
-	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
-	                <type>id</type>
-	                <name>Charging_Stations</name>
-	            </prop>
-	            <prop key="http://www.w3.org/ns/ssn/hasSensor">
-	                <type>Sensor1</type>
-	                <uri>http://www.w3.org/ns/ssn/Sensor</uri>
-	            </prop>
-	        </properties>
-	    </instance>
-	    <instance type="http://www.w3.org/ns/ssn/Sensor" name="Sensor1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
-	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
-	                <type>valueExpression</type>
-	                <valueExpression>${Charging_Stations} + "_sensor1"</valueExpression>
-	            </prop>
-	            <prop key="http://www.w3.org/ns/ssn/MadeObservation">
-	                <type>Observation1</type>
-	            </prop>
-	        </properties>
-	    </instance>
-	    <instance type="http://www.w3.org/ns/ssn/Observation" name="Observation1" isRoot="false" baseUri="http://www.disit.org/km4city/resource/">
-	        <properties>
-	            <prop key="http://purl.org/dc/terms/identifier">
-	                <type>md5</type>
-	                <md5String>"obs1"+${Charging_Stations}+${dateTime}</md5String>
-	            </prop>
-	            <prop key="http://www.w3.org/ns/ssn/dateTime" isHidden="true">
-	                <name>dateTime</name>
-	                <type>DateTime</type>
-	            </prop>
-	            <prop key="http://www.w3.org/ns/ssn/observedProperty" isUri="true">
-					<type>FromSet</type>
-	                <set>http://www.disit.org/km4city/schema#chargeState</set>
-	            </prop>
-	        </properties>
-	    </instance>
-    </iterationElement>
+```<?xml version="1.0"?>
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/">
+	<instanceIterationQuery>
+		<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+		<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} limit 10</query>
+	</instanceIterationQuery>
+	<fileInfo>
+		<fileName>sensorsite.n3</fileName>
+		<startDirectory>./sensorsite</startDirectory>
+	</fileInfo>
+	<iterationElement>
+		<attributes>
+			<prop>
+				<type>foregoing</type>	
+				<name>testVar1</name>
+				<defaultValue>2</defaultValue>
+				<refValue>@['FI055ZTL00801']{concentration}</refValue>	
+			</prop>
+			<prop>
+				<type>valueExpression</type>
+				<name>testVar2</name>
+				<valueExpression>${testVar1} + 44</valueExpression>
+			</prop>
+		</attributes>
+		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true">
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>id</type>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#hasObservation">
+					<type>Observation</type>
+				</prop>
+			</properties>
+		</instance>
+		<instance type="http://www.disit.org/km4city/schema#Observation" name="Observation" baseUri="http://www.disit.org/km4city/resource/obs/">
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>UUID</type>
+				</prop>
+				<prop key="http://purl.org/dc/terms/date">
+					<type>DateTime</type>
+					<uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#lastAverageSpeed">
+					<type>query</type>
+					<queryInfo>
+					<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+					<query>select ?speed where {
+						?s a km4c:SensorSite.
+						?s dcterms:identifier ${id}.
+						?s km4c:hasObservation ?o.
+						?o km4c:averageSpeed ?speed.
+						?o dcterms:date ?d.
+						} order by desc(?d) limit 1</query>
+					</queryInfo>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#averageSpeed">
+					<type>float</type>
+					<maxValue>3</maxValue>
+					<minValue>2</minValue>
+					<name>averageSpeed</name>
+					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#vehicleFlow">
+					<type>valueExpression</type>
+					<valueExpression>${concentration} * ${averageSpeed} </valueExpression>
+					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#concentration">
+					<type>float</type>
+					<maxValue>3</maxValue>
+					<minValue>2</minValue>
+					<name>concentration</name>
+					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#measuredTime">
+					<type>Instant</type>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#measuredBySensor">
+					<type>SensorSite</type>
+				</prop>
+			</properties>
+		</instance>
+		<instance type="http://www.w3.org/2006/time#Instant" name="Instant" >
+			<properties>
+				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
+					<type>DateTime</type>
+					<name>dateTime</name>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#instantObserv">
+					<type>Observation</type>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#valueForegoing">
+					<type>valueExpression</type>
+					<valueExpression>${testVar2}</valueExpression>
+				</prop>
+			</properties>
+		</instance>
+	</iterationElement>
 </tree>
 ```

@@ -193,6 +193,11 @@ public class IterationManager {
 //				logger.error("Process interrupt");
 //				System.exit(-1);
 //			}
+			if (a.getParam("defaultValue").toString() == null){
+				logger.error("Undefined 'defaultValue' for the attribute "+a.getAttributeName());
+				logger.error("Process interrupt");
+				System.exit(-1);
+			}
 			String regex = "@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
 			String regIndex = "[\\[]+[\\w-']*+[\\]]";
 			String regVar = "[{]+[\\w-']*+[}]";
