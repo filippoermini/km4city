@@ -107,7 +107,8 @@ ad esemprio nei campi maxValue o minValue oppure all'interno di una query.
 
 Esemipo di file xml:
 
-```<?xml version="1.0"?>
+```xml
+<?xml version="1.0"?>
 <tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/">
 	<instanceIterationQuery>
 		<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
@@ -206,5 +207,4 @@ Esemipo di file xml:
 			</properties>
 		</instance>
 	</iterationElement>
-</tree>
-```
+</tree>```
