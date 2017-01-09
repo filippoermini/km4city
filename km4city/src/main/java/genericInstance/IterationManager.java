@@ -3,6 +3,7 @@ package genericInstance;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -25,10 +26,12 @@ import com.thoughtworks.xstream.io.binary.Token.Attribute;
 import Application.CommonValue;
 import Application.EvalEngine;
 import Application.RDFconnector.RepositoryManager;
+import Application.TripleGenerator;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Instance;
 import XMLDomain.Tree.Instance.Properties.Prop;
-import XMLDomain.Tree.Instance;
+import jsonDomain.States;
+
 
 public class IterationManager {
 
@@ -38,15 +41,21 @@ public class IterationManager {
 	private IterationElement it;
 	private EvalEngine javascriptEngine;
 	private SimulationObject temporarylist;
+	private HashMap<String,KeyWordCommand> keyWord;
+	private States states;
+	private TripleGenerator.IterationObject itObject;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
-	public IterationManager(Tree.iterationElement iterationElement, String baseUri, SimulationObject tempList){
+	public IterationManager(Tree.iterationElement iterationElement, String baseUri, TripleGenerator.IterationObject itObject){
 		
 		this.javascriptEngine = EvalEngine.getInstance();
 		this.origin = iterationElement;
 		this.it = new IterationElement();
 		this.mainBaseUri = baseUri;
-		this.temporarylist = tempList;
+		this.temporarylist = itObject.getSimulationObject();
+		this.keyWord = itObject.getKeyWord();
+		this.states = itObject.getStates();
+		
 	}
 	
 	private void init(IterationElement it){
@@ -142,26 +151,32 @@ public class IterationManager {
 			    		while (matcher.find()){
 			    			Object value;
 			    			String var = matcher.group().replace(" ", "");
-			    			GenericAttribute ga = it.getGenericAttributeByName(var.replace("$", "").replace("{", "").replace("}", "")); //attributo da cui dipende la variabile
-			    			if(ga == null){
-			    				logger.error("Variable "+var+" not present");
-			    				logger.error("Process interrupt");
-			    				System.exit(-1);
-			    			}
-			    			value = ((Object) ga.getAttribute().getAttributeValue());
-			    			if(value != null){
-			    				if(value.getClass().getName().contains("String")) 
-			    					value = "\""+value+"\"";
+			    			if(this.keyWord.get(var.replace("$", "").replace("{", "").replace("}", ""))!=null){
+			    				value = this.keyWord.get(var.replace("$", "").replace("{", "").replace("}", "")).runCommand();
 			    				valueExpression = valueExpression.replace(var, value.toString());
 			    				pair.getValue().setObject(valueExpression);
 			    			}else{
-			    				//il valore dell'attributo da cui dipende la variabile non è ancora stato generato
-			    				generateAttributeValue(ga);
-			    				value = ((Object) ga.getAttribute().getAttributeValue());
-			    				if(value.getClass().getName().contains("String")) 
-			    					value = "\""+value+"\"";
-			    				valueExpression = valueExpression.replace(var, value.toString());
-			    				pair.getValue().setObject(valueExpression);
+				    			GenericAttribute ga = it.getGenericAttributeByName(var.replace("$", "").replace("{", "").replace("}", "")); //attributo da cui dipende la variabile
+				    			if(ga == null){
+				    				logger.error("Variable "+var+" not present");
+				    				logger.error("Process interrupt");
+				    				System.exit(-1);
+				    			}
+				    			value = ((Object) ga.getAttribute().getAttributeValue());
+				    			if(value != null){
+				    				if(value.getClass().getName().contains("String")) 
+				    					value = "\""+value+"\"";
+				    				valueExpression = valueExpression.replace(var, value.toString());
+				    				pair.getValue().setObject(valueExpression);
+				    			}else{
+				    				//il valore dell'attributo da cui dipende la variabile non è ancora stato generato
+				    				generateAttributeValue(ga);
+				    				value = ((Object) ga.getAttribute().getAttributeValue());
+				    				if(value.getClass().getName().contains("String")) 
+				    					value = "\""+value+"\"";
+				    				valueExpression = valueExpression.replace(var, value.toString());
+				    				pair.getValue().setObject(valueExpression);
+				    			}
 			    			}
 			    		}
 			    		//se non è un value expression (cioè sono dentro un parametro) eseguo l'espressione

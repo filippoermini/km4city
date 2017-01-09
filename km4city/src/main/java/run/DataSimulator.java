@@ -73,7 +73,7 @@ public class DataSimulator {
 			}
 			if(tree.isStatefull()){
 				try {
-					String jsonFileName = tree.getFileInfo().getFileName().substring(0, tree.getFileInfo().getFileName().length()-4)+".json";
+					String jsonFileName = tree.getFileInfo().getFileName().substring(0, tree.getFileInfo().getFileName().length()-3)+".json";
 					
 					json = new PrintWriter(path+dirSeparator+jsonFileName);
 					json.print(jsonState);
