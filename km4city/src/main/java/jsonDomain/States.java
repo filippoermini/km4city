@@ -12,6 +12,12 @@ public class States {
 	public void add(State s){
 		this.stateList.add(s);
 	}
+	protected void setStateList(ArrayList<State> s){
+		this.stateList = s;
+	}
+	public ArrayList<State> getStateList(){
+		return this.stateList;
+	}
 	
 	
 	

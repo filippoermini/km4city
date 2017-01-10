@@ -1,0 +1,562 @@
+[
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "EM0100101"
+      },
+      {
+        "key": "hasObservation",
+        "value": "e82f714e-c7ee-4649-b188-ebb1378eacb8"
+      },
+      {
+        "key": "identifier",
+        "value": "e82f714e-c7ee-4649-b188-ebb1378eacb8"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:11:59+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "25.1286"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.0357285"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "4.70007835714755"
+      },
+      {
+        "key": "concentration",
+        "value": "2.3087943"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "EM0100101"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "e82f714e-c7ee-4649-b188-ebb1378eacb8"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46 cani 1"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "EM0100102"
+      },
+      {
+        "key": "hasObservation",
+        "value": "314b0b52-e24d-4b0a-9216-5421a26774e6"
+      },
+      {
+        "key": "identifier",
+        "value": "314b0b52-e24d-4b0a-9216-5421a26774e6"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "29.1892"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.452614"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "5.52652417848"
+      },
+      {
+        "key": "concentration",
+        "value": "2.25332"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "EM0100102"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "314b0b52-e24d-4b0a-9216-5421a26774e6"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46 cani 2"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "FI055ZTL00801"
+      },
+      {
+        "key": "hasObservation",
+        "value": "0ae44029-83d7-46b9-a10b-c05b53d69e4c"
+      },
+      {
+        "key": "identifier",
+        "value": "0ae44029-83d7-46b9-a10b-c05b53d69e4c"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "0.0"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.5729494"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "6.7411222821012"
+      },
+      {
+        "key": "concentration",
+        "value": "2.619998"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "FI055ZTL00801"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "0ae44029-83d7-46b9-a10b-c05b53d69e4c"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 3"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200101"
+      },
+      {
+        "key": "hasObservation",
+        "value": "8b8af600-a324-482f-98f3-d223914b9e7f"
+      },
+      {
+        "key": "identifier",
+        "value": "8b8af600-a324-482f-98f3-d223914b9e7f"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "56.6"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.3434353"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "4.7603654178786"
+      },
+      {
+        "key": "concentration",
+        "value": "2.031362"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200101"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "8b8af600-a324-482f-98f3-d223914b9e7f"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 4"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200102"
+      },
+      {
+        "key": "hasObservation",
+        "value": "ed597d08-88d4-4084-9024-5db22b508d80"
+      },
+      {
+        "key": "identifier",
+        "value": "ed597d08-88d4-4084-9024-5db22b508d80"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "44.8"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.6254056"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "7.540853264548321"
+      },
+      {
+        "key": "concentration",
+        "value": "2.8722622"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200102"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "ed597d08-88d4-4084-9024-5db22b508d80"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 5"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200201"
+      },
+      {
+        "key": "hasObservation",
+        "value": "975ee07c-5abc-45dc-b968-80cbcfe7bdf2"
+      },
+      {
+        "key": "identifier",
+        "value": "975ee07c-5abc-45dc-b968-80cbcfe7bdf2"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "52.8"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.622899"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "5.802773225548999"
+      },
+      {
+        "key": "concentration",
+        "value": "2.212351"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200201"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "975ee07c-5abc-45dc-b968-80cbcfe7bdf2"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 6"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200202"
+      },
+      {
+        "key": "hasObservation",
+        "value": "39583ccb-355a-41eb-8843-58f501ea9309"
+      },
+      {
+        "key": "identifier",
+        "value": "39583ccb-355a-41eb-8843-58f501ea9309"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "55.9"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.2085557"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "5.022870081995739"
+      },
+      {
+        "key": "concentration",
+        "value": "2.2742782"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200202"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "39583ccb-355a-41eb-8843-58f501ea9309"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 7"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200301"
+      },
+      {
+        "key": "hasObservation",
+        "value": "b6513d52-7fca-4865-a4f5-883cb9fbd875"
+      },
+      {
+        "key": "identifier",
+        "value": "b6513d52-7fca-4865-a4f5-883cb9fbd875"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "37.4"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.760087"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "7.0589202944304"
+      },
+      {
+        "key": "concentration",
+        "value": "2.5574992"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200301"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "b6513d52-7fca-4865-a4f5-883cb9fbd875"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 8"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "AR05100200302"
+      },
+      {
+        "key": "hasObservation",
+        "value": "fba0508c-13c7-4dec-b12c-d8f0ade404a9"
+      },
+      {
+        "key": "identifier",
+        "value": "fba0508c-13c7-4dec-b12c-d8f0ade404a9"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": "41.4"
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.4792259"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "7.33288379627808"
+      },
+      {
+        "key": "concentration",
+        "value": "2.9577312"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "AR05100200302"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "fba0508c-13c7-4dec-b12c-d8f0ade404a9"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 9"
+      }
+    ]
+  },
+  {
+    "attribute": [
+      {
+        "key": "identifier",
+        "value": "EM0100201"
+      },
+      {
+        "key": "hasObservation",
+        "value": "3c8c4709-836e-4686-88b3-0ebc197181f0"
+      },
+      {
+        "key": "identifier",
+        "value": "3c8c4709-836e-4686-88b3-0ebc197181f0"
+      },
+      {
+        "key": "date",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "lastAverageSpeed",
+        "value": ""
+      },
+      {
+        "key": "averageSpeed",
+        "value": "2.0693202"
+      },
+      {
+        "key": "vehicleFlow",
+        "value": "4.1811111277848"
+      },
+      {
+        "key": "concentration",
+        "value": "2.020524"
+      },
+      {
+        "key": "measuredTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "measuredBySensor",
+        "value": "EM0100201"
+      },
+      {
+        "key": "dateTime",
+        "value": "2017-01-10T10:12:00+01:00"
+      },
+      {
+        "key": "instantObserv",
+        "value": "3c8c4709-836e-4686-88b3-0ebc197181f0"
+      },
+      {
+        "key": "valueForegoing",
+        "value": "46.619998 cani 10"
+      }
+    ]
+  }
+]

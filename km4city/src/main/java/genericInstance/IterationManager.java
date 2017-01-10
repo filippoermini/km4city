@@ -30,6 +30,7 @@ import Application.TripleGenerator;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Instance;
 import XMLDomain.Tree.Instance.Properties.Prop;
+import jsonDomain.LoadedStates;
 import jsonDomain.States;
 
 
@@ -42,7 +43,7 @@ public class IterationManager {
 	private EvalEngine javascriptEngine;
 	private SimulationObject temporarylist;
 	private HashMap<String,KeyWordCommand> keyWord;
-	private States states;
+	private LoadedStates states;
 	private TripleGenerator.IterationObject itObject;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
