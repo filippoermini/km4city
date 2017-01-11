@@ -31,6 +31,10 @@ public class LoadedStates extends States{
 		this.stateList.add(lse);
 	}
 	
+	public ArrayList<LoadedStatesElement> getLoadedList(){
+		return this.stateList;
+	}
+	
 	
 	
 }

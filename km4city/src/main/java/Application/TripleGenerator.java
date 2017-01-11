@@ -60,6 +60,9 @@ public class TripleGenerator {
 			this.keyWord.put("index", new KeyWordCommand() {
 	            public Object runCommand() { return getIteration(); };
 	        });
+			this.keyWord.put("id", new KeyWordCommand() {
+	            public Object runCommand() { return getId(); };
+	        });
 		}
 		
 		private void deepSearch(String startDir, String path,String filename) throws FileNotFoundException{
@@ -110,9 +113,11 @@ public class TripleGenerator {
 	
 	private IterationManager itManager;
 	private ArrayList<State> statesList;
-	private int index;
 	private IterationObject itObject;
+	private int index;
+	private String id;
 	public static Logger logger; 
+	
 	
 	
 	
@@ -144,7 +149,8 @@ public class TripleGenerator {
 		while(results.hasNext()){
 			BindingSet bindingSet = results.next();
 			Value value = bindingSet.getValue("id");
-			logger.info("Processing record "+ ++index +" id extract: "+value.stringValue());
+			this.id = value.stringValue();
+			logger.info("Processing record "+ ++index +" id extract: "+this.id);
 			IterationElement itElement = generateValue(value.stringValue()); //genero i valori per ogni record della query
 			this.itObject.getSimulationObject().AddElement(itElement); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
 			triple += itElement.generateTriple(type)+"\n";
@@ -161,6 +167,10 @@ public class TripleGenerator {
 	}
 	public int getIteration(){
 		return index;
+	}
+	
+	public String getId(){
+		return id;
 	}
 	
 	
