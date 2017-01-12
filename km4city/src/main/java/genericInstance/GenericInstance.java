@@ -59,20 +59,7 @@ public class GenericInstance {
 			attributeList.add(gAtt);
 		}	
 	}
-	public GenericInstance(GenericInstance go) {
 	
-		this.instanceName = go.instanceName;
-		this.isRoot = go.isRoot;
-		this.type = go.type;
-		this.baseUri = go.baseUri;
-		this.processed = go.processed;
-		this.attributeList = new ArrayList<GenericAttribute>();
-		Iterator<GenericAttribute> it = go.attributeList.iterator();
-		while(it.hasNext()){
-			this.attributeList.add(new GenericAttribute(it.next()));
-		}
-		
-	}
 
 	public void setID(String id){
 		for(GenericAttribute g:attributeList){

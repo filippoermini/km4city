@@ -107,6 +107,7 @@ public class GenericAttribute {
 	private boolean isUri;
 	private boolean isValueExpression;
 	private boolean isForegoingValue;
+	private boolean isPreviusState;
 	private boolean isProcessed;
 	private boolean isHidden;
 	
@@ -144,30 +145,21 @@ public class GenericAttribute {
 		
 	}
 	
-	
-	
-	public GenericAttribute(GenericAttribute ga) {
-		
-		
-		this.attribute = new Attribute<>(ga.attribute);
-		this.attributeKey = ga.attributeKey;
-		this.isPrimaryKey = ga.isPrimaryKey;
-		this.isExternalKey = ga.isExternalKey;
-		this.name = ga.name;
-		this.externalInstanceObject = ga.externalInstanceObject;
-		this.isUri = ga.isUri();
-		this.isProcessed = ga.isProcessed;
-		this.isValueExpression = ga.isValueExpression;
-		this.isHidden = ga.isHidden;
-		this.paramList = ga.paramList;
-	}
-	
-	
 	public boolean paramContainForegoingValue(){
 		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
 	    while (it.hasNext()) {
 	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
 	    	if (pair.getValue()!=null && pair.getValue().isForegoingValue())
+	    		return true;
+	    }
+	    return false;
+	}
+	
+	public boolean paramContainPreviusValue(){
+		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
+	    	if (pair.getValue()!=null && pair.getValue().isPreviusStateValue())
 	    		return true;
 	    }
 	    return false;
