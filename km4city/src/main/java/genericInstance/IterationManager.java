@@ -31,6 +31,8 @@ import XMLDomain.Tree;
 import XMLDomain.Tree.Instance;
 import XMLDomain.Tree.Instance.Properties.Prop;
 import jsonDomain.LoadedStates;
+import jsonDomain.LoadedStates.LoadedStatesElement;
+import jsonDomain.State;
 import jsonDomain.States;
 
 
@@ -202,7 +204,8 @@ public class IterationManager {
 				}	
 			}    	
 		}
-		//controllo il caso in cui il valore � un riferimento ad un iterazione precedente
+		//controllo il caso in cui il valore � un riferimento record generato precedentemente all'interno 
+		//della solita iterazione
 		if(a.isForegoingValue()){
 //			if(a.getParam("defaultValue") == null){
 //				logger.error("Default value for "+a.getAttributeName()+" attribute not defined");
@@ -286,6 +289,91 @@ public class IterationManager {
     			
     		}			
 
+		}
+		if(a.isPreviusState()){
+			//l'attributo è un riferimento ad un valore generato in esecuzioni precedenti
+			if (a.getParam("defaultValue").toString() == null){
+				logger.error("Undefined 'defaultValue' for the attribute "+a.getAttributeName());
+				logger.error("Process interrupt");
+				System.exit(-1);
+			}
+			String regex = "#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
+			String regIndex = "[\\[]+[\\d+]*+[\\]]";
+			String regId = "[\\]]+[\\[]+[\\w-']*+[\\]]";
+			String regVar = "[{]+[\\w-]*+[}]";
+			String refValue = a.getParam("refValue").toString();
+			Pattern pattern = Pattern.compile(regex);
+    		Matcher matcher = pattern.matcher(refValue);
+    		if (matcher.find()){
+    			//la stringa contiene la sintassi giusta
+    			//determino quale processo precedentemente generato devo prendere
+    			String var = matcher.group().trim();
+    			String index;
+    			String id;
+    			String varName;
+    			
+    			pattern = Pattern.compile(regIndex);
+    			matcher = pattern.matcher(var);
+    			if(matcher.find()){
+    				index = matcher.group().trim().replace("[", "").replace("]", "");
+        			pattern = Pattern.compile(regId);
+         			matcher = pattern.matcher(var);
+         			if(matcher.find()){
+             			 id = matcher.group().trim().replace("[", "").replace("]", "").replaceAll("'", "");
+             			 pattern = Pattern.compile(regVar);
+            			 matcher = pattern.matcher(var);
+            			 if(matcher.find()){
+            				varName = matcher.group().trim().replace("{", "").replace("}", "");
+            				//ho tutti i valori delle tre variabili posso determinare il valore del parametro 
+            				//se esite quella determinata iterazione
+            				if(this.states.getLoadedList().size()>=Integer.parseInt(index)){
+            					//l'iterazione è presente
+            					//controllo se esite una tripla con l'id indicato 
+            					LoadedStatesElement lse = this.states.getStateAtIndex(Integer.parseInt(index));
+            					State state;
+            					if((state = lse.getStatesById(id)) != null){
+            						String value;
+            						if((value = state.getValue(varName)) != null){
+            							a.getAttribute().setValue(value);
+            						}else{
+            							logger.error("Variable Name "+varName+" not found");
+                        				logger.info("The value is set to defaultValue");
+                        				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+            						}
+            					}else{
+            						logger.error("Identifier "+id+" not found");
+                    				logger.info("The value is set to defaultValue");
+                    				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+            					}
+            				}else{
+            					logger.error("Previous iteration number "+index+" missing");
+                				logger.info("The value is set to defaultValue");
+                				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+            				}
+            			}else{
+            				logger.error("Previus State parse error on variable name: "+var);
+            				logger.info("The value is set to defaultValue");
+            				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+            			}
+         			}else{
+         				logger.error("Previus State parse error on id: "+var);
+        				logger.info("The value is set to defaultValue");
+        				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+         			}
+    			}else{
+    				logger.error("Previus State parse error on index: "+var);
+    				logger.info("The value is set to defaultValue");
+    				a.getAttribute().setValue(a.getParam("defaultValue").toString());
+    			}
+    			
+    			
+    			
+    			
+    			
+    			
+    			
+    		}
+			
 		}else{
 			a.getAttribute().setValue(a.getType(), a.getAttributeList());
 		}

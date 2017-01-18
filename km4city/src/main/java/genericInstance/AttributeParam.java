@@ -32,9 +32,9 @@ public class AttributeParam{
 		}
 		try{
 			String v = val.toString();
-			this.isForegoingValue  = belongToClass("@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //@['id']{nomepropriet‡}
-			this.isValueEspression = belongToClass("[$]+[{]+[\\w-]*+[}]", v); //${nomepropriet‡}
-			this.isPreviusState = belongToClass("#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //#[indice]['id']{nomepropriet‡}
+			this.isForegoingValue  = belongToClass("@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //@['id']{nomepropriet√†}
+			this.isValueEspression = belongToClass("[$]+[{]+[\\w-]*+[}]", v); //${nomepropriet√†}
+			this.isPreviusState = belongToClass("#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //#[indice]['id']{nomepropriet√†}
 		}catch(Exception e){
 
 			isValueEspression = false;
@@ -72,6 +72,9 @@ public class AttributeParam{
 	public boolean isValueEspression() {
 		return isValueEspression;
 	}	
+	public boolean isPreviusState(){
+		return this.isPreviusState;
+	}
 	public String toString(){
 		return "Object: "+object+" "+(isValueEspression?"isValueExpression":"");
 	}

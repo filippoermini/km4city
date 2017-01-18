@@ -155,7 +155,7 @@ public class TripleGenerator {
 			this.itObject.getSimulationObject().AddElement(itElement); //aggiungo l'oggetto con i valori appena generati alla lista delle triple
 			triple += itElement.generateTriple(type)+"\n";
 			if(stateful){
-				statesList.add(itElement.generateStateArray());
+				statesList.add(itElement.generateStateArray(id));
 			}
 		}
 		return triple;

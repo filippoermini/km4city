@@ -142,6 +142,7 @@ public class GenericAttribute {
 		}
 		this.isValueExpression = this.attribute==null?false:this.paramContainExpression();
 		this.isForegoingValue = this.paramContainForegoingValue();
+		this.isPreviusState = this.paramContainPreviusValue();
 		
 	}
 	
@@ -196,7 +197,9 @@ public class GenericAttribute {
 	public boolean isForegoingValue(){
 		return isForegoingValue;
 	}
-		
+	public boolean isPreviusState(){
+		return this.isPreviusState;
+	}
 	public void setProcessed(boolean isProcessed) {
 		this.isProcessed = isProcessed;
 	}

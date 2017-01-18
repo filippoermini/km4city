@@ -2,7 +2,7 @@ package jsonDomain;
 
 import java.util.ArrayList;
 
-public class LoadedStates extends States{
+public class LoadedStates{
 
 	
 	public class LoadedStatesElement extends States{
@@ -35,6 +35,9 @@ public class LoadedStates extends States{
 		return this.stateList;
 	}
 	
+	public LoadedStatesElement getStateAtIndex(int index){
+		return this.stateList.get(index);
+	}
 	
 	
 }

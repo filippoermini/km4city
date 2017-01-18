@@ -65,26 +65,24 @@ public class IterationElement {
 	
 	public String generateTriple(String type){
 		String tripleRDF = "";
-		State state = new State();
 		for(GenericInstance go:instances){
 			//per ogni classe genero il type
 			String baseUri = "<"+go.getBaseUri(instances)+"> ";
 			tripleRDF += baseUri+"<"+type+"> "+"<"+go.getType().toString()+"> .\n";
-			state.add(new Attribute("id",go.getIdentifier().getAttribute().getAttributeValue().toString()));
 			for(GenericAttribute ga:go.getAttributeList()){
 				//genero per ogni attributo delle classi che compongono l'oggetto la lista delle triple
 				if(!ga.isHidden()){
 					String attributeValue = !ga.isUri()?"\""+ga.getAttribute().getAttributeValue().toString()+"\"":"<"+ga.getAttribute().getAttributeValue().toString()+">";
 					String object = ga.isExternalKey()?"<"+ga.getExternalInstanceObject().getBaseUri(instances)+">":attributeValue+(ga.getDatatype()!=null?"^^<"+ga.getDatatype(instances)+">":"");
 					tripleRDF += baseUri+"<"+ga.getAttributeKey()+"> "+object+" .\n";
-					
 				}
 			}
+
 		}
 		return tripleRDF;
 	}
 	
-	public State generateStateArray(){
+	public State generateStateArray(String id){
 		State state = new State();
 		for(GenericInstance go:instances){
 			for(GenericAttribute ga:go.getAttributeList()){
@@ -93,6 +91,7 @@ public class IterationElement {
 				}
 			}
 		}
+		state.setId(id);
 		return state; 
 	}
 }
