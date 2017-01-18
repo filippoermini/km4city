@@ -34,6 +34,9 @@ public class IterationElement {
 		return null;
 	}
 	
+	public String getValueId(){
+		return getValueByAttributeName("id");
+	}
 	public GenericAttribute getGenericAttributeByName(String name){
 		GenericAttribute value = null;
 		for(GenericInstance go:instances){

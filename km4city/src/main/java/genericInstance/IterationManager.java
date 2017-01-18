@@ -3,6 +3,7 @@ package genericInstance;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -20,14 +21,18 @@ import org.eclipse.rdf4j.query.TupleQueryResult;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.thoughtworks.xstream.io.binary.Token.Attribute;
 
 import Application.CommonValue;
 import Application.EvalEngine;
 import Application.RDFconnector.RepositoryManager;
+import Application.TripleGenerator;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Instance;
 import XMLDomain.Tree.Instance.Properties.Prop;
-import XMLDomain.Tree.Instance;
+import jsonDomain.LoadedStates;
+import jsonDomain.States;
+
 
 public class IterationManager {
 
@@ -37,14 +42,21 @@ public class IterationManager {
 	private IterationElement it;
 	private EvalEngine javascriptEngine;
 	private SimulationObject temporarylist;
+	private HashMap<String,KeyWordCommand> keyWord;
+	private LoadedStates states;
+	private TripleGenerator.IterationObject itObject;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
-	public IterationManager(Tree.iterationElement iterationElement, String baseUri){
+	public IterationManager(Tree.iterationElement iterationElement, String baseUri, TripleGenerator.IterationObject itObject){
 		
 		this.javascriptEngine = EvalEngine.getInstance();
 		this.origin = iterationElement;
 		this.it = new IterationElement();
 		this.mainBaseUri = baseUri;
+		this.temporarylist = itObject.getSimulationObject();
+		this.keyWord = itObject.getKeyWord();
+		this.states = itObject.getStates();
+		
 	}
 	
 	private void init(IterationElement it){
@@ -140,21 +152,32 @@ public class IterationManager {
 			    		while (matcher.find()){
 			    			Object value;
 			    			String var = matcher.group().replace(" ", "");
-			    			GenericAttribute ga = it.getGenericAttributeByName(var.replace("$", "").replace("{", "").replace("}", "")); //attributo da cui dipende la variabile
-			    			value = ((Object) ga.getAttribute().getAttributeValue());
-			    			if(value != null){
-			    				if(value.getClass().getName().contains("String")) 
-			    					value = "\""+value+"\"";
+			    			if(this.keyWord.get(var.replace("$", "").replace("{", "").replace("}", ""))!=null){
+			    				value = this.keyWord.get(var.replace("$", "").replace("{", "").replace("}", "")).runCommand();
 			    				valueExpression = valueExpression.replace(var, value.toString());
 			    				pair.getValue().setObject(valueExpression);
 			    			}else{
-			    				//il valore dell'attributo da cui dipende la variabile non è ancora stato generato
-			    				generateAttributeValue(ga);
-			    				value = ((Object) ga.getAttribute().getAttributeValue());
-			    				if(value.getClass().getName().contains("String")) 
-			    					value = "\""+value+"\"";
-			    				valueExpression = valueExpression.replace(var, value.toString());
-			    				pair.getValue().setObject(valueExpression);
+				    			GenericAttribute ga = it.getGenericAttributeByName(var.replace("$", "").replace("{", "").replace("}", "")); //attributo da cui dipende la variabile
+				    			if(ga == null){
+				    				logger.error("Variable "+var+" not present");
+				    				logger.error("Process interrupt");
+				    				System.exit(-1);
+				    			}
+				    			value = ((Object) ga.getAttribute().getAttributeValue());
+				    			if(value != null){
+				    				if(value.getClass().getName().contains("String")) 
+				    					value = "\""+value+"\"";
+				    				valueExpression = valueExpression.replace(var, value.toString());
+				    				pair.getValue().setObject(valueExpression);
+				    			}else{
+				    				//il valore dell'attributo da cui dipende la variabile non è ancora stato generato
+				    				generateAttributeValue(ga);
+				    				value = ((Object) ga.getAttribute().getAttributeValue());
+				    				if(value.getClass().getName().contains("String")) 
+				    					value = "\""+value+"\"";
+				    				valueExpression = valueExpression.replace(var, value.toString());
+				    				pair.getValue().setObject(valueExpression);
+				    			}
 			    			}
 			    		}
 			    		//se non è un value expression (cioè sono dentro un parametro) eseguo l'espressione
@@ -181,6 +204,16 @@ public class IterationManager {
 		}
 		//controllo il caso in cui il valore � un riferimento ad un iterazione precedente
 		if(a.isForegoingValue()){
+//			if(a.getParam("defaultValue") == null){
+//				logger.error("Default value for "+a.getAttributeName()+" attribute not defined");
+//				logger.error("Process interrupt");
+//				System.exit(-1);
+//			}
+			if (a.getParam("defaultValue").toString() == null){
+				logger.error("Undefined 'defaultValue' for the attribute "+a.getAttributeName());
+				logger.error("Process interrupt");
+				System.exit(-1);
+			}
 			String regex = "@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]";
 			String regIndex = "[\\[]+[\\w-']*+[\\]]";
 			String regVar = "[{]+[\\w-']*+[}]";
@@ -196,15 +229,68 @@ public class IterationManager {
         		matcher = patternIndex.matcher(var);
         		if(matcher.find()){
         			String index = matcher.group().trim().replace("[", "").replace("]", "");
-        			
+        			//controllo se � un indice numerico o un id 
+        			if(index.contains("'")){
+        				//l'indice � un id
+        				
+        				index = index.replaceAll("'", "");
+        				Pattern patternVar = Pattern.compile(regVar);
+		        		matcher = patternVar.matcher(var);
+		        		matcher.find();
+		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
+		        		String val;
+		        		
+		        		//controllo se � l'id attuale 
+        				if(index.equals(this.it.getValueId())){
+        					//il valore potrebbe ancora non essere stato generato
+        					if((val = this.it.getValueByAttributeName(varName))!=null){
+    		        			a.getAttribute().setValue(val);
+    		        		}else{
+    		        			for(GenericInstance g:it.getInstances()){ //estraggo le classi
+    		        				if(!g.isProcessed()){//la classe non è ancora stata processata
+    		        					_process(g);
+    		        				}
+    		        			}
+    		        			//ho generato i valori che non avevo
+    		        			a.getAttribute().setValue(this.it.getValueByAttributeName(varName));    
+    		        		}
+        				}else{
+        					//vado a cercare l'id nella lista degli elementi gi� generati
+        					IterationElement ie;
+        					if((ie = this.temporarylist.getElementById(index))!=null){
+        						val = ie.getValueByAttributeName(varName);
+        		        		a.getAttribute().setValue(val);
+        		        		
+        					}else{
+        						//l'elemento con quell'id non � presente nella lista
+        						a.getAttribute().setValue(a.getParam("defaultValue").toString());
+        					}
+        				}
+        			}else{
+        				//l'indice � il numero del record
+        				int indexInt = Integer.parseInt(index);
+        				if(this.temporarylist.size()>indexInt){
+        					IterationElement ie = this.temporarylist.getElementAtIndex(indexInt);
+        					Pattern patternVar = Pattern.compile(regVar);
+    		        		matcher = patternVar.matcher(var);
+    		        		matcher.find();
+    		        		String varName = matcher.group().trim().replace("{", "").replace("}", "");
+    		        		a.getAttribute().setValue(ie.getValueByAttributeName(varName));
+        				}else{
+        					//il record a quell'indice ancora non esiste
+        					a.getAttribute().setValue(a.getParam("defaultValue").toString());
+        				}
+        			}
         		}
     			
     			
     		}			
 
+		}else{
+			a.getAttribute().setValue(a.getType(), a.getAttributeList());
 		}
 		//tutti i parametri necessari a determinare il valore dell'attributo non sono espressioni (o non lo sono più)
-		a.getAttribute().setValue(a.getType(), a.getAttributeList());
+		
 		//System.out.println(a.toString());
 	}
 }

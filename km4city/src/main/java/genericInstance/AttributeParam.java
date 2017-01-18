@@ -3,12 +3,15 @@ package genericInstance;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AttributeParam{
 	
 	private Object object;
 	private boolean isValueEspression;
 	private boolean isForegoingValue;
+	private boolean isPreviusState;
 	
 	public AttributeParam(Object val){
 		if (val == null || val.getClass() == String.class )
@@ -29,9 +32,11 @@ public class AttributeParam{
 		}
 		try{
 			String v = val.toString();
-			this.isValueEspression = v.contains("$");
-			this.isForegoingValue  = v.contains("@");
+			this.isForegoingValue  = belongToClass("@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //@['id']{nomeproprietà}
+			this.isValueEspression = belongToClass("[$]+[{]+[\\w-]*+[}]", v); //${nomeproprietà}
+			this.isPreviusState = belongToClass("#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //#[indice]['id']{nomeproprietà}
 		}catch(Exception e){
+
 			isValueEspression = false;
 		}
 		
@@ -58,6 +63,9 @@ public class AttributeParam{
 		}
 		
 	}
+	public boolean isPreviusStateValue() {
+		return isPreviusState;
+	}
 	public boolean isForegoingValue() {
 		return isForegoingValue;
 	}
@@ -66,5 +74,11 @@ public class AttributeParam{
 	}	
 	public String toString(){
 		return "Object: "+object+" "+(isValueEspression?"isValueExpression":"");
+	}
+	
+	public static boolean belongToClass(String regexClass,String value){
+		Pattern pattern = Pattern.compile(regexClass);
+		Matcher matcher = pattern.matcher(value);
+		return matcher.find();
 	}
 }

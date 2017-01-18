@@ -5,6 +5,7 @@ package genericInstance;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -26,7 +27,7 @@ import XMLDomain.Tree.Instance;
 public class GenericAttribute {
 
 	public class Attribute<T>{
-		private final Class<T> typeParameterClass;
+		private Class<T> typeParameterClass;
 		private T attributeValue;
 		
 		
@@ -65,14 +66,33 @@ public class GenericAttribute {
 		public T getAttributeValue(){
 			return this.attributeValue;
 		}
-		
+		public boolean setValue(String value){
+			try{
+				Integer intValue = Integer.parseInt(value);
+				Class instance = Integer.class;
+				this.typeParameterClass = instance;
+				this.attributeValue = (T) intValue;
+				return true;
+			}catch(NumberFormatException ex){}
+			try{
+				Float floatValue = Float.parseFloat(value);
+				Class instance = Float.class;
+				this.typeParameterClass = instance;
+				this.attributeValue = (T) floatValue;
+				return true;
+			}catch(NumberFormatException ex){}
+			this.attributeValue = (T) value;
+			return true;
+			
+		}
 		public void setValue(String type,Object value){	
 			this.attributeValue = (T) genericTypeMap.getValue(type, value);
 		}
+		
 		public String toString(){
 			return "value: "+this.attributeValue+"\n";
-					
 		}
+		
 	}
 
 	final static GenericTypeMap genericTypeMap = GenericTypeMap.getInstance();
@@ -87,6 +107,7 @@ public class GenericAttribute {
 	private boolean isUri;
 	private boolean isValueExpression;
 	private boolean isForegoingValue;
+	private boolean isPreviusState;
 	private boolean isProcessed;
 	private boolean isHidden;
 	
@@ -124,30 +145,21 @@ public class GenericAttribute {
 		
 	}
 	
-	
-	
-	public GenericAttribute(GenericAttribute ga) {
-		
-		
-		this.attribute = new Attribute<>(ga.attribute);
-		this.attributeKey = ga.attributeKey;
-		this.isPrimaryKey = ga.isPrimaryKey;
-		this.isExternalKey = ga.isExternalKey;
-		this.name = ga.name;
-		this.externalInstanceObject = ga.externalInstanceObject;
-		this.isUri = ga.isUri();
-		this.isProcessed = ga.isProcessed;
-		this.isValueExpression = ga.isValueExpression;
-		this.isHidden = ga.isHidden;
-		this.paramList = ga.paramList;
-	}
-	
-	
 	public boolean paramContainForegoingValue(){
 		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
 	    while (it.hasNext()) {
 	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
 	    	if (pair.getValue()!=null && pair.getValue().isForegoingValue())
+	    		return true;
+	    }
+	    return false;
+	}
+	
+	public boolean paramContainPreviusValue(){
+		Iterator<Entry<String, AttributeParam>> it = this.paramList.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry<String,AttributeParam> pair = (Map.Entry<String,AttributeParam>)it.next();
+	    	if (pair.getValue()!=null && pair.getValue().isPreviusStateValue())
 	    		return true;
 	    }
 	    return false;

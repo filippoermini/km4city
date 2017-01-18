@@ -1,6 +1,7 @@
 package run;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.Instant;
@@ -46,34 +47,38 @@ public class DataSimulator {
 				
 		//generazione file e cartelle secondo lo scema predefinito
 		String directoryPath = this.startPath;
+		String dirSeparator = File.separator;
+		if((directoryPath.charAt(directoryPath.length()-1)) != dirSeparator.charAt(0))
+			directoryPath += dirSeparator;
 		String path = directoryPath+DateTimeFormatter.ofPattern("yyyy_MM/dd/HH/mmss").withZone(ZoneOffset.systemDefault()).format(Instant.now()).toString();
 		if(mkdir(path)){
 			PrintWriter out = null;
 			PrintWriter end = null;
 			PrintWriter json = null;
 			try {
-				out = new PrintWriter(path+"/"+tree.getFileInfo().getFileName());
+				out = new PrintWriter(path+dirSeparator+tree.getFileInfo().getFileName());
 				out.print(triple);
 				out.close();
-				logger.info("File "+path+"/"+tree.getFileInfo().getFileName()+" creato");
+				logger.info("File "+path+dirSeparator+tree.getFileInfo().getFileName()+" creato");
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file .n3 error "+e.getMessage());
 			}
 			try {
-				end = new PrintWriter(path+"/"+"end.txt");
+				end = new PrintWriter(path+dirSeparator+"end.txt");
 				end.print("end triplification");
 				end.close();
-				logger.info("File "+path+"/end.txt creato");
+				logger.info("File "+path+dirSeparator+"end.txt creato");
 			} catch (FileNotFoundException e) {
 				logger.error("Creating file end.txt error "+e.getMessage());
 			}
 			if(tree.isStatefull()){
 				try {
-					String jsonFileName = tree.getFileInfo().getFileName().substring(0, tree.getFileInfo().getFileName().length()-4)+".json";
-					json = new PrintWriter(path+"/"+jsonFileName);
+					String jsonFileName = tree.getFileInfo().getFileName().substring(0, tree.getFileInfo().getFileName().length()-3)+".json";
+					
+					json = new PrintWriter(path+dirSeparator+jsonFileName);
 					json.print(jsonState);
 					json.close();
-					logger.info("File "+path+"/"+jsonFileName+" creato");
+					logger.info("File "+path+dirSeparator+jsonFileName+" creato");
 				} catch (FileNotFoundException e) {
 					logger.error("Creating file .n3 error "+e.getMessage());
 				}
@@ -85,18 +90,15 @@ public class DataSimulator {
 	
 	private static boolean mkdir(String dirPath){
 		
-		File theDir = new File("./"+dirPath);
+		File theDir = new File(dirPath);
+		theDir.setReadable(true, false);
+		theDir.setExecutable(true, false);
+		theDir.setWritable(true, false);
 		if (!theDir.exists()) {
-		    boolean result = false;
-		    try{
-		        theDir.mkdirs();
-		        result = true;
-		    } 
-		    catch(SecurityException se){
+		    if (theDir.mkdirs()){
+		    	logger.info("Directory created: "+dirPath);
+		    }else{
 		    	logger.error("Directory not created: "+dirPath);
-		    }        
-		    if(result) {    
-		        logger.info("Directory created: "+dirPath);
 		    }
 		}
 		return true;
