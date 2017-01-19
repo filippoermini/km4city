@@ -183,7 +183,7 @@ public class IterationManager {
 			    			}
 			    		}
 			    		//se non è un value expression (cioè sono dentro un parametro) eseguo l'espressione
-			    		if(!a.getType().equals("valueExpression") && !a.getType().equals("query")){
+			    		if(!a.getType().equals("valueExpression") && !a.getType().equals("query") && !a.isPreviusState() && !a.isForegoingValue()){
 				    		try {
 								pair.getValue().setObject(javascriptEngine.getEngine().eval(pair.getValue().getObject().toString()).toString());
 							} catch (ScriptException e) {

@@ -14,7 +14,7 @@
 				<type>previusstate</type>	
 				<name>testVar3</name>
 				<defaultValue>78</defaultValue>
-				<refValue>#[1]['FI055ZTL00801']{concentration}</refValue>	
+				<refValue>#[1]['${id}']{concentration}</refValue>	
 			</prop>
 			<prop>
 				<type>valueExpression</type>

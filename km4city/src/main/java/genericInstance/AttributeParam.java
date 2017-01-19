@@ -34,7 +34,7 @@ public class AttributeParam{
 			String v = val.toString();
 			this.isForegoingValue  = belongToClass("@[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //@['id']{nomeproprietà}
 			this.isValueEspression = belongToClass("[$]+[{]+[\\w-]*+[}]", v); //${nomeproprietà}
-			this.isPreviusState = belongToClass("#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-']*+[\\]]+[{]+[\\w-]*+[}]", v); //#[indice]['id']{nomeproprietà}
+			this.isPreviusState = belongToClass("#[\\[]+[\\d+]*+[\\]]+[\\[]+[\\w-${}']*+[\\]]+[{]+[\\w-]*+[}]", v); //#[indice]['id']{nomeproprietà}
 		}catch(Exception e){
 
 			isValueEspression = false;
