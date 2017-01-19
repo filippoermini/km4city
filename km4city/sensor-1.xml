@@ -11,15 +11,15 @@
 	<iterationElement>
 		<attributes>
 			<prop>
-				<type>foregoing</type>	
-				<name>testVar1</name>
-				<defaultValue>2</defaultValue>
-				<refValue>@['FI055ZTL00801']{concentration}</refValue>	
+				<type>previusstate</type>	
+				<name>testVar3</name>
+				<defaultValue>78</defaultValue>
+				<refValue>#[1]['FI055ZTL00801']{concentration}</refValue>	
 			</prop>
 			<prop>
 				<type>valueExpression</type>
 				<name>testVar2</name>
-				<valueExpression>${testVar1} + 44</valueExpression>
+				<valueExpression>${testVar3} + 44</valueExpression>
 			</prop>
 		</attributes>
 		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true">
@@ -47,7 +47,7 @@
 					<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
 					<query>select ?speed where {
 ?s a km4c:SensorSite.
-?s dcterms:identifier ${id}.
+?s dcterms:identifier '${id}'.
 ?s km4c:hasObservation ?o.
 ?o km4c:averageSpeed ?speed.
 ?o dcterms:date ?d.

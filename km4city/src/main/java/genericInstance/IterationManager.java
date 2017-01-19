@@ -329,7 +329,7 @@ public class IterationManager {
             				if(this.states.getLoadedList().size()>=Integer.parseInt(index)){
             					//l'iterazione è presente
             					//controllo se esite una tripla con l'id indicato 
-            					LoadedStatesElement lse = this.states.getStateAtIndex(Integer.parseInt(index));
+            					LoadedStatesElement lse = this.states.getStateAtIndex(this.states.getLoadedList().size()-Integer.parseInt(index));
             					State state;
             					if((state = lse.getStatesById(id)) != null){
             						String value;
