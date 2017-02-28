@@ -28,6 +28,7 @@ proprietà: nessuna
 elementi:
 - fileName: nome del file .n3 da generare
 - startDirectory: path della cartella in cui creare il file .n3
+
 ## queryInfo
 elemento per la definizione di una query SPARQL
 
@@ -37,6 +38,7 @@ elementi:
 - query: query SPARQL
 - servar: end point a cui sottoporre la query
 - bindingValue: campo su cui andare a rcuperare il valore (dafault = id)
+
 ## iterationElement
 contiene gli elementi che devono essere generati ad ogni iterazione. Contiene una lista (opzionale) 
 di attributi il cui valore sarà necessario ai fini del calcolo dei valori degli attibuti delle istanze, ed una lista di istanze 
