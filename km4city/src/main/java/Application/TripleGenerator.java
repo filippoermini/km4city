@@ -39,7 +39,7 @@ public class TripleGenerator {
 			keyWord = new HashMap<>();
 			loadedStates = new LoadedStates();
 			initKeyWord();
-			loadStates(tree);
+			if(tree.isStatefull()) loadStates(tree);
 			
 			this.simulationObject = new SimulationObject(tree);
 		}

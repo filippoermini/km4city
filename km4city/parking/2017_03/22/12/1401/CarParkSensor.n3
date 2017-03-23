@@ -1,0 +1,1170 @@
+<http://www.disit.org/km4city/resource/CarParkSensor Alberti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Alberti> <http://purl.org/dc/terms/identifier> "CarParkSensor Alberti" .
+<http://www.disit.org/km4city/resource/CarParkSensor Alberti> <http://www.disit.org/km4city/schema#capacity> "313" .
+<http://www.disit.org/km4city/resource/CarParkSensor Alberti> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://purl.org/dc/terms/identifier> "ed0f3755-0b33-42b6-aba5-019f2e738b18" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://purl.org/dc/terms/date> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Alberti> .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#occupied> "28" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#free> "285.0" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#parkOccupancy> "8.945686900958465" .
+<http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/ed0f3755-0b33-42b6-aba5-019f2e738b18> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorAlberti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorAlberti> <http://purl.org/dc/terms/identifier> "CarParkSensorAlberti" .
+<http://www.disit.org/km4city/resource/CarParkSensorAlberti> <http://www.disit.org/km4city/schema#capacity> "313" .
+<http://www.disit.org/km4city/resource/CarParkSensorAlberti> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://purl.org/dc/terms/identifier> "69e91428-cd28-488b-8690-427b6966474e" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://purl.org/dc/terms/date> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorAlberti> .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#occupied> "181" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#free> "132.0" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#parkOccupancy> "57.82747603833865" .
+<http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/69e91428-cd28-488b-8690-427b6966474e> .
+
+<http://www.disit.org/km4city/resource/RT048014PK001EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK001EM> <http://purl.org/dc/terms/identifier> "RT048014PK001EM" .
+<http://www.disit.org/km4city/resource/RT048014PK001EM> <http://www.disit.org/km4city/schema#capacity> "310" .
+<http://www.disit.org/km4city/resource/RT048014PK001EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://purl.org/dc/terms/identifier> "cfee002a-51e4-41ac-ae8e-cd8e438e1132" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://purl.org/dc/terms/date> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK001EM> .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#occupied> "50" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#free> "260.0" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#parkOccupancy> "16.129032258064516" .
+<http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:53+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:53+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/cfee002a-51e4-41ac-ae8e-cd8e438e1132> .
+
+<http://www.disit.org/km4city/resource/RT048014PK002EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK002EM> <http://purl.org/dc/terms/identifier> "RT048014PK002EM" .
+<http://www.disit.org/km4city/resource/RT048014PK002EM> <http://www.disit.org/km4city/schema#capacity> "146" .
+<http://www.disit.org/km4city/resource/RT048014PK002EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://purl.org/dc/terms/identifier> "3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK002EM> .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#occupied> "42" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#free> "104.0" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#parkOccupancy> "28.767123287671232" .
+<http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/3c7c6f0f-0b3c-41f5-b5d7-2543a4154aba> .
+
+<http://www.disit.org/km4city/resource/RT048014PK003EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK003EM> <http://purl.org/dc/terms/identifier> "RT048014PK003EM" .
+<http://www.disit.org/km4city/resource/RT048014PK003EM> <http://www.disit.org/km4city/schema#capacity> "260" .
+<http://www.disit.org/km4city/resource/RT048014PK003EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://purl.org/dc/terms/identifier> "ef883c89-5655-4ce6-affb-89bbf15eaf9f" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK003EM> .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#occupied> "115" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#free> "145.0" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#parkOccupancy> "44.230769230769226" .
+<http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/ef883c89-5655-4ce6-affb-89bbf15eaf9f> .
+
+<http://www.disit.org/km4city/resource/RT048014PK004EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK004EM> <http://purl.org/dc/terms/identifier> "RT048014PK004EM" .
+<http://www.disit.org/km4city/resource/RT048014PK004EM> <http://www.disit.org/km4city/schema#capacity> "370" .
+<http://www.disit.org/km4city/resource/RT048014PK004EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://purl.org/dc/terms/identifier> "20fee42d-63cd-422e-a179-b054bb91d7d6" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK004EM> .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#occupied> "349" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#free> "21.0" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#parkOccupancy> "94.32432432432432" .
+<http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/20fee42d-63cd-422e-a179-b054bb91d7d6> .
+
+<http://www.disit.org/km4city/resource/RT048014PK005EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK005EM> <http://purl.org/dc/terms/identifier> "RT048014PK005EM" .
+<http://www.disit.org/km4city/resource/RT048014PK005EM> <http://www.disit.org/km4city/schema#capacity> "150" .
+<http://www.disit.org/km4city/resource/RT048014PK005EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://purl.org/dc/terms/identifier> "cd908347-f2b5-40e3-adb1-a50ef707473d" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK005EM> .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#occupied> "20" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#free> "130.0" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#parkOccupancy> "13.333333333333334" .
+<http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/cd908347-f2b5-40e3-adb1-a50ef707473d> .
+
+<http://www.disit.org/km4city/resource/RT048014PK006EM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048014PK006EM> <http://purl.org/dc/terms/identifier> "RT048014PK006EM" .
+<http://www.disit.org/km4city/resource/RT048014PK006EM> <http://www.disit.org/km4city/schema#capacity> "130" .
+<http://www.disit.org/km4city/resource/RT048014PK006EM> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://purl.org/dc/terms/identifier> "760b41b6-9fee-4705-aa18-12b18909190c" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048014PK006EM> .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#occupied> "3" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#free> "127.0" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#parkOccupancy> "2.307692307692308" .
+<http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/760b41b6-9fee-4705-aa18-12b18909190c> .
+
+<http://www.disit.org/km4city/resource/RT048017PK001FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK001FI> <http://purl.org/dc/terms/identifier> "RT048017PK001FI" .
+<http://www.disit.org/km4city/resource/RT048017PK001FI> <http://www.disit.org/km4city/schema#capacity> "901" .
+<http://www.disit.org/km4city/resource/RT048017PK001FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://purl.org/dc/terms/identifier> "03b7f22b-f03c-4cb8-b9da-1968225adc5c" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK001FI> .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#occupied> "223" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#free> "678.0" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#parkOccupancy> "24.75027746947836" .
+<http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/03b7f22b-f03c-4cb8-b9da-1968225adc5c> .
+
+<http://www.disit.org/km4city/resource/RT048017PK002FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK002FI> <http://purl.org/dc/terms/identifier> "RT048017PK002FI" .
+<http://www.disit.org/km4city/resource/RT048017PK002FI> <http://www.disit.org/km4city/schema#capacity> "179" .
+<http://www.disit.org/km4city/resource/RT048017PK002FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://purl.org/dc/terms/identifier> "ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK002FI> .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#occupied> "75" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#free> "104.0" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#parkOccupancy> "41.899441340782126" .
+<http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/ccbb4ff9-2cc4-47ce-9bc5-c9a255f57d7a> .
+
+<http://www.disit.org/km4city/resource/RT048017PK003FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK003FI> <http://purl.org/dc/terms/identifier> "RT048017PK003FI" .
+<http://www.disit.org/km4city/resource/RT048017PK003FI> <http://www.disit.org/km4city/schema#capacity> "371" .
+<http://www.disit.org/km4city/resource/RT048017PK003FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://purl.org/dc/terms/identifier> "3d346f32-fde8-4117-b1c1-9ea43738a702" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK003FI> .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#occupied> "162" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#free> "209.0" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#parkOccupancy> "43.66576819407008" .
+<http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/3d346f32-fde8-4117-b1c1-9ea43738a702> .
+
+<http://www.disit.org/km4city/resource/RT048017PK004FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK004FI> <http://purl.org/dc/terms/identifier> "RT048017PK004FI" .
+<http://www.disit.org/km4city/resource/RT048017PK004FI> <http://www.disit.org/km4city/schema#capacity> "210" .
+<http://www.disit.org/km4city/resource/RT048017PK004FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://purl.org/dc/terms/identifier> "8bbefa8a-81b0-4792-8197-749c8d66e433" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK004FI> .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#occupied> "56" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#free> "154.0" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#parkOccupancy> "26.666666666666668" .
+<http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/8bbefa8a-81b0-4792-8197-749c8d66e433> .
+
+<http://www.disit.org/km4city/resource/RT048017PK005FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK005FI> <http://purl.org/dc/terms/identifier> "RT048017PK005FI" .
+<http://www.disit.org/km4city/resource/RT048017PK005FI> <http://www.disit.org/km4city/schema#capacity> "156" .
+<http://www.disit.org/km4city/resource/RT048017PK005FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://purl.org/dc/terms/identifier> "f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://purl.org/dc/terms/date> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK005FI> .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#occupied> "116" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#free> "40.0" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#parkOccupancy> "74.35897435897436" .
+<http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:54+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:54+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/f263f8eb-d8bf-4b9d-b8ec-47e7caa6e5d5> .
+
+<http://www.disit.org/km4city/resource/RT048017PK006FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK006FI> <http://purl.org/dc/terms/identifier> "RT048017PK006FI" .
+<http://www.disit.org/km4city/resource/RT048017PK006FI> <http://www.disit.org/km4city/schema#capacity> "9999" .
+<http://www.disit.org/km4city/resource/RT048017PK006FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://purl.org/dc/terms/identifier> "6a0ee2e0-b5a0-494e-978b-910ede0246b0" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK006FI> .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#occupied> "8510" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#free> "1489.0" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#parkOccupancy> "85.1085108510851" .
+<http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/6a0ee2e0-b5a0-494e-978b-910ede0246b0> .
+
+<http://www.disit.org/km4city/resource/RT048017PK007FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK007FI> <http://purl.org/dc/terms/identifier> "RT048017PK007FI" .
+<http://www.disit.org/km4city/resource/RT048017PK007FI> <http://www.disit.org/km4city/schema#capacity> "521" .
+<http://www.disit.org/km4city/resource/RT048017PK007FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://purl.org/dc/terms/identifier> "f6b92e4b-2fc0-4c17-8bf2-3fe68a486455" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK007FI> .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#occupied> "402" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#free> "119.0" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#parkOccupancy> "77.15930902111324" .
+<http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/f6b92e4b-2fc0-4c17-8bf2-3fe68a486455> .
+
+<http://www.disit.org/km4city/resource/RT048017PK008FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK008FI> <http://purl.org/dc/terms/identifier> "RT048017PK008FI" .
+<http://www.disit.org/km4city/resource/RT048017PK008FI> <http://www.disit.org/km4city/schema#capacity> "300" .
+<http://www.disit.org/km4city/resource/RT048017PK008FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://purl.org/dc/terms/identifier> "eda54132-9ab5-4fdf-8c94-22099c70ebf5" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK008FI> .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#occupied> "172" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#free> "128.0" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#parkOccupancy> "57.333333333333336" .
+<http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/eda54132-9ab5-4fdf-8c94-22099c70ebf5> .
+
+<http://www.disit.org/km4city/resource/RT048017PK009FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK009FI> <http://purl.org/dc/terms/identifier> "RT048017PK009FI" .
+<http://www.disit.org/km4city/resource/RT048017PK009FI> <http://www.disit.org/km4city/schema#capacity> "218" .
+<http://www.disit.org/km4city/resource/RT048017PK009FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://purl.org/dc/terms/identifier> "85a7aa87-36d0-4aff-b4d1-94241734a16b" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK009FI> .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#occupied> "155" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#free> "63.0" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#parkOccupancy> "71.10091743119266" .
+<http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/85a7aa87-36d0-4aff-b4d1-94241734a16b> .
+
+<http://www.disit.org/km4city/resource/RT048017PK010FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK010FI> <http://purl.org/dc/terms/identifier> "RT048017PK010FI" .
+<http://www.disit.org/km4city/resource/RT048017PK010FI> <http://www.disit.org/km4city/schema#capacity> "879" .
+<http://www.disit.org/km4city/resource/RT048017PK010FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://purl.org/dc/terms/identifier> "815381ef-49a3-4282-8e48-d82a97c499db" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK010FI> .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#occupied> "170" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#free> "709.0" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#parkOccupancy> "19.340159271899886" .
+<http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/815381ef-49a3-4282-8e48-d82a97c499db> .
+
+<http://www.disit.org/km4city/resource/RT048017PK012FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK012FI> <http://purl.org/dc/terms/identifier> "RT048017PK012FI" .
+<http://www.disit.org/km4city/resource/RT048017PK012FI> <http://www.disit.org/km4city/schema#capacity> "122" .
+<http://www.disit.org/km4city/resource/RT048017PK012FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://purl.org/dc/terms/identifier> "22c7be61-fd61-43b0-b40f-9772c2f896b4" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK012FI> .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#occupied> "29" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#free> "93.0" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#parkOccupancy> "23.770491803278688" .
+<http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/22c7be61-fd61-43b0-b40f-9772c2f896b4> .
+
+<http://www.disit.org/km4city/resource/RT048017PK013FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK013FI> <http://purl.org/dc/terms/identifier> "RT048017PK013FI" .
+<http://www.disit.org/km4city/resource/RT048017PK013FI> <http://www.disit.org/km4city/schema#capacity> "165" .
+<http://www.disit.org/km4city/resource/RT048017PK013FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://purl.org/dc/terms/identifier> "9239e00d-f736-4abf-ade7-de1f7941c060" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK013FI> .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#occupied> "13" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#free> "152.0" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#parkOccupancy> "7.878787878787878" .
+<http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/9239e00d-f736-4abf-ade7-de1f7941c060> .
+
+<http://www.disit.org/km4city/resource/RT048017PK014FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK014FI> <http://purl.org/dc/terms/identifier> "RT048017PK014FI" .
+<http://www.disit.org/km4city/resource/RT048017PK014FI> <http://www.disit.org/km4city/schema#capacity> "406" .
+<http://www.disit.org/km4city/resource/RT048017PK014FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://purl.org/dc/terms/identifier> "6abf786f-24aa-4953-b7ec-74b0a250f979" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK014FI> .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#occupied> "307" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#free> "99.0" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#parkOccupancy> "75.61576354679804" .
+<http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/6abf786f-24aa-4953-b7ec-74b0a250f979> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050001> <http://purl.org/dc/terms/identifier> "AR051FSPK050001" .
+<http://www.disit.org/km4city/resource/AR051FSPK050001> <http://www.disit.org/km4city/schema#capacity> "100" .
+<http://www.disit.org/km4city/resource/AR051FSPK050001> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://purl.org/dc/terms/identifier> "f03effca-7081-4355-ab6a-ea8b20495fd8" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050001> .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#occupied> "33" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#free> "67.0" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#parkOccupancy> "33.0" .
+<http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/f03effca-7081-4355-ab6a-ea8b20495fd8> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050002> <http://purl.org/dc/terms/identifier> "AR051FSPK050002" .
+<http://www.disit.org/km4city/resource/AR051FSPK050002> <http://www.disit.org/km4city/schema#capacity> "255" .
+<http://www.disit.org/km4city/resource/AR051FSPK050002> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://purl.org/dc/terms/identifier> "2c1f6318-1c57-470f-8772-ed1e08baa61c" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://purl.org/dc/terms/date> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050002> .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#occupied> "195" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#free> "60.0" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#parkOccupancy> "76.47058823529412" .
+<http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:55+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:55+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/2c1f6318-1c57-470f-8772-ed1e08baa61c> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050003> <http://purl.org/dc/terms/identifier> "AR051FSPK050003" .
+<http://www.disit.org/km4city/resource/AR051FSPK050003> <http://www.disit.org/km4city/schema#capacity> "210" .
+<http://www.disit.org/km4city/resource/AR051FSPK050003> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://purl.org/dc/terms/identifier> "282e3629-de39-477e-9062-612bd40a2cfc" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050003> .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#occupied> "175" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#free> "35.0" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#parkOccupancy> "83.33333333333334" .
+<http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/282e3629-de39-477e-9062-612bd40a2cfc> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050004> <http://purl.org/dc/terms/identifier> "AR051FSPK050004" .
+<http://www.disit.org/km4city/resource/AR051FSPK050004> <http://www.disit.org/km4city/schema#capacity> "400" .
+<http://www.disit.org/km4city/resource/AR051FSPK050004> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://purl.org/dc/terms/identifier> "cbdba117-74f0-4eeb-a4d5-5459da2d0979" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050004> .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#occupied> "233" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#free> "167.0" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#parkOccupancy> "58.25" .
+<http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/cbdba117-74f0-4eeb-a4d5-5459da2d0979> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050005> <http://purl.org/dc/terms/identifier> "AR051FSPK050005" .
+<http://www.disit.org/km4city/resource/AR051FSPK050005> <http://www.disit.org/km4city/schema#capacity> "800" .
+<http://www.disit.org/km4city/resource/AR051FSPK050005> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://purl.org/dc/terms/identifier> "3a5ed1d5-d88b-446d-9358-914a9de7593d" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050005> .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#occupied> "89" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#free> "711.0" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#parkOccupancy> "11.125" .
+<http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/3a5ed1d5-d88b-446d-9358-914a9de7593d> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050006> <http://purl.org/dc/terms/identifier> "AR051FSPK050006" .
+<http://www.disit.org/km4city/resource/AR051FSPK050006> <http://www.disit.org/km4city/schema#capacity> "154" .
+<http://www.disit.org/km4city/resource/AR051FSPK050006> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://purl.org/dc/terms/identifier> "0c7cadde-5ef8-48db-8f0a-4227242b6a72" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050006> .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#occupied> "23" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#free> "131.0" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#parkOccupancy> "14.935064935064934" .
+<http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/0c7cadde-5ef8-48db-8f0a-4227242b6a72> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050007> <http://purl.org/dc/terms/identifier> "AR051FSPK050007" .
+<http://www.disit.org/km4city/resource/AR051FSPK050007> <http://www.disit.org/km4city/schema#capacity> "132" .
+<http://www.disit.org/km4city/resource/AR051FSPK050007> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://purl.org/dc/terms/identifier> "654da65d-a2ff-4f6a-a794-4b529f294c3e" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050007> .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#occupied> "123" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#free> "9.0" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#parkOccupancy> "93.18181818181817" .
+<http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/654da65d-a2ff-4f6a-a794-4b529f294c3e> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050008> <http://purl.org/dc/terms/identifier> "AR051FSPK050008" .
+<http://www.disit.org/km4city/resource/AR051FSPK050008> <http://www.disit.org/km4city/schema#capacity> "93" .
+<http://www.disit.org/km4city/resource/AR051FSPK050008> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://purl.org/dc/terms/identifier> "3d248afe-4a04-424a-a053-6eb79a35bc6d" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050008> .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#occupied> "46" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#free> "47.0" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#parkOccupancy> "49.46236559139785" .
+<http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/3d248afe-4a04-424a-a053-6eb79a35bc6d> .
+
+<http://www.disit.org/km4city/resource/AR051FSPK050009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/AR051FSPK050009> <http://purl.org/dc/terms/identifier> "AR051FSPK050009" .
+<http://www.disit.org/km4city/resource/AR051FSPK050009> <http://www.disit.org/km4city/schema#capacity> "230" .
+<http://www.disit.org/km4city/resource/AR051FSPK050009> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://purl.org/dc/terms/identifier> "0c1b3089-b2af-4ff4-8226-2b17f98b35ee" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/AR051FSPK050009> .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#occupied> "151" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#free> "79.0" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#parkOccupancy> "65.65217391304347" .
+<http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/0c1b3089-b2af-4ff4-8226-2b17f98b35ee> .
+
+<http://www.disit.org/km4city/resource/LI049FSPK040001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/LI049FSPK040001> <http://purl.org/dc/terms/identifier> "LI049FSPK040001" .
+<http://www.disit.org/km4city/resource/LI049FSPK040001> <http://www.disit.org/km4city/schema#capacity> "137" .
+<http://www.disit.org/km4city/resource/LI049FSPK040001> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://purl.org/dc/terms/identifier> "9a7b60cd-644a-46c1-a73e-178f2df34b0d" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/LI049FSPK040001> .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#occupied> "93" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#free> "44.0" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#parkOccupancy> "67.88321167883211" .
+<http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/9a7b60cd-644a-46c1-a73e-178f2df34b0d> .
+
+<http://www.disit.org/km4city/resource/LI049FSPK040002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/LI049FSPK040002> <http://purl.org/dc/terms/identifier> "LI049FSPK040002" .
+<http://www.disit.org/km4city/resource/LI049FSPK040002> <http://www.disit.org/km4city/schema#capacity> "121" .
+<http://www.disit.org/km4city/resource/LI049FSPK040002> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://purl.org/dc/terms/identifier> "90ad4ecd-8c81-4a07-9199-323f6c2d131a" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/LI049FSPK040002> .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#occupied> "97" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#free> "24.0" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#parkOccupancy> "80.16528925619835" .
+<http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/90ad4ecd-8c81-4a07-9199-323f6c2d131a> .
+
+<http://www.disit.org/km4city/resource/LI049FSPK040003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/LI049FSPK040003> <http://purl.org/dc/terms/identifier> "LI049FSPK040003" .
+<http://www.disit.org/km4city/resource/LI049FSPK040003> <http://www.disit.org/km4city/schema#capacity> "120" .
+<http://www.disit.org/km4city/resource/LI049FSPK040003> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://purl.org/dc/terms/identifier> "2dd17c72-bfb2-4154-8a25-90311eb59015" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://purl.org/dc/terms/date> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/LI049FSPK040003> .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#occupied> "61" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#free> "59.0" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#parkOccupancy> "50.83333333333333" .
+<http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:56+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:56+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/2dd17c72-bfb2-4154-8a25-90311eb59015> .
+
+<http://www.disit.org/km4city/resource/LI049FSPK040004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/LI049FSPK040004> <http://purl.org/dc/terms/identifier> "LI049FSPK040004" .
+<http://www.disit.org/km4city/resource/LI049FSPK040004> <http://www.disit.org/km4city/schema#capacity> "305" .
+<http://www.disit.org/km4city/resource/LI049FSPK040004> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://purl.org/dc/terms/identifier> "41755859-47c9-47c6-a1ba-7314b0fed97f" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/LI049FSPK040004> .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#occupied> "0" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#free> "305.0" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#parkOccupancy> "0.0" .
+<http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/41755859-47c9-47c6-a1ba-7314b0fed97f> .
+
+<http://www.disit.org/km4city/resource/LI049FSPK040005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/LI049FSPK040005> <http://purl.org/dc/terms/identifier> "LI049FSPK040005" .
+<http://www.disit.org/km4city/resource/LI049FSPK040005> <http://www.disit.org/km4city/schema#capacity> "328" .
+<http://www.disit.org/km4city/resource/LI049FSPK040005> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://purl.org/dc/terms/identifier> "db0bd0ea-dd7e-40a6-b3b5-c7177c954106" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/LI049FSPK040005> .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#occupied> "185" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#free> "143.0" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#parkOccupancy> "56.40243902439024" .
+<http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/db0bd0ea-dd7e-40a6-b3b5-c7177c954106> .
+
+<http://www.disit.org/km4city/resource/RT055100PK001LU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT055100PK001LU> <http://purl.org/dc/terms/identifier> "RT055100PK001LU" .
+<http://www.disit.org/km4city/resource/RT055100PK001LU> <http://www.disit.org/km4city/schema#capacity> "421" .
+<http://www.disit.org/km4city/resource/RT055100PK001LU> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://purl.org/dc/terms/identifier> "cb187af4-6cd4-4e93-953e-6c63e58a883e" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT055100PK001LU> .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#occupied> "136" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#free> "285.0" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#parkOccupancy> "32.304038004750595" .
+<http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/cb187af4-6cd4-4e93-953e-6c63e58a883e> .
+
+<http://www.disit.org/km4city/resource/RT055100PK002LU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT055100PK002LU> <http://purl.org/dc/terms/identifier> "RT055100PK002LU" .
+<http://www.disit.org/km4city/resource/RT055100PK002LU> <http://www.disit.org/km4city/schema#capacity> "252" .
+<http://www.disit.org/km4city/resource/RT055100PK002LU> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://purl.org/dc/terms/identifier> "0ef39a85-118a-40d0-b117-b3ea4d4e5f61" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT055100PK002LU> .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#occupied> "185" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#free> "67.0" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#parkOccupancy> "73.4126984126984" .
+<http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/0ef39a85-118a-40d0-b117-b3ea4d4e5f61> .
+
+<http://www.disit.org/km4city/resource/RT055100PK003LU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT055100PK003LU> <http://purl.org/dc/terms/identifier> "RT055100PK003LU" .
+<http://www.disit.org/km4city/resource/RT055100PK003LU> <http://www.disit.org/km4city/schema#capacity> "115" .
+<http://www.disit.org/km4city/resource/RT055100PK003LU> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://purl.org/dc/terms/identifier> "9ec8a8c5-f91c-45ec-8730-dbc90b185900" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT055100PK003LU> .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#occupied> "26" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#free> "89.0" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#parkOccupancy> "22.608695652173914" .
+<http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/9ec8a8c5-f91c-45ec-8730-dbc90b185900> .
+
+<http://www.disit.org/km4city/resource/RT055100PK004LU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT055100PK004LU> <http://purl.org/dc/terms/identifier> "RT055100PK004LU" .
+<http://www.disit.org/km4city/resource/RT055100PK004LU> <http://www.disit.org/km4city/schema#capacity> "362" .
+<http://www.disit.org/km4city/resource/RT055100PK004LU> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://purl.org/dc/terms/identifier> "f86811af-d4b5-45af-b40f-3a9e9347e38f" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT055100PK004LU> .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#occupied> "26" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#free> "336.0" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#parkOccupancy> "7.18232044198895" .
+<http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/f86811af-d4b5-45af-b40f-3a9e9347e38f> .
+
+<http://www.disit.org/km4city/resource/RT055100PK005LU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT055100PK005LU> <http://purl.org/dc/terms/identifier> "RT055100PK005LU" .
+<http://www.disit.org/km4city/resource/RT055100PK005LU> <http://www.disit.org/km4city/schema#capacity> "199" .
+<http://www.disit.org/km4city/resource/RT055100PK005LU> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://purl.org/dc/terms/identifier> "39391924-e867-4396-85c7-2bac9251b2d2" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT055100PK005LU> .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#occupied> "141" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#free> "58.0" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#parkOccupancy> "70.85427135678391" .
+<http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/39391924-e867-4396-85c7-2bac9251b2d2> .
+
+<http://www.disit.org/km4city/resource/RT048017PK011FI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/RT048017PK011FI> <http://purl.org/dc/terms/identifier> "RT048017PK011FI" .
+<http://www.disit.org/km4city/resource/RT048017PK011FI> <http://www.disit.org/km4city/schema#capacity> "192" .
+<http://www.disit.org/km4city/resource/RT048017PK011FI> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://purl.org/dc/terms/identifier> "e4f46f60-702e-4f54-8443-3dde7accc38d" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/RT048017PK011FI> .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#occupied> "178" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#free> "14.0" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#parkOccupancy> "92.70833333333334" .
+<http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/e4f46f60-702e-4f54-8443-3dde7accc38d> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Beccaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Beccaria> <http://purl.org/dc/terms/identifier> "CarParkSensor Beccaria" .
+<http://www.disit.org/km4city/resource/CarParkSensor Beccaria> <http://www.disit.org/km4city/schema#capacity> "210" .
+<http://www.disit.org/km4city/resource/CarParkSensor Beccaria> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://purl.org/dc/terms/identifier> "75b02387-74ae-4de3-920e-b7333e16d071" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Beccaria> .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#occupied> "64" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#free> "146.0" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#parkOccupancy> "30.476190476190478" .
+<http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/75b02387-74ae-4de3-920e-b7333e16d071> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorBeccaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorBeccaria> <http://purl.org/dc/terms/identifier> "CarParkSensorBeccaria" .
+<http://www.disit.org/km4city/resource/CarParkSensorBeccaria> <http://www.disit.org/km4city/schema#capacity> "210" .
+<http://www.disit.org/km4city/resource/CarParkSensorBeccaria> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://purl.org/dc/terms/identifier> "29755c48-5602-4195-90b2-a0a018c359eb" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://purl.org/dc/terms/date> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorBeccaria> .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#occupied> "12" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#free> "198.0" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#parkOccupancy> "5.714285714285714" .
+<http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:57+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:57+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/29755c48-5602-4195-90b2-a0a018c359eb> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Careggi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Careggi> <http://purl.org/dc/terms/identifier> "CarParkSensor Careggi" .
+<http://www.disit.org/km4city/resource/CarParkSensor Careggi> <http://www.disit.org/km4city/schema#capacity> "406" .
+<http://www.disit.org/km4city/resource/CarParkSensor Careggi> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://purl.org/dc/terms/identifier> "67ea399b-cea0-4397-87cc-cf598f347216" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Careggi> .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#occupied> "349" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#free> "57.0" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#parkOccupancy> "85.96059113300493" .
+<http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/67ea399b-cea0-4397-87cc-cf598f347216> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorCareggi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorCareggi> <http://purl.org/dc/terms/identifier> "CarParkSensorCareggi" .
+<http://www.disit.org/km4city/resource/CarParkSensorCareggi> <http://www.disit.org/km4city/schema#capacity> "406" .
+<http://www.disit.org/km4city/resource/CarParkSensorCareggi> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://purl.org/dc/terms/identifier> "ac09c47b-2c0e-4270-9ebb-857c209c5589" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorCareggi> .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#occupied> "23" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#free> "383.0" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#parkOccupancy> "5.665024630541872" .
+<http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/ac09c47b-2c0e-4270-9ebb-857c209c5589> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Oltrarno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Oltrarno> <http://purl.org/dc/terms/identifier> "CarParkSensor Oltrarno" .
+<http://www.disit.org/km4city/resource/CarParkSensor Oltrarno> <http://www.disit.org/km4city/schema#capacity> "218" .
+<http://www.disit.org/km4city/resource/CarParkSensor Oltrarno> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://purl.org/dc/terms/identifier> "64834ad7-133c-43eb-ade2-46ac6054df98" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Oltrarno> .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#occupied> "154" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#free> "64.0" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#parkOccupancy> "70.64220183486239" .
+<http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/64834ad7-133c-43eb-ade2-46ac6054df98> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorOltrarno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorOltrarno> <http://purl.org/dc/terms/identifier> "CarParkSensorOltrarno" .
+<http://www.disit.org/km4city/resource/CarParkSensorOltrarno> <http://www.disit.org/km4city/schema#capacity> "218" .
+<http://www.disit.org/km4city/resource/CarParkSensorOltrarno> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://purl.org/dc/terms/identifier> "a4f91a32-a014-4619-94da-13237ae0aef6" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorOltrarno> .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#occupied> "172" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#free> "46.0" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#parkOccupancy> "78.89908256880734" .
+<http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/a4f91a32-a014-4619-94da-13237ae0aef6> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Pal. Giustizia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Pal. Giustizia> <http://purl.org/dc/terms/identifier> "CarParkSensor Pal. Giustizia" .
+<http://www.disit.org/km4city/resource/CarParkSensor Pal. Giustizia> <http://www.disit.org/km4city/schema#capacity> "241" .
+<http://www.disit.org/km4city/resource/CarParkSensor Pal. Giustizia> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://purl.org/dc/terms/identifier> "04275fd1-8fe0-49f0-8119-c27e264cb673" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Pal. Giustizia> .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#occupied> "206" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#free> "35.0" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#parkOccupancy> "85.47717842323651" .
+<http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/04275fd1-8fe0-49f0-8119-c27e264cb673> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorPal. Giustizia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorPal. Giustizia> <http://purl.org/dc/terms/identifier> "CarParkSensorPal. Giustizia" .
+<http://www.disit.org/km4city/resource/CarParkSensorPal. Giustizia> <http://www.disit.org/km4city/schema#capacity> "241" .
+<http://www.disit.org/km4city/resource/CarParkSensorPal. Giustizia> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://purl.org/dc/terms/identifier> "9421b807-c1cf-4767-8341-3ad1cc23bf27" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorPal. Giustizia> .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#occupied> "21" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#free> "220.0" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#parkOccupancy> "8.71369294605809" .
+<http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/9421b807-c1cf-4767-8341-3ad1cc23bf27> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Parterre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Parterre> <http://purl.org/dc/terms/identifier> "CarParkSensor Parterre" .
+<http://www.disit.org/km4city/resource/CarParkSensor Parterre> <http://www.disit.org/km4city/schema#capacity> "1006" .
+<http://www.disit.org/km4city/resource/CarParkSensor Parterre> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://purl.org/dc/terms/identifier> "de8fd1a5-9119-4461-b084-4d0b1a524ce5" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Parterre> .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#occupied> "674" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#free> "332.0" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#parkOccupancy> "66.99801192842942" .
+<http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/de8fd1a5-9119-4461-b084-4d0b1a524ce5> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorParterre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorParterre> <http://purl.org/dc/terms/identifier> "CarParkSensorParterre" .
+<http://www.disit.org/km4city/resource/CarParkSensorParterre> <http://www.disit.org/km4city/schema#capacity> "1006" .
+<http://www.disit.org/km4city/resource/CarParkSensorParterre> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://purl.org/dc/terms/identifier> "5a903aef-e355-4c72-815b-31fa9e328da5" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorParterre> .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#occupied> "645" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#free> "361.0" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#parkOccupancy> "64.11530815109344" .
+<http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/5a903aef-e355-4c72-815b-31fa9e328da5> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Pieraccini Meyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Pieraccini Meyer> <http://purl.org/dc/terms/identifier> "CarParkSensor Pieraccini Meyer" .
+<http://www.disit.org/km4city/resource/CarParkSensor Pieraccini Meyer> <http://www.disit.org/km4city/schema#capacity> "879" .
+<http://www.disit.org/km4city/resource/CarParkSensor Pieraccini Meyer> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://purl.org/dc/terms/identifier> "e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Pieraccini Meyer> .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#occupied> "485" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#free> "394.0" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#parkOccupancy> "55.17633674630261" .
+<http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/e0bae4ef-ce6a-49fc-ae7f-9e99e7eef9ca> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorPieraccini Meyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorPieraccini Meyer> <http://purl.org/dc/terms/identifier> "CarParkSensorPieraccini Meyer" .
+<http://www.disit.org/km4city/resource/CarParkSensorPieraccini Meyer> <http://www.disit.org/km4city/schema#capacity> "879" .
+<http://www.disit.org/km4city/resource/CarParkSensorPieraccini Meyer> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://purl.org/dc/terms/identifier> "458e7a18-7ea2-41de-81b1-967ae06eb490" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorPieraccini Meyer> .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#occupied> "420" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#free> "459.0" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#parkOccupancy> "47.781569965870304" .
+<http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/458e7a18-7ea2-41de-81b1-967ae06eb490> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Porta al Prato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Porta al Prato> <http://purl.org/dc/terms/identifier> "CarParkSensor Porta al Prato" .
+<http://www.disit.org/km4city/resource/CarParkSensor Porta al Prato> <http://www.disit.org/km4city/schema#capacity> "300" .
+<http://www.disit.org/km4city/resource/CarParkSensor Porta al Prato> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://purl.org/dc/terms/identifier> "73e0c171-46aa-4819-9a93-27fe4b8ba5b5" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://purl.org/dc/terms/date> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Porta al Prato> .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#occupied> "257" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#free> "43.0" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#parkOccupancy> "85.66666666666667" .
+<http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:58+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:58+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/73e0c171-46aa-4819-9a93-27fe4b8ba5b5> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorPorta al Prato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorPorta al Prato> <http://purl.org/dc/terms/identifier> "CarParkSensorPorta al Prato" .
+<http://www.disit.org/km4city/resource/CarParkSensorPorta al Prato> <http://www.disit.org/km4city/schema#capacity> "300" .
+<http://www.disit.org/km4city/resource/CarParkSensorPorta al Prato> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://purl.org/dc/terms/identifier> "e102dd21-68ac-4e7b-b4b5-9b33c86356e2" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://purl.org/dc/terms/date> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorPorta al Prato> .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#occupied> "157" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#free> "143.0" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#parkOccupancy> "52.33333333333333" .
+<http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/e102dd21-68ac-4e7b-b4b5-9b33c86356e2> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor S. Ambrogio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Ambrogio> <http://purl.org/dc/terms/identifier> "CarParkSensor S. Ambrogio" .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Ambrogio> <http://www.disit.org/km4city/schema#capacity> "379" .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Ambrogio> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://purl.org/dc/terms/identifier> "b1a137c8-d4a7-4b60-9800-4b586938cf35" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://purl.org/dc/terms/date> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor S. Ambrogio> .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#occupied> "47" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#free> "332.0" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#parkOccupancy> "12.401055408970976" .
+<http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/b1a137c8-d4a7-4b60-9800-4b586938cf35> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorS. Ambrogio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Ambrogio> <http://purl.org/dc/terms/identifier> "CarParkSensorS. Ambrogio" .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Ambrogio> <http://www.disit.org/km4city/schema#capacity> "379" .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Ambrogio> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://purl.org/dc/terms/identifier> "e635249c-c6c2-4fdf-abdc-d154ac4edff7" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://purl.org/dc/terms/date> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorS. Ambrogio> .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#occupied> "121" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#free> "258.0" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#parkOccupancy> "31.926121372031663" .
+<http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/e635249c-c6c2-4fdf-abdc-d154ac4edff7> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor S. Lorenzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Lorenzo> <http://purl.org/dc/terms/identifier> "CarParkSensor S. Lorenzo" .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Lorenzo> <http://www.disit.org/km4city/schema#capacity> "179" .
+<http://www.disit.org/km4city/resource/CarParkSensor S. Lorenzo> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://purl.org/dc/terms/identifier> "908c52d3-00e2-46fa-911f-e6c6b2bbc894" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://purl.org/dc/terms/date> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor S. Lorenzo> .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#occupied> "38" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#free> "141.0" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#parkOccupancy> "21.22905027932961" .
+<http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:13:59+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:13:59+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/908c52d3-00e2-46fa-911f-e6c6b2bbc894> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorS. Lorenzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Lorenzo> <http://purl.org/dc/terms/identifier> "CarParkSensorS. Lorenzo" .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Lorenzo> <http://www.disit.org/km4city/schema#capacity> "179" .
+<http://www.disit.org/km4city/resource/CarParkSensorS. Lorenzo> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://purl.org/dc/terms/identifier> "899f27a8-be89-4d7c-9e89-1ba5610030d2" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorS. Lorenzo> .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#occupied> "94" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#free> "85.0" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#parkOccupancy> "52.513966480446925" .
+<http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/899f27a8-be89-4d7c-9e89-1ba5610030d2> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Binario 16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Binario 16> <http://purl.org/dc/terms/identifier> "CarParkSensor Stazione Binario 16" .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Binario 16> <http://www.disit.org/km4city/schema#capacity> "165" .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Binario 16> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://purl.org/dc/terms/identifier> "f9f22ac1-0149-4ede-8664-84cbb44d5254" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Stazione Binario 16> .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#occupied> "147" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#free> "18.0" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#parkOccupancy> "89.0909090909091" .
+<http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/f9f22ac1-0149-4ede-8664-84cbb44d5254> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Binario 16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Binario 16> <http://purl.org/dc/terms/identifier> "CarParkSensorStazione Binario 16" .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Binario 16> <http://www.disit.org/km4city/schema#capacity> "165" .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Binario 16> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://purl.org/dc/terms/identifier> "3a7da1d3-42eb-4ad2-a35d-1d807ec50e66" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorStazione Binario 16> .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#occupied> "15" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#free> "150.0" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#parkOccupancy> "9.090909090909092" .
+<http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/3a7da1d3-42eb-4ad2-a35d-1d807ec50e66> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Firenze S.M.N.> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Firenze S.M.N.> <http://purl.org/dc/terms/identifier> "CarParkSensor Stazione Firenze S.M.N." .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Firenze S.M.N.> <http://www.disit.org/km4city/schema#capacity> "901" .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Firenze S.M.N.> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://purl.org/dc/terms/identifier> "7bc6483a-700b-450b-817f-3c93708fe9c0" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Stazione Firenze S.M.N.> .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#occupied> "612" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#free> "289.0" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#parkOccupancy> "67.9245283018868" .
+<http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/7bc6483a-700b-450b-817f-3c93708fe9c0> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Firenze S.M.N.> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Firenze S.M.N.> <http://purl.org/dc/terms/identifier> "CarParkSensorStazione Firenze S.M.N." .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Firenze S.M.N.> <http://www.disit.org/km4city/schema#capacity> "901" .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Firenze S.M.N.> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://purl.org/dc/terms/identifier> "ea072dd6-521c-4d40-9dc7-ea9d4def342e" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorStazione Firenze S.M.N.> .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#occupied> "775" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#free> "126.0" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#parkOccupancy> "86.01553829078802" .
+<http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/ea072dd6-521c-4d40-9dc7-ea9d4def342e> .
+
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Fortezza Fiera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Fortezza Fiera> <http://purl.org/dc/terms/identifier> "CarParkSensor Stazione Fortezza Fiera" .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Fortezza Fiera> <http://www.disit.org/km4city/schema#capacity> "521" .
+<http://www.disit.org/km4city/resource/CarParkSensor Stazione Fortezza Fiera> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://purl.org/dc/terms/identifier> "46d03642-0340-40db-8dd6-f644d6ab0bb9" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://purl.org/dc/terms/date> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensor Stazione Fortezza Fiera> .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#occupied> "0" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#free> "521.0" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#parkOccupancy> "0.0" .
+<http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:00+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:00+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/46d03642-0340-40db-8dd6-f644d6ab0bb9> .
+
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Fortezza Fiera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#CarParkSensor> .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Fortezza Fiera> <http://purl.org/dc/terms/identifier> "CarParkSensorStazione Fortezza Fiera" .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Fortezza Fiera> <http://www.disit.org/km4city/schema#capacity> "521" .
+<http://www.disit.org/km4city/resource/CarParkSensorStazione Fortezza Fiera> <http://www.disit.org/km4city/schema#hasRecord> <http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.disit.org/km4city/schema#SitutatioRecord> .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://purl.org/dc/terms/identifier> "136d4063-7b16-4ac6-a12f-d020e2625c5f" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://purl.org/dc/terms/date> "2017-03-22T12:14:01+01:00" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#relatedToSensor> <http://www.disit.org/km4city/resource/CarParkSensorStazione Fortezza Fiera> .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#observationTime> <http://www.disit.org/km4city/resource/2017-03-22T12:14:01+01:00> .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#validityStatus> "active" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#occupied> "407" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#free> "114.0" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#parkOccupancy> "78.1190019193858" .
+<http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> <http://www.disit.org/km4city/schema#carParkStatus> "enoughSpacesAvailable" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:01+01:00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:01+01:00> <http://purl.org/dc/terms/identifier> "2017-03-22T12:14:01+01:00" .
+<http://www.disit.org/km4city/resource/2017-03-22T12:14:01+01:00> <http://www.disit.org/km4city/schema#instantParking> <http://www.disit.org/km4city/resource/136d4063-7b16-4ac6-a12f-d020e2625c5f> .
+
