@@ -66,10 +66,12 @@
 					<name>free</name>
 					<uri>http://www.w3.org/2001/XMLSchema#integer</uri>
 					<valueExpression>${capacity} - ${occupied}</valueExpression>
+					<format>%.0f</format>
 				</prop>
 				<prop key="http://www.disit.org/km4city/schema#parkOccupancy">
 					<type>valueExpression</type>
 					<valueExpression>( ${occupied} / ${capacity} ) * 100 </valueExpression>
+					<format>%.2f</format>
 				</prop>
 				<prop key="http://www.disit.org/km4city/schema#carParkStatus">
 					<type>valueExpression</type>

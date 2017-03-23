@@ -110,7 +110,7 @@ public class GenericAttribute {
 	private boolean isPreviusState;
 	private boolean isProcessed;
 	private boolean isHidden;
-	
+
 	
 	
 	
@@ -186,6 +186,10 @@ public class GenericAttribute {
 	
 	public Object getParam(String key){
 		return this.paramList.get(key).getObject();
+	}
+	public String getStringParam(String key){
+		Object obj = this.paramList.get(key).getObject();
+		return obj != null?obj.toString():"";
 	}
 	public boolean isHidden(){
 		return isHidden;

@@ -406,7 +406,8 @@ public class Tree {
                 "profileId",
                 "variance",
                 "defaultValue",
-                "refValue"
+                "refValue",
+                "format"
                 
             })
             public static class Prop {
@@ -440,7 +441,14 @@ public class Tree {
                 protected String variance;
                 @XmlAttribute(name = "isPersistent")
                 protected String isPersistent;
+                protected String format;
                 
+				public String getFormat() {
+					return format;
+				}
+				public void setFormat(String format) {
+					this.format = format;
+				}
 				public String getRefValue() {
 					return refValue;
 				}

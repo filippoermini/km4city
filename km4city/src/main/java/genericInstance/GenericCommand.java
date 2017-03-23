@@ -2,6 +2,7 @@ package genericInstance;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Formatter;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -11,6 +12,7 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Random;
 import java.util.UUID;
 import java.util.regex.Matcher;
@@ -243,8 +245,11 @@ public class GenericCommand {
 		public String valueGenerator(Object... args) {
 			HashMap<String,AttributeParam> param = (HashMap<String, AttributeParam>) args[0];
 			String expression = (String) param.get("valueExpression").getObject();
+			String format = (String) param.get("format").getObject();
+			if (format == null || format == "") format = "%s";
 			try {
-				return javascriptEngine.getEngine().eval(expression).toString();
+				Object obj = javascriptEngine.getEngine().eval(expression);
+				return getOutputFormat(obj,format);
 			} catch (ScriptException e) {
 				// TODO Auto-generated catch block
 				logger.error("Evaluate expression error: "+ e.getMessage());
@@ -292,6 +297,30 @@ public class GenericCommand {
 		return genericCommand;
 	}
 	
+	private String getOutputFormat(Object obj,String format){
+		Formatter formatter = new Formatter();
+		if(format.contains("%d")){
+			try{
+				int num = Integer.parseInt(obj.toString());
+				return formatter.format(format, num).toString();
+			}catch(NumberFormatException ex){
+				logger.error("Cannot cast value"+ obj.toString()+ " to integer value" );
+				return obj.toString();
+			}
+		}
+		if(format.contains("%") && format.contains("f")){
+			try{
+				double num = Double.parseDouble(obj.toString());
+				String output = formatter.format(format, num).toString();
+				return output.replace(",", ".");
+			}catch(NumberFormatException ex){
+				logger.error("Cannot cast value"+ obj.toString()+ " to double value" );
+				return obj.toString();
+			}
+		}
+		return formatter.format(format, obj.toString()).toString();
+	}
+	
 	public class CommandFactory {
 		private final HashMap<String, Command>	commands;
 		
@@ -309,7 +338,6 @@ public class GenericCommand {
 			}
 			return null;
 		}
-
 		/* Factory pattern */
 		public void init() {
 			
