@@ -140,7 +140,7 @@ public class GenericAttribute {
 				logger.error("Acquiring properties Error: "+e.getMessage());
 			}
 		}
-		this.isValueExpression = this.attribute==null?false:this.paramContainExpression();
+		this.isValueExpression = this.paramContainExpression();
 		this.isForegoingValue = this.paramContainForegoingValue();
 		this.isPreviusState = this.paramContainPreviusValue();
 		
