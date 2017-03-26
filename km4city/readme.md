@@ -127,7 +127,8 @@ Esemipo di file xml:
 		<startDirectory>./parking</startDirectory>
 	</fileInfo>
 	<iterationElement>
-		<instance type="http://www.disit.org/km4city/schema#CarParkSensor" name="CarParkSensor" isRoot="true">
+		<instance type="http://www.disit.org/km4city/schema#CarParkSensor" 
+			  name="CarParkSensor" isRoot="true">
 			<properties>
 				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 					<type>id</type>
