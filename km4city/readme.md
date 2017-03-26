@@ -111,10 +111,16 @@ Esemipo di file xml:
 
 ```xml
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/" isStateful="false">
+<tree 	typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" 
+	baseUri="http://www.disit.org/km4city/resource/" isStateful="false">
 	<instanceIterationQuery>
 		<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
-		<query>SELECT DISTINCT ?id WHERE {?s a km4c:CarParkSensor. ?s dcterms:identifier ?id. ?s km4c:capacity ?o} limit 100</query>
+		<query>SELECT DISTINCT ?id WHERE 
+					{?s a km4c:CarParkSensor. 
+					 ?s dcterms:identifier ?id. 
+					 ?s km4c:capacity ?o}
+					 limit 100
+		</query>
 	</instanceIterationQuery>
 	<fileInfo>
 		<fileName>CarParkSensor.n3</fileName>
