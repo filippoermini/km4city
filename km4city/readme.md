@@ -111,40 +111,42 @@ Esemipo di file xml:
 
 ```xml
 <?xml version="1.0"?>
-<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/">
+<tree typeId="http://www.w3.org/1999/02/22-rdf-syntax-ns#type" baseUri="http://www.disit.org/km4city/resource/" isStateful="false">
 	<instanceIterationQuery>
 		<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
-		<query>SELECT DISTINCT ?id WHERE {?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,"METRO"))} limit 10</query>
+		<query>SELECT DISTINCT ?id WHERE {?s a km4c:CarParkSensor. ?s dcterms:identifier ?id. ?s km4c:capacity ?o} limit 100</query>
 	</instanceIterationQuery>
 	<fileInfo>
-		<fileName>sensorsite.n3</fileName>
-		<startDirectory>./sensorsite</startDirectory>
+		<fileName>CarParkSensor.n3</fileName>
+		<startDirectory>./parking</startDirectory>
 	</fileInfo>
 	<iterationElement>
-		<attributes>
-			<prop>
-				<type>foregoing</type>	
-				<name>testVar1</name>
-				<defaultValue>2</defaultValue>
-				<refValue>@['FI055ZTL00801']{concentration}</refValue>	
-			</prop>
-			<prop>
-				<type>valueExpression</type>
-				<name>testVar2</name>
-				<valueExpression>${testVar1} + 44</valueExpression>
-			</prop>
-		</attributes>
-		<instance type="http://www.disit.org/km4city/schema#SensorSite" name="SensorSite" isRoot="true">
+		<instance type="http://www.disit.org/km4city/schema#CarParkSensor" name="CarParkSensor" isRoot="true">
 			<properties>
 				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 					<type>id</type>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#hasObservation">
-					<type>Observation</type>
+				<prop key="http://www.disit.org/km4city/schema#capacity">
+					<type>query</type>
+					<name>capacity</name>
+					<queryInfo>
+						<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
+						<query>	
+								SELECT ?capacity WHERE {
+								?s a km4c:CarParkSensor. 
+								?s dcterms:identifier '${id}'.
+								?s km4c:capacity ?capacity.
+								} LIMIT 1
+						</query>
+						<bindingValue>capacity</bindingValue>
+					</queryInfo>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#hasRecord">
+					<type>SituationRecord</type>
 				</prop>
 			</properties>
 		</instance>
-		<instance type="http://www.disit.org/km4city/schema#Observation" name="Observation" baseUri="http://www.disit.org/km4city/resource/obs/">
+		<instance type="http://www.disit.org/km4city/schema#SitutatioRecord" name="SituationRecord">
 			<properties>
 				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 					<type>UUID</type>
@@ -153,60 +155,61 @@ Esemipo di file xml:
 					<type>DateTime</type>
 					<uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#lastAverageSpeed">
-					<type>query</type>
-					<queryInfo>
-					<server>http://servicemap.disit.org/WebAppGrafo/sparql</server>
-					<query>select ?speed where {
-						?s a km4c:SensorSite.
-						?s dcterms:identifier ${id}.
-						?s km4c:hasObservation ?o.
-						?o km4c:averageSpeed ?speed.
-						?o dcterms:date ?d.
-						} order by desc(?d) limit 1</query>
-					</queryInfo>
+				<prop key="http://www.disit.org/km4city/schema#relatedToSensor">
+					<type>CarParkSensor</type>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#averageSpeed">
-					<type>float</type>
-					<maxValue>3</maxValue>
-					<minValue>2</minValue>
-					<name>averageSpeed</name>
-					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
-				</prop>
-				<prop key="http://www.disit.org/km4city/schema#vehicleFlow">
-					<type>valueExpression</type>
-					<valueExpression>${concentration} * ${averageSpeed} </valueExpression>
-					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
-				</prop>
-				<prop key="http://www.disit.org/km4city/schema#concentration">
-					<type>float</type>
-					<maxValue>3</maxValue>
-					<minValue>2</minValue>
-					<name>concentration</name>
-					<uri>http://www.w3.org/2001/XMLSchema#float</uri>
-				</prop>
-				<prop key="http://www.disit.org/km4city/schema#measuredTime">
+				<prop key="http://www.disit.org/km4city/schema#observationTime">
 					<type>Instant</type>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#measuredBySensor">
-					<type>SensorSite</type>
+				<prop key="http://www.disit.org/km4city/schema#validityStatus">
+					<type>fromset</type>
+					<name>validityStatus</name>
+					<set>active</set>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#occupied">
+					<type>integer</type>
+					<name>occupied</name>
+					<uri>http://www.w3.org/2001/XMLSchema#integer</uri>
+					<maxValue>${capacity}</maxValue>
+					<minValue>0</minValue>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#free">
+					<type>valueExpression</type>
+					<name>free</name>
+					<uri>http://www.w3.org/2001/XMLSchema#integer</uri>
+					<valueExpression>${capacity} - ${occupied}</valueExpression>
+					<format>%.0f</format>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#parkOccupancy">
+					<type>valueExpression</type>
+					<valueExpression>( ${occupied} / ${capacity} ) * 100 </valueExpression>
+					<format>%.2f</format>
+				</prop>
+				<prop key="http://www.disit.org/km4city/schema#carParkStatus">
+					<type>valueExpression</type>
+					<valueExpression>
+						<![CDATA[
+							function checkStatus(free){
+								if(free == 0) return 'carParkFull';
+								else return 'enoughSpacesAvailable';
+							}
+							checkStatus(${free});
+						]]>
+					</valueExpression>	
 				</prop>
 			</properties>
 		</instance>
-		<instance type="http://www.w3.org/2006/time#Instant" name="Instant" >
+		<instance type="http://www.w3.org/2006/time#Instant" name="Instant">
 			<properties>
 				<prop key="http://purl.org/dc/terms/identifier" isPrimaryKey="true">
 					<type>DateTime</type>
-					<name>dateTime</name>
+					<uri>http://www.w3.org/2001/XMLSchema#dateTime</uri>
 				</prop>
-				<prop key="http://www.disit.org/km4city/schema#instantObserv">
-					<type>Observation</type>
-				</prop>
-				<prop key="http://www.disit.org/km4city/schema#valueForegoing">
-					<type>valueExpression</type>
-					<valueExpression>${testVar2}</valueExpression>
+				<prop key="http://www.disit.org/km4city/schema#instantParking">
+					<type>SituationRecord</type>
 				</prop>
 			</properties>
 		</instance>
 	</iterationElement>
-</tree>```
+</tree>
+```
