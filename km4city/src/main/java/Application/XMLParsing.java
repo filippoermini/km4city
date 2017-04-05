@@ -48,7 +48,7 @@ public class XMLParsing<T> {
 		return results;
 
 	}
-	public T DeserializeFromXML(String xmlPath){
+	public T DeserializeFromXML(String xmlPath) {
 		T object=null;
 		try {
 
@@ -58,12 +58,13 @@ public class XMLParsing<T> {
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			object = (T) jaxbUnmarshaller.unmarshal(file);
 			logger.info("Deserialize file "+xmlPath+" into "+typeParameterClass+" object");
-
+			
 		  } catch (JAXBException e) {
-			logger.error("Deserialize error - JAXB excepition: "+e.getMessage());
+			String msg = e.getLocalizedMessage()==null?e.getLinkedException().getLocalizedMessage():e.getLocalizedMessage();
+			logger.error("Deserialize error - JAXB excepition: "+msg);
 			logger.error("Process interrupt");
 			System.exit(-1);
-		  }
+		  } 
 		return object;
 		
 		
