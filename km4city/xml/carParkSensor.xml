@@ -61,6 +61,14 @@
 					<maxValue>${capacity}</maxValue>
 					<minValue>0</minValue>
 				</prop>
+				<prop key="http://www.disit.org/km4city/schema#testcsv">
+					<type>profiledependent</type>
+					<name>test</name>
+					<profilesFile>profiles-files/profiles-1.csv</profilesFile>
+					<profileId>consumoElettrico</profileId>
+					<maxValue>3000</maxValue>
+					<variance>100</variance>
+				</prop>
 				<prop key="http://www.disit.org/km4city/schema#free">
 					<type>valueExpression</type>
 					<name>free</name>

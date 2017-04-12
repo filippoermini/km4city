@@ -33,7 +33,7 @@ public class DataSimulator {
 		logger = Logger.getLogger(name);
 		CommonValue.init(name);
 		xml = new XMLParsing(Tree.class);
-		tree = xml.DeserializeFromXML(xmlFile);
+		tree = xml.DeserializeFromXML(xmlFile); // oggetto che contiene il file xml deserializzato
 		logger.info("Initialization parameters completed");
 		this.startPath = tree.getFileInfo().getStartDirectory();
 	}

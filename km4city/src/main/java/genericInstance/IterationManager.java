@@ -26,7 +26,6 @@ import com.thoughtworks.xstream.io.binary.Token.Attribute;
 import Application.CommonValue;
 import Application.EvalEngine;
 import Application.RDFconnector.RepositoryManager;
-import Application.TripleGenerator;
 import XMLDomain.Tree;
 import XMLDomain.Tree.Instance;
 import XMLDomain.Tree.Instance.Properties.Prop;
@@ -46,10 +45,10 @@ public class IterationManager {
 	private SimulationObject temporarylist;
 	private HashMap<String,KeyWordCommand> keyWord;
 	private LoadedStates states;
-	private TripleGenerator.IterationObject itObject;
+	private IterationObject itObject;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
-	public IterationManager(Tree.iterationElement iterationElement, String baseUri, TripleGenerator.IterationObject itObject){
+	public IterationManager(Tree.iterationElement iterationElement, String baseUri, IterationObject itObject){
 		
 		this.javascriptEngine = EvalEngine.getInstance();
 		this.origin = iterationElement;
@@ -365,15 +364,7 @@ public class IterationManager {
     				logger.info("The value is set to defaultValue");
     				a.getAttribute().setValue(a.getParam("defaultValue").toString());
     			}
-    			
-    			
-    			
-    			
-    			
-    			
-    			
     		}
-			
 		}else{
 			a.getAttribute().setValue(a.getType(), a.getAttributeList());
 		}
