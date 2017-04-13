@@ -20,7 +20,6 @@ import jsonDomain.States;
 
 public class TripleGenerator {
 	
-
 	private RepositoryManager rdfEngine;
 	
 	private IterationManager itManager;
