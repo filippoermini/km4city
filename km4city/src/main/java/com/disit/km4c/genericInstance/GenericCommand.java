@@ -61,6 +61,7 @@ public class GenericCommand {
 			}
 		}
 	}
+	
 	public class GenerateFloatValue implements Command<Float>{
 		
 		@Override
@@ -388,7 +389,7 @@ public class GenericCommand {
 			}
 			return null;
 		}
-		/* Factory pattern */
+		
 		public void init() {
 			
 			this.addCommand("integer",new GenerateIntValue());

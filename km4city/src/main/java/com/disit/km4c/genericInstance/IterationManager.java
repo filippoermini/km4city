@@ -45,7 +45,6 @@ public class IterationManager {
 	private SimulationObject temporarylist;
 	private HashMap<String,KeyWordCommand> keyWord;
 	private LoadedStates states;
-	private IterationObject itObject;
 	final static Logger logger  = Logger.getLogger(CommonValue.getInstance().getSimulationName());
 	
 	public IterationManager(Tree.iterationElement iterationElement, String baseUri, IterationObject itObject){
@@ -81,6 +80,7 @@ public class IterationManager {
 	public void setTemporayList(SimulationObject obj){
 		this.temporarylist = obj;
 	}
+	
 	public IterationElement generateIterationElement(String resId){
 		this.it = new IterationElement();
 		init(it);
@@ -99,7 +99,7 @@ public class IterationManager {
 		//generazione delle classi
 		for(GenericInstance g:it.getInstances()){ //estraggo le classi
 			if(!g.isProcessed()){//la classe non è ancora stata processata
-				_process(g);
+				process(g);
 			}
 		}
 		return it;
@@ -115,38 +115,29 @@ public class IterationManager {
 		}
 	}
 	
-	private void _process(GenericInstance g){
+	private void process(GenericInstance g){
 		for(GenericAttribute a:g.getAttributeList()){ //estraggo gli attributi per ogni classe
 			if(a.getAttribute().getAttributeValue() == null){
 				if(!(a.isPrimaryKey() && g.isRoot())){//non devo generare il valore per il campo id della clsse root, è già settato
-					if(a.isValueExpression()){
+					if(a.isExternalKey()){//l'attributo è un riferimento ad un'altra classe
+						
+						GenericInstance refInstances = it.getObjectInstanceByName(a.getType());
+						if (!refInstances.isProcessed()){ //la classe non è ancora stata processata
+							if(refInstances.getIdentifier().getAttribute().getAttributeValue()==null)
+								process(refInstances); //chiamata ricorsiva
+						} // alla fine di questa procedura la classe refInstances contiene tutti i 
+						  //valori (escluso quelli che hanno delle dipendenze) compreso il valore dell'attributo identifier
+						a.setExternalInstanceObject(refInstances); 
+						//l'attributo identifier della refInstances è già stato valorizzato e lo posso passare al mio attributo a
+					}else{ 
+						// l'attributo è un campo semplice 
 						try {
 							generateAttributeValue(a);
 						} catch (MissingAttributeExceptions e) {
-							//gestisco la mancanza di un eventuale attributo ed esco
 							logger.error(e.getMessage());
-							logger.error("Istance Name error: "+g.getInstanceName()+" - Property Name error: "+a.getAttributeName());
+							logger.error("Istance error: "+g.getInstanceName()+" Property error: "+a.getAttributeName());
 							logger.error("Process interrupt");
 							System.exit(-1);
-						}
-					}else{
-						if(a.isExternalKey()){//l'attributo è un riferimento ad un'altra classe
-							
-							GenericInstance refInstances = it.getObjectInstanceByName(a.getType());
-							if (!refInstances.isProcessed()){ //la classe non è ancora stata processata
-								if(refInstances.getIdentifier().getAttribute().getAttributeValue()==null)
-									_process(refInstances); //chiamata ricorsiva
-							} // alla fine di questa procedura la classe refInstances contiene tutti i valori (escluso quelli che hanno delle dipendenze) compreso il valore dell'attributo identifier
-							a.setExternalInstanceObject(refInstances); //l'attributo identifier della refInstances è già stato valorizzato e lo posso passare al mio attributo a
-						}else{ // l'attributo è un campo semplice 
-							try {
-								generateAttributeValue(a);
-							} catch (MissingAttributeExceptions e) {
-								logger.error(e.getMessage());
-								logger.error("Istance error: "+g.getInstanceName()+" Property error: "+a.getAttributeName());
-								logger.error("Process interrupt");
-								System.exit(-1);
-							}
 						}
 					}
 				}
@@ -154,6 +145,9 @@ public class IterationManager {
 		}
 		
 	}
+	
+	
+	
 	private void generateAttributeValue(GenericAttribute a) throws MissingAttributeExceptions{
 		//calcolo del valore per la simulazione in base ai parametri  
 		if(a.isValueExpression()){//uno o più parametri dell'attributo sono delle espressioni da calcolare
@@ -225,7 +219,7 @@ public class IterationManager {
 				}	
 			}    	
 		}
-		//controllo il caso in cui il valore � un riferimento record generato precedentemente all'interno 
+		//controllo il caso in cui il valore è un riferimento ad un record generato precedentemente all'interno 
 		//della solita iterazione
 		if(a.isForegoingValue()){
 //			if(a.getParam("defaultValue") == null){
@@ -272,7 +266,7 @@ public class IterationManager {
     		        		}else{
     		        			for(GenericInstance g:it.getInstances()){ //estraggo le classi
     		        				if(!g.isProcessed()){//la classe non è ancora stata processata
-    		        					_process(g);
+    		        					process(g);
     		        				}
     		        			}
     		        			//ho generato i valori che non avevo
@@ -388,7 +382,7 @@ public class IterationManager {
     			}
     		}
 		}else{
-			a.getAttribute().setValue(a.getType(), a.getAttributeList());
+			a.getAttribute().generateValue(a.getType(), a.getAttributeList());
 		}
 		//tutti i parametri necessari a determinare il valore dell'attributo non sono espressioni (o non lo sono più)
 		

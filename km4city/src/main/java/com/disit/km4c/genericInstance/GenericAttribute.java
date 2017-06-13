@@ -86,7 +86,8 @@ public class GenericAttribute {
 			return true;
 			
 		}
-		public void setValue(String type,Object value) throws MissingAttributeExceptions{	
+		
+		public void generateValue(String type,Object value) throws MissingAttributeExceptions{	
 			this.attributeValue = (T) genericTypeMap.getValue(type, value);
 		}
 		

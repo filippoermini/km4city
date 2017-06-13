@@ -8,6 +8,8 @@ public class GenericTypeMap {
 
 	private static GenericTypeMap genericTypeMap = new GenericTypeMap();
 	private static GenericCommand commandMap;
+	
+	
 	private static final HashMap<String,String> ClassMap = new HashMap<String,String>(){{
 		put("integer","java.lang.Integer");
 		put("float","java.lang.Float");
