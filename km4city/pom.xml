@@ -2,25 +2,74 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>km4city</groupId>
   <artifactId>km4city</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1</version>
+  <packaging>jar</packaging>
+  <name>sensorGenerator</name>
   <build>
+  	<finalName>sensorGenerator</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
     <resources>
       <resource>
         <directory>src/main/java</directory>
       </resource>
     </resources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+		<plugins>
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<!-- Set a compiler level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- Make this jar executable -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+				  <archive>
+				    <manifest>
+					<addClasspath>true</addClasspath>
+					<mainClass>com.disit.km4c.run.Main</mainClass>
+					<classpathPrefix>dependency-jars/</classpathPrefix>
+				    </manifest>
+				  </archive>
+				</configuration>
+			</plugin>
+
+			<!-- Copy project dependency -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+				  <execution>
+					<id>copy-dependencies</id>
+					<phase>package</phase>
+					<goals>
+						<goal>copy-dependencies</goal>
+					</goals>
+				  </execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
   <dependencies>
   	<dependency>
   		<groupId>com.google.code.gson</groupId>
@@ -42,17 +91,28 @@
   		<artifactId>xstream</artifactId>
   		<version>1.4.9</version>
   	</dependency>
-  	<dependency>
-  		<groupId>org.eclipse.rdf4j</groupId>
-  		<artifactId>rdf4j-runtime</artifactId>
-  		<version>2.1</version>
-  	</dependency>
   	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 	<dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-simple</artifactId>
 	    <version>1.6.0</version>
 	</dependency>
+	<dependency>
+	
+  <groupId>org.eclipse.rdf4j</groupId>
+  <artifactId>rdf4j-repository-http</artifactId>
+  <version>2.2.2</version>
 
+	</dependency>
+	<dependency>
+  <groupId>org.eclipse.rdf4j</groupId>
+  <artifactId>rdf4j-repository-sparql</artifactId>
+  <version>2.2.2</version>
+</dependency>
+	<dependency>
+  <groupId>org.eclipse.rdf4j</groupId>
+  <artifactId>rdf4j-runtime</artifactId>
+  <version>2.2.2</version>
+</dependency>
   </dependencies>
 </project>

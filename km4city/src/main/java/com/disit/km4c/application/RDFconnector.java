@@ -1,11 +1,10 @@
 package com.disit.km4c.application;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import org.apache.log4j.Logger;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryEvaluationException;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.TupleQuery;
@@ -13,6 +12,7 @@ import org.eclipse.rdf4j.query.TupleQueryResult;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
+
 
 
 
@@ -26,8 +26,13 @@ public class RDFconnector {
 		private RepositoryConnection conn;
 		public RepositoryManager(String endPoint,Logger log){
 			this.endPoint = endPoint;//"http://servicemap.disit.org/WebAppGrafo/sparql";
-			repo = new SPARQLRepository(this.endPoint);
+			SPARQLRepository rep = new SPARQLRepository(this.endPoint);
+			HashMap<String,String> header = new HashMap(); 
+			header.put("type","application/sparql-results+xml, charset UTF-8");
+			rep.setAdditionalHttpHeaders(header);
+			repo = rep;
 			repo.initialize();
+			
 			this.logger = log;
 		}
 
@@ -44,7 +49,8 @@ public class RDFconnector {
 		}
 		
 		public TupleQueryResult SPARQLExecute(String query){
-			conn = repo.getConnection(); 
+			conn = repo.getConnection();
+			
 //		    String queryString = "SELECT DISTINCT ?id WHERE {"
 //						   					+"?s a km4c:SensorSite. ?s dcterms:identifier ?id.filter(!strstarts(?id,\"METRO\"))"
 //											+"} order by ?id limit 100";
